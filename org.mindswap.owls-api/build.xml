@@ -1,0 +1,40 @@
+<project default="jar" name="OWLS-api">
+	<buildnumber file="mybuild.number" />
+
+	<property name="build.dir" value="build" />
+	<property name="src.dir" value="src/main/java/" />
+	<property name="dist.dir" value="dist" />
+	<property name="ext.dep.productbase" value="../../software/alive-common-deps/owls-api-3.1" />
+	<property name="jar.file" value="${dist.dir}/owls-api-3.1-bath.jar" />
+	<property name="res.dir" value="src/main/resources" />
+
+	<path id="classpath">
+		<fileset dir="dep" includes="**/*.jar" />
+	</path>
+	<target name="compile">
+		<mkdir dir="${build.dir}" />
+		<javac debug="true" classpathref="classpath" destdir="${build.dir}" srcdir="${src.dir}" includes="**/*.java" />
+	</target>
+	<!-- - - - - - - - - - - - - - - - - - 
+          target: jar                      
+         - - - - - - - - - - - - - - - - - -->
+	<target name="jar" depends="compile">
+		<mkdir dir="${dist.dir}" />
+		<jar compress="true" destfile="${jar.file}" manifest="MANIFEST.MF">
+			<fileset dir="${build.dir}" includes="**/*.class" />
+			<fileset dir="${res.dir}" includes="**/*" />
+		</jar>
+	</target>
+	<target name="updateDepDir">
+		<copy todir="${ext.dep.productbase}">
+			<fileset dir="dep" includes="*.jar" excludes="slf4j*.jar">
+			</fileset>
+			<fileset dir="dist" includes="owls-api-3.1-bath.jar" />
+		</copy>
+	</target>
+
+	<target name="clean">
+		<delete dir="${build.dir}" />
+	</target>
+
+</project>

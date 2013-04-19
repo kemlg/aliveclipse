@@ -1,0 +1,46 @@
+«EXTENSION net::sf::ictalive::coordination::agents::diagram::oaw::templates::util»
+«DEFINE Mas FOR agents::MasModel»
+	«FILE getInjectAgentsBuildFileName()»<?xml version="1.0" encoding="UTF-8"?>
+<project name="net.sf.ictalive.coordination.agents.agentscape.injectagents"
+        default="injectAgents">
+
+        <!-- code details -->
+        <property name="agentscape-dir" value="«getAgentScapePath()»" />
+
+        <target name="injectAgents" depends="">
+                <echo>Running injector - matchmaker agent</echo>
+                <java jar="${agentscape-dir}/lib/injector.jar" failonerror="true" fork="true">
+                        <jvmarg line="-Dhttp.proxyHost=${proxyHost} -Dhttp.proxyPort=${proxyPort} -Dhttp.proxyUser=${proxyUser} -Dhttp.proxyPassword=${proxyPassword} -Dhttp.nonProxyHosts=&quot;${nonProxyHosts}&quot; -Xmx${maxHeapSize}m -XX:MaxPermSize=512m"/>
+                        <arg line="-L ${agentscapeServer}:${agentscapePort} ${agentscapeLocation} ${agentscape-dir}/lib/agents/alive-matchmaker-agent.jar"/>
+                </java>
+                
+                <echo>Running injector - eventagent</echo>
+                <java jar="${agentscape-dir}/lib/injector.jar" failonerror="true" fork="true">
+                        <jvmarg line="-Dhttp.proxyHost=${proxyHost} -Dhttp.proxyPort=${proxyPort} -Dhttp.proxyUser=${proxyUser} -Dhttp.proxyPassword=${proxyPassword} -Dhttp.nonProxyHosts=&quot;${nonProxyHosts}&quot; -Xmx${maxHeapSize}m -XX:MaxPermSize=512m"/>
+                        <arg line="-L ${agentscapeServer}:${agentscapePort} ${agentscapeLocation} ${agentscape-dir}/lib/agents/EventAgent.jar"/>
+                </java>
+
+				«FOREACH agents AS agent ITERATOR iter»
+                <echo>Running injector - agent « iter.counter0»</echo>
+                <java jar="${agentscape-dir}/lib/injector.jar" failonerror="true" fork="true">
+                        <jvmarg line="-Dhttp.proxyHost=${proxyHost} -Dhttp.proxyPort=${proxyPort} -Dhttp.proxyUser=${proxyUser} -Dhttp.proxyPassword=${proxyPassword} -Dhttp.nonProxyHosts=&quot;${nonProxyHosts}&quot; -Xmx${maxHeapSize}m -XX:MaxPermSize=512m"/>
+                        <arg line="-L ${agentscapeServer}:${agentscapePort} ${agentscapeLocation} ${agentscape-dir}/lib/agents/agent«iter.counter0».jar"/>
+                </java>
+				«ENDFOREACH»	
+               
+               
+                <echo>Running injector - planning agent</echo>
+                <java jar="${agentscape-dir}/lib/injector.jar" failonerror="true" fork="true">
+                        <jvmarg line="-Dhttp.proxyHost=${proxyHost} -Dhttp.proxyPort=${proxyPort} -Dhttp.proxyUser=${proxyUser} -Dhttp.proxyPassword=${proxyPassword} -Dhttp.nonProxyHosts=&quot;${nonProxyHosts}&quot; -Xmx${maxHeapSize}m -XX:MaxPermSize=512m"/>
+                        <arg line="-L ${agentscapeServer}:${agentscapePort} ${agentscapeLocation} ${agentscape-dir}/lib/agents/PlanningAgent.jar"/>
+                </java>
+
+                <echo>Running injector - servlet agent</echo>
+                <java jar="${agentscape-dir}/lib/injector.jar" failonerror="true" fork="true" output="run.log" error="run.log">
+                        <jvmarg line="-Dhttp.proxyHost=${proxyHost} -Dhttp.proxyPort=${proxyPort} -Dhttp.proxyUser=${proxyUser} -Dhttp.proxyPassword=${proxyPassword} -Dhttp.nonProxyHosts=&quot;${nonProxyHosts}&quot; -Xmx${maxHeapSize}m -XX:MaxPermSize=512m"/>
+                        <arg line="-L ${agentscapeServer}:${agentscapePort} ${agentscapeLocation} ${agentscape-dir}/lib/agents/ServletAgent.jar"/>
+                </java>
+        </target>
+</project>
+	«ENDFILE»
+«ENDDEFINE»

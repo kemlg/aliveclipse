@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Overview</title>
+  <link rel="stylesheet" href="shared.css" type="text/css" />	
+  </head>
+
+<body>
+<div class="menu">
+	<div class="tooltipy" style="margin-top:10px;"><a href="http://org.eclipse.ui.intro/showPage?id=overview"><img src="images/yellow.png" height="24" width="24" border="0" /><span class="yellow" style="font-size:9px;">Overview</span></a></div>
+    <div class="tooltip" style="margin-top:30px;"><a href="http://org.eclipse.ui.intro/showPage?id=tutorials"><img src="images/red.png" height="24" width="24" border="0" /><span style="font-size:9px;">Tutorials</span></a></div>
+    <div class="tooltip" style="margin-left:-10px;"><a href="http://org.eclipse.ui.intro/showPage?id=methodology"><img src="images/green.png" width="24" height="24" border="0" /><span style="font-size:9px;">Methodology</span></a></div>
+    <div class="tooltip" style="margin-left:50px;"><a href="http://org.eclipse.ui.intro/showPage?id=actions"><img src="images/left.png" width="24" height="24" border="0" /><span style="font-size:9px;">Previous</span></a></div>
+    <div class="tooltipup"><a href="http://org.eclipse.ui.intro/showPage?id=coordination"><img src="images/up.png" width="24" height="24" border="0" /><span style="font-size:9px;">Up</span></a></div>
+    <div class="tooltip"><a href="http://org.eclipse.ui.intro/showPage?id=agents"><img src="images/right.png" width="24" height="24" border="0" /><span style="font-size:9px;">Next</span></a></div>
+    <div class="tooltip" style="margin-left:50px;"><a href="http://org.eclipse.ui.intro/close"><img src="images/workspace.png" width="24" height="24" border="0" /><span style="font-size:9px;">Go to workbench</span></a></div>
+</div>
+
+<div class="bg">
+<img id="background-img" src="images/alive_background.jpg" class="bg" />
+</div>
+
+<div class="page-style">
+    <div id="content"> 	
+        <h2>Tasks</h2>
+      <p>A task provides a problem that the plan synthesis will attempt to produce a plan for using a given set of actions. For example, a task may be to produce a plan (set of atomic actions) which achieves a composite action, given a description of the initial (current) world state.</p>
+        <p> Similar to actions, a task model has a task collection, which can contain a set of tasks.&nbsp; The task collection has a ns property, which is used to define the namespace of the task collection and the items contained within it. </p>
+        <p> Each task has four properties that are important:</p>
+        <ul>
+          <li>name, which specifies the name of the task. This is combined with the ns of the task collection to generate the URI of the task, and so the name should be unique within the same task collection.</li>
+          <li>hasPrecondition, which specifies the world state before the task is performed. This is used to provide the initial/current world state for the planner, and for agents enacting a plan for the task.</li>
+          <li>components, which defines a list of control constructs that reference the actions that should be achieved to achieve the task. The ordering of the control constructs in the list is taken as the order in which the tasks should be performed (i.e. this is equivalent to having single a Sequence control construct as the value of this property). The planner will attempt to produce a plan, currently consisting of a series of atomic actions, which achieves all of the referenced actions.</li>
+          <li>input, which specifies a series of input message maps, each of which defines a binding between a parameter (referenced by a variables in the hasPrecondition and inputs to the actions directly referenced in the components) to a particular value.</li>
+      </ul>
+      <p>All variables in the hasPrecondition must be assigned a value before the planner can use the task; likewise, all inputs to actions directly referenced in the components property value (i.e. those referenced by an Perform control constructs in the components) must have a value assigned. In principal this requires that all atoms in the hasPrecondition use values of types IndividualID or Datavalue and not IndividualVariable or DataVariable for the args, argument1, and argument2 properties. This may make it necessary to add numerous concepts to an ontology in the OM that are only relevant to the one task. This can be avoided through the use of input message maps in the task.</p>
+      <p> An Input Message Map has two properties: parameter, which refers to a parameter (input or output) from an action collection, and messagePart, which is a string defining the value of that parameter. When the plan synthesis attempts to produce a plan, for every variable used by atoms in the hasPrecondition, it will attempt to find an Input Message Map for a parameter with URI (ns+name) equal to the variable’s name. If such an Input Message Map is found, the messagePart of the map is used as the value for the variable. Similarly, for all actions referenced by Perform control constructs in the task’s components, the plan synthesis will set the value of each of the action’s input to the messagePart of a map with that input as the map’s parameter value.</p>
+      <p> If the input message map is defining a value for an individual variable, then the messagePart should be set to the URI of the desired concept, for example http://www.example.com/example.owl#concept. </p>
+      <p>As discussed above, it is possible to use an input binding to specify the value of an input of an action referenced by a Perform control construct. This is also possible with Performed used in tasks, in which case the input value specified by the Perform’s input binding will be used and not a the value specified in the task’s input message map. </p>
+      <h3>Step Through</h3>
+      <p>There are two options available for creating a new task model: defining the task manually, or deriving a series of outline tasks from an action model; both approaches are discussed below.</p>
+      <h4>Designing Tasks from Scratch</h4>
+      <p>There are two plugins available for creating and editing task models: a tree-style editor (this is used for files with the extension &quot;.tasks&quot;) and a graphical editor (used for files with extension &quot;.tasks_diagram&quot;). Detailed instructions on using both tools for building tasks are provided in the Task Tab User Manual.&nbsp; </p>
+<h4>Derived Tasks</h4>
+      <p>The &quot;Derive&quot; button between the &quot;Action Model&quot; and &quot;Task Model&quot; boxes in the ALIVE Dashboard will generate a task model containing tasks for each action in the selected action model.&nbsp; The task model consists of a single task collection, and a series of outline tasks. Each generated task is composed of a single Perform referencing an action from the action model. In order for a task to be used by the plan synthesis, it may be necessary to use one of the task editors to define the initial world state (hasPrecondition) and input bindings for the task.</p>
+<h3>Best Practices (do)</h3>
+      <p>Set the ns value of the task collection to ensure that actions are stored correctly in the repository. The ns should be specified using the following form: &quot;http://www.example.com/example.owl#&quot;.&nbsp;</p>
+      <p>      Ensure all variables in the precondition and inputs to referenced actions have values specified in input message maps, otherwise the plan synthesis will be unable to produce a plan for the task and the ASPReasoner will not work correctly. That is, the Atom List in the &quot;hasPrecondition&quot; in combination with any &quot;Input Message Map&quot;s must produce a fully grounded initial state, so that all of the &quot;Individual Variable&quot;s and &quot;Data Variable&quot;s used in the Atom List must correspond to an &quot;Input Message Map&quot;, grounding them to its &quot;Message Part&quot;.</p>
+<h3>Bad Practices (don't)</h3>
+      <p>Define tasks with identical names within the same task collection.</p>
+      <p> Define task collections with identical ns values – try to keep all tasks within the same namespace in the same task collection, in the same file.</p>
+      <p> Use control constructs other than AnyOrder, Perform, or Sequence for the components of a task, as other control constructs are not supported by the planner and so no plan will be produced for the task.</p>
+      <p>Define multiple input message maps for the same parameter.</p>
+<h3>Inter-dependencies</h3>
+      <p>The main inter-dependency for a task model is with the action model(s) containing the actions referenced by the task’s components and the inputs referenced by the task’s input message maps. A task model may also refer to the Concepts from an Ontology in an organisation model’s CS as part of the atoms in the hasPrecondition. </p>
+  </div>
+    <br />
+    <div style="float:right; margin-right:10%;">Next: <a href="http://org.eclipse.ui.intro/showPage?id=agents">Agents</a></div>
+</div>
+
+<div id="logo">
+	<img src="images/alive_logo.jpg" border="0" />
+</div>
+</body>
+</html>

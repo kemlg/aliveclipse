@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+   <extension-point id="modelTracker" name="Model Tracker" schema="schema/modelTracker.exsd"/>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="net.sf.ictalive.operetta.editor.newWizards"
+            name="OperettA"/>
+      <wizard
+            id="net.sf.ictalive.operetta.OM.presentation.OMModelWizardID"
+            name="%_UI_OMModelWizard_label"
+            class="net.sf.ictalive.operetta.OM.presentation.OMModelWizard"
+            category="net.sf.ictalive.operetta.editor.newWizards"
+            icon="icons/full/obj16/OMModelFile.gif">
+         <description>%_UI_OMModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="net.sf.ictalive.operetta.OM.presentation.OMEditorID"
+            name="%_UI_OMEditor_label"
+            icon="icons/full/obj16/OMModelFile.gif"
+            extensions="opera"
+            class="net.sf.ictalive.operetta.OM.presentation.OMEditor"
+            contributorClass="net.sf.ictalive.operetta.OM.presentation.OMMultipageActionBarContributor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="net.sf.ictalive.operetta.editor.perspectives.OperettAPerspective"
+            icon="icons/full/obj16/OMModelFile.gif"
+            id="net.sf.ictalive.operetta.editor.perspectives.operetta"
+            name="OperettA">
+      </perspective>
+   </extension>
+  
+ <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:openPerspective?before=openPerspectiveSeparator">
+         <command
+                  commandId="org.eclipse.ui.perspectives.showPerspective"
+                  label="OperettA Perspective"
+                  style="radio">
+               <parameter
+                     name="org.eclipse.ui.perspectives.showPerspective.perspectiveId"
+                     value="net.sf.ictalive.operetta.editor.perspectives.operetta">
+               </parameter>
+            </command>
+      </menuContribution>
+   </extension>
+   
+   <extension
+         point="net.sf.ictalive.aliveclipse.dashboard.actions">
+      <client
+            class="net.sf.ictalive.operetta.editor.dashboard.CreateOrganisationDashboardAction">
+      </client>
+   </extension>
+   
+   <extension point="org.eclipse.ui.perspectiveExtensions"> 
+      <perspectiveExtension 
+            targetID="net.sf.ictalive.operetta.editor.perspectives.operetta">
+            <newWizardShortcut id="net.sf.ictalive.operetta.OM.presentation.OMModelWizardID"/>  
+      </perspectiveExtension> 
+      <perspectiveExtension 
+         	targetID="org.eclipse.ui.resourcePerspective"> 
+      </perspectiveExtension> 
+   </extension> 
+   
+   
+</plugin>

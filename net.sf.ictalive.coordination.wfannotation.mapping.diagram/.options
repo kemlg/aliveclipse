@@ -1,0 +1,7 @@
+# Tracing options for the net.sf.ictalive.coordination.wfannotation.mapping.diagram plug-in
+
+# Common issues
+net.sf.ictalive.coordination.wfannotation.mapping.diagram/debug=false
+
+# Visual IDs
+net.sf.ictalive.coordination.wfannotation.mapping.diagram/debug/visualID=false

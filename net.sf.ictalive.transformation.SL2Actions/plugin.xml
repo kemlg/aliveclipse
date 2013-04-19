@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="net.sf.ictalive.SL2Actions.contribution1"
+            nameFilter="*.owls"
+            objectClass="org.eclipse.core.resources.IFile">
+         <menu
+               icon="icons/transformation.gif"
+               id="net.sf.ictalive.SL2Actions.menu1"
+               label="Transformations"
+               path="additions">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               class="net.sf.ictalive.SL2Actions.ui.SL2ActionsAction"
+               enablesFor="1"
+               icon="icons/qvto.gif"
+               id="net.sf.ictalive.SL2Actions.ui.SL2ActionsAction"
+               label="Convert to Actions and OperA"
+               menubarPath="net.sf.ictalive.SL2Actions.menu1/group1"
+               tooltip="Convert OWL-S to Actions and OperA">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="net.sf.ictalive.aliveclipse.dashboard.actions">
+      <client
+            class="net.sf.ictalive.SL2Actions.ui.SL2ActionsDashboardWizard">
+      </client>
+   </extension>
+
+</plugin>

@@ -1,0 +1,260 @@
+Manifest-Version: 1.0
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: ALIVE
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-Name: ALIVE Runtime Dashboard
+Bundle-SymbolicName: net.sf.ictalive.runtime.dashboard;singleton:=true
+Bundle-Activator: net.sf.ictalive.runtime.dashboard.Plugin
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.3.0,4.0.0)",
+ org.eclipse.core.resources;bundle-version="[3.3.0,4.0.0)",
+ org.eclipse.ui;bundle-version="[3.3.0,4.0.0)",
+ org.eclipse.draw2d;bundle-version="[3.2.0,4.0.0)",
+ org.eclipse.gmf.map.edit;bundle-version="[2.0.0,3.0.0)",
+ org.eclipse.core.expressions;bundle-version="3.4.100",
+ net.sf.ictalive.dashboard;bundle-version="1.0.0";visibility:=reexport
+Bundle-Version: 2.0.0.qualifier
+Export-Package: net.sf.ictalive.runtime.dashboard
+Bundle-ManifestVersion: 2
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$C
+ reateTDMAction.class
+SHA1-Digest: VWIBO9KI8F89m5CbGs4Mj5lI/EM=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$S
+ electTDMAction.class
+SHA1-Digest: DOcpF4C+nfaTfp69Kz6oOg3VmEg=
+
+Name: org/eclipse/gmf/bridge/ui/dashboard/DashboardFacade.class
+SHA1-Digest: EkhyB5OFAGmlVigfJqNHlpmfkhw=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$R
+ unWizardAction$1.class
+SHA1-Digest: bIdA31y2w8Dyw73LLGEAvi4LZJU=
+
+Name: icons/cview16/synced.gif
+SHA1-Digest: Ghj9SQaJ6vJj8hRCpmwiAfHF1uI=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardFigure$1.c
+ lass
+SHA1-Digest: wMit5DDTw2XwVtt8UrXNHyCau1k=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardActionRegi
+ stry$DashboardActionDescriptor$Proxy.class
+SHA1-Digest: iJkYiAvUQYScSXTynaslfERmirs=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$E
+ ditDMAction.class
+SHA1-Digest: CJtCGXoG1SVo4dfNqpgrtQmGNHU=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardPart.class
+SHA1-Digest: TLzANesGo34JPe30OnJr4Bg43jY=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator.c
+ lass
+SHA1-Digest: DetRQpsYFasA3rsC3TIRqh8bUeI=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/SeparatorFigure.cla
+ ss
+SHA1-Digest: ZolrA6f6IfWjhVolORnD39Uqx0Q=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/HyperlinkFigure.cla
+ ss
+SHA1-Digest: mjEAivlypJTDjFClVLyOtnuGOd0=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$R
+ eloadDGMAction.class
+SHA1-Digest: TvrqpVQjauq7HQvwWiJh17WtsFg=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$S
+ electFileAction.class
+SHA1-Digest: zG+UzVPzfVmlJ28olMbzoTxtl6M=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/FlowFigure.class
+SHA1-Digest: ZJFrS09EPoTBF60iF42iIP7Rh3Y=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$1
+ .class
+SHA1-Digest: oxzmbjsvmtyz8vLPu0NiUa3wj9o=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardPart$1.cla
+ ss
+SHA1-Digest: joV4mv0NfiqsLUO+uDR0ebS5Zu0=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$C
+ reateGMAction.class
+SHA1-Digest: WlAHOGMp1GYZlgIEzHuGYgRz8IQ=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$S
+ electGMAction.class
+SHA1-Digest: 7J7d0bUZjHpqaPo3AELAlTuh74g=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardPart$3.cla
+ ss
+SHA1-Digest: BL3G6oQY4xCMbkfCIJ0SZWqxzIc=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/HyperlinkFigure$2.c
+ lass
+SHA1-Digest: aYcwbBsCyaTDX+oeyMaQv8ZEKqI=
+
+Name: org/eclipse/gmf/bridge/ui/dashboard/DashboardAction.class
+SHA1-Digest: ctZN4h0zbTC58sUTYA5MFha2ARw=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: KyT9FF7C7t86NoBoa2kZT3ZJBfw=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$E
+ ditMMAction.class
+SHA1-Digest: fSw6xeVQD5P3wItLmgks7XB8ZSk=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$O
+ penEMFModelWizard.class
+SHA1-Digest: YDUYSGSFZsU5OYPDniJ+p8HxG0E=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/actions/TransformMa
+ p2GenModelAction.class
+SHA1-Digest: iDFY2MGQZUuWomyVeqJIKr8a3i4=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$E
+ ditGDMAction.class
+SHA1-Digest: DwmOzQjAhH/TuYqjC7GQfZvgNG4=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$D
+ eriveGDMAction.class
+SHA1-Digest: spa66xSTklGforvNowTXhCUuCuI=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardFigure$Das
+ hboardLayout$LayoutData.class
+SHA1-Digest: Plox1hs2lrqMRjXHGDNo02ZAGr4=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardActionRegi
+ stry.class
+SHA1-Digest: BJh0CBOebzPyr7XiIuAYu5cwfZw=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/Messages.class
+SHA1-Digest: ysBnUFFJRCFlTDj13f/oZGWZQ/A=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$C
+ reateGDMAction.class
+SHA1-Digest: z52wE6secWHzlCz6NFRXn9NiTDc=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$S
+ electGDMAction.class
+SHA1-Digest: wuiMbrZ635vhtz0VGQLEuEaoJnY=
+
+Name: org/eclipse/gmf/bridge/ui/dashboard/DashboardState.class
+SHA1-Digest: 7oInNvPjPOqk8ZO3OUkRVVlt+/8=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardActionRegi
+ stry$1.class
+SHA1-Digest: 7EFXYxt9oxBIE87bKLdYR/sFNhU=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$C
+ reateDMAction.class
+SHA1-Digest: ckTExEzpIKnCbuw0a2C+JIeJjc8=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$C
+ ombineMMAction.class
+SHA1-Digest: OiGKunY0mqd9QoNI+pjMiuoihnA=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardFigure.cla
+ ss
+SHA1-Digest: +fXoUD3WE+4r0qELBk6x6b8mGZM=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$S
+ electDMAction.class
+SHA1-Digest: AzbCgI/sXtInVWcDu+7yaxEcPXQ=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$E
+ ditDGMAction.class
+SHA1-Digest: 231rNjc3TPxogxR8zOkWwMHTVJU=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$D
+ eriveDGMAction.class
+SHA1-Digest: V3h/urk/iVqQaLN/1SlBCdxMOlc=
+
+Name: plugin.properties
+SHA1-Digest: NSVMIGza7i+rvR3CNXas6qpKwsI=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$S
+ electDGMAction.class
+SHA1-Digest: WTJblymtEENCijyIwvvAZHMOKF0=
+
+Name: icons/cview16/dashboard.gif
+SHA1-Digest: JGu9auH5MhEX8mQPT0PO20Ennbs=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/messages.properties
+SHA1-Digest: H3upFkNfVsvUziRD3P9/oiqzfJw=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/ActionContainer.cla
+ ss
+SHA1-Digest: 48YGaMH14abLYdfE8DdTh2BkFmE=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/ModelFigure.class
+SHA1-Digest: 35LGV2zvcHhzfY6XSnfJIXv1abM=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$C
+ reateMMAction.class
+SHA1-Digest: ffmyxB6lGKpmfFfjSvQRXcBFvKo=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$S
+ electMMAction.class
+SHA1-Digest: /hlVOHduLuDbgrEfrXLt4wkvKhI=
+
+Name: plugin.xml
+SHA1-Digest: 5DEsckEj4tpR3iuTHFF5xP2idWc=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardFigure$Das
+ hboardLayout.class
+SHA1-Digest: 0WEnCQU4EKTIW78ciDS1Tu9rNCE=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/Plugin.class
+SHA1-Digest: 2roqLrfQhUCs+7MLQijKCeJPfbc=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardPart$2.cla
+ ss
+SHA1-Digest: MGvFH5Srs1tLs/BwEaMn8FhTY3U=
+
+Name: icons/viewban/logo.png
+SHA1-Digest: A6x/CWPMlvrOeyRGA/zw9xJf70Q=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/HyperlinkFigure$1.c
+ lass
+SHA1-Digest: 3b+68Zncm57VRH/khwIYmc7Ad1E=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$R
+ eloadDGMAction$1.class
+SHA1-Digest: yynveL+ETM56VOGTS1elkinIP7s=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$E
+ ditFileAction.class
+SHA1-Digest: 5TSnzUa35ho1aIpoZsG1De5Uh8s=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardActionRegi
+ stry$DashboardActionDescriptor.class
+SHA1-Digest: i4BtRfRlsEhu15xZ5OBqQALOBj8=
+
+Name: about.html
+SHA1-Digest: m//+sZd+LYcO5OY/bjEiZVm0dk0=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$E
+ ditGMAction.class
+SHA1-Digest: BJw+SIYJ0WcQ7Py/ql08HXJ+vP4=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/FlowActionFigure.cl
+ ass
+SHA1-Digest: ehVthfoO7nn1mLDRb+TQeJxqReY=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$E
+ ditTDMAction.class
+SHA1-Digest: VLP5eo1UYNps+X4scH7nvxM6/OA=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$D
+ eriveTDMAction.class
+SHA1-Digest: wMmsc0F6r3dkfJyjjfh2kZ2xprg=
+
+Name: org/eclipse/gmf/internal/bridge/ui/dashboard/DashboardMediator$R
+ unWizardAction.class
+SHA1-Digest: RK/j9aRlD2KrGpDh+r0nmbHfPa8=
+Import-Package: net.sf.ictalive.dashboard
+

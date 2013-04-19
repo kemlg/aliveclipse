@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ALIVE Transformation: Service Code Generator UI
+Bundle-SymbolicName: net.sf.ictalive.SL2Code.ui;singleton:=true
+Bundle-Version: 1.0.3.qualifier
+Bundle-Activator: net.sf.ictalive.SL2Code.ui.Activator
+Bundle-Vendor: ALIVE, Trinity College Dublin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources, 
+ net.sf.ictalive.SL2Code,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.ocl,
+ org.eclipse.ocl.ecore,
+ org.eclipse.acceleo.model,
+ org.eclipse.acceleo.engine
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy

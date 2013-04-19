@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ALIVE EventLog Dashboard Additions
+Bundle-SymbolicName: net.sf.ictalive.eventlog.dashboard;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: net.sf.ictalive.runtime.dashboard;bundle-version="2.0.0",
+ net.sf.ictalive.eventlog;bundle-version="0.0.1",
+ net.sf.ictalive.aliveclipse.dashboard;bundle-version="2.0.0",
+ org.eclipse.jface;bundle-version="3.5.2",
+ org.eclipse.emf.common;bundle-version="2.5.0",
+ org.eclipse.core.resources;bundle-version="3.5.2",
+ org.eclipse.ui;bundle-version="3.5.2",
+ net.sf.ictalive.eventbus.dashboard;bundle-version="1.0.0"
+Bundle-ClassPath: lib/apache-cassandra-0.6.2.jar,
+ lib/clhm-production.jar,
+ lib/commons-collections-3.2.1.jar,
+ lib/commons-lang-2.4.jar,
+ lib/google-collections-1.0.jar,
+ lib/high-scale-lib.jar,
+ lib/libthrift-r917130.jar,
+ lib/log4j-1.2.14.jar,
+ .,
+ lib/slf4j-api-1.5.8.jar,
+ lib/slf4j-log4j12-1.5.8.jar
+Bundle-Vendor: ALIVE, Universitat Politecnica de Catalunya

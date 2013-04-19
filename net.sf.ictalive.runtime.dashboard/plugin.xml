@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+<!--
+   <extension-point id="actions" name="Dashboard Actions" schema="schema/actions.exsd"/>
+   -->
+   <extension-point id="actions" name="Dashboard Actions" schema="schema/createAction.exsd"/>
+
+   <extension point = "org.eclipse.ui.views">
+      <view
+         id = "net.sf.ictalive.runtime.dashboard.DashboardPart"
+         name = "%view.name"
+         icon = "icons/cview16/run.png"
+         category = "org.eclipse.ui"
+         class = "net.sf.ictalive.runtime.dashboard.DashboardPart" />
+   </extension>
+
+
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:showView?before=showViewSeparator">
+            <command
+                  commandId="org.eclipse.ui.views.showView"
+                  label="Runtime Dashboard"
+                  icon = "icons/cview16/run.png"
+         	      style="push">
+               <parameter
+                     name="org.eclipse.ui.views.showView.viewId"
+                     value="net.sf.ictalive.runtime.dashboard.DashboardPart">
+               </parameter>
+            </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="net.sf.ictalive.runtime.dashboard.actions">
+      <client
+            class="net.sf.ictalive.runtime.dashboard.ServicePlatformConfigureAction">
+      </client>
+   </extension>
+   <extension
+         point="net.sf.ictalive.runtime.dashboard.actions">
+      <client
+            class="net.sf.ictalive.runtime.dashboard.ServicePlatformStartAction">
+      </client>
+   </extension>
+   <extension
+         point="net.sf.ictalive.runtime.dashboard.actions">
+      <client
+            class="net.sf.ictalive.runtime.dashboard.ServicePlatformStopAction">
+      </client>
+   </extension>
+   <extension
+         point="net.sf.ictalive.runtime.dashboard.actions">
+      <client
+            class="net.sf.ictalive.runtime.dashboard.ServicePlatformRestartAction">
+      </client>
+   </extension>
+   <extension
+         point="net.sf.ictalive.runtime.dashboard.actions">
+      <client
+            class="net.sf.ictalive.runtime.dashboard.DeployServiceAction">
+      </client>
+   </extension>
+   <extension
+         point="net.sf.ictalive.runtime.dashboard.actions">
+      <client
+            class="net.sf.ictalive.runtime.dashboard.ConfigureEventLogAction">
+      </client>
+   </extension>
+   <extension
+         point="net.sf.ictalive.runtime.dashboard.actions">
+      <client
+            class="net.sf.ictalive.runtime.dashboard.ConfigureEventCollectorAction">
+      </client>
+   </extension>
+   <extension
+         point="net.sf.ictalive.runtime.dashboard.actions">
+      <client
+            class="net.sf.ictalive.runtime.dashboard.ConfigureEventBusAction">
+      </client>
+   </extension>
+
+
+</plugin>

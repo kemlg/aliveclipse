@@ -1,0 +1,1980 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+
+-->
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="control_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="control_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="control.diagram.part.ControlDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/ControlDiagramFile.gif"
+         extensions="control_diagram"
+         default="true"
+         class="control.diagram.part.ControlDiagramEditor"
+         matchingStrategy="control.diagram.part.ControlMatchingStrategy"
+         contributorClass="control.diagram.part.ControlDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="control.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/ControlDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="control.diagram.part.ControlCreationWizard"
+  	     id="control.diagram.part.ControlCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="net.sf.ictalive.service.owlseditor.diagram.InitDiagram"
+            nameFilter="*.control"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="control.diagram.part.ControlInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="net.sf.ictalive.service.owlseditor.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="ControlPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="control.diagram.part.ControlDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.printing.render.providers.DiagramWithPrintGlobalActionHandlerProvider"
+         id="ControlPresentationPrint">
+         <Priority name="Lowest"/>
+         <ViewId id="control.diagram.part.ControlDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="print"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="ControlPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="control.diagram.part.ControlDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="ControlRender">
+         <Priority name="Lowest"/>
+         <ViewId id="control.diagram.part.ControlDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   
+      
+
+   
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="control.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="net.sf.ictalive.service.owlseditor.diagram.general"
+            name="%prefpage.net.sf.ictalive.service.owlseditor.diagram.general"
+            class="control.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="net.sf.ictalive.service.owlseditor.diagram.appearance"
+            name="%prefpage.net.sf.ictalive.service.owlseditor.diagram.appearance"
+            category="net.sf.ictalive.service.owlseditor.diagram.general"
+            class="control.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="net.sf.ictalive.service.owlseditor.diagram.connections"
+            name="%prefpage.net.sf.ictalive.service.owlseditor.diagram.connections"
+            category="net.sf.ictalive.service.owlseditor.diagram.general"
+            class="control.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="net.sf.ictalive.service.owlseditor.diagram.printing"
+            name="%prefpage.net.sf.ictalive.service.owlseditor.diagram.printing"
+            category="net.sf.ictalive.service.owlseditor.diagram.general"
+            class="control.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="net.sf.ictalive.service.owlseditor.diagram.rulersAndGrid"
+            name="%prefpage.net.sf.ictalive.service.owlseditor.diagram.rulersAndGrid"
+            category="net.sf.ictalive.service.owlseditor.diagram.general"
+            class="control.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="net.sf.ictalive.service.owlseditor.diagram"
+            labelProvider="control.diagram.sheet.ControlSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="net.sf.ictalive.service.owlseditor.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="net.sf.ictalive.service.owlseditor.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="control.diagram.sheet.ControlPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="control.diagram.navigator.ControlAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="control.diagram.providers.ControlViewProvider">
+         <Priority name="Lowest"/>
+         <object id="referencing-diagrams" class="org.eclipse.gmf.runtime.notation.Diagram">
+            <method name="getType()" value="control"/>
+         </object>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Control"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2027,2028,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2017,2018,2029,2030,2019,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033,3034,3104,3105,3106,3107,3094,3095,3096,3097,3098,3099,3100,3101,3108,3109,3110,3043,3044,3045,3046,3047,3048,3049,3050,3051,3052,3053,3054,3055,3056,3057,3058,3059,3060,3061,3062,3063,3111,3112,3065,3066,3067,3068,3113,3114,3070,3071,3072,3073,3115,3116,3076,3077,3078,3079,3080,3082,3083,3084,3085,3086,3087,3088,3089,3090,3091,3093"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003,4004,4005"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="control.diagram.providers.ControlEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="Control"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2027,2028,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2017,2018,2029,2030,2019,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033,3034,3104,3105,3106,3107,3094,3095,3096,3097,3098,3099,3100,3101,3108,3109,3110,3043,3044,3045,3046,3047,3048,3049,3050,3051,3052,3053,3054,3055,3056,3057,3058,3059,3060,3061,3062,3063,3111,3112,3065,3066,3067,3068,3113,3114,3070,3071,3072,3073,3115,3116,3076,3077,3078,3079,3080,3082,3083,3084,3085,3086,3087,3088,3089,3090,3091,3093"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4001,4002,4003,4004,4005"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5129,5130,5003,5097,5098,5099,5100,5101,5102,5103,5104,5105,5106,5107,5108,5110,5119,5145,5146,5120,5096,5004,5084,5083,5005,5006,5082,5081,5080,5079,5078,5077,5069,5007,5008,5009,5010,5011,5068,5067,5012,5013,5014,5015,5016,5066,5065,5017,5018,5019,5020,5021,5064,5030,5137,5132,5133,5134,5111,5112,5113,5114,5115,5116,5117,5118,5135,5136,5138,5034,5031,5032,5033,5038,5035,5036,5037,5039,5040,5041,5042,5043,5063,5056,5055,5054,5048,5044,5045,5046,5139,5140,5053,5049,5050,5051,5141,5142,5057,5058,5059,5060,5143,5144,5070,5071,5072,5073,5074,5076,5085,5086,5087,5088,5089,5090,5091,5092,5093,5095"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value="7001,7002,7003,7004,7005,7006,7007,7008,7009,7010,7011,7012,7013,7014,7015,7016,7017,7018,7019,7020,7129,7021,7022,7023,7024,7025,7026,7027,7130,7028,7131,7029,7030,7031,7032,7033,7034,7035,7132,7036,7133,7037,7038,7039,7040,7041,7042,7043,7134,7044,7123,7124,7125,7126,7047,7048,7049,7050,7051,7052,7053,7054,7055,7135,7056,7136,7057,7137,7058,7138,7059,7139,7060,7061,7062,7063,7142,7064,7065,7066,7067,7145,7068,7069,7070,7071,7148,7072,7149,7073,7074,7075,7076,7077,7078,7079,7080,7081,7082,7150,7083,7151,7084,7152,7085,7086,7087,7088,7089,7090,7091,7092,7093,7094,7095,7153,7096,7154,7097,7155,7098,7099,7100,7102,7103,7104,7105"/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="control.diagram.providers.ControlModelingAssistantProvider">
+         <Priority name="Lowest"/>
+         <object class="control.diagram.edit.parts.OuterProcessEditPart" id="OuterProcess_1000"/>
+         <object class="control.diagram.edit.parts.InputEditPart" id="Input_2027"/>
+         <object class="control.diagram.edit.parts.OutputEditPart" id="Output_2028"/>
+         <object class="control.diagram.edit.parts.LocEditPart" id="Loc_2003"/>
+         <object class="control.diagram.edit.parts.SequenceEditPart" id="Sequence_2004"/>
+         <object class="control.diagram.edit.parts.ChoiceEditPart" id="Choice_2005"/>
+         <object class="control.diagram.edit.parts.AnyOrderEditPart" id="AnyOrder_2006"/>
+         <object class="control.diagram.edit.parts.SplitEditPart" id="Split_2007"/>
+         <object class="control.diagram.edit.parts.SplitJoinEditPart" id="SplitJoin_2008"/>
+         <object class="control.diagram.edit.parts.IfThenElseEditPart" id="IfThenElse_2009"/>
+         <object class="control.diagram.edit.parts.RepeatUntilEditPart" id="RepeatUntil_2010"/>
+         <object class="control.diagram.edit.parts.RepeatWhileEditPart" id="RepeatWhile_2011"/>
+         <object class="control.diagram.edit.parts.PerformEditPart" id="Perform_2012"/>
+         <object class="control.diagram.edit.parts.ProduceEditPart" id="Produce_2013"/>
+         <object class="control.diagram.edit.parts.SetEditPart" id="Set_2014"/>
+         <object class="control.diagram.edit.parts.LinkEditPart" id="Link_2015"/>
+         <object class="control.diagram.edit.parts.ConditionEditPart" id="Condition_2017"/>
+         <object class="control.diagram.edit.parts.ResultEditPart" id="Result_2018"/>
+         <object class="control.diagram.edit.parts.OntologyEditPart" id="Ontology_2029"/>
+         <object class="control.diagram.edit.parts.TemplateConstraintEditPart" id="TemplateConstraint_2030"/>
+         <object class="control.diagram.edit.parts.ExprEditPart" id="Expr_2019"/>
+         <context elements="OuterProcess_1000,Input_2027,Output_2028,Loc_2003,Sequence_2004,Choice_2005,AnyOrder_2006,Split_2007,SplitJoin_2008,IfThenElse_2009,RepeatUntil_2010,RepeatWhile_2011,Perform_2012,Produce_2013,Set_2014,Link_2015,Condition_2017,Result_2018,Ontology_2029,TemplateConstraint_2030,Expr_2019"/>
+      </modelingAssistantProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="control.diagram.providers.ControlIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="control.diagram.providers.ControlParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.OuterProcess_1000"
+               name="%metatype.name.OuterProcess_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="OuterProcess"
+               edithelper="control.diagram.edit.helpers.OuterProcessEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.Input_2027"
+               name="%metatype.name.Input_2027"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Input"
+               edithelper="control.diagram.edit.helpers.InputEditHelper">
+            <param name="semanticHint" value="2027"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.Output_2028"
+               name="%metatype.name.Output_2028"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Output"
+               edithelper="control.diagram.edit.helpers.OutputEditHelper">
+            <param name="semanticHint" value="2028"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.Loc_2003"
+               name="%metatype.name.Loc_2003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Loc"
+               edithelper="control.diagram.edit.helpers.LocEditHelper">
+            <param name="semanticHint" value="2003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.Sequence_2004"
+               name="%metatype.name.Sequence_2004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Sequence"
+               edithelper="control.diagram.edit.helpers.SequenceEditHelper">
+            <param name="semanticHint" value="2004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Choice_2005"
+               name="%metatype.name.Choice_2005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Choice_3003"/>
+            <param name="semanticHint" value="2005"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_2006"
+               name="%metatype.name.AnyOrder_2006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_3007"/>
+            <param name="semanticHint" value="2006"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Split_2007"
+               name="%metatype.name.Split_2007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Split_3009"/>
+            <param name="semanticHint" value="2007"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_2008"
+               name="%metatype.name.SplitJoin_2008"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3011"/>
+            <param name="semanticHint" value="2008"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_2009"
+               name="%metatype.name.IfThenElse_2009"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3013"/>
+            <param name="semanticHint" value="2009"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_2010"
+               name="%metatype.name.RepeatUntil_2010"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_3020"/>
+            <param name="semanticHint" value="2010"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_2011"
+               name="%metatype.name.RepeatWhile_2011"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_3027"/>
+            <param name="semanticHint" value="2011"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Perform_2012"
+               name="%metatype.name.Perform_2012"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Perform_3034"/>
+            <param name="semanticHint" value="2012"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Produce_2013"
+               name="%metatype.name.Produce_2013"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Produce_3043"/>
+            <param name="semanticHint" value="2013"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Set_2014"
+               name="%metatype.name.Set_2014"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Set_3047"/>
+            <param name="semanticHint" value="2014"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.Link_2015"
+               name="%metatype.name.Link_2015"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Link"
+               edithelper="control.diagram.edit.helpers.LinkEditHelper">
+            <param name="semanticHint" value="2015"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Condition_2017"
+               name="%metatype.name.Condition_2017"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Condition_3098"/>
+            <param name="semanticHint" value="2017"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Result_2018"
+               name="%metatype.name.Result_2018"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Result_3107"/>
+            <param name="semanticHint" value="2018"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.Ontology_2029"
+               name="%metatype.name.Ontology_2029"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Ontology"
+               edithelper="control.diagram.edit.helpers.OntologyEditHelper">
+            <param name="semanticHint" value="2029"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.TemplateConstraint_2030"
+               name="%metatype.name.TemplateConstraint_2030"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="TemplateConstraint"
+               edithelper="control.diagram.edit.helpers.TemplateConstraintEditHelper">
+            <param name="semanticHint" value="2030"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Expr_2019"
+               name="%metatype.name.Expr_2019"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Expr_3100"/>
+            <param name="semanticHint" value="2019"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.ControlConstructList_3001"
+               name="%metatype.name.ControlConstructList_3001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ControlConstructList"
+               edithelper="control.diagram.edit.helpers.ControlConstructListEditHelper">
+            <param name="semanticHint" value="3001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Sequence_3002"
+               name="%metatype.name.Sequence_3002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Sequence_2004"/>
+            <param name="semanticHint" value="3002"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.Choice_3003"
+               name="%metatype.name.Choice_3003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Choice"
+               edithelper="control.diagram.edit.helpers.ChoiceEditHelper">
+            <param name="semanticHint" value="3003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.ControlConstructBag_3004"
+               name="%metatype.name.ControlConstructBag_3004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ControlConstructBag"
+               edithelper="control.diagram.edit.helpers.ControlConstructBagEditHelper">
+            <param name="semanticHint" value="3004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Sequence_3005"
+               name="%metatype.name.Sequence_3005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Sequence_2004"/>
+            <param name="semanticHint" value="3005"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Choice_3006"
+               name="%metatype.name.Choice_3006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Choice_3003"/>
+            <param name="semanticHint" value="3006"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_3007"
+               name="%metatype.name.AnyOrder_3007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="AnyOrder"
+               edithelper="control.diagram.edit.helpers.AnyOrderEditHelper">
+            <param name="semanticHint" value="3007"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.ControlConstructBag_3008"
+               name="%metatype.name.ControlConstructBag_3008"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.ControlConstructBag_3004"/>
+            <param name="semanticHint" value="3008"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.Split_3009"
+               name="%metatype.name.Split_3009"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Split"
+               edithelper="control.diagram.edit.helpers.SplitEditHelper">
+            <param name="semanticHint" value="3009"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.ControlConstructBag_3010"
+               name="%metatype.name.ControlConstructBag_3010"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.ControlConstructBag_3004"/>
+            <param name="semanticHint" value="3010"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3011"
+               name="%metatype.name.SplitJoin_3011"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="SplitJoin"
+               edithelper="control.diagram.edit.helpers.SplitJoinEditHelper">
+            <param name="semanticHint" value="3011"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.ControlConstructBag_3012"
+               name="%metatype.name.ControlConstructBag_3012"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.ControlConstructBag_3004"/>
+            <param name="semanticHint" value="3012"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3013"
+               name="%metatype.name.IfThenElse_3013"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="IfThenElse"
+               edithelper="control.diagram.edit.helpers.IfThenElseEditHelper">
+            <param name="semanticHint" value="3013"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Sequence_3014"
+               name="%metatype.name.Sequence_3014"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Sequence_2004"/>
+            <param name="semanticHint" value="3014"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Choice_3015"
+               name="%metatype.name.Choice_3015"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Choice_3003"/>
+            <param name="semanticHint" value="3015"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_3016"
+               name="%metatype.name.AnyOrder_3016"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_3007"/>
+            <param name="semanticHint" value="3016"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Split_3017"
+               name="%metatype.name.Split_3017"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Split_3009"/>
+            <param name="semanticHint" value="3017"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3018"
+               name="%metatype.name.SplitJoin_3018"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3011"/>
+            <param name="semanticHint" value="3018"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3019"
+               name="%metatype.name.IfThenElse_3019"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3013"/>
+            <param name="semanticHint" value="3019"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_3020"
+               name="%metatype.name.RepeatUntil_3020"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="RepeatUntil"
+               edithelper="control.diagram.edit.helpers.RepeatUntilEditHelper">
+            <param name="semanticHint" value="3020"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Sequence_3021"
+               name="%metatype.name.Sequence_3021"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Sequence_2004"/>
+            <param name="semanticHint" value="3021"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Choice_3022"
+               name="%metatype.name.Choice_3022"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Choice_3003"/>
+            <param name="semanticHint" value="3022"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_3023"
+               name="%metatype.name.AnyOrder_3023"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_3007"/>
+            <param name="semanticHint" value="3023"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Split_3024"
+               name="%metatype.name.Split_3024"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Split_3009"/>
+            <param name="semanticHint" value="3024"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3025"
+               name="%metatype.name.SplitJoin_3025"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3011"/>
+            <param name="semanticHint" value="3025"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3026"
+               name="%metatype.name.IfThenElse_3026"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3013"/>
+            <param name="semanticHint" value="3026"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_3027"
+               name="%metatype.name.RepeatWhile_3027"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="RepeatWhile"
+               edithelper="control.diagram.edit.helpers.RepeatWhileEditHelper">
+            <param name="semanticHint" value="3027"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Sequence_3028"
+               name="%metatype.name.Sequence_3028"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Sequence_2004"/>
+            <param name="semanticHint" value="3028"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Choice_3029"
+               name="%metatype.name.Choice_3029"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Choice_3003"/>
+            <param name="semanticHint" value="3029"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_3030"
+               name="%metatype.name.AnyOrder_3030"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_3007"/>
+            <param name="semanticHint" value="3030"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Split_3031"
+               name="%metatype.name.Split_3031"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Split_3009"/>
+            <param name="semanticHint" value="3031"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3032"
+               name="%metatype.name.SplitJoin_3032"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3011"/>
+            <param name="semanticHint" value="3032"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3033"
+               name="%metatype.name.IfThenElse_3033"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3013"/>
+            <param name="semanticHint" value="3033"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.Perform_3034"
+               name="%metatype.name.Perform_3034"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Perform"
+               edithelper="control.diagram.edit.helpers.PerformEditHelper">
+            <param name="semanticHint" value="3034"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.RemoteProcess_3104"
+               name="%metatype.name.RemoteProcess_3104"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="RemoteProcess"
+               edithelper="control.diagram.edit.helpers.RemoteProcessEditHelper">
+            <param name="semanticHint" value="3104"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Input_3105"
+               name="%metatype.name.Input_3105"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Input_2027"/>
+            <param name="semanticHint" value="3105"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Output_3106"
+               name="%metatype.name.Output_3106"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Output_2028"/>
+            <param name="semanticHint" value="3106"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.Result_3107"
+               name="%metatype.name.Result_3107"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Result"
+               edithelper="control.diagram.edit.helpers.ResultEditHelper">
+            <param name="semanticHint" value="3107"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.ValueSource_3094"
+               name="%metatype.name.ValueSource_3094"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ValueSource"
+               edithelper="control.diagram.edit.helpers.ValueSourceEditHelper">
+            <param name="semanticHint" value="3094"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.ValueForm_3095"
+               name="%metatype.name.ValueForm_3095"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ValueForm"
+               edithelper="control.diagram.edit.helpers.ValueFormEditHelper">
+            <param name="semanticHint" value="3095"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.ValueFunction_3096"
+               name="%metatype.name.ValueFunction_3096"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ValueFunction"
+               edithelper="control.diagram.edit.helpers.ValueFunctionEditHelper">
+            <param name="semanticHint" value="3096"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.ResultVar_3097"
+               name="%metatype.name.ResultVar_3097"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ResultVar"
+               edithelper="control.diagram.edit.helpers.ResultVarEditHelper">
+            <param name="semanticHint" value="3097"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.Condition_3098"
+               name="%metatype.name.Condition_3098"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Condition"
+               edithelper="control.diagram.edit.helpers.ConditionEditHelper">
+            <param name="semanticHint" value="3098"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Condition_3099"
+               name="%metatype.name.Condition_3099"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Condition_3098"/>
+            <param name="semanticHint" value="3099"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.Expr_3100"
+               name="%metatype.name.Expr_3100"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Expr"
+               edithelper="control.diagram.edit.helpers.ExprEditHelper">
+            <param name="semanticHint" value="3100"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Expr_3101"
+               name="%metatype.name.Expr_3101"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Expr_3100"/>
+            <param name="semanticHint" value="3101"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Condition_3108"
+               name="%metatype.name.Condition_3108"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Condition_3098"/>
+            <param name="semanticHint" value="3108"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Expr_3109"
+               name="%metatype.name.Expr_3109"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Expr_3100"/>
+            <param name="semanticHint" value="3109"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.TemplateProcess_3110"
+               name="%metatype.name.TemplateProcess_3110"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="TemplateProcess"
+               edithelper="control.diagram.edit.helpers.TemplateProcessEditHelper">
+            <param name="semanticHint" value="3110"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.Produce_3043"
+               name="%metatype.name.Produce_3043"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Produce"
+               edithelper="control.diagram.edit.helpers.ProduceEditHelper">
+            <param name="semanticHint" value="3043"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.ValueSource_3044"
+               name="%metatype.name.ValueSource_3044"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.ValueSource_3094"/>
+            <param name="semanticHint" value="3044"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.ValueForm_3045"
+               name="%metatype.name.ValueForm_3045"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.ValueForm_3095"/>
+            <param name="semanticHint" value="3045"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.ValueFunction_3046"
+               name="%metatype.name.ValueFunction_3046"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.ValueFunction_3096"/>
+            <param name="semanticHint" value="3046"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.Set_3047"
+               name="%metatype.name.Set_3047"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Set"
+               edithelper="control.diagram.edit.helpers.SetEditHelper">
+            <param name="semanticHint" value="3047"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.ValueSource_3048"
+               name="%metatype.name.ValueSource_3048"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.ValueSource_3094"/>
+            <param name="semanticHint" value="3048"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.ValueForm_3049"
+               name="%metatype.name.ValueForm_3049"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.ValueForm_3095"/>
+            <param name="semanticHint" value="3049"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.ValueFunction_3050"
+               name="%metatype.name.ValueFunction_3050"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.ValueFunction_3096"/>
+            <param name="semanticHint" value="3050"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Sequence_3051"
+               name="%metatype.name.Sequence_3051"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Sequence_2004"/>
+            <param name="semanticHint" value="3051"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Choice_3052"
+               name="%metatype.name.Choice_3052"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Choice_3003"/>
+            <param name="semanticHint" value="3052"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_3053"
+               name="%metatype.name.AnyOrder_3053"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_3007"/>
+            <param name="semanticHint" value="3053"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Split_3054"
+               name="%metatype.name.Split_3054"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Split_3009"/>
+            <param name="semanticHint" value="3054"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3055"
+               name="%metatype.name.SplitJoin_3055"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3011"/>
+            <param name="semanticHint" value="3055"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3056"
+               name="%metatype.name.IfThenElse_3056"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3013"/>
+            <param name="semanticHint" value="3056"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_3057"
+               name="%metatype.name.RepeatUntil_3057"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_3020"/>
+            <param name="semanticHint" value="3057"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_3058"
+               name="%metatype.name.RepeatUntil_3058"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_3020"/>
+            <param name="semanticHint" value="3058"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_3059"
+               name="%metatype.name.RepeatWhile_3059"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_3027"/>
+            <param name="semanticHint" value="3059"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_3060"
+               name="%metatype.name.RepeatUntil_3060"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_3020"/>
+            <param name="semanticHint" value="3060"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Perform_3061"
+               name="%metatype.name.Perform_3061"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Perform_3034"/>
+            <param name="semanticHint" value="3061"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Produce_3062"
+               name="%metatype.name.Produce_3062"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Produce_3043"/>
+            <param name="semanticHint" value="3062"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Set_3063"
+               name="%metatype.name.Set_3063"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Set_3047"/>
+            <param name="semanticHint" value="3063"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Condition_3111"
+               name="%metatype.name.Condition_3111"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Condition_3098"/>
+            <param name="semanticHint" value="3111"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Expr_3112"
+               name="%metatype.name.Expr_3112"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Expr_3100"/>
+            <param name="semanticHint" value="3112"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_3065"
+               name="%metatype.name.RepeatWhile_3065"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_3027"/>
+            <param name="semanticHint" value="3065"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Perform_3066"
+               name="%metatype.name.Perform_3066"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Perform_3034"/>
+            <param name="semanticHint" value="3066"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Produce_3067"
+               name="%metatype.name.Produce_3067"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Produce_3043"/>
+            <param name="semanticHint" value="3067"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Set_3068"
+               name="%metatype.name.Set_3068"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Set_3047"/>
+            <param name="semanticHint" value="3068"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Condition_3113"
+               name="%metatype.name.Condition_3113"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Condition_3098"/>
+            <param name="semanticHint" value="3113"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Expr_3114"
+               name="%metatype.name.Expr_3114"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Expr_3100"/>
+            <param name="semanticHint" value="3114"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_3070"
+               name="%metatype.name.RepeatWhile_3070"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_3027"/>
+            <param name="semanticHint" value="3070"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Perform_3071"
+               name="%metatype.name.Perform_3071"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Perform_3034"/>
+            <param name="semanticHint" value="3071"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Produce_3072"
+               name="%metatype.name.Produce_3072"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Produce_3043"/>
+            <param name="semanticHint" value="3072"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Set_3073"
+               name="%metatype.name.Set_3073"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Set_3047"/>
+            <param name="semanticHint" value="3073"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Condition_3115"
+               name="%metatype.name.Condition_3115"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Condition_3098"/>
+            <param name="semanticHint" value="3115"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Expr_3116"
+               name="%metatype.name.Expr_3116"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Expr_3100"/>
+            <param name="semanticHint" value="3116"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_3076"
+               name="%metatype.name.RepeatUntil_3076"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_3020"/>
+            <param name="semanticHint" value="3076"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_3077"
+               name="%metatype.name.RepeatWhile_3077"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_3027"/>
+            <param name="semanticHint" value="3077"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Perform_3078"
+               name="%metatype.name.Perform_3078"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Perform_3034"/>
+            <param name="semanticHint" value="3078"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Produce_3079"
+               name="%metatype.name.Produce_3079"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Produce_3043"/>
+            <param name="semanticHint" value="3079"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Set_3080"
+               name="%metatype.name.Set_3080"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Set_3047"/>
+            <param name="semanticHint" value="3080"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.ControlConstructBag_3082"
+               name="%metatype.name.ControlConstructBag_3082"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.ControlConstructBag_3004"/>
+            <param name="semanticHint" value="3082"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_3083"
+               name="%metatype.name.AnyOrder_3083"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_3007"/>
+            <param name="semanticHint" value="3083"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Split_3084"
+               name="%metatype.name.Split_3084"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Split_3009"/>
+            <param name="semanticHint" value="3084"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3085"
+               name="%metatype.name.SplitJoin_3085"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3011"/>
+            <param name="semanticHint" value="3085"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3086"
+               name="%metatype.name.IfThenElse_3086"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3013"/>
+            <param name="semanticHint" value="3086"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_3087"
+               name="%metatype.name.RepeatUntil_3087"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_3020"/>
+            <param name="semanticHint" value="3087"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_3088"
+               name="%metatype.name.RepeatWhile_3088"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_3027"/>
+            <param name="semanticHint" value="3088"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Perform_3089"
+               name="%metatype.name.Perform_3089"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Perform_3034"/>
+            <param name="semanticHint" value="3089"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Produce_3090"
+               name="%metatype.name.Produce_3090"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Produce_3043"/>
+            <param name="semanticHint" value="3090"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.Set_3091"
+               name="%metatype.name.Set_3091"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Set_3047"/>
+            <param name="semanticHint" value="3091"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <specializationType
+               id="net.sf.ictalive.service.owlseditor.diagram.ControlConstructList_3093"
+               name="%metatype.name.ControlConstructList_3093"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.service.owlseditor.diagram.ControlConstructList_3001"/>
+            <param name="semanticHint" value="3093"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.LocBinding_4001"
+               name="%metatype.name.LocBinding_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="LocBinding"
+               edithelper="control.diagram.edit.helpers.LocBindingEditHelper">
+            <param name="semanticHint" value="4001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.InputBinding_4002"
+               name="%metatype.name.InputBinding_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="InputBinding"
+               edithelper="control.diagram.edit.helpers.InputBindingEditHelper">
+            <param name="semanticHint" value="4002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.OutputBinding_4003"
+               name="%metatype.name.OutputBinding_4003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="OutputBinding"
+               edithelper="control.diagram.edit.helpers.OutputBindingEditHelper">
+            <param name="semanticHint" value="4003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.LinkBinding_4004"
+               name="%metatype.name.LinkBinding_4004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="LinkBinding"
+               edithelper="control.diagram.edit.helpers.LinkBindingEditHelper">
+            <param name="semanticHint" value="4004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.example.org">
+         <metamodelType
+               id="net.sf.ictalive.service.owlseditor.diagram.OutputBindingSource_4005"
+               name="%metatype.name.OutputBindingSource_4005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="outputBindingSource"
+               edithelper="control.diagram.edit.helpers.OutputBindingSourceEditHelper">
+            <param name="semanticHint" value="4005"/>
+         </metamodelType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="net.sf.ictalive.service.owlseditor.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="net.sf.ictalive.service.owlseditor.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="net.sf.ictalive.service.owlseditor.diagram.TypeContext">
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.OuterProcess_1000"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Input_2027"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Output_2028"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Loc_2003"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Sequence_2004"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Choice_2005"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_2006"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Split_2007"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_2008"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_2009"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_2010"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_2011"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Perform_2012"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Produce_2013"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Set_2014"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Link_2015"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Condition_2017"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Result_2018"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Ontology_2029"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.TemplateConstraint_2030"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Expr_2019"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ControlConstructList_3001"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Sequence_3002"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Choice_3003"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ControlConstructBag_3004"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Sequence_3005"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Choice_3006"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_3007"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ControlConstructBag_3008"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Split_3009"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ControlConstructBag_3010"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3011"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ControlConstructBag_3012"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3013"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Sequence_3014"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Choice_3015"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_3016"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Split_3017"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3018"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3019"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_3020"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Sequence_3021"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Choice_3022"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_3023"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Split_3024"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3025"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3026"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_3027"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Sequence_3028"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Choice_3029"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_3030"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Split_3031"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3032"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3033"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Perform_3034"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.RemoteProcess_3104"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Input_3105"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Output_3106"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Result_3107"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ValueSource_3094"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ValueForm_3095"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ValueFunction_3096"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ResultVar_3097"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Condition_3098"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Condition_3099"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Expr_3100"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Expr_3101"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Condition_3108"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Expr_3109"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.TemplateProcess_3110"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Produce_3043"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ValueSource_3044"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ValueForm_3045"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ValueFunction_3046"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Set_3047"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ValueSource_3048"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ValueForm_3049"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ValueFunction_3050"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Sequence_3051"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Choice_3052"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_3053"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Split_3054"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3055"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3056"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_3057"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_3058"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_3059"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_3060"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Perform_3061"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Produce_3062"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Set_3063"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Condition_3111"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Expr_3112"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_3065"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Perform_3066"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Produce_3067"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Set_3068"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Condition_3113"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Expr_3114"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_3070"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Perform_3071"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Produce_3072"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Set_3073"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Condition_3115"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Expr_3116"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_3076"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_3077"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Perform_3078"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Produce_3079"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Set_3080"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ControlConstructBag_3082"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.AnyOrder_3083"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Split_3084"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3085"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3086"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.RepeatUntil_3087"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.RepeatWhile_3088"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Perform_3089"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Produce_3090"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Set_3091"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ControlConstructList_3093"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.LocBinding_4001"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.InputBinding_4002"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.OutputBinding_4003"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.LinkBinding_4004"/>
+         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.OutputBindingSource_4005"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="net.sf.ictalive.service.owlseditor.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="net.sf.ictalive.service.owlseditor.diagram"
+           properties="isURIEditorInput"
+           class="control.diagram.part.ControlUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="net.sf.ictalive.service.owlseditor.diagram.resourceContent"/>
+			<contentExtension pattern="net.sf.ictalive.service.owlseditor.diagram.domainResourceContent"/>
+            <contentExtension pattern="net.sf.ictalive.service.owlseditor.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="net.sf.ictalive.service.owlseditor.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+
+<extension point="org.eclipse.ui.popupMenus" id="owls2xmiPopup">
+<objectContribution 
+      id="org.eclipse.ui.articles.action.contribution.popup.object"
+   objectClass="org.eclipse.core.resources.IResource"
+   nameFilter="*.owl">
+      <action
+         id="net.sf.ictalive.service.owlseditor.diagram.actions.OWLS2XMIAction" 
+         label="Convert to service description diagram"
+         menubarPath="additions" 
+      class="control.diagram.util.OWLS2XMIAction"> 
+      </action> 
+   </objectContribution> 
+</extension>
+
+<extension point="org.eclipse.ui.popupMenus" id="owlPopup">
+<objectContribution 
+      id="org.eclipse.ui.articles.action.contribution.popup.object"
+   objectClass="org.eclipse.core.resources.IResource"
+   nameFilter="*.owl">
+      <action
+         id="net.sf.ictalive.service.owlseditor.diagram.actions.publishOWLSAction" 
+         label="Publish to repository"
+         menubarPath="additions" 
+      class="control.diagram.util.PublishOWLSAction"> 
+      </action> 
+   </objectContribution> 
+</extension>
+
+<extension point="org.eclipse.ui.popupMenus" id="owlsPopup">
+<objectContribution 
+      id="org.eclipse.ui.articles.action.contribution.popup.object"
+   objectClass="org.eclipse.core.resources.IResource"
+   nameFilter="*.owls">
+      <action
+         id="net.sf.ictalive.service.owlseditor.diagram.actions.publishOWLSAction" 
+         label="Publish to repository"
+         menubarPath="additions" 
+      class="control.diagram.util.PublishOWLSAction"> 
+      </action> 
+   </objectContribution> 
+</extension>
+
+<extension point="org.eclipse.ui.popupMenus" id="operaPopup">
+<objectContribution 
+      id="org.eclipse.ui.articles.action.contribution.popup.object"
+   objectClass="org.eclipse.core.resources.IResource"
+   nameFilter="*.opera">
+      <action
+         id="net.sf.ictalive.service.owlseditor.diagram.actions.publishOWLSAction" 
+         label="Publish to repository"
+         menubarPath="additions" 
+      class="control.diagram.util.PublishOWLSAction"> 
+      </action> 
+   </objectContribution> 
+</extension>
+
+
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="net.sf.ictalive.service.owlseditor.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="control.diagram.navigator.ControlNavigatorContentProvider" 
+            labelProvider="control.diagram.navigator.ControlNavigatorLabelProvider"
+            icon="icons/obj16/ControlDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="control_diagram"/>
+               </and>
+               <instanceof value="control.diagram.navigator.ControlAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="net.sf.ictalive.service.owlseditor.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="control.diagram.navigator.ControlAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="net.sf.ictalive.service.owlseditor.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="net.sf.ictalive.service.owlseditor.diagram.navigatorSorter" 
+               class="control.diagram.navigator.ControlNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="control_diagram"/>
+                  </and>
+                  <instanceof value="control.diagram.navigator.ControlAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="net.sf.ictalive.service.owlseditor.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="control.diagram.navigator.ControlDomainNavigatorContentProvider" 
+            labelProvider="control.diagram.navigator.ControlDomainNavigatorLabelProvider"
+            icon="icons/obj16/ControlDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="control"/>
+               </and>
+               <instanceof value="control.diagram.navigator.ControlDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="control.diagram.navigator.ControlDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="net.sf.ictalive.service.owlseditor.diagram.navigatorActionProvider"
+            class="control.diagram.navigator.ControlNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="control.diagram.navigator.ControlAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="net.sf.ictalive.service.owlseditor.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="net.sf.ictalive.service.owlseditor.diagram.navigatorLinkHelper"
+            class="control.diagram.navigator.ControlNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="net.sf.ictalive.service.owlseditor.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="control.diagram.navigator.ControlAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="control.diagram.part.ControlDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="control.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="control.diagram.updateDiagram"
+         contextId="control.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="net.sf.ictalive.service.owlseditor.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="control.diagram.part.ControlDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="control.diagram.edit.parts.OuterProcessEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="false"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="net.sf.ictalive.service.owlseditor.diagram.ExportOWLSAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="control.diagram.part.ControlDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="control.diagram.edit.parts.OuterProcessEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>   
+
+  <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="false"?>
+      <category id="control.diagram.part.ControlDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="net.sf.ictalive.service.owlseditor.diagram.ExportOWLSAction"
+         name="Export to OWL-S"
+         categoryId="control.diagram.part.ControlDiagramEditorID"
+         defaultHandler="control.diagram.part.ExportOWLSAction"/>
+   </extension>
+
+   
+   
+   
+   
+   
+   
+   
+      
+ 
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+
+
+
+
+   <extension point="net.sf.ictalive.aliveclipse.dashboard.actions">
+      <client
+            class="net.sf.ictalive.service.owlseditor.diagram.dashboard.DefineServiceTemplateDashboardAction">
+      </client>
+   </extension>
+
+
+
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <viewerContribution
+            targetID="org.eclipse.ui.navigator.ProjectExplorer#PopupMenu"
+            id="com.ibm.examples.viewerContribution.projectExplorer">
+         <action
+               class="control.diagram.util.PublishOWLSAction"
+               enablesFor="*.*"
+               icon="icons/obj16/ControlDiagramFile.gif"
+               id="com.ibm.examples.projectExplorerAction"
+               label="Publish to repository"
+               menubarPath="additions">
+            </action>               
+      </viewerContribution>
+   </extension>
+<extension point="org.eclipse.gmf.runtime.common.ui.services.markerNavigationProviders" id="markers-navigation">
+      <?gmfgen generated="true"?>
+      <MarkerNavigationProvider class="control.diagram.providers.ControlMarkerNavigationProvider">
+         <MarkerType name="net.sf.ictalive.service.owlseditor.diagram.diagnostic"/>
+         <Priority name="Lowest"/>
+      </MarkerNavigationProvider>
+   </extension>
+
+<extension id="diagnostic" name="Control Plugin problems" point="org.eclipse.core.resources.markers">
+      <?gmfgen generated="true"?>
+      <super type="org.eclipse.core.resources.problemmarker"/>
+      <super type="org.eclipse.gmf.runtime.common.ui.services.marker"/>
+      <persistent value="true"/>
+   </extension><extension id="validationDecoratorProvider" name="ValidationDecorations" point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="control.diagram.providers.ControlValidationDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.diagram.ui.editparts.IPrimaryEditPart(org.eclipse.gmf.runtime.diagram.ui)" id="PRIMARY_VIEW"/>
+         <context decoratorTargets="PRIMARY_VIEW"/>
+      </decoratorProvider>
+   </extension>
+
+<extension point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders" id="decorator-provider">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="control.diagram.providers.ControlShortcutsDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
+            <method name="getType()" value="2027,2028,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2017,2018,2029,2030,2019"/>
+         </object>
+         <context decoratorTargets="generated-top-nodes"/>
+      </decoratorProvider>
+   </extension>
+
+<extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isShortcut">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="net.sf.ictalive.service.owlseditor.diagram.ShortcutPropertyTester"
+           type="org.eclipse.gmf.runtime.notation.View"
+           namespace="net.sf.ictalive.service.owlseditor.diagram"
+           properties="isShortcut"
+           class="control.diagram.part.ControlShortcutPropertyTester">
+       </propertyTester>
+   </extension>
+<extension
+      id="adaptorPopup"
+      point="org.eclipse.ui.popupMenus">
+   <objectContribution
+         id="org.eclipse.ui.articles.action.contribution.popup.object"
+         nameFilter="*.adaptor"
+         objectClass="org.eclipse.core.resources.IResource">
+      <action
+            class="control.diagram.util.PublishOWLSAction"
+            id="net.sf.ictalive.service.owlseditor.diagram.actions.publishOWLSAction"
+            label="Publish to repository"
+            menubarPath="additions">
+      </action>
+   </objectContribution>
+</extension>
+
+
+
+
+
+
+
+
+   <!-- optionally, specify keybindings -->
+</plugin>
+

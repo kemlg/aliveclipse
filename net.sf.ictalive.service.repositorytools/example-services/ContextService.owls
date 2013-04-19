@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:expr="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
+    xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
+    xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://services.alive.calicojack.co.uk/ContextServiceWrapper"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:grounding="http://www.daml.org/services/owl-s/1.2/Grounding.owl#"
+    xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
+    xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://services.alive.calicojack.co.uk/ContextServiceWrapper">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl"/>
+  </owl:Ontology>
+  <service:Service rdf:ID="getContext">
+    <service:supports>
+      <grounding:WsdlGrounding rdf:ID="getContextWSDLGrounding"/>
+    </service:supports>
+    <service:describedBy>
+      <process:AtomicProcess rdf:ID="getContextProcess"/>
+    </service:describedBy>
+    <service:presents>
+      <profile:Profile rdf:ID="getContextProfile"/>
+    </service:presents>
+  </service:Service>
+  <profile:Profile rdf:about="#getContextProfile">
+    <profile:hasOutput>
+      <process:Output rdf:ID="return">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#ContextType</process:parameterType>
+      </process:Output>
+    </profile:hasOutput>
+    <profile:hasInput>
+      <process:Input rdf:ID="rootIdentity">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Participant</process:parameterType>
+      </process:Input>
+    </profile:hasInput>
+    <service:presentedBy rdf:resource="#getContext"/>
+  </profile:Profile>
+  <process:AtomicProcess rdf:about="#getContextProcess">
+    <service:describes rdf:resource="#getContext"/>
+    <process:hasOutput rdf:resource="#return"/>
+    <process:hasInput rdf:resource="#rootIdentity"/>
+  </process:AtomicProcess>
+  <grounding:WsdlGrounding rdf:about="#getContextWSDLGrounding">
+    <service:supportedBy rdf:resource="#getContext"/>
+    <grounding:hasAtomicProcessGrounding>
+      <grounding:WsdlAtomicProcessGrounding rdf:ID="getContextWSDLAtomicGrounding"/>
+    </grounding:hasAtomicProcessGrounding>
+  </grounding:WsdlGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:about="#getContextWSDLAtomicGrounding">
+    <grounding:wsdlOperation>
+      <grounding:WsdlOperationRef>
+        <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >urn:cj-services#getContext</grounding:operation>
+        <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >urn:cj-services#ContextService</grounding:portType>
+      </grounding:WsdlOperationRef>
+    </grounding:wsdlOperation>
+    <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >urn:cj-services#getContextResponse</grounding:wsdlOutputMessage>
+    <grounding:wsdlOutput>
+      <grounding:WsdlOutputMessageMap rdf:ID="return_OutMessageMap">
+        <grounding:owlsParameter rdf:resource="#return"/>
+        <grounding:xsltTransformationString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:wsvc="urn:cj-services" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ont="http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#" xmlns:ns0="urn:cj-domain" xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" version="1.0"&gt;&#xD;
+  &lt;xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes" /&gt;&#xD;
+  &lt;xsl:template match="/"&gt;&#xD;
+    &lt;rdf:RDF&gt;&#xD;
+      &lt;xsl:for-each select="./wsvc:getContextResponse/wsvc:return"&gt;&#xD;
+        &lt;ont:ContextType&gt;&#xD;
+          &lt;xsl:call-template name="extract_ont_ContextType" /&gt;&#xD;
+        &lt;/ont:ContextType&gt;&#xD;
+      &lt;/xsl:for-each&gt;&#xD;
+    &lt;/rdf:RDF&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="extract_ont_Participant"&gt;&#xD;
+    &lt;xsl:for-each select="./ns0:objID"&gt;&#xD;
+      &lt;xsl:attribute name="about" namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;&#xD;
+        &lt;xsl:value-of select="." /&gt;&#xD;
+      &lt;/xsl:attribute&gt;&#xD;
+    &lt;/xsl:for-each&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="extract_ont_ContextType"&gt;&#xD;
+    &lt;xsl:for-each select="./ns0:objID"&gt;&#xD;
+      &lt;xsl:attribute name="about" namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;&#xD;
+        &lt;xsl:value-of select="." /&gt;&#xD;
+      &lt;/xsl:attribute&gt;&#xD;
+    &lt;/xsl:for-each&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+&#xD;
+</grounding:xsltTransformationString>
+      </grounding:WsdlOutputMessageMap>
+    </grounding:wsdlOutput>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap rdf:ID="rootIdentity_InputMessageMap">
+        <grounding:xsltTransformationString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:wsvc="urn:cj-services" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ont="http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#" xmlns:osvc="http://services.alive.calicojack.co.uk/ContextServiceWrapper#" xmlns:ns0="urn:cj-domain" xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" version="1.0"&gt;&#xD;
+  &lt;xsl:output method="xml" /&gt;&#xD;
+  &lt;xsl:template match="/rdf:RDF"&gt;&#xD;
+    &lt;!--Creating transformation of {http://services.alive.calicojack.co.uk/ContextServiceWrapper#getContext}.{#http://services.alive.calicojack.co.uk/ContextServiceWrapper#rootIdentity} to {$uk.co.calicojack.alive.services.ContextServiceWrapper.getContext}.{#0}--&gt;&#xD;
+    &lt;ns0:Participant&gt;&#xD;
+      &lt;xsl:for-each select="./ont:Participant"&gt;&#xD;
+        &lt;xsl:call-template name="gen_uk.co.calicojack.alive.domain.Participant" /&gt;&#xD;
+      &lt;/xsl:for-each&gt;&#xD;
+    &lt;/ns0:Participant&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.Participant"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Participant}.{id} to Participant.objID--&gt;&#xD;
+    &lt;ns0:objID&gt;&#xD;
+      &lt;xsl:value-of select="./@rdf:about" /&gt;&#xD;
+    &lt;/ns0:objID&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.ContextType"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#ContextType}.{id} to ContextType.objID--&gt;&#xD;
+    &lt;ns0:objID&gt;&#xD;
+      &lt;xsl:value-of select="./@rdf:about" /&gt;&#xD;
+    &lt;/ns0:objID&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+&#xD;
+</grounding:xsltTransformationString>
+        <grounding:owlsParameter rdf:resource="#rootIdentity"/>
+        <grounding:wsdlMessagePart>urn:cj-services#rootIdentity</grounding:wsdlMessagePart>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >urn:cj-services#getContext</grounding:wsdlInputMessage>
+    <grounding:owlsProcess rdf:resource="#getContextProcess"/>
+    <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://localhost:58332?wsdl</grounding:wsdlDocument>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlOperationRef>
+    <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >urn:cj-services#ContextService</grounding:portType>
+  </grounding:WsdlOperationRef>
+</rdf:RDF>

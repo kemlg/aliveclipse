@@ -1,0 +1,102 @@
+// Created by: Athanasios Staikopoulos
+// Copyright of Trinity College Dublin (TCD), Univeristy of Dublin, IE
+
+library Actions2OperaUtil;
+
+modeltype Opera 'strict' uses OM('http://ict-alive.sourceforge.net/operetta/OM/1.0');
+modeltype Notation "strict" uses notation('http://www.eclipse.org/gmf/runtime/1.0.2/notation');
+modeltype Actions 'strict' uses actions('http://ict-alive.sourceforge.net/coordination/actions');
+modeltype OWLS 'strict' uses process('http://ict-alive.sourceforge.net/owls/process');
+
+// a;b;c;d
+query getParameters(in expression:String, in delimeter:String): Sequence(String){
+	
+	var exp := expression;
+	var index := exp.indexOf(delimeter);
+	var lst: Sequence(String)= Sequence{} ;
+
+	while(index>0){
+		var arg:=exp.substringBefore(delimeter);
+		lst := lst->append( arg );
+			
+		exp := exp.substringAfter(delimeter).normalizeSpace() ;
+		index := exp.indexOf(delimeter);		
+	};
+	
+	var arg:=exp.normalizeSpace() ;
+	lst := lst->append( arg );
+
+	return lst;	
+}
+
+query getArguments(in expression:String): List(String){
+	
+	var exp := expression;
+	var index := exp.indexOf(",");
+	var lst: List(String) ;
+	
+	while(index>0){
+		var arg:=exp.substringAfter("(").substringBefore(",");
+		lst->add( arg );
+			
+		exp := "("+exp.substringAfter(",").normalizeSpace() ;
+		index := exp.indexOf(",");		
+	};
+	
+	var arg:=exp.substringAfter("(").substringBefore(")");
+	lst->add( arg );
+	
+	return lst;	
+}
+
+query getPredicate(exp:String):String{
+	if(exp.substringBefore("(")= null) then
+		return exp 
+	else
+		return exp.substringBefore("(")
+	endif ;
+}
+
+mapping createEmptyIS():Opera::IS{
+}
+
+mapping createEmptyNS():Opera::NS{	
+}
+
+mapping createEmptyCS():Opera::CS{	
+}
+
+mapping addISNotation():Notation::Diagram{
+	name := "IS_Diagram";
+	type := "SS";
+	measurementUnit := MeasurementUnit::Pixel;
+	
+	styles += object DiagramStyle{		
+	};
+}
+
+mapping addSSNotation():Notation::Diagram{
+	name := "SS_Diagram";
+	type := "IS";		
+	measurementUnit := MeasurementUnit::Pixel;
+	//element	:= object ER ss.;
+	styles += object DiagramStyle{		
+	};
+}
+
+query actions::CompositeAction::getComposedOf():Bag(actions::Action){
+	
+	var perform:= 
+		if (self.composedOf.oclIsTypeOf(OWLS::AnyOrder)) then
+			self.composedOf.oclAsType(OWLS::AnyOrder).components.allInstances(process::Perform)
+		else
+			self.composedOf.oclAsType(OWLS::_Sequence).components.allInstances(process::Perform)
+		endif;
+	
+	if(perform=null or perform![process::Perform].oclIsUndefined()) then {
+		return Bag{} 
+	}else{	
+		var pr:= perform ->collect(x|x.process);		
+		return	pr.oclAsType(actions::Action);
+	}endif
+}

@@ -1,0 +1,22 @@
+alive-templates
+Adan Scotney - a.scotney AT bath DOT ac DOT uk
+==============================================
+
+An implementation of the service template concept in Java using the OWL-S 
+API.
+
+See LICENSE for copying conditions.
+
+To build, change build.properties to point to the location of the ALIVE 
+common dependencies[1]. Then use ant to build.
+
+Supported ant targets:
+	jar (default)  - Build JAR
+	clean          - Clean build
+	runtests       - Run unit tests
+	javadoc        - Build Javadocs
+
+A tutorial is provided, and javadocs give a description of the use of the API.
+
+[1] http://alis.cs.bath.ac.uk/anonsvn/alive-code/alive-common-deps/trunk/
+

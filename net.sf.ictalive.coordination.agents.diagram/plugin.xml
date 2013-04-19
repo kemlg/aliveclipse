@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="mas_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="mas_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="net.sf.ictalive.coordination.agents.diagram.part.CoordinationDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/AgentsDiagramFile.gif"
+         extensions="mas_diagram"
+         default="true"
+         class="net.sf.ictalive.coordination.agents.diagram.part.CoordinationDiagramEditor"
+         matchingStrategy="net.sf.ictalive.coordination.agents.diagram.part.CoordinationMatchingStrategy"
+         contributorClass="net.sf.ictalive.coordination.agents.diagram.part.CoordinationDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="net.sf.ictalive.coordination.agents.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/AgentsDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="net.sf.ictalive.coordination.agents.diagram.part.CoordinationCreationWizard"
+  	     id="net.sf.ictalive.coordination.agents.diagram.part.CoordinationCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="net.sf.ictalive.coordination.agents.diagram.InitDiagram"
+            nameFilter="*.mas"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="net.sf.ictalive.coordination.agents.diagram.part.CoordinationInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="net.sf.ictalive.coordination.agents.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="AgentsPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="net.sf.ictalive.coordination.agents.diagram.part.CoordinationDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="AgentsPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="net.sf.ictalive.coordination.agents.diagram.part.CoordinationDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="AgentsRender">
+         <Priority name="Lowest"/>
+         <ViewId id="net.sf.ictalive.coordination.agents.diagram.part.CoordinationDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="net.sf.ictalive.coordination.agents.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="Coordination.diagram.general"
+            name="%prefpage.Coordination.diagram.general"
+            class="net.sf.ictalive.coordination.agents.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="Coordination.diagram.appearance"
+            name="%prefpage.Coordination.diagram.appearance"
+            category="Coordination.diagram.general"
+            class="net.sf.ictalive.coordination.agents.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="Coordination.diagram.connections"
+            name="%prefpage.Coordination.diagram.connections"
+            category="Coordination.diagram.general"
+            class="net.sf.ictalive.coordination.agents.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="Coordination.diagram.printing"
+            name="%prefpage.Coordination.diagram.printing"
+            category="Coordination.diagram.general"
+            class="net.sf.ictalive.coordination.agents.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="Coordination.diagram.rulersAndGrid"
+            name="%prefpage.Coordination.diagram.rulersAndGrid"
+            category="Coordination.diagram.general"
+            class="net.sf.ictalive.coordination.agents.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="net.sf.ictalive.coordination.agents.diagram"
+            labelProvider="net.sf.ictalive.coordination.agents.diagram.sheet.CoordinationSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="net.sf.ictalive.coordination.agents.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="net.sf.ictalive.coordination.agents.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="net.sf.ictalive.coordination.agents.diagram.sheet.CoordinationPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="net.sf.ictalive.coordination.agents.diagram.navigator.CoordinationAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="net.sf.ictalive.coordination.agents.diagram.providers.CoordinationViewProvider">
+         <Priority name="Lowest"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Agents"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2004,2005,2006,2007"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4003,4004"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="net.sf.ictalive.coordination.agents.diagram.providers.CoordinationEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="Agents"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2004,2005,2006,2007"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4003,4004"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5004,5005,5006,5007"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value=""/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="net.sf.ictalive.coordination.agents.diagram.providers.CoordinationModelingAssistantProvider">
+         <Priority name="Lowest"/>
+         <object class="net.sf.ictalive.coordination.agents.diagram.edit.parts.MasModelEditPart" id="MasModel_1000"/>
+         <object class="net.sf.ictalive.coordination.agents.diagram.edit.parts.AgentEditPart" id="Agent_2004"/>
+         <object class="net.sf.ictalive.coordination.agents.diagram.edit.parts.RoleEditPart" id="Role_2005"/>
+         <object class="net.sf.ictalive.coordination.agents.diagram.edit.parts.AtomicActionEditPart" id="AtomicAction_2006"/>
+         <object class="net.sf.ictalive.coordination.agents.diagram.edit.parts.CompositeActionEditPart" id="CompositeAction_2007"/>
+         <context elements="MasModel_1000,Agent_2004,Role_2005,AtomicAction_2006,CompositeAction_2007"/>
+      </modelingAssistantProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="net.sf.ictalive.coordination.agents.diagram.providers.CoordinationIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="net.sf.ictalive.coordination.agents.diagram.providers.CoordinationParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/coordination/agents">
+         <metamodelType
+               id="net.sf.ictalive.coordination.agents.diagram.MasModel_1000"
+               name="%metatype.name.MasModel_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="MasModel"
+               edithelper="net.sf.ictalive.coordination.agents.diagram.edit.helpers.MasModelEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/coordination/agents">
+         <metamodelType
+               id="net.sf.ictalive.coordination.agents.diagram.Agent_2004"
+               name="%metatype.name.Agent_2004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Agent"
+               edithelper="net.sf.ictalive.coordination.agents.diagram.edit.helpers.AgentEditHelper">
+            <param name="semanticHint" value="2004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/operetta/OM/1.0">
+         <metamodelType
+               id="net.sf.ictalive.coordination.agents.diagram.Role_2005"
+               name="%metatype.name.Role_2005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Role"
+               edithelper="net.sf.ictalive.coordination.agents.diagram.edit.helpers.RoleEditHelper">
+            <param name="semanticHint" value="2005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/coordination/actions">
+         <metamodelType
+               id="net.sf.ictalive.coordination.agents.diagram.AtomicAction_2006"
+               name="%metatype.name.AtomicAction_2006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="AtomicAction"
+               edithelper="net.sf.ictalive.coordination.agents.diagram.edit.helpers.AtomicActionEditHelper">
+            <param name="semanticHint" value="2006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/coordination/actions">
+         <metamodelType
+               id="net.sf.ictalive.coordination.agents.diagram.CompositeAction_2007"
+               name="%metatype.name.CompositeAction_2007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CompositeAction"
+               edithelper="net.sf.ictalive.coordination.agents.diagram.edit.helpers.CompositeActionEditHelper">
+            <param name="semanticHint" value="2007"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/coordination/agents">
+         <specializationType
+               id="net.sf.ictalive.coordination.agents.diagram.AgentHasAction_4003"
+               name="%metatype.name.AgentHasAction_4003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4003"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/coordination/agents">
+         <specializationType
+               id="net.sf.ictalive.coordination.agents.diagram.AgentHasRole_4004"
+               name="%metatype.name.AgentHasRole_4004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4004"/>
+         </specializationType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="net.sf.ictalive.coordination.agents.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="net.sf.ictalive.coordination.agents.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="net.sf.ictalive.coordination.agents.diagram.TypeContext">
+         <elementType ref="net.sf.ictalive.coordination.agents.diagram.MasModel_1000"/>
+         <elementType ref="net.sf.ictalive.coordination.agents.diagram.Agent_2004"/>
+         <elementType ref="net.sf.ictalive.coordination.agents.diagram.Role_2005"/>
+         <elementType ref="net.sf.ictalive.coordination.agents.diagram.AtomicAction_2006"/>
+         <elementType ref="net.sf.ictalive.coordination.agents.diagram.CompositeAction_2007"/>
+         <elementType ref="net.sf.ictalive.coordination.agents.diagram.AgentHasAction_4003"/>
+         <elementType ref="net.sf.ictalive.coordination.agents.diagram.AgentHasRole_4004"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="net.sf.ictalive.coordination.agents.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="net.sf.ictalive.coordination.agents.diagram"
+           properties="isURIEditorInput"
+           class="net.sf.ictalive.coordination.agents.diagram.part.CoordinationUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="net.sf.ictalive.coordination.agents.diagram.resourceContent"/>
+			<contentExtension pattern="net.sf.ictalive.coordination.agents.diagram.domainResourceContent"/>
+            <contentExtension pattern="net.sf.ictalive.coordination.agents.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="net.sf.ictalive.coordination.agents.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="net.sf.ictalive.coordination.agents.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="net.sf.ictalive.coordination.agents.diagram.navigator.CoordinationNavigatorContentProvider" 
+            labelProvider="net.sf.ictalive.coordination.agents.diagram.navigator.CoordinationNavigatorLabelProvider"
+            icon="icons/obj16/AgentsDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="mas_diagram"/>
+               </and>
+               <instanceof value="net.sf.ictalive.coordination.agents.diagram.navigator.CoordinationAbstractNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="net.sf.ictalive.coordination.agents.diagram.navigator.CoordinationAbstractNavigatorItem"/>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="net.sf.ictalive.coordination.agents.diagram.navigatorSorter" 
+               class="net.sf.ictalive.coordination.agents.diagram.navigator.CoordinationNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="mas_diagram"/>
+                  </and>
+                  <instanceof value="net.sf.ictalive.coordination.agents.diagram.navigator.CoordinationAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="net.sf.ictalive.coordination.agents.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="net.sf.ictalive.coordination.agents.diagram.navigator.CoordinationDomainNavigatorContentProvider" 
+            labelProvider="net.sf.ictalive.coordination.agents.diagram.navigator.CoordinationDomainNavigatorLabelProvider"
+            icon="icons/obj16/AgentsDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="mas"/>
+               </and>
+               <instanceof value="net.sf.ictalive.coordination.agents.diagram.navigator.CoordinationDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="net.sf.ictalive.coordination.agents.diagram.navigator.CoordinationDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="net.sf.ictalive.coordination.agents.diagram.navigatorActionProvider"
+            class="net.sf.ictalive.coordination.agents.diagram.navigator.CoordinationNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="net.sf.ictalive.coordination.agents.diagram.navigator.CoordinationAbstractNavigatorItem"/>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="net.sf.ictalive.coordination.agents.diagram.navigatorLinkHelper"
+            class="net.sf.ictalive.coordination.agents.diagram.navigator.CoordinationNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="net.sf.ictalive.coordination.agents.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="net.sf.ictalive.coordination.agents.diagram.navigator.CoordinationAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="net.sf.ictalive.coordination.agents.diagram.part.CoordinationDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="net.sf.ictalive.coordination.agents.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="net.sf.ictalive.coordination.agents.diagram.updateDiagram"
+         contextId="net.sf.ictalive.coordination.agents.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="net.sf.ictalive.coordination.agents.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="net.sf.ictalive.coordination.agents.diagram.part.CoordinationDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="net.sf.ictalive.coordination.agents.diagram.edit.parts.MasModelEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+         <command commandId="net.sf.ictalive.coordination.agents.diagram.CreateShortcutAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="net.sf.ictalive.coordination.agents.diagram.part.CoordinationDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="net.sf.ictalive.coordination.agents.diagram.edit.parts.MasModelEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="net.sf.ictalive.coordination.agents.diagram.part.CoordinationDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="net.sf.ictalive.coordination.agents.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="net.sf.ictalive.coordination.agents.diagram.part.CoordinationDiagramEditorID"
+         defaultHandler="net.sf.ictalive.coordination.agents.diagram.part.LoadResourceAction"/>
+      <command id="net.sf.ictalive.coordination.agents.diagram.CreateShortcutAction"
+         name="Create Shortcut..."
+         categoryId="net.sf.ictalive.coordination.agents.diagram.part.CoordinationDiagramEditorID"
+         defaultHandler="net.sf.ictalive.coordination.agents.diagram.part.CreateShortcutAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>

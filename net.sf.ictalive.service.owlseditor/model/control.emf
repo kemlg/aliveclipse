@@ -1,0 +1,300 @@
+@gmf(foo="bar")
+@namespace(uri="http://www.example.org", prefix="control")
+package control;
+
+
+
+class NamedElement {
+  attr String name;
+}
+
+class ProcessVar extends NamedElement {
+  attr String parameterType;
+  attr String parameterValue;
+}
+
+@gmf.node(label="name")
+abstract class Parameter extends ProcessVar, ValueSpecifier {
+}
+
+@gmf.node(label="name")
+class Ontology extends NamedElement {
+   attr String ontologyURI;
+}
+
+@gmf.node(label="name")
+class TemplateConstraint extends NamedElement {
+attr String aspCode;
+attr String aspBinding;
+}
+
+class Input extends Parameter {
+}
+
+class Output extends Parameter {
+}
+
+
+@gmf.diagram(foo="bar")
+class OuterProcess extends NamedElement {
+  val ControlConstruct construct;
+  val Input[*] hasInput;
+  val Output[*] hasOutput;
+  val Expr[*] hasPrecondition;
+  val Result[*] hasResult;
+  val Binding[*] bindings;
+  val Loc[*] outerLocals;
+  val Link[*] outerLinks;
+  val Ontology[*] ontologies;
+  val TemplateConstraint[1] templateConstraints;
+  
+  attr String serviceName;
+  attr String serviceURI;
+  attr String serviceDescription;
+}
+
+@gmf.node(label="name")
+abstract class AbstractProcess extends NamedElement {
+	
+  @gmf.affixed(foo="bar")
+  val Input[*] hasInput;
+
+  @gmf.affixed(foo="bar")
+  val Output[*] hasOutput;
+  
+   
+}
+
+class RemoteProcess extends AbstractProcess {
+   
+    attr String remoteURI;
+    attr String remoteURL;
+    
+   @gmf.affixed(foo="bar")
+  val Result[*] hasResult;
+
+  @gmf.affixed(foo="bar")
+  val Expr[*] expressions;
+   
+}
+
+
+class TemplateProcess extends AbstractProcess {
+   attr String slotName;    
+}
+
+@gmf.node(label="name")
+abstract class ControlConstruct extends NamedElement {
+}
+
+class Sequence extends ControlConstruct {
+
+  @gmf.compartment(foo="bar")
+  val ControlConstructList[1] components;
+}
+
+class Choice extends ControlConstruct {
+
+  @gmf.compartment(foo="bar")
+  val ControlConstructBag[1] components;
+}
+
+class AnyOrder extends ControlConstruct {
+
+  @gmf.compartment(foo="bar")
+  val ControlConstructBag[1] components;
+}
+
+class Split extends ControlConstruct {
+
+  @gmf.compartment(foo="bar")
+  val ControlConstructBag[1] components;
+}
+
+class SplitJoin extends ControlConstruct {
+
+  @gmf.compartment(foo="bar")
+  val ControlConstructBag[1] components;
+}
+
+class IfThenElse extends ControlConstruct {
+@gmf.compartment(foo="bar")
+  val Expr[1] ifCondition;
+
+  @gmf.compartment(foo="bar")
+  val ControlConstruct[1] then;
+
+  @gmf.compartment(foo="bar")
+  val ControlConstruct[1] else;
+}
+
+class RepeatUntil extends ControlConstruct {
+  @gmf.compartment(foo="bar")
+  val Expr[1] untilCondition;
+
+  @gmf.compartment(foo="bar")
+  val ControlConstruct[1] untilProcess;
+}
+
+class RepeatWhile extends ControlConstruct {
+@gmf.compartment(foo="bar")
+  val Expr[1] whileCondition;
+
+  @gmf.compartment(foo="bar")
+  val ControlConstruct[1] whileProcess;
+}
+
+class Perform extends ControlConstruct {
+
+  @gmf.compartment(foo="bar")
+  val AbstractProcess[1] theProcess;
+}
+
+class Produce extends ControlConstruct {
+
+  @gmf.compartment(foo="bar")
+  val ValueSpecifierElement producedBindingValueSpecifier;
+}
+
+class Set extends ControlConstruct {
+
+  @gmf.compartment(foo="bar")
+  val ValueSpecifierElement producedBindingValueSpecifier;
+}
+
+abstract class ValueSpecifier {
+}
+
+abstract class ValueSpecifierElement extends ValueSpecifier {
+}
+
+@gmf.node(label="name")
+class ValueSource extends NamedElement, ValueSpecifierElement {
+  attr String body;
+}
+
+@gmf.node(label="name")
+class ValueForm extends NamedElement, ValueSpecifierElement {
+  attr String body;
+}
+
+@gmf.node(label="name")
+class ValueFunction extends NamedElement, ValueSpecifierElement {
+  attr String body;
+}
+
+abstract class Binding extends ProcessVar {
+}
+
+abstract class SetBinding extends Binding {
+}
+
+@gmf.link(source="valueSource", target="toParam", target.decoration="arrow", width="2", color="120,181,0")
+class InputBinding extends Binding {
+  ref Input toParam;
+  ref Parameter valueSource;
+}
+
+@gmf.link(source="origin", target="toParam", target.decoration="arrow", width="2", color="255,0,0")
+class OutputBinding extends Binding {
+  ref Output toParam;
+  ref ValueSpecifier origin;
+}
+
+@gmf.link(source="origin", target="toLoc", target.decoration="arrow", width="2", color="0,0,255")
+class LocBinding extends SetBinding {
+  ref Loc toLoc;
+  ref ValueSpecifier origin;
+}
+
+@gmf.link(source="origin", target="toLink", target.decoration="arrow", width="2", color="0,0,255")
+class LinkBinding extends Binding {
+  ref Link toLink;
+  ref ValueSpecifier origin;
+}
+
+
+@gmf.link(source="source", target = "specifierElement", style="dash", target.decoration="arrow", width="2", color="255,0,0")
+class outputBindingSource extends Binding{
+	ref Parameter source;
+	ref ValueSpecifierElement specifierElement;   
+}
+
+@gmf.node(label="name")
+class Result extends NamedElement {
+
+  @gmf.compartment(foo="bar")
+  val Expr[*] inCondition;
+
+  @gmf.compartment(foo="bar")
+  val ResultVar hasResultVar;
+
+  @gmf.compartment(foo="bar")
+  val Expr hasEffect;
+
+  @gmf.compartment(foo="bar")
+  val ValueSpecifierElement[*] bindingSource;
+}
+
+@gmf.node(label="name")
+class ResultVar extends ProcessVar {
+}
+
+class Local extends ProcessVar {
+}
+
+@gmf.node(label="name")
+class Loc extends Local {
+}
+
+@gmf.node(label="name")
+class Link extends ProcessVar {
+  attr Boolean hasBeenWritten;
+}
+
+@gmf.node(label="name")
+class ControlConstructBag extends NamedElement {
+
+  @gmf.compartment(foo="bar")
+  val ControlConstruct[1] first;
+
+  @gmf.compartment(foo="bar")
+  val ControlConstructBag[1] rest;
+}
+
+@gmf.node(label="name")
+class ControlConstructList extends NamedElement {
+
+  @gmf.compartment(foo="bar")
+  val ControlConstruct first;
+
+  @gmf.compartment(foo="bar")
+  val ControlConstructList[1] rest;
+}
+
+// added from expr.ecore
+
+class Condition extends Expr {
+}
+
+@gmf.node(label="name")
+class Expr {
+  attr String name;
+  attr ExpressionLanguage logicLanguage = "1";
+   @gmf.compartment(foo="bar")
+  attr String bodyLiteral;
+  attr int version;
+}
+
+enum ExpressionLanguage {
+  KIF = 0;
+  SWRL = 1;
+  DRS = 2;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Overview</title>
+  <link rel="stylesheet" href="shared.css" type="text/css" />	
+  </head>
+
+<body>
+<div class="menu">
+	<div class="tooltipy" style="margin-top:10px;"><a href="http://org.eclipse.ui.intro/showPage?id=overview"><img src="images/yellow.png" height="24" width="24" border="0" /><span class="yellow" style="font-size:9px;">Overview</span></a></div>
+    <div class="tooltip" style="margin-top:30px;"><a href="http://org.eclipse.ui.intro/showPage?id=tutorials"><img src="images/red.png" height="24" width="24" border="0" /><span style="font-size:9px;">Tutorials</span></a></div>
+    <div class="tooltip" style="margin-left:-10px;"><a href="http://org.eclipse.ui.intro/showPage?id=methodology"><img src="images/green.png" width="24" height="24" border="0" /><span style="font-size:9px;">Methodology</span></a></div>
+    <div class="tooltip" style="margin-left:50px;"><a href="http://org.eclipse.ui.intro/showPage?id=eventlog"><img src="images/left.png" width="24" height="24" border="0" /><span style="font-size:9px;">Previous</span></a></div>
+    <div class="tooltipup"><a href="http://org.eclipse.ui.intro/showPage?id=monitoring"><img src="images/up.png" width="24" height="24" border="0" /><span style="font-size:9px;">Up</span></a></div>
+    <div class="tooltip"><a href="http://org.eclipse.ui.intro/showPage?id=monitortool"><img src="images/right.png" width="24" height="24" border="0" /><span style="font-size:9px;">Next</span></a></div>
+    <div class="tooltip" style="margin-left:50px;"><a href="http://org.eclipse.ui.intro/close"><img src="images/workspace.png" width="24" height="24" border="0" /><span style="font-size:9px;">Go to workbench</span></a></div>
+</div>
+
+<div class="bg">
+<img id="background-img" src="images/alive_background.jpg" class="bg" />
+</div>
+
+<div class="page-style">
+    <div id="content"> 	
+   	  <h2>Monitor</h2>
+        <p>The <em>monitor</em> is a back-end process able to capture relevant events from the <em>event bus</em> and process them (according to the definitions on an <em>ALIVE </em>organisational model) in order to generate new high level events, that are submitted to the <em>event bus</em>.</p>
+<h3>Step Through</h3>
+<h4>Configuration</h4>
+        <p><em>Monitor</em> configuration can be specified via the <em>runtime dashboard.</em> There, users can specify the location of the <em>ALIVE organisational model</em> files to be used for processing and interpreting the events, in the case they want to run the <em>monitor</em> as a local back-end process. If the <em>monitor</em> is run a remote <em>back-end</em> process on a remote machine, users can specify the location of the remote <em>monitor.</em></p>
+<h4>Running</h4>
+        <p><em>Monitor</em> can be started via the <em>Start</em> <em>Monitor</em> button on the <em>runtime dashboard</em>. Notice that, having a back-end <em>monitor</em> process running is not mandatory for the ALIVE framework to work. Users are encouraged to start the <em>monitor</em> process only if they want their low level events to be processed, interpreted and submitted to the <em>event bus</em> as high level events. Thus, scenarios without the need for event interpretation (that is, <em>norms</em> and <em>counts-as</em> rules) are encouraged to avoid starting the <em>monitor</em> back-end process.</p>
+<h3>Best Practices</h3>
+        <p>To add if any.</p>
+        <h3>Bad Practices</h3>
+        <p>To add if any.</p>
+        <h3>Inter-dependencies</h3>
+        <p>To add if any.</p>
+<h3>Errors</h3>
+        <p>To add if any.</p>
+	</div>
+    <br />
+    <div style="float:right; margin-right:10%;">Next: <a href="http://org.eclipse.ui.intro/showPage?id=monitortool">Monitor Tool</a></div>
+</div>
+
+<div id="logo">
+	<img src="images/alive_logo.jpg" border="0" />
+</div>
+</body>
+</html>

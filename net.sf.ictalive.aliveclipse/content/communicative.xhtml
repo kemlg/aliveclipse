@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Overview</title>
+  <link rel="stylesheet" href="shared.css" type="text/css" />	
+  </head>
+
+<body>
+<div class="menu">
+	<div class="tooltipy" style="margin-top:10px;"><a href="http://org.eclipse.ui.intro/showPage?id=overview"><img src="images/yellow.png" height="24" width="24" border="0" /><span class="yellow" style="font-size:9px;">Overview</span></a></div>
+    <div class="tooltip" style="margin-top:30px;"><a href="http://org.eclipse.ui.intro/showPage?id=tutorials"><img src="images/red.png" height="24" width="24" border="0" /><span style="font-size:9px;">Tutorials</span></a></div>
+    <div class="tooltip" style="margin-left:-10px;"><a href="http://org.eclipse.ui.intro/showPage?id=methodology"><img src="images/green.png" width="24" height="24" border="0" /><span style="font-size:9px;">Methodology</span></a></div>
+    <div class="tooltip" style="margin-left:50px;"><a href="http://org.eclipse.ui.intro/showPage?id=interactionstructure"><img src="images/left.png" width="24" height="24" border="0" /><span style="font-size:9px;">Previous</span></a></div>
+    <div class="tooltipup"><a href="http://org.eclipse.ui.intro/showPage?id=organisation"><img src="images/up.png" width="24" height="24" border="0" /><span style="font-size:9px;">Up</span></a></div>
+    <div class="tooltip"><a href="http://org.eclipse.ui.intro/showPage?id=normativestructure"><img src="images/right.png" width="24" height="24" border="0" /><span style="font-size:9px;">Next</span></a></div>
+    <div class="tooltip" style="margin-left:50px;"><a href="http://org.eclipse.ui.intro/close"><img src="images/workspace.png" width="24" height="24" border="0" /><span style="font-size:9px;">Go to workbench</span></a></div>
+</div>
+
+<div class="bg">
+<img id="background-img" src="images/alive_background.jpg" class="bg" />
+</div>
+
+<div class="page-style">
+    <div id="content"> 	
+        <h2>Communicative Structure</h2>
+        <p>The communicative structure of an organisation describes the elements needed in the interactions and for the formal specification of various elements. In essence, it is a collection of the ontologies and formulas used and present in the organisation. We describe each of these in detail.</p>
+        <h3>Ontologies</h3>
+        <p>While designing the social and interaction structures of your organisation, you have already been busy defining the ontology of your organisation. Each of the role names and objectives names have been collected and added to the organisational ontology. To have a look at the current content of the organisation ontology, open the communicative structure &quot;CS&quot; and open the &quot;Ontology Default&quot; in the tree-editor.</p>
+      <h3>Importing Ontologies</h3>
+        <p>An existing ontology (e.g. one describing elements from the domain that you are modelling) can be imported into the editor to use for picking names for the organisation concepts (such as roles, objectives, predicate atoms, etc.). To import an ontology, either select &quot;Import&quot; from the &quot;Ontology&quot; menu in the menu-bar and locate the ontology you want to import, or select the ontology on the dashboard (via the &quot;Select&quot; button in the Domain Ontology box) and clicking the &quot;Import&quot; button on the arrow pointing from the Domain Ontology box to the Organisation Model box.</p>
+        <p> Naming elements based on existing concepts in the ontology is simple. For example, lets assume our ontology contains a concept &quot;User&quot; and we want to use that name for a role in our organisation. First let’s create a new role as described in <a href="http://org.eclipse.ui.intro/showPage?id=socialstructure">before</a>, but instead of typing the name of the role in the &quot;Name&quot; property field, we instead select the &quot;Concept User&quot; from the list in the &quot;Concept&quot; property field. After selecting and pressing Return, the name of the role will automatically be filled with the name of the selected concept.</p>
+        <p> This is not only useful for the design when using complex existing ontology (as you make sure that you are using the correct terms in your organisation, e.g., eliminating confusions such where &quot;Fireman&quot;, &quot;FireBrigade&quot;, &quot;FireDepartment&quot; are supposed to describe the same actors), but also makes sure that the connections between the ontology and the organisation model is made in a correct way (which is important for the use in later stages of an ALIVE system).</p>
+      <h3>Exporting the Organisation Ontology</h3>
+        <p>The organisational ontology, that was created while designing the organisation (that is, all the concepts in the &quot;Ontology Default&quot;) can be exported. There are two easy ways to export this ontology to an external OWL file. Either select &quot;Export&quot; from the &quot;Ontology&quot; menu in the menu-bar, or select the &quot;Export&quot; button on the arrow leading from the Organisation Model to the Domain Ontology in the dashboard.</p>
+        <p> In the file dialog that appears you can specify where the ontology file should be placed. Be warned that overwriting an existing owl-file will remove all of it current contents and filling it with the concepts from the organisation ontology. Changes made to an earlier exported version of the ontology will have to be made again in an external ontology editor.</p>
+      <h3>Creating Partial State Descriptions</h3>
+      <p>We briefly mentioned partial state descriptions before when discussing objectives and again when discussing landmarks. Partial State Descriptions (PSD) are logical formulas that are representations of (parts of) the state of affairs in terms of the properties of that state (e.g., goods are sold, thermostat is on, room is cold, etc.) that hold at a certain point in time. Partial State Descriptions are either a Predicate Atom (with <em>0 </em>to <em>n</em> arguments), or complex formulas combining Partial State Descriptions with logical operators (like negation &not;, conjunction &and;, disjunction &or;, material implication &rarr;, etc.). The arguments of the Predicate Atoms are Terms, which can either be Constants, Variables or Functions (over Terms).</p>
+      <p> Now let us create a Partial State Description to describe the states of affairs referred to by the objectives (&quot;GetDateTime&quot;, &quot;GetUserLocation&quot;, and &quot;GatherUserContext&quot;) to give an example of how to create PSDs and attach them to their respective organisational component. The objectives &quot;GetDateTime&quot; and &quot;GetUserLocation&quot; will be represented as simple propositional atoms (that is, a predicate atom without any arguments). Right click the &quot;CS&quot; element in the tree-editor and select &quot;New Child&quot; and choose &quot;Atom&quot;. Click the new atom, select the &quot;Predicate&quot; property field and type &quot;UserLocationGet&quot; to give it that name (we use a slightly different name than the name of the objective to differentiate between their concepts in the ontology). Note that the &quot;Concept&quot; property field is again automatically filled with a (newly created) concept from the ontology. Also note the &quot;ID&quot; field, which every PSD has. The ID shows the entire logical formula at that point in the PSD-tree. Basically, it gives a line-based representation of the logical formula, for quick reference (for instance, to quickly see whether you are composing your logical formula correctly). </p>
+      <p> To attach this PSD to the objective in question, we have to select the objective in the list. Either navigate through the &quot;SS&quot; element of the tree-editor to locate it or switch to the &quot;SS Diagram&quot; tab and select the &quot;Manage Objectives&quot; tab in the properties view and locate it there. Select the objective &quot;GetUserLocation&quot;, click on the &quot;State Description&quot; property field and select &quot;UserLocationGet&quot; from the list. This attaches the PSD to the objective, giving it formal meaning in the organisation.</p>
+      <p> Likewise, create a Predicate Atom &quot;DateTimeGet&quot; that needs to be attached to the &quot;GetDateTime&quot; objective.</p>
+      <p> As mentioned earlier, objectives with sub-objectives can have more complex state descriptions, in that the state description of such objectives can be composed of the state descriptions of its children. The state description of &quot;GatherUserContext&quot; is one of such state descriptions that expresses that doing either &quot;GetUserLocation&quot; or &quot;GetDateTime&quot; is enough to fulfil the objective. This is expressed by creating a disjunction between the state descriptions of the sub-objectives. To create this state description, again right click the &quot;CS&quot; element in the tree-editor and select &quot;New Child&quot; and choose &quot;Disjunction&quot;. A disjunction requires two state descriptions as its arguments (to represent the left-hand and right-hand sides of the disjunction). To insert the &quot;UserLocationGet&quot; and &quot;DateTimeGet&quot; state descriptions as its arguments, click the &quot;Left State Description&quot; and &quot;Right State Description&quot; property fields, respectively. Select the correct state description from the pull-down list.</p>
+      <p> In similar ways, you can use the other operators available to create more complex partial state descriptions. Here is a brief overview of the operators available:</p>
+        <ul style="margin-top:5px;">
+          <li>Atom: atomic components of PSDs to represent a proposition (an atom with no arguments) or predicate (with <em>1</em> to <em>n</em> arguments).</li>
+          <li>Negation, conjuncation, disjunction, implication: typical (classical) logical operators matching &not;, &and;, &or;, and &rarr;. Negations require 1 state description as argument, the others require 2.</li>
+          <li>For All Paths, Exists Path: state descriptions to quantify over temporal paths. Require 1 path formula as argument.</li>
+          <li>Path negation, path conjunction, path disjunction, path implication: similar to their state variants described above, but require path formulas as argument instead.</li>
+          <li>Next, sometime, always: path formulas describing that something should hold in the next state on the path, in some state along the path, in every state along the path, respectively. Require 1 path formula as argument.</li>
+          <li>Until: path formula expressing that the first argument should hold up to the point where the second argument holds along the path. Requires 2 path formulas as argument.</li>
+      </ul>
+        <p>Other components available for the specification of partial state descriptions:</p>
+<ul style="margin-top:5px;">
+          <li>Constant: a reference to a specific element in the domain of reference that can function as an argument to a predicate atom or a function.</li>
+          <li>Variable: an undefined (later to be instantiated) reference to elements of the domain that can function as argument to a predicate atom or functions.</li>
+        </ul>
+  <p>Function: a relationship or expression over constants, variables and/or functions that can be function as an argument to predicate atoms or functions.</p>
+  <h3>Creating Counts-As Expressions</h3>
+  <p>Creating counts-as expressions (to operationalise the abstract terms/concepts used in the organisation) is done in a similar way as creating partial state descriptions. A count-as relation requires partial state descriptions on its left- and right-hand sides, in addition to a label for the context (to which it belongs and which it helps defining).</p>
+<h3>Best Practices</h3>
+  <p>Some considerations when creating concepts/formulas in the communicative structure:</p>
+  <ul style="margin-top:5px;">
+    <li>Concepts in the organisational model should directly reflect the concepts defined in the ontology of the ALIVE system (which is a combination of a domain ontology and the organisational ontology generated).</li>
+    <ul>
+      <li>Every class should be defined as a concept with type &quot;Class&quot;.</li>
+      <li>Every property should be defined as a concept with type &quot;Property&quot;. The domain and range of these should be set in the external ontology editor.</li>
+      <li>Every individual should be defined as a concept with type &quot;Individual&quot;.</li>
+    </ul>
+    <li>Formulas defined in the CS must be in accordance with the (imported) ontology.</li>
+    <ul>
+      <li>Every atom should have a name or concept specified (the other is created/generated automatically).</li>
+      <li>If the atom’s &quot;Concept&quot; corresponds to a Class type, the arguments of that atom (if any) should match that Class (that is, being of that Class as well, or being an individual in that Class).</li>
+      <li>If the atom’s &quot;Concept&quot; corresponds to a Property type:</li>
+      <ul>
+        <li>The atom can have only 1 or 2 arguments with some &quot;Concept&quot; of Class type;</li>
+        <li>The arguments’ &quot;Concept&quot; must reflect the Domain and Range defined for the equivalent property in the ontology;</li>
+        <li>Atoms with a &quot;Concept&quot; of Property type and only 1 argument are considered to be a &quot;Datavalued Property&quot; with Range &quot;Boolean&quot;, and must be modelled as such in the ontology. </li>
+      </ul>
+      <li>The &quot;Concept&quot; of constants must either be of &quot;Class&quot; or &quot;Individual&quot; type.</li>
+    </ul>
+  </ul>
+  </div>
+    <br />
+    <div style="float:right; margin-right:10%;">Next: <a href="http://org.eclipse.ui.intro/showPage?id=normativestructure">Normative Structure</a></div>
+</div>
+
+<div id="logo">
+	<img src="images/alive_logo.jpg" border="0" />
+</div>
+</body>
+</html>

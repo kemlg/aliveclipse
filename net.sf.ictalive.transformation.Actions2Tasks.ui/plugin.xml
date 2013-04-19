@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+<extension point="org.eclipse.ui.popupMenus">
+	<objectContribution id="net.sf.ictalive.actions2tasks.ui.popupMenus.contribution.IFile"
+			objectClass="org.eclipse.core.resources.IFile"
+			nameFilter="*.actions">
+            
+		<menu
+        icon="icons/transformation.gif"
+        id="net.sf.ictalive.transformations.menu"
+        label="&amp;Transformations"
+        path="additions">              
+			<separator name="group1"></separator>
+		</menu>
+
+		<action
+        class="net.sf.ictalive.actions2tasks.ui.Actions2TasksAction"
+        enablesFor="1"
+        icon="icons/qvto.gif"
+        id="convertActionsToTasks"
+        label="Convert to Tasks"
+        menubarPath="net.sf.ictalive.transformations.menu/group1"
+        tooltip="Convert Actions toTasks">
+		</action>
+	</objectContribution>
+	
+</extension>
+<extension
+      point="net.sf.ictalive.aliveclipse.dashboard.actions">
+   <client
+         class="net.sf.ictalive.actions2tasks.ui.Actions2TasksDashboardAction">
+   </client>
+</extension>
+
+</plugin>

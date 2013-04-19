@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:expr="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
+    xmlns="http://deliver.cj.usecases.istalive.eu/DeliverEmail"
+    xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
+    xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:grounding="http://www.daml.org/services/owl-s/1.2/Grounding.owl#"
+    xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
+    xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://deliver.cj.usecases.istalive.eu/DeliverEmail">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl"/>
+  </owl:Ontology>
+  <service:Service rdf:ID="deliverMessage">
+    <service:supports>
+      <grounding:WsdlGrounding rdf:ID="deliverMessageWSDLGrounding"/>
+    </service:supports>
+    <service:describedBy>
+      <process:AtomicProcess rdf:ID="deliverMessageProcess"/>
+    </service:describedBy>
+    <service:presents>
+      <profile:Profile rdf:ID="deliverMessageProfile"/>
+    </service:presents>
+  </service:Service>
+  <profile:Profile rdf:about="#deliverMessageProfile">
+    <profile:hasInput>
+      <process:Input rdf:ID="message">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#TextMessage</process:parameterType>
+      </process:Input>
+    </profile:hasInput>
+    <profile:hasInput>
+      <process:Input rdf:ID="channel">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Subscription</process:parameterType>
+      </process:Input>
+    </profile:hasInput>
+    <service:presentedBy rdf:resource="#deliverMessage"/>
+  </profile:Profile>
+  <process:AtomicProcess rdf:about="#deliverMessageProcess">
+    <service:describes rdf:resource="#deliverMessage"/>
+    <process:hasInput rdf:resource="#channel"/>
+    <process:hasInput rdf:resource="#message"/>
+  </process:AtomicProcess>
+  <grounding:WsdlGrounding rdf:about="#deliverMessageWSDLGrounding">
+    <service:supportedBy rdf:resource="#deliverMessage"/>
+    <grounding:hasAtomicProcessGrounding>
+      <grounding:WsdlAtomicProcessGrounding rdf:ID="deliverMessageWSDLAtomicGrounding"/>
+    </grounding:hasAtomicProcessGrounding>
+  </grounding:WsdlGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:about="#deliverMessageWSDLAtomicGrounding">
+    <grounding:wsdlOperation>
+      <grounding:WsdlOperationRef>
+        <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >urn:cj-services/deliveremail#deliverMessage</grounding:operation>
+        <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >urn:cj-services/deliveremail#DeliverEmail</grounding:portType>
+      </grounding:WsdlOperationRef>
+    </grounding:wsdlOperation>
+    <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >urn:cj-services/deliveremail#deliverMessageResponse</grounding:wsdlOutputMessage>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap rdf:ID="channel_InputMessageMap">
+        <grounding:xsltTransformationString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:wsvc="urn:cj-services/deliveremail" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ont="http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#" xmlns:osvc="http://deliver.cj.usecases.istalive.eu/DeliverEmail#" xmlns:ns1="urn:cj-domain" xmlns:ns0="urn:alive-cj-message" xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" version="1.0"&gt;&#xD;
+  &lt;xsl:output method="xml" /&gt;&#xD;
+  &lt;xsl:template match="/rdf:RDF"&gt;&#xD;
+    &lt;!--Creating transformation of {http://deliver.cj.usecases.istalive.eu/DeliverEmail#deliverMessage}.{#http://deliver.cj.usecases.istalive.eu/DeliverEmail#channel} to {$eu.istalive.usecases.cj.deliver.DeliverEmail.deliverMessage}.{#1}--&gt;&#xD;
+    &lt;ns1:Subscription&gt;&#xD;
+      &lt;xsl:for-each select="./ont:Subscription"&gt;&#xD;
+        &lt;xsl:call-template name="gen_uk.co.calicojack.alive.domain.Subscription" /&gt;&#xD;
+      &lt;/xsl:for-each&gt;&#xD;
+    &lt;/ns1:Subscription&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.Message"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Message}.{http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#content} to Message.content--&gt;&#xD;
+    &lt;ns0:content&gt;&#xD;
+      &lt;xsl:value-of select="./ont:content" /&gt;&#xD;
+    &lt;/ns0:content&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Message}.{http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#initiator} to Message.initiator--&gt;&#xD;
+    &lt;ns0:initiator&gt;&#xD;
+      &lt;xsl:for-each select="./ont:initiator"&gt;&#xD;
+        &lt;xsl:for-each select="./ont:Participant"&gt;&#xD;
+          &lt;xsl:call-template name="gen_uk.co.calicojack.alive.domain.Participant" /&gt;&#xD;
+        &lt;/xsl:for-each&gt;&#xD;
+      &lt;/xsl:for-each&gt;&#xD;
+    &lt;/ns0:initiator&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Message}.{http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#recipient} to Message.recipient--&gt;&#xD;
+    &lt;ns0:recipient&gt;&#xD;
+      &lt;xsl:for-each select="./ont:recipient"&gt;&#xD;
+        &lt;xsl:for-each select="./ont:Participant"&gt;&#xD;
+          &lt;xsl:call-template name="gen_uk.co.calicojack.alive.domain.Participant" /&gt;&#xD;
+        &lt;/xsl:for-each&gt;&#xD;
+      &lt;/xsl:for-each&gt;&#xD;
+    &lt;/ns0:recipient&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.ResourceType"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#ResourceType}.{id} to ResourceType.objID--&gt;&#xD;
+    &lt;ns1:objID&gt;&#xD;
+      &lt;xsl:value-of select="./@rdf:about" /&gt;&#xD;
+    &lt;/ns1:objID&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.Participant"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Participant}.{id} to Participant.objID--&gt;&#xD;
+    &lt;ns1:objID&gt;&#xD;
+      &lt;xsl:value-of select="./@rdf:about" /&gt;&#xD;
+    &lt;/ns1:objID&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.Subscription" /&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.Address"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Address}.{http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#address} to Address.address--&gt;&#xD;
+    &lt;ns1:address&gt;&#xD;
+      &lt;xsl:value-of select="./ont:address" /&gt;&#xD;
+    &lt;/ns1:address&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.ChannelType"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#ChannelType}.{id} to ChannelType.objID--&gt;&#xD;
+    &lt;ns1:objID&gt;&#xD;
+      &lt;xsl:value-of select="./@rdf:about" /&gt;&#xD;
+    &lt;/ns1:objID&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+&#xD;
+</grounding:xsltTransformationString>
+        <grounding:owlsParameter rdf:resource="#channel"/>
+        <grounding:wsdlMessagePart>urn:cj-services/deliveremail#subscription</grounding:wsdlMessagePart>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap rdf:ID="message_InputMessageMap">
+        <grounding:xsltTransformationString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:wsvc="urn:cj-services/deliveremail" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ont="http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#" xmlns:osvc="http://deliver.cj.usecases.istalive.eu/DeliverEmail#" xmlns:ns1="urn:cj-domain" xmlns:ns0="urn:alive-cj-message" xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" version="1.0"&gt;&#xD;
+  &lt;xsl:output method="xml" /&gt;&#xD;
+  &lt;xsl:template match="/rdf:RDF"&gt;&#xD;
+    &lt;!--Creating transformation of {http://deliver.cj.usecases.istalive.eu/DeliverEmail#deliverMessage}.{#http://deliver.cj.usecases.istalive.eu/DeliverEmail#message} to {$eu.istalive.usecases.cj.deliver.DeliverEmail.deliverMessage}.{#0}--&gt;&#xD;
+    &lt;ns0:Message&gt;&#xD;
+      &lt;xsl:for-each select="./ont:TextMessage"&gt;&#xD;
+        &lt;xsl:call-template name="gen_uk.co.calicojack.alive.domain.Message" /&gt;&#xD;
+      &lt;/xsl:for-each&gt;&#xD;
+    &lt;/ns0:Message&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.Message"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Message}.{http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#content} to Message.content--&gt;&#xD;
+    &lt;ns0:content&gt;&#xD;
+      &lt;xsl:value-of select="./ont:content" /&gt;&#xD;
+    &lt;/ns0:content&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Message}.{http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#initiator} to Message.initiator--&gt;&#xD;
+    &lt;ns0:initiator&gt;&#xD;
+      &lt;xsl:for-each select="./ont:initiator"&gt;&#xD;
+        &lt;xsl:for-each select="./ont:Participant"&gt;&#xD;
+          &lt;xsl:call-template name="gen_uk.co.calicojack.alive.domain.Participant" /&gt;&#xD;
+        &lt;/xsl:for-each&gt;&#xD;
+      &lt;/xsl:for-each&gt;&#xD;
+    &lt;/ns0:initiator&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Message}.{http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#recipient} to Message.recipient--&gt;&#xD;
+    &lt;ns0:recipient&gt;&#xD;
+      &lt;xsl:for-each select="./ont:recipient"&gt;&#xD;
+        &lt;xsl:for-each select="./ont:Participant"&gt;&#xD;
+          &lt;xsl:call-template name="gen_uk.co.calicojack.alive.domain.Participant" /&gt;&#xD;
+        &lt;/xsl:for-each&gt;&#xD;
+      &lt;/xsl:for-each&gt;&#xD;
+    &lt;/ns0:recipient&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.ResourceType"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#ResourceType}.{id} to ResourceType.objID--&gt;&#xD;
+    &lt;ns1:objID&gt;&#xD;
+      &lt;xsl:value-of select="./@rdf:about" /&gt;&#xD;
+    &lt;/ns1:objID&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.Participant"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Participant}.{id} to Participant.objID--&gt;&#xD;
+    &lt;ns1:objID&gt;&#xD;
+      &lt;xsl:value-of select="./@rdf:about" /&gt;&#xD;
+    &lt;/ns1:objID&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.Subscription" /&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.Address"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Address}.{http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#address} to Address.address--&gt;&#xD;
+    &lt;ns1:address&gt;&#xD;
+      &lt;xsl:value-of select="./ont:address" /&gt;&#xD;
+    &lt;/ns1:address&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.ChannelType"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#ChannelType}.{id} to ChannelType.objID--&gt;&#xD;
+    &lt;ns1:objID&gt;&#xD;
+      &lt;xsl:value-of select="./@rdf:about" /&gt;&#xD;
+    &lt;/ns1:objID&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+&#xD;
+</grounding:xsltTransformationString>
+        <grounding:owlsParameter rdf:resource="#message"/>
+        <grounding:wsdlMessagePart>urn:cj-services/deliveremail#message</grounding:wsdlMessagePart>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >urn:cj-services/deliveremail#deliverMessage</grounding:wsdlInputMessage>
+    <grounding:owlsProcess rdf:resource="#deliverMessageProcess"/>
+    <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://localhost:35260?wsdl</grounding:wsdlDocument>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlOperationRef>
+    <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >urn:cj-services/deliveremail#DeliverEmail</grounding:portType>
+  </grounding:WsdlOperationRef>
+</rdf:RDF>

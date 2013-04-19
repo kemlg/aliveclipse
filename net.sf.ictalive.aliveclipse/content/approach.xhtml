@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Overview</title>
+  <link rel="stylesheet" href="shared.css" type="text/css" />	
+  </head>
+
+<body>
+<div class="menu">
+	<div class="tooltipy" style="margin-top:10px;"><a href="http://org.eclipse.ui.intro/showPage?id=overview"><img src="images/yellow.png" height="24" width="24" border="0" /><span class="yellow" style="font-size:9px;">Overview</span></a></div>
+    <div class="tooltip" style="margin-top:30px;"><a href="http://org.eclipse.ui.intro/showPage?id=tutorials"><img src="images/red.png" height="24" width="24" border="0" /><span style="font-size:9px;">Tutorials</span></a></div>
+<div class="tooltip" style="margin-left:-10px;"><a href="http://org.eclipse.ui.intro/showPage?id=methodology"><img src="images/green.png" width="24" height="24" border="0" /><span style="font-size:9px;">Methodology</span></a></div>
+    <div class="tooltip" style="margin-left:50px;"><a href="http://org.eclipse.ui.intro/showPage?id=methodology"><img src="images/left.png" width="24" height="24" border="0" /><span style="font-size:9px;">Previous</span></a></div>
+    <div class="tooltipup"><a href="http://org.eclipse.ui.intro/showPage?id=methodology"><img src="images/up.png" width="24" height="24" border="0" /><span style="font-size:9px;">Up</span></a></div>
+    <div class="tooltip"><a href="http://org.eclipse.ui.intro/showPage?id=development"><img src="images/right.png" width="24" height="24" border="0" /><span style="font-size:9px;">Next</span></a></div>
+    <div class="tooltip" style="margin-left:50px;"><a href="http://org.eclipse.ui.intro/close"><img src="images/workspace.png" width="24" height="24" border="0" /><span style="font-size:9px;">Go to workbench</span></a></div>
+</div>
+
+<div class="bg">
+<img id="background-img" src="images/alive_background.jpg" class="bg" />
+</div>
+
+<div class="page-style">
+    <div id="content"> 	
+        <h2>Approach: Core Characteristics</h2>
+        <p>In its core, the ALIVE methodology approach is characterised by </p>
+        <ul>
+          <li>Multi Levels of Design: In particular three (3) conceptual layers are used to specify an ALIVE application. Namely these are Organisation, Coordination and Service layers. </li>
+          <li>Model Driven: The ALIVE approach utilises model-driven engineering principles, for the specification of with metamodel specifications, model abstractions and automated transformations.</li>
+          <li>Automation: Many development steps in ALIVE are automated or semi automated for example to create models from other models or generate code implementations for services, agents and plans.</li>
+          <li>Monitoring: A delicate monitoring mechanism is used to track various types of run time activities.</li>
+          <li>Analysis: Semantic/Ontology technologies are used to analyse specific properties of our system.</li>
+          <li>Tools: a variety of internal and external tools are used to provide a highly interoperable application framework where methodology steps are supported.</li>
+        </ul>
+      <h3>Multiple Levels</h3>
+        <table align="right"><tr><td><img src="images/layers.png" align="right" width="375" /></td></tr><tr>
+          <td style="text-align:center; font-weight: bold; font-size:11px;">Figure 1. ALIVE's Multi-Layer Architecture</td></tr></table>
+      <p>ALIVE applications are defined upon three (3) levels (or layers); the <em>Organisation</em>, <em>Coordination</em> and <em>Services</em>. Each level specifies the conceptual elements and capabilities of their domain (see Figure 1). </p>
+      <p> For example, the Organisational Level provides context for the other levels, supporting an explicit representation of the organisational structure of the system. Mainly stakeholders and their inter-relations are to be represented; this will allow the derivation of formal goals, requirements and restrictions. Tools and mechanisms for verification and analysis of organisational specifications are also provided. In addition, this layer supports methods of Norm-oriented organisational design, supporting scenarios where traditional approaches do not fit well.</p>
+      <p> The Coordination Level provides the means to specify, at a high level, the patterns of interaction between services, transforming the organisational representation (including information flows, constraints, tasks and agents) coming from the Organisational Level into coordination plans. These plans are automatically synthesized to achieve organisational goals, taking into account possible human interventions. Means to enact these plans in a distributed fashion, making use of the Service Level, are provided in this layer, as well as exception handling mechanisms to verify and analyze via logs the plans already executed. </p>
+        <p> The Service Level supports the semantic description of services and the selection of the most appropriate service for a given task (based on the semantic information contained in the service description), effectively supporting higher level, dynamic service composition. This is useful when highly dynamic services are present in the system, as the semantic description eases the process of finding equivalent services when a given service is not available, or when more suitable services have been registered recently. This layer is also responsible of low-level monitoring of service activity.<br />
+      The layers are not isolated one from another but related, so changes in one level may trigger changes to another layer. Within ALIVE, each of these three conceptual levels is represented by a metamodel specification. The relationships among levels are reflected with relations between the elements of their metamodels, for example organisation roles to coordination agents and workflow tasks to invocation of services.</p>
+      <h3>Model Driven</h3>
+        <p>In model-driven development, models become primer artefacts that are used throughout the development life cycle of an application or system. In ALIVE the model-driven approach is used to specify the conceptual framework of ALIVE with metamodels, to provide diagramming tools that capture ALIVE applications via models, and define transformations among source and target models or languages to automate the development process. </p>
+      <p>In general, Model Driven Engineering (MDE) offers a number of benefits to the software development process. In particular, it a) provides visual representations as an aid to communication and understanding, b) captures applications and systems at various levels of abstractions, allowing separation of concerns and better complexity management, c) allows analysis of certain system properties and d) creates parts (technological implementations) automatically via transformations. Automation is considered by far the most effective technological means for boosting productivity and reliability (Selic 2003).</p>
+      <h3>Automations</h3>
+        <p>The ALIVE approach promotes the automated generation of models and implementation code extensively. More specifically many model transformations are defined to semi automate models from other models, based on identified relationships (mappings). In addition services, plans and agents are automatically generated via specialised tools. </p>
+	  <h3>Monitoring</h3>
+        <p>Once ALIVE applications are deployed and executed, a monitoring mechanism is used to generate and track the events generated across the system. Monitoring is primary used to visualise and provide an understanding of the activities happening of the ALIVE system as well as to facilitate the analysis process.</p>
+<h3>Analysis</h3>
+        <p>Based on the events generated and stored from the monitoring mechanism, we employ semantic/ontological technologies to analyse and reason about particular properties of an ALIVE application. Once certain problems are identified, the analysis process is used to provide user feedback as well as to facilitate the adaptation process such as re-planning.</p>
+<h3>Tools</h3>
+      <p>Many steps of our methodology approach are supported by a variety of tools. For example, there are tools to define ontologies, to model ALIVE organisations, coordinations and services, to perform transformations, create plans, reason about norms and exchange events. Following sections describe in detail how those tools are used and how they facilitate our methodology. In addition the deliverables D6.2 and D6.3 provide additional information of those tools.</p>
+    </div><br />
+    <div style="float:right; margin-right:10%;">Next: <a href="http://org.eclipse.ui.intro/showPage?id=development">Development Process</a></div>
+</div>
+
+<div id="logo">
+	<img src="images/alive_logo.jpg" border="0" />
+</div>
+</body>
+</html>

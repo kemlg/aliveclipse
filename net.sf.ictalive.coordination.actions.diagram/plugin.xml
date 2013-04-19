@@ -1,0 +1,1311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="actions_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="actions_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="net.sf.ictalive.coordination.actions.diagram.part.CoordinationDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/ActionsDiagramFile.gif"
+         extensions="actions_diagram"
+         default="true"
+         class="net.sf.ictalive.coordination.actions.diagram.part.CoordinationDiagramEditor"
+         matchingStrategy="net.sf.ictalive.coordination.actions.diagram.part.CoordinationMatchingStrategy"
+         contributorClass="net.sf.ictalive.coordination.actions.diagram.part.CoordinationDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="net.sf.ictalive.coordination.actions.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/ActionsDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="net.sf.ictalive.coordination.actions.diagram.part.CoordinationCreationWizard"
+  	     id="net.sf.ictalive.coordination.actions.diagram.part.CoordinationCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="net.sf.ictalive.coordination.actions.diagram.InitDiagram"
+            nameFilter="*.actions"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="net.sf.ictalive.coordination.actions.diagram.part.CoordinationInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="net.sf.ictalive.coordination.actions.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="ActionsPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="net.sf.ictalive.coordination.actions.diagram.part.CoordinationDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="ActionsPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="net.sf.ictalive.coordination.actions.diagram.part.CoordinationDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="ActionsRender">
+         <Priority name="Lowest"/>
+         <ViewId id="net.sf.ictalive.coordination.actions.diagram.part.CoordinationDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="net.sf.ictalive.coordination.actions.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="Coordination.diagram.general"
+            name="%prefpage.Coordination.diagram.general"
+            class="net.sf.ictalive.coordination.actions.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="Coordination.diagram.appearance"
+            name="%prefpage.Coordination.diagram.appearance"
+            category="Coordination.diagram.general"
+            class="net.sf.ictalive.coordination.actions.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="Coordination.diagram.connections"
+            name="%prefpage.Coordination.diagram.connections"
+            category="Coordination.diagram.general"
+            class="net.sf.ictalive.coordination.actions.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="Coordination.diagram.printing"
+            name="%prefpage.Coordination.diagram.printing"
+            category="Coordination.diagram.general"
+            class="net.sf.ictalive.coordination.actions.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="Coordination.diagram.rulersAndGrid"
+            name="%prefpage.Coordination.diagram.rulersAndGrid"
+            category="Coordination.diagram.general"
+            class="net.sf.ictalive.coordination.actions.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="net.sf.ictalive.coordination.actions.diagram"
+            labelProvider="net.sf.ictalive.coordination.actions.diagram.sheet.CoordinationSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="net.sf.ictalive.coordination.actions.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="net.sf.ictalive.coordination.actions.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="net.sf.ictalive.coordination.actions.diagram.sheet.CoordinationPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="net.sf.ictalive.coordination.actions.diagram.navigator.CoordinationAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="net.sf.ictalive.coordination.actions.diagram.providers.CoordinationViewProvider">
+         <Priority name="Lowest"/>
+         <object id="referencing-diagrams" class="org.eclipse.gmf.runtime.notation.Diagram">
+            <method name="getType()" value="actions,mas,tasks,plans,wfvv"/>
+         </object>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Actions"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2024,2025,2026,2027,2028,2029,2030,2031,2032,2033,2034,2035,2036,2037,2038,2039,2040,3054,3055,3056,3057,3058,3059,3060,3061,3062,3063,3064,3065,3066,3067,3068,3069,3070,3071,3072,3073,3074,3090,3075,3076,3077,3078,3079,3080,3081,3082,3083,3084,3085,3086,3087,3088,3089"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4026,4027,4028,4029,4030,4031,4032,4033,4045,4046,4034,4035,4036,4037,4038,4039,4040,4041,4042,4043,4044"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="net.sf.ictalive.coordination.actions.diagram.providers.CoordinationEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="Actions"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2024,2025,2026,2027,2028,2029,2030,2031,2032,2033,2034,2035,2036,2037,2038,2039,2040,3054,3055,3056,3057,3058,3059,3060,3061,3062,3063,3064,3065,3066,3067,3068,3069,3070,3071,3072,3073,3074,3090,3075,3076,3077,3078,3079,3080,3081,3082,3083,3084,3085,3086,3087,3088,3089"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4026,4027,4028,4029,4030,4031,4032,4033,4045,4046,4034,4035,4036,4037,4038,4039,4040,4041,4042,4043,4044"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5055,5060,5061,5062,5063,5054,5068,5067,5043,5071,5069,5044,5070,5045,5073,5072,5046,5075,5074,5047,5048,5049,5050,5051,5076,5077,5079,5052,5078,5053,5056,5059,5057,5058,5064,5065,5066"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value="7033,7034,7035,7036,7037,7038,7039,7040,7054,7041,7042,7043,7044,7045,7046,7047,7048,7049,7050,7051,7052,7053"/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="net.sf.ictalive.coordination.actions.diagram.providers.CoordinationModelingAssistantProvider">
+         <Priority name="Lowest"/>
+         <object class="net.sf.ictalive.coordination.actions.diagram.edit.parts.ActionsCollectionEditPart" id="ActionsCollection_1000"/>
+         <object class="net.sf.ictalive.coordination.actions.diagram.edit.parts.CompositeActionEditPart" id="CompositeAction_2024"/>
+         <object class="net.sf.ictalive.coordination.actions.diagram.edit.parts.AtomicActionEditPart" id="AtomicAction_2025"/>
+         <object class="net.sf.ictalive.coordination.actions.diagram.edit.parts.InputEditPart" id="Input_2026"/>
+         <object class="net.sf.ictalive.coordination.actions.diagram.edit.parts.OutputEditPart" id="Output_2027"/>
+         <object class="net.sf.ictalive.coordination.actions.diagram.edit.parts.ParticipantEditPart" id="Participant_2028"/>
+         <object class="net.sf.ictalive.coordination.actions.diagram.edit.parts.SequenceEditPart" id="Sequence_2029"/>
+         <object class="net.sf.ictalive.coordination.actions.diagram.edit.parts.AnyOrderEditPart" id="AnyOrder_2030"/>
+         <object class="net.sf.ictalive.coordination.actions.diagram.edit.parts.ControlConstructBagEditPart" id="ControlConstructBag_2031"/>
+         <object class="net.sf.ictalive.coordination.actions.diagram.edit.parts.PerformEditPart" id="Perform_2032"/>
+         <object class="net.sf.ictalive.coordination.actions.diagram.edit.parts.ChoiceEditPart" id="Choice_2033"/>
+         <object class="net.sf.ictalive.coordination.actions.diagram.edit.parts.ControlConstructListEditPart" id="ControlConstructList_2034"/>
+         <object class="net.sf.ictalive.coordination.actions.diagram.edit.parts.RepeatUntilEditPart" id="RepeatUntil_2035"/>
+         <object class="net.sf.ictalive.coordination.actions.diagram.edit.parts.RepeatWhileEditPart" id="RepeatWhile_2036"/>
+         <object class="net.sf.ictalive.coordination.actions.diagram.edit.parts.IfThenElseEditPart" id="IfThenElse_2037"/>
+         <object class="net.sf.ictalive.coordination.actions.diagram.edit.parts.InputBindingEditPart" id="InputBinding_2038"/>
+         <object class="net.sf.ictalive.coordination.actions.diagram.edit.parts.SplitEditPart" id="Split_2039"/>
+         <object class="net.sf.ictalive.coordination.actions.diagram.edit.parts.SplitJoinEditPart" id="SplitJoin_2040"/>
+         <context elements="ActionsCollection_1000,CompositeAction_2024,AtomicAction_2025,Input_2026,Output_2027,Participant_2028,Sequence_2029,AnyOrder_2030,ControlConstructBag_2031,Perform_2032,Choice_2033,ControlConstructList_2034,RepeatUntil_2035,RepeatWhile_2036,IfThenElse_2037,InputBinding_2038,Split_2039,SplitJoin_2040"/>
+      </modelingAssistantProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="net.sf.ictalive.coordination.actions.diagram.providers.CoordinationIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="net.sf.ictalive.coordination.actions.diagram.providers.CoordinationParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders" id="decorator-provider">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="net.sf.ictalive.coordination.actions.diagram.providers.CoordinationShortcutsDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
+            <method name="getType()" value="2024,2025,2026,2027,2028,2029,2030,2031,2032,2033,2034,2035,2036,2037,2038,2039,2040"/>
+         </object>
+         <context decoratorTargets="generated-top-nodes"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/coordination/actions">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.ActionsCollection_1000"
+               name="%metatype.name.ActionsCollection_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ActionsCollection"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.ActionsCollectionEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/coordination/actions">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.CompositeAction_2024"
+               name="%metatype.name.CompositeAction_2024"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CompositeAction"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.CompositeActionEditHelper">
+            <param name="semanticHint" value="2024"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/coordination/actions">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.AtomicAction_2025"
+               name="%metatype.name.AtomicAction_2025"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="AtomicAction"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.AtomicActionEditHelper">
+            <param name="semanticHint" value="2025"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.Input_2026"
+               name="%metatype.name.Input_2026"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Input"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.InputEditHelper">
+            <param name="semanticHint" value="2026"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.Output_2027"
+               name="%metatype.name.Output_2027"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Output"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.OutputEditHelper">
+            <param name="semanticHint" value="2027"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.Participant_2028"
+               name="%metatype.name.Participant_2028"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Participant"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.ParticipantEditHelper">
+            <param name="semanticHint" value="2028"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.Sequence_2029"
+               name="%metatype.name.Sequence_2029"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Sequence"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.SequenceEditHelper">
+            <param name="semanticHint" value="2029"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.AnyOrder_2030"
+               name="%metatype.name.AnyOrder_2030"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="AnyOrder"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.AnyOrderEditHelper">
+            <param name="semanticHint" value="2030"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.ControlConstructBag_2031"
+               name="%metatype.name.ControlConstructBag_2031"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ControlConstructBag"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.ControlConstructBagEditHelper">
+            <param name="semanticHint" value="2031"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.Perform_2032"
+               name="%metatype.name.Perform_2032"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Perform"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.PerformEditHelper">
+            <param name="semanticHint" value="2032"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.Choice_2033"
+               name="%metatype.name.Choice_2033"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Choice"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.ChoiceEditHelper">
+            <param name="semanticHint" value="2033"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.ControlConstructList_2034"
+               name="%metatype.name.ControlConstructList_2034"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ControlConstructList"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.ControlConstructListEditHelper">
+            <param name="semanticHint" value="2034"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.RepeatUntil_2035"
+               name="%metatype.name.RepeatUntil_2035"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="RepeatUntil"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.RepeatUntilEditHelper">
+            <param name="semanticHint" value="2035"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.RepeatWhile_2036"
+               name="%metatype.name.RepeatWhile_2036"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="RepeatWhile"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.RepeatWhileEditHelper">
+            <param name="semanticHint" value="2036"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.IfThenElse_2037"
+               name="%metatype.name.IfThenElse_2037"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="IfThenElse"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.IfThenElseEditHelper">
+            <param name="semanticHint" value="2037"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.InputBinding_2038"
+               name="%metatype.name.InputBinding_2038"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="InputBinding"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.InputBindingEditHelper">
+            <param name="semanticHint" value="2038"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.Split_2039"
+               name="%metatype.name.Split_2039"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Split"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.SplitEditHelper">
+            <param name="semanticHint" value="2039"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.SplitJoin_2040"
+               name="%metatype.name.SplitJoin_2040"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="SplitJoin"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.SplitJoinEditHelper">
+            <param name="semanticHint" value="2040"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/expr">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.Condition_3054"
+               name="%metatype.name.Condition_3054"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Condition"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.ConditionEditHelper">
+            <param name="semanticHint" value="3054"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.AtomList_3055"
+               name="%metatype.name.AtomList_3055"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="AtomList"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.AtomListEditHelper">
+            <param name="semanticHint" value="3055"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.ClassAtom_3056"
+               name="%metatype.name.ClassAtom_3056"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ClassAtom"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.ClassAtomEditHelper">
+            <param name="semanticHint" value="3056"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.IndividualID_3057"
+               name="%metatype.name.IndividualID_3057"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="IndividualID"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.IndividualIDEditHelper">
+            <param name="semanticHint" value="3057"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.IndividualVariable_3058"
+               name="%metatype.name.IndividualVariable_3058"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="IndividualVariable"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.IndividualVariableEditHelper">
+            <param name="semanticHint" value="3058"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.IndividualPropertyAtom_3059"
+               name="%metatype.name.IndividualPropertyAtom_3059"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="IndividualPropertyAtom"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.IndividualPropertyAtomEditHelper">
+            <param name="semanticHint" value="3059"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.IndividualID_3060"
+               name="%metatype.name.IndividualID_3060"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.IndividualID_3057"/>
+            <param name="semanticHint" value="3060"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.IndividualVariable_3061"
+               name="%metatype.name.IndividualVariable_3061"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.IndividualVariable_3058"/>
+            <param name="semanticHint" value="3061"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.IndividualID_3062"
+               name="%metatype.name.IndividualID_3062"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.IndividualID_3057"/>
+            <param name="semanticHint" value="3062"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.IndividualVariable_3063"
+               name="%metatype.name.IndividualVariable_3063"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.IndividualVariable_3058"/>
+            <param name="semanticHint" value="3063"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.SameIndividualAtom_3064"
+               name="%metatype.name.SameIndividualAtom_3064"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="SameIndividualAtom"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.SameIndividualAtomEditHelper">
+            <param name="semanticHint" value="3064"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.IndividualID_3065"
+               name="%metatype.name.IndividualID_3065"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.IndividualID_3057"/>
+            <param name="semanticHint" value="3065"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.IndividualVariable_3066"
+               name="%metatype.name.IndividualVariable_3066"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.IndividualVariable_3058"/>
+            <param name="semanticHint" value="3066"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.DifferentIndividualsAtom_3067"
+               name="%metatype.name.DifferentIndividualsAtom_3067"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="DifferentIndividualsAtom"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.DifferentIndividualsAtomEditHelper">
+            <param name="semanticHint" value="3067"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.IndividualID_3068"
+               name="%metatype.name.IndividualID_3068"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.IndividualID_3057"/>
+            <param name="semanticHint" value="3068"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.IndividualVariable_3069"
+               name="%metatype.name.IndividualVariable_3069"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.IndividualVariable_3058"/>
+            <param name="semanticHint" value="3069"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.BuiltInAtom_3070"
+               name="%metatype.name.BuiltInAtom_3070"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="BuiltInAtom"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.BuiltInAtomEditHelper">
+            <param name="semanticHint" value="3070"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.DataRangeAtom_3071"
+               name="%metatype.name.DataRangeAtom_3071"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="DataRangeAtom"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.DataRangeAtomEditHelper">
+            <param name="semanticHint" value="3071"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.DataLiteral_3072"
+               name="%metatype.name.DataLiteral_3072"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="DataLiteral"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.DataLiteralEditHelper">
+            <param name="semanticHint" value="3072"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.DataValue_3073"
+               name="%metatype.name.DataValue_3073"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="DataValue"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.DataValueEditHelper">
+            <param name="semanticHint" value="3073"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.DataVariable_3074"
+               name="%metatype.name.DataVariable_3074"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="DataVariable"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.DataVariableEditHelper">
+            <param name="semanticHint" value="3074"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.DataValue_3090"
+               name="%metatype.name.DataValue_3090"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.DataValue_3073"/>
+            <param name="semanticHint" value="3090"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.DatavaluedPropertyAtom_3075"
+               name="%metatype.name.DatavaluedPropertyAtom_3075"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="DatavaluedPropertyAtom"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.DatavaluedPropertyAtomEditHelper">
+            <param name="semanticHint" value="3075"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.IndividualVariable_3076"
+               name="%metatype.name.IndividualVariable_3076"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.IndividualVariable_3058"/>
+            <param name="semanticHint" value="3076"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.IndividualID_3077"
+               name="%metatype.name.IndividualID_3077"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.IndividualID_3057"/>
+            <param name="semanticHint" value="3077"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.DataLiteral_3078"
+               name="%metatype.name.DataLiteral_3078"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.DataLiteral_3072"/>
+            <param name="semanticHint" value="3078"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/swrl">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.DataVariable_3079"
+               name="%metatype.name.DataVariable_3079"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.DataVariable_3074"/>
+            <param name="semanticHint" value="3079"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/expr">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.Condition_3080"
+               name="%metatype.name.Condition_3080"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.Condition_3054"/>
+            <param name="semanticHint" value="3080"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/coordination/actions">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.AtomicActionResult_3081"
+               name="%metatype.name.AtomicActionResult_3081"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="AtomicActionResult"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.AtomicActionResultEditHelper">
+            <param name="semanticHint" value="3081"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/expr">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.Expression_3082"
+               name="%metatype.name.Expression_3082"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Expression"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.ExpressionEditHelper">
+            <param name="semanticHint" value="3082"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/expr">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.Expression_3083"
+               name="%metatype.name.Expression_3083"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.Expression_3082"/>
+            <param name="semanticHint" value="3083"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/coordination/actions">
+         <metamodelType
+               id="net.sf.ictalive.coordination.actions.diagram.Distribution_3084"
+               name="%metatype.name.Distribution_3084"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Distribution"
+               edithelper="net.sf.ictalive.coordination.actions.diagram.edit.helpers.DistributionEditHelper">
+            <param name="semanticHint" value="3084"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/coordination/actions">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.Distribution_3085"
+               name="%metatype.name.Distribution_3085"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.Distribution_3084"/>
+            <param name="semanticHint" value="3085"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/coordination/actions">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.Distribution_3086"
+               name="%metatype.name.Distribution_3086"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.Distribution_3084"/>
+            <param name="semanticHint" value="3086"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/expr">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.Condition_3087"
+               name="%metatype.name.Condition_3087"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.Condition_3054"/>
+            <param name="semanticHint" value="3087"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/expr">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.Condition_3088"
+               name="%metatype.name.Condition_3088"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.Condition_3054"/>
+            <param name="semanticHint" value="3088"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/expr">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.Condition_3089"
+               name="%metatype.name.Condition_3089"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="net.sf.ictalive.coordination.actions.diagram.Condition_3054"/>
+            <param name="semanticHint" value="3089"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.ProcessHasInput_4026"
+               name="%metatype.name.ProcessHasInput_4026"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4026"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.ProcessHasOutput_4027"
+               name="%metatype.name.ProcessHasOutput_4027"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4027"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.ProcessPerformedBy_4028"
+               name="%metatype.name.ProcessPerformedBy_4028"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4028"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.CompositeProcessComposedOf_4029"
+               name="%metatype.name.CompositeProcessComposedOf_4029"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4029"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.PerformProcess_4030"
+               name="%metatype.name.PerformProcess_4030"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4030"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.ChoiceComponents_4031"
+               name="%metatype.name.ChoiceComponents_4031"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4031"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.AnyOrderComponents_4032"
+               name="%metatype.name.AnyOrderComponents_4032"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4032"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.SequenceComponents_4033"
+               name="%metatype.name.SequenceComponents_4033"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4033"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.SplitComponents_4045"
+               name="%metatype.name.SplitComponents_4045"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4045"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.SplitJoinComponents_4046"
+               name="%metatype.name.SplitJoinComponents_4046"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4046"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.ControlConstructBagRest_4034"
+               name="%metatype.name.ControlConstructBagRest_4034"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4034"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.ControlConstructListRest_4035"
+               name="%metatype.name.ControlConstructListRest_4035"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4035"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.IfThenElseThen_4036"
+               name="%metatype.name.IfThenElseThen_4036"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4036"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.IfThenElseElse_4037"
+               name="%metatype.name.IfThenElseElse_4037"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4037"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.RepeatUntilUntilProcess_4038"
+               name="%metatype.name.RepeatUntilUntilProcess_4038"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4038"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.RepeatWhileWhileProcess_4039"
+               name="%metatype.name.RepeatWhileWhileProcess_4039"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4039"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.ControlConstructBagFirst_4040"
+               name="%metatype.name.ControlConstructBagFirst_4040"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4040"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.ControlConstructListFirst_4041"
+               name="%metatype.name.ControlConstructListFirst_4041"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4041"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.PerformHasDataFrom_4042"
+               name="%metatype.name.PerformHasDataFrom_4042"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4042"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.BindingValueFrom_4043"
+               name="%metatype.name.BindingValueFrom_4043"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4043"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://ict-alive.sourceforge.net/owls/process">
+         <specializationType
+               id="net.sf.ictalive.coordination.actions.diagram.BindingToParam_4044"
+               name="%metatype.name.BindingToParam_4044"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4044"/>
+         </specializationType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="net.sf.ictalive.coordination.actions.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="net.sf.ictalive.coordination.actions.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="net.sf.ictalive.coordination.actions.diagram.TypeContext">
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.ActionsCollection_1000"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.CompositeAction_2024"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.AtomicAction_2025"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.Input_2026"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.Output_2027"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.Participant_2028"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.Sequence_2029"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.AnyOrder_2030"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.ControlConstructBag_2031"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.Perform_2032"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.Choice_2033"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.ControlConstructList_2034"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.RepeatUntil_2035"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.RepeatWhile_2036"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.IfThenElse_2037"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.InputBinding_2038"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.Split_2039"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.SplitJoin_2040"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.Condition_3054"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.AtomList_3055"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.ClassAtom_3056"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.IndividualID_3057"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.IndividualVariable_3058"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.IndividualPropertyAtom_3059"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.IndividualID_3060"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.IndividualVariable_3061"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.IndividualID_3062"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.IndividualVariable_3063"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.SameIndividualAtom_3064"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.IndividualID_3065"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.IndividualVariable_3066"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.DifferentIndividualsAtom_3067"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.IndividualID_3068"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.IndividualVariable_3069"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.BuiltInAtom_3070"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.DataRangeAtom_3071"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.DataLiteral_3072"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.DataValue_3073"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.DataVariable_3074"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.DataValue_3090"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.DatavaluedPropertyAtom_3075"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.IndividualVariable_3076"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.IndividualID_3077"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.DataLiteral_3078"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.DataVariable_3079"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.Condition_3080"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.AtomicActionResult_3081"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.Expression_3082"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.Expression_3083"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.Distribution_3084"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.Distribution_3085"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.Distribution_3086"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.Condition_3087"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.Condition_3088"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.Condition_3089"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.ProcessHasInput_4026"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.ProcessHasOutput_4027"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.ProcessPerformedBy_4028"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.CompositeProcessComposedOf_4029"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.PerformProcess_4030"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.ChoiceComponents_4031"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.AnyOrderComponents_4032"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.SequenceComponents_4033"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.SplitComponents_4045"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.SplitJoinComponents_4046"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.ControlConstructBagRest_4034"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.ControlConstructListRest_4035"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.IfThenElseThen_4036"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.IfThenElseElse_4037"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.RepeatUntilUntilProcess_4038"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.RepeatWhileWhileProcess_4039"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.ControlConstructBagFirst_4040"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.ControlConstructListFirst_4041"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.PerformHasDataFrom_4042"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.BindingValueFrom_4043"/>
+         <elementType ref="net.sf.ictalive.coordination.actions.diagram.BindingToParam_4044"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="net.sf.ictalive.coordination.actions.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="net.sf.ictalive.coordination.actions.diagram"
+           properties="isURIEditorInput"
+           class="net.sf.ictalive.coordination.actions.diagram.part.CoordinationUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isShortcut">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="net.sf.ictalive.coordination.actions.diagram.ShortcutPropertyTester"
+           type="org.eclipse.gmf.runtime.notation.View"
+           namespace="net.sf.ictalive.coordination.actions.diagram"
+           properties="isShortcut"
+           class="net.sf.ictalive.coordination.actions.diagram.part.CoordinationShortcutPropertyTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="net.sf.ictalive.coordination.actions.diagram.resourceContent"/>
+			<contentExtension pattern="net.sf.ictalive.coordination.actions.diagram.domainResourceContent"/>
+            <contentExtension pattern="net.sf.ictalive.coordination.actions.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="net.sf.ictalive.coordination.actions.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="net.sf.ictalive.coordination.actions.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="net.sf.ictalive.coordination.actions.diagram.navigator.CoordinationNavigatorContentProvider" 
+            labelProvider="net.sf.ictalive.coordination.actions.diagram.navigator.CoordinationNavigatorLabelProvider"
+            icon="icons/obj16/ActionsDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="actions_diagram"/>
+               </and>
+               <instanceof value="net.sf.ictalive.coordination.actions.diagram.navigator.CoordinationAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="net.sf.ictalive.coordination.actions.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="net.sf.ictalive.coordination.actions.diagram.navigator.CoordinationAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="net.sf.ictalive.coordination.actions.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="net.sf.ictalive.coordination.actions.diagram.navigatorSorter" 
+               class="net.sf.ictalive.coordination.actions.diagram.navigator.CoordinationNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="actions_diagram"/>
+                  </and>
+                  <instanceof value="net.sf.ictalive.coordination.actions.diagram.navigator.CoordinationAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="net.sf.ictalive.coordination.actions.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="net.sf.ictalive.coordination.actions.diagram.navigator.CoordinationDomainNavigatorContentProvider" 
+            labelProvider="net.sf.ictalive.coordination.actions.diagram.navigator.CoordinationDomainNavigatorLabelProvider"
+            icon="icons/obj16/ActionsDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="actions"/>
+               </and>
+               <instanceof value="net.sf.ictalive.coordination.actions.diagram.navigator.CoordinationDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="net.sf.ictalive.coordination.actions.diagram.navigator.CoordinationDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="net.sf.ictalive.coordination.actions.diagram.navigatorActionProvider"
+            class="net.sf.ictalive.coordination.actions.diagram.navigator.CoordinationNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="net.sf.ictalive.coordination.actions.diagram.navigator.CoordinationAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="net.sf.ictalive.coordination.actions.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="net.sf.ictalive.coordination.actions.diagram.navigatorLinkHelper"
+            class="net.sf.ictalive.coordination.actions.diagram.navigator.CoordinationNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="net.sf.ictalive.coordination.actions.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="net.sf.ictalive.coordination.actions.diagram.navigator.CoordinationAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="net.sf.ictalive.coordination.actions.diagram.part.CoordinationDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="net.sf.ictalive.coordination.actions.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="net.sf.ictalive.coordination.actions.diagram.updateDiagram"
+         contextId="net.sf.ictalive.coordination.actions.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="net.sf.ictalive.coordination.actions.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="net.sf.ictalive.coordination.actions.diagram.part.CoordinationDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="net.sf.ictalive.coordination.actions.diagram.edit.parts.ActionsCollectionEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+         <command commandId="net.sf.ictalive.coordination.actions.diagram.CreateShortcutAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="net.sf.ictalive.coordination.actions.diagram.part.CoordinationDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="net.sf.ictalive.coordination.actions.diagram.edit.parts.ActionsCollectionEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="net.sf.ictalive.coordination.actions.diagram.part.CoordinationDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="net.sf.ictalive.coordination.actions.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="net.sf.ictalive.coordination.actions.diagram.part.CoordinationDiagramEditorID"
+         defaultHandler="net.sf.ictalive.coordination.actions.diagram.part.LoadResourceAction"/>
+      <command id="net.sf.ictalive.coordination.actions.diagram.CreateShortcutAction"
+         name="Create Shortcut..."
+         categoryId="net.sf.ictalive.coordination.actions.diagram.part.CoordinationDiagramEditorID"
+         defaultHandler="net.sf.ictalive.coordination.actions.diagram.part.CreateShortcutAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>

@@ -1,0 +1,7 @@
+#Wed Jul 21 11:24:21 BST 2010
+eclipse.preferences.version=1
+gmf_dashboard/domainGenerationModel=platform\:/resource/net.sf.ictalive.coordination.wfannotation.mapping/model/mapping.genmodel
+gmf_dashboard/domainModel=platform\:/resource/net.sf.ictalive.coordination.wfannotation.mapping/model/mapping.ecore
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/net.sf.ictalive.coordination.wfannotation.mapping/model/mapping.gmfgraph
+gmf_dashboard/mappingModel=platform\:/resource/net.sf.ictalive.coordination.wfannotation.mapping/model/mapping.gmfmap
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/net.sf.ictalive.coordination.wfannotation.mapping/model/mapping.gmftool

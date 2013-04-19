@@ -1,0 +1,28 @@
+«EXTENSION net::sf::ictalive::coordination::agents::diagram::oaw::templates::util»
+«DEFINE Mas FOR agents::MasModel»
+	«FILE getRunAgentScapeBuildFileName()»<?xml version="1.0" encoding="UTF-8"?>
+<project name="net.sf.ictalive.coordination.agents.agentscape.start"
+        default="startAgentscape">
+
+        <!-- code details -->
+        <property name="agentscape-dir" value="«getAgentScapePath()»" />
+
+        <target name="startAgentscape" depends="">
+                <echo>Running aslookup</echo>
+                 <java jar="${agentscape-dir}/lib/aslookup.jar" fork="true" spawn="true">
+						 <jvmarg line="-Dhttp.proxyHost=${proxyHost} -Dhttp.proxyPort=${proxyPort} -Dhttp.proxyUser=${proxyUser} -Dhttp.proxyPassword=${proxyPassword} -Dhttp.nonProxyHosts=&quot;${nonProxyHosts}&quot; -Xmx${maxHeapSize}m -XX:MaxPermSize=512m"/>
+                        <arg line="${agentscapePort}"/>
+                </java>
+               
+                <echo>Running aslookup location</echo>
+                <java jar="${agentscape-dir}/lib/asstartup.jar" fork="true" spawn="true">
+					 <jvmarg line="-Dhttp.proxyHost=${proxyHost} -Dhttp.proxyPort=${proxyPort} -Dhttp.proxyUser=${proxyUser} -Dhttp.proxyPassword=${proxyPassword} -Dhttp.nonProxyHosts=&quot;${nonProxyHosts}&quot; -Xmx${maxHeapSize}m -XX:MaxPermSize=512m"/>
+                        <arg line="-L ${agentscapeServer}:${agentscapePort} -jvm 1 -sp 0 ${agentscapeLocation}"/>
+                </java>
+               
+                <!--  need to sleep here for 30s -->
+                <sleep seconds="30"/>
+        </target>
+</project>
+	«ENDFILE»
+«ENDDEFINE»
