@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Overview</title>
+  <link rel="stylesheet" href="shared.css" type="text/css" />	
+  </head>
+
+<body>
+<div class="menu">
+	<div class="tooltipy" style="margin-top:10px;"><a href="http://org.eclipse.ui.intro/showPage?id=overview"><img src="images/yellow.png" height="24" width="24" border="0" /><span class="yellow" style="font-size:9px;">Overview</span></a></div>
+    <div class="tooltip" style="margin-top:30px;"><a href="http://org.eclipse.ui.intro/showPage?id=tutorials"><img src="images/red.png" height="24" width="24" border="0" /><span style="font-size:9px;">Tutorials</span></a></div>
+    <div class="tooltip" style="margin-left:-10px;"><a href="http://org.eclipse.ui.intro/showPage?id=methodology"><img src="images/green.png" width="24" height="24" border="0" /><span style="font-size:9px;">Methodology</span></a></div>
+    <div class="tooltip" style="margin-left:50px;"><a href="http://org.eclipse.ui.intro/showPage?id=coordination"><img src="images/left.png" width="24" height="24" border="0" /><span style="font-size:9px;">Previous</span></a></div>
+    <div class="tooltipup"><a href="http://org.eclipse.ui.intro/showPage?id=coordination"><img src="images/up.png" width="24" height="24" border="0" /><span style="font-size:9px;">Up</span></a></div>
+    <div class="tooltip"><a href="http://org.eclipse.ui.intro/showPage?id=tasks"><img src="images/right.png" width="24" height="24" border="0" /><span style="font-size:9px;">Next</span></a></div>
+    <div class="tooltip" style="margin-left:50px;"><a href="http://org.eclipse.ui.intro/close"><img src="images/workspace.png" width="24" height="24" border="0" /><span style="font-size:9px;">Go to workbench</span></a></div>
+</div>
+
+<div class="bg">
+<img id="background-img" src="images/alive_background.jpg" class="bg" />
+</div>
+
+<div class="page-style">
+    <div id="content"> 	
+        <h2>Actions</h2>
+        <p>An action model consists of a series of actions, each of which describe a separate process that agents will carry out.  There are two types of actions:</p>
+        <ul>
+          <li>Atomic actions, which are standalone actions, typically achieved by invoking a single service</li>
+          <li>Composite actions, are composed of other actions (i.e., composed actions are achieved by performing (a series of) other action(s)).</li>
+      </ul>
+        <p>Both types of action have various properties, however the key properties are:</p>
+      <ul>
+          <li>name – the name of the action,</li>
+          <li>hasInput, a list of the action’s inputs,</li>
+          <li>hasOuput, a list of the action’s outputs,</li>
+          <li>hasPrecondition, a list of the preconditions which must be satisfied before the action can be performed.</li>
+        </ul>
+        <p>Atomic actions also have a hasAtomicActionResult property, which defines the results of performing the action. An atomic action result is composed of an condition under which the result occurs, and add and delete effects of the result (discussed below). Atomic actions can have multiple results, but only one result will be used when an atomic action is performed.</p>
+        <p>          The control flow of a composite action is determined by the control construct used in the definition of the composed action; there are seven types of control construct which can be used:</p>
+        <ul>
+          <li>Any Order, which specifies a series of control constructs that can be performed in any order,</li>
+          <li>Choice, which specifies a series of control constructs, one of which should be performed,</li>
+          <li>If Then Else, which specifies a control construct to perform if some condition is satisfied, and, optionally, a control construct to perform if the condition is not satisfied,</li>
+          <li>Perform, which specifies an (atomic or composite) action to perform,</li>
+          <li>Repeat Until, which specifies a control construct to perform until some condition is satisfied,</li>
+          <li>Repeat While, which specifies a control construct to perform while some condition is satisfied,</li>
+          <li>Sequence, which specifies a series of control constructs to be performed in the defined order,</li>
+          <li>Split, which specifies a series of control constructs that should be performed in parallel,</li>
+          <li>Split Join, which, like Split, specifies a series of control constructs that should be performed in parallel, however the flow should wait until all those control constructs are performed before continuing.</li>
+      </ul>
+      <p>Actions are stored in an Action Collection, which also stores the inputs and outputs used by the actions. Each action collection has a ns (abbreviation of namespace), which is used to provide the URIs for the actions in that collection (the URI of an action being derived by combining the action collection’s ns and the action’s name).</p>
+      <p> Inputs and Outputs also have a ns and name property (if the ns is blank, then the value is inherited from the action collection). As with actions, the URI of an input or output is a unique identifier for the input or output, and is derived by combining the ns and the name. Inputs and Outputs also have a parameterType, which is a Concept from the organisation model, which defines the type of the input or output value.</p>
+        <p>          URIs are used to provide a unique point of reference for objects, such as actions, inputs, and outputs, so if two different objects have the same URI, then they are considered to be the same object.</p>
+        <p>      Conditions are used to describe the preconditions of an action, and expressions are used to describe the postconditions of atomic actions; both conditions and expressions use the same format. Conditions and expressions describe the state of the world, which is based on the domain ontology and consists of:</p>
+        <ul>
+          <li>Classes, which describe different types of objects.</li>
+          <li>Properties, which describe attributes of the classes and relationships between the classes. There are two types of properties: datatype properties, which can have values such as string, numeric, or date; and object properties, which can have values that are other individuals.</li>
+          <li>Individuals, which are instances of classes with associated property values. There are two types of property values, datavalues (for datatype properties) and individual values (for object properties). </li>
+      </ul>
+        <p>The expressions and conditions consist of a list of atoms; there are five different types of atoms that can be used to describe different aspects of the world state depending on the context in which they are used. Table 1 describes the different atoms, and how they are interpreted as (pre)conditions and postconditions (split into add effects, items added to the world state, and delete effect, items removed from the world state).</p>
+        <p>When selecting the value of arguments, such as the argument1, argument2, and args properties it is possible to either specify the exact value or a variable. The exact value can be the datavalue (for the datavalued property atom argument2 property or the one of property of the data range atom), or the concept from an organisation model ontology (for the individual class atom’s argument1 property, the individual property atom’s argument2 property, the args property for the same individual, different individual, and built in atoms, or the argument1 and dataType properties of the data range atom).</p>
+        <p style="margin-bottom:10px;">When using a variable, it is necessary to specify the name of the variable. Within a single action, different variables with the same name are treated as the same variable. It is possible to have an output refer to an input or output by specifying the variable name to be the URI (ns+name) of the input/output.</p>
+        <center><font style="text-align:center; font-weight: bold; font-size:11px;">Table 1. Outline of how atoms are interpreted in action pre- and post-conditions.</font>
+        <table border="1" cellspacing="0" cellpadding="0" width="70%">
+          <tr>
+            <td valign="top">Atom type</td>
+            <td valign="top">Properties</td>
+            <td valign="top">Condition interpretation</td>
+            <td valign="top">Add effect interpretation</td>
+            <td valign="top">Delete effect interpretation</td>
+          </tr>
+          <tr>
+            <td valign="top">Class atom</td>
+            <td valign="top">classPredicate, argument1</td>
+            <td valign="top">Checks that argument1 is an individual   of type classPredicate</td>
+            <td valign="top">Asserts that argument1 is an individual   of type classPredicate</td>
+            <td valign="top">Removes any assertion that argument1 is   an individual of type classPredicate</td>
+          </tr>
+          <tr>
+            <td valign="top">Datavalued property atom</td>
+            <td valign="top">argument1, propertyPredicate, argument2</td>
+            <td valign="top">Checks that argument1 has argument2 as   a value of the property propertyPredicate</td>
+            <td valign="top">Asserts that argument1 has argument2 as   a value of the property propertyPredicate</td>
+            <td valign="top">Removes argument2 as a value of the   property propertyPredicate for argument1</td>
+          </tr>
+          <tr>
+            <td valign="top">Individual property atom</td>
+            <td valign="top">argument1, propertyPredicate, argument2</td>
+            <td valign="top">Checks that argument1 has argument2 as   a value of the property propertyPredicate</td>
+            <td valign="top">Asserts that argument1 has argument2 as   a value of the property propertyPredicate</td>
+            <td valign="top">Removes argument2 as a value of the   property propertyPredicate for argument1</td>
+          </tr>
+          <tr>
+            <td valign="top">Same individual atom</td>
+            <td valign="top">args</td>
+            <td valign="top">Checks that every individual in args   have been asserted as being the same</td>
+            <td valign="top">Asserts that every pair of individuals   in args are the same individuals</td>
+            <td valign="top">Retracts any assertion that every pair   of individuals in args are the same</td>
+          </tr>
+          <tr>
+            <td valign="top">Different individuals atom</td>
+            <td valign="top">args</td>
+            <td valign="top">Checks that every individual in args   have been asserted as being different</td>
+            <td valign="top">Asserts that every pair of individuals   in args are different individuals</td>
+            <td valign="top">Retracts any assertion that every pair   of individuals in args are different</td>
+          </tr>
+          <tr>
+            <td valign="top">Data range atom</td>
+            <td valign="top">argument1, dataType, oneOf</td>
+            <td valign="top">Checks that the value of argument1 is   either of type dataType or one of the oneOf values</td>
+            <td valign="top">Not appropriate</td>
+            <td valign="top">Not appropriate</td>
+          </tr>
+          <tr>
+            <td valign="top">Built in atom</td>
+            <td valign="top">builtIn, args</td>
+            <td valign="top">Depends on the builtIn; if a test type   builtIn is used (for example ‘&gt;’ or ‘&lt;’) then the builtIn is applied   with the first and second values in args, then the second and third, and so   on; otherwise, it is interpreted as in the add effect.</td>
+            <td valign="top">Sets the value of the first item in   args to be the result of applying the builtIn to the second and subsequent   values in args.</td>
+            <td valign="top">Not appropriate</td>
+          </tr>
+        </table></center>
+      <h3>Step Through</h3>
+        <p>There are two options available for creating a new action model: defining all of the actions manually, or deriving a series of outline actions from an organisation model; both approaches are discussed below.</p>
+      <h4>Designing Actions from Scratch</h4>
+        <p>Designing actions from scratch requires manually creating all of the actions that are required for the action model.&nbsp; There are two plugins available for editing action models: a tree-style editor (this is used for files with the extension &quot;.actions&quot;) and a graphical editor (used for files with extension &quot;.actions_diagram&quot;).&nbsp; Detailed instructions on using both tools for building action models are provided in the Action Tab User Manual.&nbsp; </p>
+<h4>Derived Actions</h4>
+        <p>The &quot;Derive&quot; button between the &quot;Organisation Model&quot; and &quot;Action Model&quot; can be used to generate a set of actions based on concepts from the selected organisation model.&nbsp; Briefly, the actions are generated as follows:</p>
+        <ul>
+          <li>A composite action with a name starting &quot;[IS]_&quot; is created based on the Interaction Structure (IS) in the organisation model.&nbsp; This action is composed of the following scene actions.</li>
+          <li>For each scene in the IS, a composite action with name &quot;[Scene]_&lt;scene_name&gt;&quot; is created.&nbsp; These actions are composed of the following Landmark Pattern actions.</li>
+          <li>For each Landmark Pattern in a scene, a composite action with name &quot;[LMP]_X&quot; is created.&nbsp; This action is composed of the following landmark actions.</li>
+          <li>For each Landmark in a Landmark Pattern, a composite action with name &quot;[LM]_&lt;landmark-name&gt;&quot; is created.&nbsp; This action is composed of the following objective actions for every objective entailed by the landmark.</li>
+          <li>For objectives with subobjectives, a composite action with name &quot;&lt;objective-name&gt;&quot; is created, composed of objective actions for each subobjective of the objective.</li>
+          <li>For objectives with no subobjectives, an atomic action with name &quot;&lt;objective-name&gt;&quot; is created.&nbsp; These actions have one result, with one add effect that has a name derived from a serialisation of the state description of the corresponding objective. </li>
+        </ul>
+        These actions can be considered as placeholders, which should be expanded using the action editor.&nbsp; In particular, none of the generated actions have inputs, outputs, or preconditions, and the generated atomic actions have only a basic result, which must be expanded to be used by the plan synthesis and the enactment.&nbsp;
+<h3>Best Practices (do)</h3>
+      <p>Ensure actions, inputs, and outputs have a unique URI (see above for a description of how the URI is determined).</p>
+        <p> When defining inputs and outputs, ensure that the parameterType is set to at least one concept, as the types are used when selecting services to use for enacting an action, and by the ASPReasoner component. This is a reasonable requirement as inputs and outputs of an action represent objects (classes) rather than properties or individuals.</p>
+        <p> When creating expressions or conditions, ensure an atom list is added to the expression/condition and atoms are added to the list. The expression/condition name is for reference purposes only, and is not used by other components (such as the plan synthesis and agent action enactment).&nbsp;</p>
+        <p>          Currently it is necessary to ensure atomic actions are only performed by a single role, specified by adding the role name to the value of the performedByRole property. If no role is specified here, the action will not be enacted by any agents and plans using that action will fail. In the future it is likely that if multiple roles are specified, then the OM’s SS will be used to determine which role should perform the action (preferably either a Hierarchy or Network dependency should be used so that it is clear which role should perform the action), this will only work however, if it is possible to determine which objective the action corresponds to.&nbsp;</p>
+        <p>          It must be possible to determine which (combination of) atomic actions should be performed to achieve a composite action. The plan synthesis attempts to produce a plan consisting of atomic actions, if it is not possible (due to, for example, a cycle produced by references among composite actions) then no plans will be generated.</p>
+        <p> When using the Repeat-While and Repeat-Until control constructs, ensure that the actions referenced in the whileProcess and untilProcess change the property values used in the whileCondition and untilCondition in a manner that will cause the loop to exit; otherwise an infinite loop will be entered by the planner and no plans using those actions will be produced.</p>
+        <p> The planner currently used for plan synthesis does not support parallel threads of execution, so any Split and Split-Join control constructs will be replaced by the control construct referenced by the Split/Split-Join by the planner.</p>
+        <p> Set the ns of the action collection, to ensure that actions are stored correctly in the repository. The ns should be specified using the following form: &quot;http://www.example.com/example.owl#&quot;.&nbsp;</p>
+        <p>          If the action has inputs, add a precondition to the action, and for every input, add a Class Atom with classPredicate equal to the input’s parameterType and a IndividualVariable for the argument1 property with the name equal to the URI of the input (the input’s ns + the input’s name, or if the input’s ns is blank, the containing action collection’s ns + the input’s name). This will ensure that inputs to the action (during both plan synthesis and enactment) are of the correct type.</p>
+        <p> If the atomic action has outputs, for every result ensure that an add effect is added with a Class Atom for every ouputput with classPredicate equal to the output's parameterType and a IndividualVariable for the argument1 property with the name equal to the URI of the output (the output’s ns + the output’s name, or if the output’s ns is blank, the containing action collection’s ns + the output’s name).</p>
+        <p> To refer to an input or output in a pre- or post-condition, add an individual variable with the name equal to the input/output’s URI (see previous two points).</p>
+        <p> When defining a Perform control construct, it is possible to define an Input Binding, which specifies the value of an input of the action referenced by the control construct. Ensure that the toParam property is set to an input of the referenced action, and use either the valueData or valueSpecifier property to specify the value for the input as text, or set the valueFrom property to be an input of the composite action the Perform is part of.</p>
+        <p> Further, in order to use the ASPReasoner component, preconditions and add effects of atomic actions need to be expressed in SWRL. Currently KIF and DRS are not supported. When defining the atoms, ensure the following conditions are met: </p>
+        <ul>
+          <li>Class Atom. Must have the &quot;Class Predicate&quot; field filled in with a concept of type &quot;Class&quot; </li>
+          <li>Individual Property Atom. Must have the &quot;Property Predicate&quot; field filled in with a concept of type &quot;Property&quot; </li>
+          <li>Datavalued Property Atom. Must have the &quot;Property Predicate&quot; field filled in with a concept of type &quot;Property&quot; </li>
+      </ul>
+        Built In Atom. Must have the &quot;Built In&quot; field filled in.
+<h3>Bad Practices (don't)</h3>
+        <p>Define actions with identical names within the same action collection.</p>
+        <p> Define action collections with identical ns values – try to keep all actions within the same namespace in the same action collection, in the same file.</p>
+        <p> When defining an Input Binding for a Perform control construct, don’t set the valueFrom to be an output of another action referred to by the composite action, as the planner is unable to determine such links between actions. To achieve this, add a Class atom to the precondition of the Perform action for a variable with the same type as the output.</p>
+<h3>Inter-dependencies</h3>
+        <p>The main inter-dependency for an action model is with the Concepts from an Ontology in an organisation model’s CS.&nbsp; Concepts are used to specify the type of inputs and outputs, and also the individuals used by the atoms in the conditions and expressions.</p>
+        <p>It is possible to split an action model across multiple action files and use links between the files to build the overall model; however, this approach is not recommended. </p>
+  </div>
+    <br />
+    <div style="float:right; margin-right:10%;">Next: <a href="http://org.eclipse.ui.intro/showPage?id=tasks">Tasks</a></div>
+</div>
+
+<div id="logo">
+	<img src="images/alive_logo.jpg" border="0" />
+</div>
+</body>
+</html>

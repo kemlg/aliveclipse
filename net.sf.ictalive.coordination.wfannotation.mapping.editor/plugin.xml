@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="net.sf.ictalive.coordination.CategoryID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="net.sf.ictalive.coordination.wfannotation.mapping.presentation.MappingModelWizardID"
+            name="%_UI_MappingModelWizard_label"
+            class="net.sf.ictalive.coordination.wfannotation.mapping.presentation.MappingModelWizard"
+            category="net.sf.ictalive.coordination.CategoryID"
+            icon="icons/full/obj16/MappingModelFile.gif">
+         <description>%_UI_MappingModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="net.sf.ictalive.coordination.wfannotation.mapping.presentation.MappingEditorID"
+            name="%_UI_MappingEditor_label"
+            icon="icons/full/obj16/MappingModelFile.gif"
+            extensions="bpelactionmap"
+            class="net.sf.ictalive.coordination.wfannotation.mapping.presentation.MappingEditor"
+            contributorClass="net.sf.ictalive.coordination.wfannotation.mapping.presentation.MappingActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

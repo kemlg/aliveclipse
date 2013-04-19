@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:process="http://ict-alive.sourceforge.net/owls/process" xmlns:tasks="http://ict-alive.sourceforge.net/coordination/tasks">
+  <tasks:Task name="Task_For_manage_User_Context">
+    <components xsi:type="process:Sequence">
+      <components>
+        <first xsi:type="process:Perform">
+          <process href="../model/Opera2Actions.actions#//@actions.0"/>
+        </first>
+      </components>
+    </components>
+  </tasks:Task>
+  <tasks:Task name="Task_For_[LM]_Know_Possible_Channels">
+    <components xsi:type="process:Sequence">
+      <components>
+        <first xsi:type="process:Perform">
+          <process href="../model/Opera2Actions.actions#//@actions.9"/>
+        </first>
+      </components>
+    </components>
+  </tasks:Task>
+  <tasks:Task name="Task_For_[LM]_Start">
+    <components xsi:type="process:Sequence">
+      <components>
+        <first xsi:type="process:Perform">
+          <process href="../model/Opera2Actions.actions#//@actions.8"/>
+        </first>
+      </components>
+    </components>
+  </tasks:Task>
+  <tasks:Task name="Task_For_[LM]_Communication_Finished">
+    <components xsi:type="process:Sequence">
+      <components>
+        <first xsi:type="process:Perform">
+          <process href="../model/Opera2Actions.actions#//@actions.11"/>
+        </first>
+      </components>
+    </components>
+  </tasks:Task>
+  <tasks:Task name="Task_For_[Scene]_Communication">
+    <components xsi:type="process:Sequence">
+      <components>
+        <first xsi:type="process:Perform">
+          <process href="../model/Opera2Actions.actions#//@actions.15"/>
+        </first>
+      </components>
+    </components>
+  </tasks:Task>
+  <tasks:Task name="Task_For_receive_Appropriate_Channels">
+    <components xsi:type="process:Sequence">
+      <components>
+        <first xsi:type="process:Perform">
+          <process href="../model/Opera2Actions.actions#//@actions.7"/>
+        </first>
+      </components>
+    </components>
+  </tasks:Task>
+  <tasks:Task name="Task_For_retrieve_Receiver_Context">
+    <components xsi:type="process:Sequence">
+      <components>
+        <first xsi:type="process:Perform">
+          <process href="../model/Opera2Actions.actions#//@actions.6"/>
+        </first>
+      </components>
+    </components>
+  </tasks:Task>
+  <tasks:Task name="Task_For_[LM]_Know_Appropriate_Channels">
+    <components xsi:type="process:Sequence">
+      <components>
+        <first xsi:type="process:Perform">
+          <process href="../model/Opera2Actions.actions#//@actions.10"/>
+        </first>
+      </components>
+    </components>
+  </tasks:Task>
+  <tasks:Task name="Task_For_manage_User_Preferences">
+    <components xsi:type="process:Sequence">
+      <components>
+        <first xsi:type="process:Perform">
+          <process href="../model/Opera2Actions.actions#//@actions.2"/>
+        </first>
+      </components>
+    </components>
+  </tasks:Task>
+  <tasks:Task name="Task_For_message_Transmitted">
+    <components xsi:type="process:Sequence">
+      <components>
+        <first xsi:type="process:Perform">
+          <process href="../model/Opera2Actions.actions#//@actions.4"/>
+        </first>
+      </components>
+    </components>
+  </tasks:Task>
+  <tasks:Task name="Task_For_[LMP]_1">
+    <components xsi:type="process:Sequence">
+      <components>
+        <first xsi:type="process:Perform">
+          <process href="../model/Opera2Actions.actions#//@actions.12"/>
+        </first>
+      </components>
+    </components>
+  </tasks:Task>
+  <tasks:Task name="Task_For_retrieve_Receiver_Profile">
+    <components xsi:type="process:Sequence">
+      <components>
+        <first xsi:type="process:Perform">
+          <process href="../model/Opera2Actions.actions#//@actions.5"/>
+        </first>
+      </components>
+    </components>
+  </tasks:Task>
+  <tasks:Task name="Task_For_[IS]_">
+    <components xsi:type="process:Sequence">
+      <components>
+        <first xsi:type="process:Perform">
+          <process href="../model/Opera2Actions.actions#//@actions.16"/>
+        </first>
+      </components>
+    </components>
+  </tasks:Task>
+  <tasks:Task name="Task_For_[Scene]_end">
+    <components xsi:type="process:Sequence">
+      <components>
+        <first xsi:type="process:Perform">
+          <process href="../model/Opera2Actions.actions#//@actions.14"/>
+        </first>
+      </components>
+    </components>
+  </tasks:Task>
+  <tasks:Task name="Task_For_manage_User_Subscription_Info">
+    <components xsi:type="process:Sequence">
+      <components>
+        <first xsi:type="process:Perform">
+          <process href="../model/Opera2Actions.actions#//@actions.1"/>
+        </first>
+      </components>
+    </components>
+  </tasks:Task>
+  <tasks:Task name="Task_For_retrieve_Receiver_Subscription">
+    <components xsi:type="process:Sequence">
+      <components>
+        <first xsi:type="process:Perform">
+          <process href="../model/Opera2Actions.actions#//@actions.3"/>
+        </first>
+      </components>
+    </components>
+  </tasks:Task>
+  <tasks:Task name="Task_For_[Scene]_start">
+    <components xsi:type="process:Sequence">
+      <components>
+        <first xsi:type="process:Perform">
+          <process href="../model/Opera2Actions.actions#//@actions.13"/>
+        </first>
+      </components>
+    </components>
+  </tasks:Task>
+</xmi:XMI>

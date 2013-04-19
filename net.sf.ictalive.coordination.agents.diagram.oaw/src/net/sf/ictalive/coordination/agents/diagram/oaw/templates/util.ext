@@ -1,0 +1,3 @@
+String getAgentScapePath() : JAVA net.sf.ictalive.coordination.agents.diagram.oaw.util.PathUtils.getAgentScapePath();
+String getRunAgentScapeBuildFileName() : JAVA net.sf.ictalive.coordination.agents.diagram.oaw.util.PathUtils.getRunAgentScapeBuildFileName();
+String getInjectAgentsBuildFileName() : JAVA net.sf.ictalive.coordination.agents.diagram.oaw.util.PathUtils.getInjectAgentsBuildFileName();

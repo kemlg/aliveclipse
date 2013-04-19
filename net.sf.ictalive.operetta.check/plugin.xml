@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.xtend.typesystem.emf.checks">
+      <metaModel
+            nsURI="http://ict-alive.sourceforge.net/operetta/OM/1.0"
+            override="true">
+         <checkFile
+               
+               path="check/om">
+         </checkFile>
+      </metaModel>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="net.sf.ictalive.operetta.check.RegisterCheckValidator">
+      </startup>
+   </extension>
+
+</plugin>

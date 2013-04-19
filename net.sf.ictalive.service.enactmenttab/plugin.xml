@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Alive Services"
+            id="eu.istalive.serviceide.enactment">
+      </category>
+      <view
+            category="eu.istalive.serviceide.enactment"
+            class="eu.istalive.serviceide.enactment.views.ServiceEventListView"
+            icon="icons/sample.gif"
+            id="eu.istalive.serviceide.enactment.views.ServiceEventListView"
+            name="Service Events">
+      </view>
+   </extension>
+
+</plugin>

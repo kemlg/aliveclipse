@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+<extension point="org.eclipse.ui.popupMenus">
+	<objectContribution id="net.sf.ictalive.actions2opera.ui.popupMenus.contribution.IFile"
+			objectClass="org.eclipse.core.resources.IFile"
+			nameFilter="*.actions">
+            
+		<menu
+        icon="icons/transformation.gif"
+        id="net.sf.ictalive.transformations.menu"
+        label="&amp;Transformations"
+        path="additions">              
+			<separator name="group1"></separator>
+		</menu>
+
+		<action
+        class="net.sf.ictalive.actions2opera.ui.Actions2OperaAction"
+        enablesFor="1"
+        icon="icons/qvto.gif"
+        id="convertActionsToOpera"
+        label="Convert to OperA"
+        menubarPath="net.sf.ictalive.transformations.menu/group1"
+        tooltip="Convert Actions to OperA">
+		</action>
+	</objectContribution>
+	
+</extension>
+<extension
+      point="net.sf.ictalive.aliveclipse.dashboard.actions">
+   <client
+         class="net.sf.ictalive.actions2opera.ui.Actions2OperaDashboardAction">
+   </client>
+</extension>
+
+</plugin>

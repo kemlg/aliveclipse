@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="control.presentation.ControlModelWizardID"
+            name="%_UI_ControlModelWizard_label"
+            class="control.presentation.ControlModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ControlModelFile.gif">
+         <description>%_UI_ControlModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="control.presentation.ControlEditorID"
+            name="%_UI_ControlEditor_label"
+            icon="icons/full/obj16/ControlModelFile.gif"
+            extensions="control"
+            class="control.presentation.ControlEditor"
+            contributorClass="control.presentation.ControlActionBarContributor">
+      </editor>
+   </extension>
+   <extension
+         point="net.sf.ictalive.aliveclipse.dashboard.actions">
+      <client
+            class="net.sf.ictalive.service.owlseditor.editor.dashboard.DefineServiceTemplateDashboardAction">
+      </client>
+   </extension>
+
+</plugin>

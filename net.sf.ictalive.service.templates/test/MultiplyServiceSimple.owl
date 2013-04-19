@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:j.0="http://on.cs.unibas.ch/owl-s/1.2/MoreGroundings.owl#"
+    xmlns:test="http://www.ist-alive.eu/ontologies/ALIVE-Templates-Test.owl#"
+    xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
+    xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
+    xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
+    xmlns="http://alivetemplates.bath.edu/MultiplyServiceSimple"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:expr="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:grounding="http://www.daml.org/services/owl-s/1.2/Grounding.owl#"
+    xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://alivetemplates.bath.edu/MultiplyServiceSimple">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://numbers.org/Numbers.owl"/>
+    <owl:imports rdf:resource="http://www.ist-alive.eu/ontologies/ALIVE-Templates-Test.owl"/>
+  </owl:Ontology>
+  <service:Service rdf:ID="MulService">
+    <service:supports>
+      <j.0:JavaGrounding rdf:ID="MulServiceWSDLGrounding">
+        <service:supportedBy rdf:resource="#MulService"/>
+        <grounding:hasAtomicProcessGrounding>
+          <j.0:JavaAtomicProcessGrounding rdf:ID="MulServiceJavaAtomicGrounding">
+            <j.0:hasJavaParameter>
+              <j.0:JavaParameter rdf:ID="y">
+		<j.0:transformatorClass>edu.bath.owlsbuilder.owlbinding.OWLSBuilderTransformator</j.0:transformatorClass>
+                <j.0:paramIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >1</j.0:paramIndex>
+                <j.0:owlsParameter rdf:resource="#y"/>
+                <j.0:javaType>edu.bath.alivetemplates.test.ANumber</j.0:javaType>
+                <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://numbers.org/Numbers.owl#RHOpInt</process:parameterType>
+                <rdf:type rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl#Input"/>
+              </j.0:JavaParameter>
+            </j.0:hasJavaParameter>
+            <j.0:hasJavaParameter>
+              <j.0:JavaParameter rdf:ID="x">
+		<j.0:transformatorClass>edu.bath.owlsbuilder.owlbinding.OWLSBuilderTransformator</j.0:transformatorClass>
+                <j.0:paramIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >0</j.0:paramIndex>
+                <j.0:owlsParameter rdf:resource="#x"/>
+                <j.0:javaType>edu.bath.alivetemplates.test.ANumber</j.0:javaType>
+                <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://numbers.org/Numbers.owl#LHOpInt</process:parameterType>
+                <rdf:type rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl#Input"/>
+              </j.0:JavaParameter>
+            </j.0:hasJavaParameter>
+            <j.0:javaOutput>
+              <j.0:JavaVariable rdf:ID="rv">
+		<j.0:transformatorClass>edu.bath.owlsbuilder.owlbinding.OWLSBuilderTransformator</j.0:transformatorClass>
+                <j.0:owlsParameter rdf:resource="#rv"/>
+                <j.0:javaType>edu.bath.alivetemplates.test.ANumber</j.0:javaType>
+                <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://numbers.org/Numbers.owl#Integer</process:parameterType>
+                <rdf:type rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl#Output"/>
+              </j.0:JavaVariable>
+            </j.0:javaOutput>
+            <j.0:javaMethod>multiply</j.0:javaMethod>
+            <j.0:javaClass>edu.bath.alivetemplates.test.MultiplyServiceSimple</j.0:javaClass>
+            <grounding:owlsProcess>
+              <process:AtomicProcess rdf:ID="MulServiceProcess"/>
+            </grounding:owlsProcess>
+          </j.0:JavaAtomicProcessGrounding>
+        </grounding:hasAtomicProcessGrounding>
+      </j.0:JavaGrounding>
+    </service:supports>
+    <service:describedBy>
+      <process:AtomicProcess rdf:about="#MulServiceProcess"/>
+    </service:describedBy>
+    <service:presents>
+      <profile:Profile rdf:ID="MulServiceProfile"/>
+    </service:presents>
+  </service:Service>
+  <profile:Profile rdf:about="#MulServiceProfile">
+    <test:testFloatProp rdf:datatype="http://www.w3.org/2001/XMLSchema#float">42.1</test:testFloatProp>
+    <profile:serviceName rdf:ID="SubServiceName">Arithmetic Service</profile:serviceName>
+    <profile:hasOutput rdf:resource="#rv"/>
+    <profile:hasInput rdf:resource="#x"/>
+    <profile:hasInput rdf:resource="#y"/>
+    <service:presentedBy rdf:resource="#MulService"/>
+  </profile:Profile>
+  <process:AtomicProcess rdf:about="#MulServiceProcess">
+    <service:describes rdf:resource="#MulService"/>
+    <process:hasOutput rdf:resource="#rv"/>
+    <process:hasInput rdf:resource="#y"/>
+    <process:hasInput rdf:resource="#x"/>
+  </process:AtomicProcess>
+</rdf:RDF>

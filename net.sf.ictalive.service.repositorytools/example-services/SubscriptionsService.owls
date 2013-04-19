@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://services.alive.calicojack.co.uk/SubscriptionsServiceWrapper"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:expr="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
+    xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
+    xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:grounding="http://www.daml.org/services/owl-s/1.2/Grounding.owl#"
+    xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
+    xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://services.alive.calicojack.co.uk/SubscriptionsServiceWrapper">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl"/>
+  </owl:Ontology>
+  <service:Service rdf:ID="getSubscriptions">
+    <service:supports>
+      <grounding:WsdlGrounding rdf:ID="getSubscriptionsWSDLGrounding"/>
+    </service:supports>
+    <service:describedBy>
+      <process:AtomicProcess rdf:ID="getSubscriptionsProcess"/>
+    </service:describedBy>
+    <service:presents>
+      <profile:Profile rdf:ID="getSubscriptionsProfile"/>
+    </service:presents>
+  </service:Service>
+  <profile:Profile rdf:about="#getSubscriptionsProfile">
+    <profile:hasOutput>
+      <process:Output rdf:ID="return">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#UserSubscriptions</process:parameterType>
+      </process:Output>
+    </profile:hasOutput>
+    <profile:hasInput>
+      <process:Input rdf:ID="rootIdentity">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Participant</process:parameterType>
+      </process:Input>
+    </profile:hasInput>
+    <service:presentedBy rdf:resource="#getSubscriptions"/>
+  </profile:Profile>
+  <process:AtomicProcess rdf:about="#getSubscriptionsProcess">
+    <service:describes rdf:resource="#getSubscriptions"/>
+    <process:hasOutput rdf:resource="#return"/>
+    <process:hasInput rdf:resource="#rootIdentity"/>
+  </process:AtomicProcess>
+  <grounding:WsdlGrounding rdf:about="#getSubscriptionsWSDLGrounding">
+    <service:supportedBy rdf:resource="#getSubscriptions"/>
+    <grounding:hasAtomicProcessGrounding>
+      <grounding:WsdlAtomicProcessGrounding rdf:ID="getSubscriptionsWSDLAtomicGrounding"/>
+    </grounding:hasAtomicProcessGrounding>
+  </grounding:WsdlGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:about="#getSubscriptionsWSDLAtomicGrounding">
+    <grounding:wsdlOperation>
+      <grounding:WsdlOperationRef>
+        <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >urn:cj-services/subscriptions#getSubscriptions</grounding:operation>
+        <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >urn:cj-services/subscriptions#SubscriptionsServiceWrapper</grounding:portType>
+      </grounding:WsdlOperationRef>
+    </grounding:wsdlOperation>
+    <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >urn:cj-services/subscriptions#getSubscriptionsResponse</grounding:wsdlOutputMessage>
+    <grounding:wsdlOutput>
+      <grounding:WsdlOutputMessageMap rdf:ID="return_OutMessageMap">
+        <grounding:owlsParameter rdf:resource="#return"/>
+        <grounding:xsltTransformationString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ont="http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#" xmlns:wsvc="urn:cj-services/subscriptions" xmlns:ns0="urn:cj-domain" xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" version="1.0"&gt;&#xD;
+  &lt;xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes" /&gt;&#xD;
+  &lt;xsl:template match="/"&gt;&#xD;
+    &lt;rdf:RDF&gt;&#xD;
+      &lt;xsl:for-each select="./wsvc:getSubscriptionsResponse/wsvc:return"&gt;&#xD;
+        &lt;ont:UserSubscriptions&gt;&#xD;
+          &lt;xsl:call-template name="extract_ont_UserSubscriptions" /&gt;&#xD;
+        &lt;/ont:UserSubscriptions&gt;&#xD;
+      &lt;/xsl:for-each&gt;&#xD;
+    &lt;/rdf:RDF&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="extract_ont_Participant"&gt;&#xD;
+    &lt;xsl:for-each select="./ns0:objID"&gt;&#xD;
+      &lt;xsl:attribute name="about" namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;&#xD;
+        &lt;xsl:value-of select="." /&gt;&#xD;
+      &lt;/xsl:attribute&gt;&#xD;
+    &lt;/xsl:for-each&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="extract_ont_UserSubscriptions"&gt;&#xD;
+    &lt;xsl:for-each select="./ns0:subscriptions"&gt;&#xD;
+      &lt;ont:hasSubscription&gt;&#xD;
+        &lt;xsl:call-template name="extract_ont_Subscription" /&gt;&#xD;
+      &lt;/ont:hasSubscription&gt;&#xD;
+    &lt;/xsl:for-each&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="extract_ont_Subscription" /&gt;&#xD;
+  &lt;xsl:template name="extract_ont_Address"&gt;&#xD;
+    &lt;xsl:for-each select="./ns0:address"&gt;&#xD;
+      &lt;ont:address&gt;&#xD;
+        &lt;xsl:attribute name="rdf:datatype"&gt;http://www.w3.org/2001/XMLSchema#string&lt;/xsl:attribute&gt;&#xD;
+        &lt;xsl:value-of select="." /&gt;&#xD;
+      &lt;/ont:address&gt;&#xD;
+    &lt;/xsl:for-each&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="extract_ont_ChannelType"&gt;&#xD;
+    &lt;xsl:for-each select="./ns0:objID"&gt;&#xD;
+      &lt;xsl:attribute name="about" namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;&#xD;
+        &lt;xsl:value-of select="." /&gt;&#xD;
+      &lt;/xsl:attribute&gt;&#xD;
+    &lt;/xsl:for-each&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="extract_ont_ResourceType"&gt;&#xD;
+    &lt;xsl:for-each select="./ns0:objID"&gt;&#xD;
+      &lt;xsl:attribute name="about" namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;&#xD;
+        &lt;xsl:value-of select="." /&gt;&#xD;
+      &lt;/xsl:attribute&gt;&#xD;
+    &lt;/xsl:for-each&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+&#xD;
+</grounding:xsltTransformationString>
+      </grounding:WsdlOutputMessageMap>
+    </grounding:wsdlOutput>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap rdf:ID="rootIdentity_InputMessageMap">
+        <grounding:xsltTransformationString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:wsvc="urn:cj-services/subscriptions" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ont="http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#" xmlns:osvc="http://services.alive.calicojack.co.uk/SubscriptionsServiceWrapper#" xmlns:ns0="urn:cj-domain" xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" version="1.0"&gt;&#xD;
+  &lt;xsl:output method="xml" /&gt;&#xD;
+  &lt;xsl:template match="/rdf:RDF"&gt;&#xD;
+    &lt;!--Creating transformation of {http://services.alive.calicojack.co.uk/SubscriptionsServiceWrapper#getSubscriptions}.{#http://services.alive.calicojack.co.uk/SubscriptionsServiceWrapper#rootIdentity} to {$uk.co.calicojack.alive.services.SubscriptionsServiceWrapper.getSubscriptions}.{#0}--&gt;&#xD;
+    &lt;ns0:Participant&gt;&#xD;
+      &lt;xsl:for-each select="./ont:Participant"&gt;&#xD;
+        &lt;xsl:call-template name="gen_uk.co.calicojack.alive.domain.Participant" /&gt;&#xD;
+      &lt;/xsl:for-each&gt;&#xD;
+    &lt;/ns0:Participant&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.Participant"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Participant}.{id} to Participant.objID--&gt;&#xD;
+    &lt;ns0:objID&gt;&#xD;
+      &lt;xsl:value-of select="./@rdf:about" /&gt;&#xD;
+    &lt;/ns0:objID&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.UserSubscriptions"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#UserSubscriptions}.{http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#hasSubscription} to UserSubscriptions.subscriptions--&gt;&#xD;
+    &lt;xsl:for-each select="./ont:hasSubscription"&gt;&#xD;
+      &lt;ns0:subscriptions&gt;&#xD;
+        &lt;xsl:for-each select="./ont:Subscription"&gt;&#xD;
+          &lt;xsl:call-template name="gen_uk.co.calicojack.alive.domain.Subscription" /&gt;&#xD;
+        &lt;/xsl:for-each&gt;&#xD;
+      &lt;/ns0:subscriptions&gt;&#xD;
+    &lt;/xsl:for-each&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.Subscription" /&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.Address"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Address}.{http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#address} to Address.address--&gt;&#xD;
+    &lt;ns0:address&gt;&#xD;
+      &lt;xsl:value-of select="./ont:address" /&gt;&#xD;
+    &lt;/ns0:address&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.ChannelType"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#ChannelType}.{id} to ChannelType.objID--&gt;&#xD;
+    &lt;ns0:objID&gt;&#xD;
+      &lt;xsl:value-of select="./@rdf:about" /&gt;&#xD;
+    &lt;/ns0:objID&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.ResourceType"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#ResourceType}.{id} to ResourceType.objID--&gt;&#xD;
+    &lt;ns0:objID&gt;&#xD;
+      &lt;xsl:value-of select="./@rdf:about" /&gt;&#xD;
+    &lt;/ns0:objID&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+&#xD;
+</grounding:xsltTransformationString>
+        <grounding:owlsParameter rdf:resource="#rootIdentity"/>
+        <grounding:wsdlMessagePart>http://localhost:8080/axis2/services/ContextService#rootIdentity</grounding:wsdlMessagePart>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >urn:cj-services/subscriptions#getSubscriptions</grounding:wsdlInputMessage>
+    <grounding:owlsProcess rdf:resource="#getSubscriptionsProcess"/>
+    <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://localhost:39967?wsdl</grounding:wsdlDocument>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlOperationRef>
+    <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >urn:cj-services/subscriptions#SubscriptionsServiceWrapper</grounding:portType>
+  </grounding:WsdlOperationRef>
+</rdf:RDF>

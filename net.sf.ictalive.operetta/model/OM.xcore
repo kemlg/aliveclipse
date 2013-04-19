@@ -1,0 +1,427 @@
+@Ecore(nsPrefix="net.sf.ictalive.operetta", nsURI="http://ict-alive.sourceforge.net/operetta/OM/1.0")
+@GenModel(modelName="OperA", importerID="org.eclipse.emf.importer.ecore")
+package OM
+
+class OperAModel
+{
+	id String [1] Name
+	contains resolving OM [1] om
+}
+
+class OM
+{
+	contains resolving SS [1] ss
+	contains resolving IS [1] is
+	contains resolving NS [1] ns
+	contains resolving CS [1] cs
+}
+
+class SS
+{
+	contains resolving Role [+] roles
+	contains resolving Objective [+] objectives
+	contains resolving Dependency [+] dependencies
+}
+
+class IS
+{
+	contains resolving Scene [2..*] scenes keys sceneID
+	contains resolving Transition [+] transitions keys transitionID
+	contains resolving Arc [2..*] arcs keys arcID
+}
+
+class NS
+{
+	contains resolving Norm [] norms keys normID
+	contains resolving TransitionNorm [] transitionNorms keys ID
+}
+
+class CS
+{
+	contains resolving PartialStateDescription [] formulas
+	contains resolving Ontology [+] ontology
+	contains resolving Term [] terms
+	contains resolving CountsAs [] countsAsRules
+	contains resolving Context [] contexts
+	contains resolving Actions [1] actionLibrary
+}
+
+class Role
+{
+	unsettable derived id String [1] Name
+	refers Concept [1] conceptName keys concept
+	refers Objective [+] objectives
+	refers readonly transient volatile derived Norm [] norms
+	contains resolving Right [] rights
+	RoleType [1] RoleType
+	refers readonly transient volatile derived Dependency [] DependantOn
+	refers readonly transient volatile derived Dependency [] DependeeIn
+}
+
+class Objective
+{
+	id String [1] Name
+	refers Concept [1] conceptName
+	refers PartialStateDescription [1] stateDescription
+	refers Objective [] subObjectives keys Name
+	refers readonly transient volatile derived Objective [] parentObjective keys Name
+	refers readonly transient volatile derived Role [] usedByRole
+}
+
+abstract class Dependency
+{
+	String [1] ID
+	readonly transient volatile derived String [1] Name = ""
+	refers Objective [+] ObjectOfDependency
+}
+
+class Norm
+{
+	id String [1] normID
+	refers PartialStateDescription [1] activatingCondition
+	refers PartialStateDescription [1] deactivatingCondition
+	refers PartialStateDescription [1] maintenanceCondition
+	refers PartialStateDescription timeout
+	contains resolving DeonticStatement [1] deontics
+	refers PartialStateDescription repairCondition
+}
+
+abstract class DeonticStatement
+{
+	DeonticModality [1] modality
+	refers PartialStateDescription [1] what
+}
+
+enum DeonticModality
+{
+	OBLIGATION as "O"
+	PROHIBITION as "F" = 1
+	PERMISSION as "P" = 2
+}
+
+class IndividualDeonticStatement extends DeonticStatement
+{
+	refers Player [1] actor keys playerID
+}
+
+class RoleDeonticStatement extends DeonticStatement
+{
+	refers Role [1] role
+}
+
+class Right
+{
+	String [1] Name
+	refers PartialStateDescription [1] Expr
+}
+
+enum RoleType
+{
+	Internal as "In"
+	External as "Ex" = 1
+}
+
+class HierarchyDependency extends Dependency
+{
+	refers Role [1] Dependant
+	refers Role [1] Dependee
+}
+
+class MarketDependency extends Dependency
+{
+	refers Role [1] Dependant
+	refers Role [1] Dependee
+}
+
+class NetworkDependency extends Dependency
+{
+	refers Role [1] Dependant1
+	refers Role [1] Dependant2
+}
+
+class Scene
+{
+	id String [1] sceneID
+	contains resolving Player [+] players
+	refers Landmark [+] results
+	contains resolving LandmarkPattern [1] interactionPattern
+	String description
+	SceneType [1] ^type
+}
+
+enum SceneType
+{
+	Normal as "normal"
+	Start as "start" = 1
+	End as "end" = 2
+}
+
+class Transition
+{
+	derived id String [1] transitionID
+	TransitionType [1] transitionType
+	refers TransitionNorm [+] norms
+}
+
+enum TransitionType
+{
+	AND
+	OR = 1
+	XOR = 2
+}
+
+abstract class Arc
+{
+	derived id String [1] arcID
+	refers Role [+] accessible
+}
+
+class SceneToTransitionArc extends Arc
+{
+	refers Scene [1] from keys sceneID
+	refers Transition [1] to keys transitionID
+}
+
+class TransitionToSceneArc extends Arc
+{
+	refers Transition [1] from keys transitionID
+	refers Scene [1] to keys sceneID
+	TTSType [1] ^type
+}
+
+enum TTSType
+{
+	NewScene as "New"
+	JoinInstance as "Instance" = 1
+}
+
+class Player
+{
+	id char [1] playerID
+	refers Role [1] role
+}
+
+class LandmarkPattern
+{
+	contains resolving Landmark [2..*] landmarks keys name
+	contains resolving PartialOrder [+] landmarkOrder
+}
+
+class Landmark
+{
+	id String [1] name
+	refers PartialStateDescription [1] stateDescription
+	refers Objective [] entails
+	transient volatile boolean [1] isResult = "false"
+}
+
+class TransitionNorm
+{
+	id String [1] ID
+	refers Scene [1] fromScene
+	refers Player [+] fromPlayers
+	refers Landmark [+] fromResults
+	refers Scene [1] toScene
+	refers Player [1] toPlayer
+	refers transient volatile Transition [1] attachedTo
+}
+
+class PartialOrder
+{
+	derived String [1] name
+	refers Landmark [1] from
+	refers Landmark [1] to
+}
+
+abstract class PartialStateDescription
+{
+	readonly transient volatile derived id String [1] ID
+}
+
+abstract class PathFormula extends PartialStateDescription
+{
+}
+
+abstract class StateFormula extends PathFormula, CountsAsConcreteFact
+{
+}
+
+class Atom extends StateFormula
+{
+	unsettable String [1] predicate
+	refers Concept [1] concept
+	refers Term [] arguments
+}
+
+abstract class Term
+{
+}
+
+class Constant extends Term
+{
+	id String [1] name
+	refers Concept [1] concept
+}
+
+class Variable extends Term
+{
+	id String [1] name
+}
+
+class Function extends Term
+{
+	id String [1] name
+	refers Term [+] arguments
+}
+
+class Negation extends StateFormula
+{
+	refers StateFormula [1] stateFormula
+}
+
+class Conjunction extends StateFormula
+{
+	refers StateFormula [1] leftStateFormula
+	refers StateFormula [1] rightStateFormula
+}
+
+class Disjunction extends StateFormula
+{
+	refers StateFormula [1] leftStateFormula
+	refers StateFormula [1] rightStateFormula
+}
+
+class Implication extends StateFormula
+{
+	refers StateFormula [1] antecedentStateFormula
+	refers StateFormula [1] consequentStateFormula
+}
+
+class ForAllPaths extends StateFormula
+{
+	refers PathFormula [1] pathFormula
+}
+
+class ExistsPath extends StateFormula
+{
+	refers PathFormula [1] pathFormula
+}
+
+class PathNegation extends PathFormula
+{
+	refers PathFormula [1] pathFormula
+}
+
+class PathConjunction extends PathFormula
+{
+	refers PathFormula [1] leftPathFormula
+	refers PathFormula [1] rightPathFormula
+}
+
+class PathDisjunction extends PathFormula
+{
+	refers PathFormula [1] leftPathFormula
+	refers PathFormula [1] rightPathFormula
+}
+
+class PathImplication extends PathFormula
+{
+	refers PathFormula [1] antecedentPathFormula
+	refers PathFormula [1] consequentPathFormula
+}
+
+class Next extends PathFormula
+{
+	refers PathFormula [1] pathFormula
+}
+
+class Sometime extends PathFormula
+{
+	refers PathFormula [1] pathFormula
+}
+
+class Always extends PathFormula
+{
+	refers PathFormula [1] pathFormula
+}
+
+class Until extends PathFormula
+{
+	refers PathFormula [1] fromPathFormula
+	refers PathFormula [1] untilPathFormula
+}
+
+class Ontology
+{
+	String [1] ontologyID
+	contains resolving Concept [+] classes keys concept
+}
+
+class Concept
+{
+	id String [1] concept
+	String URI
+	ConceptType [1] ^type = ""
+}
+
+enum ConceptType
+{
+	Class
+	Property = 1
+	Individual = 2
+}
+
+class CountsAs
+{
+	refers CountsAsConcreteFact [1] concreteFact
+	refers PartialStateDescription [1] abstractFact
+	refers Context context
+}
+
+abstract class CountsAsConcreteFact
+{
+}
+
+class Actions
+{
+	contains resolving ActionDescription [] actions
+}
+
+abstract class ActionDescription extends CountsAsConcreteFact
+{
+}
+
+class AtomicAction extends ActionDescription
+{
+	String [1] statement
+}
+
+class Sequence extends ActionDescription
+{
+	refers ActionDescription [2] actions
+}
+
+class Conditional extends ActionDescription
+{
+	refers StateFormula [1] condition
+	refers ActionDescription [1] action
+}
+
+class Context
+{
+	id String [1] Name
+}
+
+class Exists extends FirstOrderQuantifier
+{
+}
+
+class FirstOrderQuantifier extends PartialStateDescription
+{
+	refers Variable [1] variable
+	refers PartialStateDescription [1] formula
+}
+
+class ForAll extends FirstOrderQuantifier
+{
+}

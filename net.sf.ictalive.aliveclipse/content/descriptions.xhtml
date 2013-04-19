@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Overview</title>
+  <link rel="stylesheet" href="shared.css" type="text/css" />	
+  </head>
+
+<body>
+<div class="menu">
+	<div class="tooltipy" style="margin-top:10px;"><a href="http://org.eclipse.ui.intro/showPage?id=overview"><img src="images/yellow.png" height="24" width="24" border="0" /><span class="yellow" style="font-size:9px;">Overview</span></a></div>
+    <div class="tooltip" style="margin-top:30px;"><a href="http://org.eclipse.ui.intro/showPage?id=tutorials"><img src="images/red.png" height="24" width="24" border="0" /><span style="font-size:9px;">Tutorials</span></a></div>
+    <div class="tooltip" style="margin-left:-10px;"><a href="http://org.eclipse.ui.intro/showPage?id=methodology"><img src="images/green.png" width="24" height="24" border="0" /><span style="font-size:9px;">Methodology</span></a></div>
+    <div class="tooltip" style="margin-left:50px;"><a href="http://org.eclipse.ui.intro/showPage?id=services"><img src="images/left.png" width="24" height="24" border="0" /><span style="font-size:9px;">Previous</span></a></div>
+    <div class="tooltipup"><a href="http://org.eclipse.ui.intro/showPage?id=services"><img src="images/up.png" width="24" height="24" border="0" /><span style="font-size:9px;">Up</span></a></div>
+    <div class="tooltip"><a href="http://org.eclipse.ui.intro/showPage?id=servicetemplates"><img src="images/right.png" width="24" height="24" border="0" /><span style="font-size:9px;">Next</span></a></div>
+    <div class="tooltip" style="margin-left:50px;"><a href="http://org.eclipse.ui.intro/close"><img src="images/workspace.png" width="24" height="24" border="0" /><span style="font-size:9px;">Go to workbench</span></a></div>
+</div>
+
+<div class="bg">
+<img id="background-img" src="images/alive_background.jpg" class="bg" />
+</div>
+
+<div class="page-style">
+    <div id="content"> 	
+        <h2>Service Descriptions</h2>
+        <h3>Step Through</h3>
+        <h4>Designing Services from Scratch</h4>
+        <p>In order to annotate a service you must have the following things in place:</p>
+        <ul>
+          <li>An OWL (&lt;=v1.1) ontology describing the required OWL classes for the services's inputs and outputs, typically written using Protégé. </li>
+          <li>A JAX-WS web service. On the whole the builder will work will default annotation schema, however some JAX-WS annotations are not supported and will break the groundings. The service inputs and outputs can be expressed as conventional java beans, however some caveats apply</li>
+          <ul>
+            <li>No java.util.Maps: maps are unsupported in the bindings, as there is no convention for serialising them to RDF. If you have map properties expose them as a collection of wrapped key-value pairs. (unordered collections (Sets) are supported as mappings to non-functional properties and ordered collections (arrays, descendents of java.util.List) are supported as mappings to (subclasses of) <a href="http://www.ai.sri.com/daml/services/owl-s/1.2/generic/ObjectList.owl#List">http://www.ai.sri.com/daml/services/owl-s/1.2/generic/ObjectList.owl#List</a></li>
+            <li>JAX-WS Schema elements must be qualified : by default in JAX-WS they are not, to make them so, add the following package annotation to pkg-info.java in the service package (and any packages containing beans): 
+            <center><table class="service"><tr>
+              <td><p>@javax.xml.bind.annotation.XmlSchema(<br />
+  						<img class="tab" src="images/spacer.gif" />attributeFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED,<br />
+  						<img class="tab" src="images/spacer.gif" />elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)<br />
+  						<img class="tab" src="images/spacer.gif" />package edu.bath.owlsbuilder.tests.annotated;</p></td></tr></table></center></li>
+          </ul>
+        </ul>
+        <p>We'll start with a trivial example: Assuming we have the following ontology which describes a number object with an integer value:</p>
+      <center><table class="service"><tr>
+          <td><table cellspacing="0" cellpadding="0" hspace="0" vspace="0" align="left">
+            <tr>
+              <td valign="top"><div>
+                <p>&lt;?xml version=&quot;1.0&quot;?&gt;<br />
+                  &lt;!DOCTYPE rdf:RDF [<br />
+                  <img class="tab" src="images/spacer.gif" />&lt;!ENTITY numbers &quot;http://numbers.org/&quot;   &gt;<br />
+                  <img class="tab" src="images/spacer.gif" />&lt;!ENTITY owl   &quot;http://www.w3.org/2002/07/owl#&quot; &gt;<br />
+                  <img class="tab" src="images/spacer.gif" />&lt;!ENTITY Numbers   &quot;http://numbers.org/Numbers.owl#&quot; &gt;<br />
+                  <img class="tab" src="images/spacer.gif" />&lt;!ENTITY xsd   &quot;http://www.w3.org/2001/XMLSchema#&quot; &gt;<br />
+                  <img class="tab" src="images/spacer.gif" />&lt;!ENTITY owl2xml   &quot;http://www.w3.org/2006/12/owl2-xml#&quot; &gt;<br />
+                  <img class="tab" src="images/spacer.gif" />&lt;!ENTITY rdfs &quot;http://www.w3.org/2000/01/rdf-schema#&quot;   &gt;<br />
+                  <img class="tab" src="images/spacer.gif" />&lt;!ENTITY rdf   &quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot; &gt;<br />
+                  ]&gt;<br />
+                  &lt;rdf:RDF   xmlns=&quot;&amp;numbers;Numbers.owl#&quot;<br />
+                  <img class="tab" src="images/spacer.gif" />xml:base=&quot;&amp;numbers;Numbers.owl&quot;<br />
+                  <img class="tab" src="images/spacer.gif" />xmlns:rdfs=&quot;http://www.w3.org/2000/01/rdf-schema#&quot;<br />
+                  <img class="tab" src="images/spacer.gif" />xmlns:owl2xml=&quot;http://www.w3.org/2006/12/owl2-xml#&quot;<br />
+                  <img class="tab" src="images/spacer.gif" />xmlns:numbers=&quot;http://numbers.org/&quot;<br />
+                  <img class="tab" src="images/spacer.gif" />xmlns:owl=&quot;http://www.w3.org/2002/07/owl#&quot;<br />
+                  <img class="tab" src="images/spacer.gif" />xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema#&quot;<br />
+                  <img class="tab" src="images/spacer.gif" />xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;<br />
+                  <img class="tab" src="images/spacer.gif" />xmlns:Numbers=&quot;&amp;numbers;Numbers.owl#&quot;&gt;<br />
+                  <img class="tab" src="images/spacer.gif" />&lt;owl:Ontology rdf:about=&quot;&quot;/&gt;<br />
+                  <img class="tab" src="images/spacer.gif" />&lt;owl:Class   rdf:about=&quot;#Integer&quot;/&gt;<br />
+                  <img class="tab" src="images/spacer.gif" />&lt;owl:DatatypeProperty   rdf:about=&quot;#hasValue&quot;&gt;<br />
+                  <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;rdf:type   rdf:resource=&quot;&amp;owl;FunctionalProperty&quot;/&gt;<br />
+                  <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;rdfs:domain   rdf:resource=&quot;#Integer&quot;/&gt;<br />
+                  <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;rdfs:range   rdf:resource=&quot;&amp;xsd;int&quot;/&gt;<br />
+                  <img class="tab" src="images/spacer.gif" />&lt;/owl:DatatypeProperty&gt;</p>
+                <p>&lt;/rdf:RDF&gt;</p>
+              </div></td>
+            </tr>
+          </table></td></tr></table></center>
+          <p>And we have a service which performs, say addition:</p>
+<center><table class="service"><tr><td><p>package edu.bath.owlsbuilder.tests.annotated;</p>
+        <p><img class="tab" src="images/spacer.gif" /></p>
+        <p>import javax.jws.WebMethod;</p>
+        <p>import javax.jws.WebParam;</p>
+        <p>import javax.jws.WebService;</p>
+        <p><img class="tab" src="images/spacer.gif" /></p>
+        <p>@WebService(targetNamespace = &quot;http://test-primitive/&quot;)</p>
+        <p>public class AddServicePrimitive {</p>
+        <p><img class="tab" src="images/spacer.gif" /></p>
+        <p><img class="tab" src="images/spacer.gif" />@WebMethod</p>
+        <p><img class="tab" src="images/spacer.gif" />public int add(</p>
+        <p><img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />@WebParam(name = &quot;x&quot;)&nbsp; int x,</p>
+        <p><img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />@WebParam(name = &quot;y&quot;)&nbsp; int y) {</p>
+        <p><img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />return x + y;</p>
+        <p><img class="tab" src="images/spacer.gif" />}</p>
+        <p><img class="tab" src="images/spacer.gif" /></p>
+        <p>}</p></td>
+</tr></table></center>
+<h5>Adding Service class annotations</h5>
+<p>We now add annotations to the service class which do the following:</p>
+<ul>
+  <li>Define a URI binding between the prefix &amp;num1; and the Ontolgy URI http://numbers.org/Numbers.owl</li>
+  <li>Import the domain ontology into the service</li>
+  <li>Define the class as an OWL-S class with the numbers ontology as the default domain ontology:
+  <center><table class="service"><tr>
+    <td><p>@URINamespace(prefix = &quot;num&quot;, value = &quot;http://numbers.org/Numbers.owl&quot;)<br />
+      @OwlsImport(&quot;&amp;num;&quot;)<br />
+      @OwlsClass(defaultOntology = &quot;&amp;num;&quot;)</p></td></tr></table></center></li>
+  <li>Define the service properties on the appropriate service method (annotated with @WebMethod )</li>
+  <li>Define OWL-S outputs on the method itself using the @OwlsOutParam annotation:</li>
+  <li>@OwlsOutParam(name = &quot;rv&quot;, owlType = &quot;#Integer&quot;, bindings = { @OwlsBinding(from = &quot;.&quot;, to = &quot;hasValue&quot;) })</li>
+</ul>
+<p>For the output we define the type to be #Integer and the name to be rv</p>
+<p> Because the output of the method is a primitive value and the output type of the service is an object, we must bind the java location (relative to the return value, in this case &quot;.&quot; : the return value itself) to an appropriate location within the return object (in this case to the OWL property &quot;hasValue&quot;). When the output groundings for this service are invoked, the value of the return type will be encapsulated into RDF as the hasValue property property of the #Integer object returned. More detail about bindings can be found below. For either sides of the binding the location &quot;.&quot; is implicit and may be omitted, indicating either the Java parameter or return value, or the OWL-S parameter respectively.</p>
+<p> Multiple @OwlsOutParam annotations can be placed within an @OwlsOutParams annotation, each output can bind to the same or different parts of the output value.</p>
+<p> We also define similar descriptions for input parameters on the Java parameters using the @OwlsInParam annotation:<br />
+  &nbsp;@OwlsInParam(name = &quot;x&quot;, owlType = &quot;#Integer&quot;, bindings = { @OwlsBinding(from = &quot;.&quot;, to = &quot;hasValue&quot;) })</p>
+<p> As with outputs each Java parameter can bind to several input values, although note that each OWL input parameter can only be linked to one java parameter (at the moment, until the OWL-S API handles Document encoding properly)</p>
+<p> The annotated Java Class will now look something like this:</p>
+<center><table class="service"><tr>
+  <td><p>import javax.jws.WebMethod;<br />
+    import javax.jws.WebParam;<br />
+    import javax.jws.WebService;<br />
+    <br />
+  </p>
+    <p>import edu.bath.owlsannotations.OwlsBinding;<br />
+      import edu.bath.owlsannotations.OwlsClass;<br />
+      import edu.bath.owlsannotations.OwlsInParam;<br />
+      import edu.bath.owlsannotations.OwlsOutParam;<br />
+      import edu.bath.owlsannotations.OwlsService;<br />
+      import edu.bath.owlsannotations.URINamespace;<br />
+      <br />
+    </p>
+    <p>@WebService(targetNamespace = &quot;http://test-primitive/&quot;)<br />
+      @URINamespace(prefix = &quot;num&quot;, value = &quot;http://numbers.org/Numbers.owl&quot;)<br />
+      @OwlsClass(defaultOntology = &quot;&amp;num;&quot;)<br />
+      public class AddServicePrimitive&nbsp; {<br />
+      <br />
+    </p>
+    <p> <img class="tab" src="images/spacer.gif" />@WebMethod<br />
+     <img class="tab" src="images/spacer.gif" />@OwlsService(name = &quot;AddServicePrimitive&quot;)<br />
+      <img class="tab" src="images/spacer.gif" />@OwlsOutParam(name = &quot;rv&quot;, owlType = &quot;#Integer&quot;, bindings = { @OwlsBinding(from = &quot;.&quot;, to = &quot;hasValue&quot;) })<br />
+      <img class="tab" src="images/spacer.gif" />public int add(<br />
+      <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />@WebParam(name = &quot;x&quot;) @OwlsInParam(name = &quot;x&quot;, owlType = &quot;#Integer&quot;, bindings = { @OwlsBinding(from = &quot;.&quot;, to = &quot;hasValue&quot;) }) int x,</p>
+    <p><img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />@WebParam(name = &quot;y&quot;) @OwlsInParam(name = &quot;y&quot;, owlType = &quot;#Integer&quot;, bindings = { @OwlsBinding(from = &quot;.&quot;, to = &quot;hasValue&quot;) }) int y)<br /><br /></p>
+    <p><img class="tab" src="images/spacer.gif" />{<br />
+     <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />return x + y;<br />
+     <img class="tab" src="images/spacer.gif" />}<br />
+      }</p></td></tr></table></center>
+      <h5>Generating an OWL-S Description</h5>
+      <p>To generate the OWL-S description from the class use the edu.bath.owlsbuilder.OWLSBuilder utility (a unix script which invokes this is in the install directory).</p>
+      <p> In order for the script to work, the service class and dependencies must be in your classpath.</p>
+      <p> The parameters are as follows:</p>
+      <center><table class="service"><tr>
+        <td><p>owlsbuilder -h c-g &lt;grounding&gt; -g &lt;gronuding2&gt; -o &lt;dir&gt; -t &lt;ontologyDirs&gt; -w &lt;wsdlLoc&gt; &lt;className&gt; methodName <br />
+          -h --help <br />
+          -g --grounding &lt;GroundingName&gt; add a grounding (currently 'WSDL' ) <br />
+          -o --out &lt;dir&gt; write services to directory (with default names)<br />
+          -f --file &lt;filename.owl&gt; write single service to file (when method is specified)<br />
+          -t --ontologyDirs &lt;paths&gt; colon-seperated list of places to serach for ontologies<br />
+          -w --wsloc &lt;http://a/Service&gt; theoretical location of service base to add to OWL-S</p></td></tr></table></center>
+          <p>To generate the description for the above service, include WSDL groundings we must know the WSDL location of the service when it is deployed, assuming this is http://localhost:8080/services/AddServicePrimitive?wsdlwe would invoke the buidler as follows:</p>
+          <center><table class="service"><tr>
+            <td><p align="left">./owlsbuilder.sh -g WSDL -f Primitive.owl -t test/ -w&nbsp; <br />
+  <img class="tab" src="images/spacer.gif" />&quot;http://localhost:8080/services/AddServicePrimitive?wsdl&quot; <br />
+  <img class="tab" src="images/spacer.gif" />edu.bath.owlsbuilder.tests.annotated.AddServicePrimitive</p></td></tr></table></center>
+  <p>This will generate a grounded service description into Primitive.owl</p>
+  <h5>Bean Bindings</h5>
+  <p>In the above example the service described had parameters and return values which were primitive types it is also possible to bind complex java types (represented as java beans) to complex objects in the ontology. We do this by adding java annotations to the bean accessors themselves much as you do in the java XML binding system JAXB.</p>
+  <p>The following types of object can be bound to:</p>
+  <ul>
+    <li>Primitive types (int/float/String/double/boolean etc. ) can be bound to OWL dataType properties</li>
+    <li>Beans can be bound to service parameters or owl Object properties</li>
+    <li>Unsorted collections (java.util.Set) can be bound to OWL properties (ones which aren't declared as functional)</li>
+    <li>Sorted collections (java.util.List, arrays) of Objects (can be bound to OWL-S ObjectList types and subclasses thereof, Within the ontology you may subclass the generic OWL ObjectList class to restrict it to the appropriate OWL contained types.</li>
+  </ul>
+  <p>The following types cannot be bound:</p>
+  <ul>
+    <li>Sorted collections of primitive types: this doesn't work at the moment - but this may change if required</li>
+    <li>Maps: these can be bound by exposing the map as an unsorted collection of an explicit type which refers to the key-value pairs of the map in the bean.</li>
+    <li>Parameterised types other than lists or sets.</li>
+    <li>Classes which do not have bean semantics</li>
+    <li>Classes which cannot be serialised into JAXB: this is a restriction on JAX-WS itself.</li>
+    <li>Beans which serialise to XML as a graph as opposed to a tree (e.g. using XmlIDRef).</li>
+  </ul>
+  <h5>Binding Java bean classes</h5>
+  <p>We start with a java bean which has a number of complex properties:</p>
+<center><table class="service"><tr>
+  <td><p>@XmlType(namespace = &quot;urn:cmp-bean&quot;)<br />
+    public class CmpBean {<br />
+    <img class="tab" src="images/spacer.gif" />BNumber nestedBean;<br />
+    <img class="tab" src="images/spacer.gif" />BNumber nestedBeanList[];<br />
+    <img class="tab" src="images/spacer.gif" />int valInt;<br />
+    <img class="tab" src="images/spacer.gif" />Set&lt;String&gt; stringCollection;<br />
+    <img class="tab" src="images/spacer.gif" />Integer valCmpInt;<br />
+    <img class="tab" src="images/spacer.gif" />boolean valBool;<br />
+    <img class="tab" src="images/spacer.gif" />Date valDateTime;<br />
+    <img class="tab" src="images/spacer.gif" />public BNumber[] getNestedBeanList() {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />return nestedBeanList;<br />
+    <img class="tab" src="images/spacer.gif" />}<br />
+    <img class="tab" src="images/spacer.gif" />public void setNestedBeanList(BNumber[] nestedBeanList) {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />this.nestedBeanList = nestedBeanList;<br />
+    <img class="tab" src="images/spacer.gif" />}<br />
+    <img class="tab" src="images/spacer.gif" />public BNumber getNestedBean() {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />return nestedBean;<br />
+    <img class="tab" src="images/spacer.gif" />}<br />
+    <img class="tab" src="images/spacer.gif" />public void setNestedBean(BNumber nestedBean) {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />this.nestedBean = nestedBean;<br />
+    <img class="tab" src="images/spacer.gif" />}<br />
+    <img class="tab" src="images/spacer.gif" />public int getValInt() {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />return valInt;<br />
+    <img class="tab" src="images/spacer.gif" />}<br />
+    <img class="tab" src="images/spacer.gif" />public void setValInt(int valInt) {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />this.valInt = valInt;<br />
+    <img class="tab" src="images/spacer.gif" />}<br />
+    <img class="tab" src="images/spacer.gif" />public Set&lt;String&gt; getStringCollection() {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />return stringCollection;<br />
+    <img class="tab" src="images/spacer.gif" />}<br />
+    <img class="tab" src="images/spacer.gif" />public void setStringCollection(Set&lt;String&gt; stringList) {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />this.stringCollection = stringList;<br />
+    <img class="tab" src="images/spacer.gif" />}<br />
+    <img class="tab" src="images/spacer.gif" />public Integer getValCmpInt() {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />return valCmpInt;<br />
+    <img class="tab" src="images/spacer.gif" />}<br />
+    <img class="tab" src="images/spacer.gif" />public void setValCmpInt(Integer valCmpInt) {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />this.valCmpInt = valCmpInt;<br />
+    <img class="tab" src="images/spacer.gif" />}<br />
+    <img class="tab" src="images/spacer.gif" />public boolean isValBool() {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />return valBool;<br />
+    <img class="tab" src="images/spacer.gif" />}<br />
+    <img class="tab" src="images/spacer.gif" />public void setValBool(boolean valBool) {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />this.valBool = valBool;<br />
+    <img class="tab" src="images/spacer.gif" />}<br />
+    <img class="tab" src="images/spacer.gif" />public Date getValDateTime() {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />return valDateTime;<br />
+    <img class="tab" src="images/spacer.gif" />}<br />
+    <img class="tab" src="images/spacer.gif" />public void setValDateTime(Date valDateTime) {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />this.valDateTime = valDateTime;<br />
+    <img class="tab" src="images/spacer.gif" />}<br />
+    }</p></td></tr></table></center>
+    <p>and a corresponding ontology which describes an OWL object #CmpBean with corresponding object and datatype properties. We re-use the Number Ontology from the previous examples to encapsulate the list of nested beans.</p>
+    <p> Note the presence of an @XmlType declaration which binds the bean to a specific namespace in JAX-B if this is omitted then a namespace will be generated based on the bean's class name and package.</p>
+    <p>We annotate the bean in a similar way to annotating a service as follows:</p>
+    <center><table class="service"><tr>
+      <td><p>@URINamespaces( {<br />
+        @URINamespace(prefix = &quot;num&quot;, value = &quot;http://numbers.org/Numbers.owl&quot;),<br />
+        @URINamespace(prefix = &quot;cmp&quot;, value = &quot;http://complex.org/CmpBean.owl&quot;) })<br />
+        @OwlBean(ontology = &quot;&amp;cmp;&quot;, name = &quot;#CmpBean&quot;)</p></td></tr></table></center>
+    <p>This declares a couple of namespace prefixes , and identifies the class as a bound bean (using @OwlBean) . The @OwlBean(ontology = &quot;&amp;cmp;&quot;, name = &quot;#CmpBean&quot;) annotation indicates which OWL class the bean is bound to and the ontology within which it is bound. In this case the name may be ommitted as the OWL class and java class names match.</p>
+    <p> For each property we then declare it's corresponding OWL properties using the @OwlProp annotation on the getter method of the bean property (field annotations are not supported). e.g. for the &quot;valInt&quot; property we would add simply:</p>
+<center><table class="service"><tr>
+  <td><p>&nbsp;@OwlProp()<br />
+    <img class="tab" src="images/spacer.gif" />&nbsp;public int getValInt() {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&nbsp;return valInt;<br />
+    <img class="tab" src="images/spacer.gif" />&nbsp;}</p></td></tr></table></center>
+    <p>In this case as the name of the OWL object property is in the same ontology as the bean and the bean property name (&quot;valInt&quot; ) matches that of the owl property &quot;#valInt&quot; the annotation body can be left empty.</p>
+    <p> If the property has a different name in the ontology, or exists in a different ontology, these may be specified in the annotation:</p>
+<center><table class="service"><tr>
+  <td><p>&nbsp;@OwlProp(value=&quot;someIntProperty&quot;, ontology=&quot;&amp;otherOntology;&quot;)<br />
+    <img class="tab" src="images/spacer.gif" />&nbsp;public int getValInt() {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&nbsp;return valInt;<br />
+    <img class="tab" src="images/spacer.gif" />&nbsp;}</p></td></tr></table></center>
+    <p>We can use this mechanism to bind to other annotated beans as properties. e.g. if we had a bean property of type BNumber with the following annotations:</p>
+<center><table class="service"><tr>
+  <td><p>package edu.bath.owlsbuilder.tests.annotated;<br />
+    <br />
+    import javax.xml.bind.annotation.XmlType;<br />
+    import edu.bath.owlsannotations.OwlBean;<br />
+    import edu.bath.owlsannotations.OwlProp;<br />
+    import edu.bath.owlsannotations.URINamespace;<br />
+    <br />
+  <strong>@URINamespace(prefix = &quot;num&quot;, value = &quot;http://numbers.org/Numbers.owl&quot;)</strong><br />
+  <strong>@OwlBean(ontology = &quot;&amp;num;&quot;, name = &quot;Integer&quot;)</strong><br />
+    @XmlType(namespace=&quot;urn:a-number&quot;)<br />
+    public class BNumber {<br />
+    <img class="tab" src="images/spacer.gif" />public BNumber(){<br />
+    <img class="tab" src="images/spacer.gif" />}<br />
+    <img class="tab" src="images/spacer.gif" />public BNumber(int val){<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />this.value = val;<br />
+    <img class="tab" src="images/spacer.gif" />}<br />
+    <img class="tab" src="images/spacer.gif" />int value;<br />
+  <img class="tab" src="images/spacer.gif" /><strong>@OwlProp(&quot;hasValue&quot;)</strong><br />
+    <img class="tab" src="images/spacer.gif" />public int getValue() {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />return value;<br />
+    <img class="tab" src="images/spacer.gif" />}<br />
+    <img class="tab" src="images/spacer.gif" />public void setValue(int value) {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />this.value = value;<br />
+    <img class="tab" src="images/spacer.gif" />}<br />
+    }</p></td></tr></table></center>
+    <p>we could bind the corresponding property in CmpBean using:</p>
+<center><table class="service"><tr>
+  <td><p>&nbsp;<strong>@OwlProp(&quot;nestedBean&quot;)</strong><br />
+    <img class="tab" src="images/spacer.gif" />&nbsp;public BNumber getNestedBean() {<br />
+    <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&nbsp;return nestedBean;<br />
+    <img class="tab" src="images/spacer.gif" />&nbsp;}</p></td></tr></table></center>
+    <p>to use the bound bean in a service we no longer need to explicitly bind the bean's properties in the service method:</p>
+<center><table class="service"><tr>
+  <td><p><strong>@URINamespaces( {</strong><br />
+    <img class="tab" src="images/spacer.gif" /><strong> @URINamespace(prefix = &quot;num1&quot;, value = &quot;http://numbers.org/Numbers.owl&quot;),</strong><br />
+    <img class="tab" src="images/spacer.gif" /><strong> @URINamespace(prefix = &quot;cmp1&quot;, value = &quot;http://complex.org/CmpBean.owl&quot;) })</strong><br />
+    <strong>@OwlsImports( { @OwlsImport(prefix = &quot;num&quot;, value = &quot;&amp;num1;&quot;),</strong><br />
+    <img class="tab" src="images/spacer.gif" /><strong> @OwlsImport(prefix = &quot;cmp&quot;, value = &quot;&amp;cmp1;&quot;) })</strong><br />
+    <strong>@OwlsClass(defaultOntology = &quot;&amp;cmp;#&quot;)</strong><br />
+    @WebService(targetNamespace = &quot;http://test-complexservice/&quot;)<br />
+    public class ComplexService extends TestService {<br />
+  <img class="tab" src="images/spacer.gif" /><strong> @OwlsService(name = &quot;owlOP&quot;, label = &quot;OpService&quot;)</strong><br />
+  <img class="tab" src="images/spacer.gif" /><strong> @OwlsOutParam(name = &quot;rv&quot;, owlType = &quot;CmpBean&quot;)</strong><br />
+   <img class="tab" src="images/spacer.gif" /> @WebMethod<br />
+   <img class="tab" src="images/spacer.gif" /> public CmpBean cmpOp(<br />
+   <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" /> @WebParam(name = &quot;inp&quot;) @OwlsInParam(name = &quot;inp&quot;, owlType = &quot;CmpBean&quot;) CmpBean inp) {<br />
+   <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" /> return inp;<br />
+   <img class="tab" src="images/spacer.gif" /> }<br />
+    }</p></td></tr></table></center>
+    <h5>Service Deployment</h5>
+    <p>Services may be deployed through any JAX-WS compatible environment (with some caveats - this is only tested using CXF - some users have reported problems with glassfish).</p>
+    <p> If you would like OWL-S descriptions to be deployed on the fly and published in an online repository then the following instructions will be of use. This requires the following:</p>
+    <ul>
+      <li>That services are being published through Apache CXF using a spring configuration.&nbsp; The underlying service descriptions need only be in JAX-WS </li>
+      <li>Services are published under a path which is different from the servlet root (e.g. /cxfservices/ws/FooService rather than /cxfservice/FooService)</li>
+    </ul>
+    <p>An example webapp is provided in source distribution, build it by running </p>
+<center><table class="service"><tr>
+  <td><table cellspacing="0" cellpadding="0" hspace="0" vspace="0" align="left">
+    <tr>
+      <td valign="top"><div>
+        <p>$ ant build.webapp</p>
+      </div></td>
+    </tr>
+  </table></td></tr></table></center>
+    <p>this builds a webapp in the dist/webapp directory.</p>
+    <h5>Dependencies</h5>
+    <p>In addition to the standard CXF/Spring dependencies you will also need the following in your webapp:</p>
+    <ul>
+      <li>OWLSBuilder.jar</li>
+      <li>owls-api-3.0-bath.jar (and dependencies)</li>
+      <li>slf4j.jar</li>
+      <li>spring-mvc</li>
+    </ul>
+    <p>For repository support you will also need:</p>
+    <ul>
+      <li>quartz</li>
+      <li>alive-repository-server.jar</li>
+    </ul>
+    Images of the currently supported dependences are available from our anonymous SVN server here: https://alis.cs.bath.ac.uk/anonsvn/alive-code/alive-common-deps/trunk/
+<h5>Webapp Setup</h5>
+    <p>Assuming that you have a web.xml which looks something like this:</p>
+<center><table class="service"><tr>
+  <td><table cellspacing="0" cellpadding="0" hspace="0" vspace="0" align="left">
+    <tr>
+      <td valign="top"><div>
+        <p>&lt;?xml version=&quot;1.0&quot;   encoding=&quot;ISO-8859-1&quot;?&gt;<br />
+          &lt;!DOCTYPE web-app<br />
+          <img class="tab" src="images/spacer.gif" /> PUBLIC &quot;-//Sun Microsystems, Inc.//DTD   Web Application 2.3//EN&quot;<br />
+          <img class="tab" src="images/spacer.gif" />   &quot;http://java.sun.com/dtd/web-app_2_3.dtd&quot;&gt;<br />
+          &lt;web-app&gt;<br />
+          &lt;context-param&gt;</p>
+      </div></td>
+    </tr>
+  </table></td></tr></table></center>
+    <p>add classpath:edu/bath/owlsbuilder/servlet/cxf/applicationContext.xml (required) to your contextConfiguration parameter.</p>
+    <p> Create an owls servlet as follows:</p>
+<center><table class="service"><tr>
+  <td><table cellspacing="0" cellpadding="0" hspace="0" vspace="0" align="left">
+    <tr>
+      <td valign="top"><div>
+        <p>&lt;servlet&gt;<br />
+          <img class="tab" src="images/spacer.gif" />&lt;servlet-name&gt;owlsbuilder&lt;/servlet-name&gt;<br />
+          <img class="tab" src="images/spacer.gif" />&lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;<br />
+          <img class="tab" src="images/spacer.gif" />&lt;init-param&gt;<br />
+          <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;<br />
+          <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;param-value&gt;classpath:edu/bath/owlsbuilder/servlet/servletContext.xml&lt;/param-value&gt;<br />
+          <img class="tab" src="images/spacer.gif" />&lt;/init-param&gt;<br />
+          <img class="tab" src="images/spacer.gif" />&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;<br />
+          &lt;/servlet&gt;</p>
+      </div></td>
+    </tr>
+  </table></td></tr></table></center>
+    <p>And a mapping as follows:</p>
+<center><table class="service"><tr>
+  <td><table cellspacing="0" cellpadding="0" hspace="0" vspace="0" align="left">
+    <tr>
+      <td valign="top"><div>
+        <p><img class="tab" src="images/spacer.gif" />&lt;servlet-mapping&gt;<br />
+          <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;servlet-name&gt;owlsbuilder&lt;/servlet-name&gt;<br />
+          <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;url-pattern&gt;/owls/*&lt;/url-pattern&gt;<br />
+          <img class="tab" src="images/spacer.gif" />&lt;/servlet-mapping&gt;</p>
+      </div></td>
+    </tr>
+  </table></td></tr></table></center>
+    <p>The resulting web.xml should look something like:</p>
+<!--<center><table class="service"><tr>
+  <td><table cellspacing="0" cellpadding="0" hspace="0" vspace="0" align="left">
+    <tr>
+      <td valign="top"><div>
+        <p>&lt;?xml version=&quot;1.0&quot;   encoding=&quot;ISO-8859-1&quot;?&gt;<br />
+          &lt;!DOCTYPE web-app<br />
+          <img class="tab" src="images/spacer.gif" /> PUBLIC &quot;-//Sun Microsystems, Inc.//DTD   Web Application 2.3//EN&quot;<br />
+          <img class="tab" src="images/spacer.gif" />   &quot;http://java.sun.com/dtd/web-app_2_3.dtd&quot;&gt;<br />
+          &lt;web-app&gt;<br />
+          <img class="tab" src="images/spacer.gif" />&lt;context-param&gt;<br />
+          <img class="tab" src="images/spacer.gif" />&lt;<img class="tab" src="images/spacer.gif" />param-name&gt;log4jConfigLocation&lt;/param-name&gt;<br />
+          <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;param-value&gt;/WEB-INF/log4j.properties&lt;/param-value&gt;<br />
+          <img class="tab" src="images/spacer.gif" />&lt;/context-param&gt;<br />
+          <img class="tab" src="images/spacer.gif" />&lt;context-param&gt;<br />
+          <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;<br />
+          <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;param-value&gt;WEB-INF/beans.xml<br />
+          <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />classpath:edu/bath/owlsbuilder/servlet/cxf/applicationContext.xml&lt;/param-value&gt;<br />
+          <img class="tab" src="images/spacer.gif" />&lt;/context-param&gt;<br />
+          <img class="tab" src="images/spacer.gif" />&lt;context-param&gt;<br />
+          <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;param-name&gt;webAppRootKey&lt;/param-name&gt;<br />
+          <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;param-value&gt;owlsbuilder.root&lt;/param-value&gt;<br />
+          <img class="tab" src="images/spacer.gif" />&lt;/context-param&gt;</p>
+      </div></td>
+    </tr>
+  </table></td></tr></table></center>
+<center>
+  <table class="service"><tr>
+    <td><table cellspacing="0" cellpadding="0" hspace="0" vspace="0" align="left">
+      <tr>
+        <td valign="top"><div>
+          <p><img class="tab" src="images/spacer.gif" />&lt;listener&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;listener-class&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />org.springframework.web.context.ContextLoaderListener<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;/listener-class&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;/listener&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;listener&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;listener-class&gt;org.springframework.web.util.Log4jConfigListener&lt;/listener-class&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;/listener&gt;<br />
+            &nbsp;&lt;servlet&gt;</p>
+          </div></td>
+        </tr>
+    </table></td></tr></table></center>-->
+<center>
+  <table class="service"><tr>
+    <td><table cellspacing="0" cellpadding="0" hspace="0" vspace="0" align="left">
+      <tr>
+        <td valign="top"><div>
+          <p>&lt;?xml   version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;<br />
+            &lt;!DOCTYPE web-app<br />
+            <img class="tab" src="images/spacer.gif" /> PUBLIC &quot;-//Sun Microsystems, Inc.//DTD   Web Application 2.3//EN&quot;<br />
+            <img class="tab" src="images/spacer.gif" />   &quot;http://java.sun.com/dtd/web-app_2_3.dtd&quot;&gt;<br />
+            &lt;web-app&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;context-param&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;param-name&gt;log4jConfigLocation&lt;/param-name&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;param-value&gt;/WEB-INF/log4j.properties&lt;/param-value&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;/context-param&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;context-param&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;param-value&gt;WEB-INF/beans.xml<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />classpath:edu/bath/owlsbuilder/servlet/cxf/applicationContext.xml&lt;/param-value&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;/context-param&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;context-param&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;param-name&gt;webAppRootKey&lt;/param-name&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;param-value&gt;owlsbuilder.root&lt;/param-value&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;/context-param&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;listener&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;listener-class&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />org.springframework.web.context.ContextLoaderListener<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;/listener-class&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;/listener&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;listener&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;listener-class&gt;org.springframework.web.util.Log4jConfigListener&lt;/listener-class&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;/listener&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;servlet&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;servlet-name&gt;CXFServlet&lt;/servlet-name&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;display-name&gt;CXF Servlet&lt;/display-name&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;servlet-class&gt;org.apache.cxf.transport.servlet.CXFServlet&lt;/servlet-class&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;/servlet&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;servlet&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;servlet-name&gt;owlsbuilder&lt;/servlet-name&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;init-param&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;param-value&gt;classpath:edu/bath/owlsbuilder/servlet/servletContext.xml&lt;/param-value&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;/init-param&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;/servlet&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;servlet-mapping&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;servlet-name&gt;owlsbuilder&lt;/servlet-name&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;url-pattern&gt;/owls/*&lt;/url-pattern&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;/servlet-mapping&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;servlet-mapping&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;servlet-name&gt;CXFServlet&lt;/servlet-name&gt;<br />
+            <img class="tab" src="images/spacer.gif" /><img class="tab" src="images/spacer.gif" />&lt;url-pattern&gt;/ws/*&lt;/url-pattern&gt;<br />
+            <img class="tab" src="images/spacer.gif" />&lt;servlet-mapping&gt;<br />
+            &lt;/web-app&gt;
+          </p>
+        </div></td>
+      </tr>
+    </table></td></tr></table></center>
+    <p>create a owlsbuilder.properties file and put it into your webapp classpath (e.g. WEB-INF/classes) for example:</p>
+<center><table class="service"><tr>
+  <td><table cellspacing="0" cellpadding="0" hspace="0" vspace="0" align="left">
+    <tr>
+      <td valign="top"><div>
+        <p># The host prefix to prepend to OWLs URLs   before any servlet parts<br />
+          owlsbuilder.hostbase=http://localhost:8080<br />
+          #The Web service Endpoint address of the   repository server to use<br />
+          owlsbuilder.repositoryserver=http://localhost:8080/repo/ws/ObjectRepo?wsdl</p>
+      </div></td>
+    </tr>
+  </table></td></tr></table></center>
+    <p>The owlsbuilder.hostbase property is the URL which is prefixed before the context path when URLs are exposed to the outside world.</p>
+    <p> The owlsbuilder.repositoryserver property sets the location of an Alive Repository - this can be used to discover referenced ontologies for generating OWL-S Descriptions.</p>
+	<h5>Deployment</h5>
+    <p>Finally Deploy the webapp to a compatible java servlet container (e.g. Tomcat/Jetty etc) - you should be able to view the list of semantic services by browsing to the page /servletname/owls/list.do</p>
+    <p> If you want to register your services to be picked up by an ALIVE repository server the URL of the discovery file is : /servletname/owls/disco.do</p>
+<h4>Annotating an existing service</h4>
+        <p>To be added.</p>
+        <h4>Building services from templates</h4>
+        <p>To be added</p>
+        <h4>(Semi) Derived Services</h4>
+        <p>To be added.</p>
+      <h4>Best Practices (do)</h4>
+        <ul>
+          <li>Keep services and&nbsp; descriptions at the service layer simple</li>
+          <li>Try to ensure that as much of the semantics of the service is captured in the service description. Inputs and outputs should be of appropriate ontological types and preconditions and results should try and be as complete as possible. If a service has a side effect add a result or an output which models that side effect. </li>
+          <li>Where possible use service templates to re-use existing services and build pre-defined service compositions. If you create new service templates be sure to to publish them to the service repository. </li>
+        </ul>
+        <h4>Bad Practices (don't)</h4>
+        <ul>
+          <li>Don’t use primitive types for service parameters unless you absolutely have to, where primitive types are used they should appear as predicates of either preconditions or effects. </li>
+        </ul>
+      <h4>Inter-dependencies</h4>
+        <p>Service descriptions require pre-existing ontologies in order to provide descriptions of service semantic properties. </p>
+</div>
+    <br />
+    <div style="float:right; margin-right:10%;">Next: <a href="http://org.eclipse.ui.intro/showPage?id=servicetemplates">Service Templates</a></div>
+</div>
+
+<div id="logo">
+	<img src="images/alive_logo.jpg" border="0" />
+</div>
+</body>
+</html>

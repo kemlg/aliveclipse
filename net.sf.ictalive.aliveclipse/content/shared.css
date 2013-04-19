@@ -1,0 +1,218 @@
+/* Shared style applied to all pages */
+/* trick to get desired scroll bar behavior on all browsers */ 
+html {
+	overflow: auto;
+	border:0px;
+	height:100%;
+	}
+
+	
+body {	
+	margin-left: 14px;
+	margin-top: 10px;
+	font-family: Tahoma;
+	font-size: 12px;
+	background-color: #d9e3e2;
+	color:#545b5a;
+	/*background-image:url("./images/alive_background.jpg");
+	background-position: center;
+	background-repeat: inherit;
+	background-attachment: inherit;*/
+	} 
+	
+h1 {
+	text-align: left;
+	font-weight: bold;
+	font-size: 16pt;
+	color: #545b5a;
+	} 
+
+h4 {
+	color: #787878;
+	margin-left:7px; 
+	margin-bottom:5px;
+	font-size:13px;
+	}	
+h5 {
+	color: #787878;
+	margin-left:7px;
+	margin-bottom:5px;
+	font-size:12px;
+}
+	
+a.block {
+	display :block;
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #000000;
+	font-weight: normal;
+	text-decoration: none;
+	padding-bottom: 5px;
+	margin-left: 20px;
+	}
+a {
+	font-family:Tahoma;
+	color: #000000;
+	font-weight: normal;
+	text-decoration: none;
+}
+	
+p {
+	padding-left: 7px;
+	margin-bottom: 2px;
+	margin-top: 2px;
+	text-align: justify;
+}	
+
+.bg {
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 0;
+}
+
+img {
+	/*width: 48px;
+	height: 48px;*/
+	vertical-align: middle;
+	border: none;
+	margin-bottom: 10px;
+	}
+
+img.button {
+	border: none;
+	width: 36px;
+	height: 36px;
+}
+
+img.tab {
+	width: 25px;
+	height:1px;
+}
+
+table.service {
+	background-color:#CCC;
+	border:thin;
+	border-color:#000;
+	font-family:"Courier New", Courier, monospace;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+td.figure {
+	text-align:center; 
+	font-weight: bold; 
+	font-size:11px;
+}
+
+/* Give some space for main div.*/	
+.page-style {
+	text-align:justify;
+	margin-top: 75px;
+	margin-bottom: 2px;
+	padding-bottom: 8px;
+	z-index: 100;
+	position: absolute;
+	overflow: auto;
+	top: 0px;
+	left: -3px;
+	bottom: 0px;
+	right: 0px;
+	}
+	
+/* satisfy Mozilla */	
+body > div.page-style {
+	padding-left:3%;
+}
+
+.menu {
+	position: absolute;
+	top:0px;
+	left:300px;
+	z-index:1;
+}
+
+
+#content {
+	text-align:left;
+	width: 80%;
+}
+
+#logo {
+	position: absolute;
+	left: 16px;
+	top: 8px;	
+	z-index: 2;
+}
+
+/* Test */
+a.info{
+    position:relative; /*this is the key*/
+}
+a.info:hover{}
+a.info span{display: none}
+a.info:hover span{ /*the span will display just on :hover state*/
+    display:block;
+    position:absolute;
+	top: 15px; left: 12px; width: 350px;
+    border:1px solid #787878;
+    background-color:#d9e3e2;
+	color:#545b5a;
+	padding: 4px;
+    text-align: justify;
+}
+
+
+.tooltip { float:left;}
+.tooltip a span { display: none;}
+.tooltip a:hover {
+    	font-size: 99%;
+    	font-color: #000000;
+}
+.tooltip a:hover span { 
+	    display: block; 
+    	position: absolute; 
+    	margin-left: -5px; 
+		margin-top: -12px;
+    	z-index: 99; 
+    	text-align: left; 
+    	text-decoration: none;
+		font-weight: bold;
+}
+.tooltipy{ float: left;}
+.tooltipy a span{ display:none;}
+.tooltipy a:hover {
+	font-size:99%;
+	font-color: #000000;
+}
+.tooltipy a:hover span{
+	display: block;
+	position: absolute;
+	margin-left: -15px;
+	margin-top: -12px;
+	z-index: 99;
+	text-align: left;
+	text-decoration: none;
+	font-weight: bold;
+}
+.tooltipup { float:left;}
+.tooltipup a span{ display: none;}
+.tooltipup a:hover {
+	font-size: 99%;
+	font-color: #000000;
+}
+.tooltipup a:hover span {
+	display: block;
+	position: absolute;
+	margin-left: 5px;
+	margin-top: -12px;
+	z-index: 99;
+	text-align: left;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+ul {
+	margin-top:10px;
+}

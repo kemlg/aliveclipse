@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: Thorsten
+Build-Jdk: 1.6.0_17
+Specification-Title: ON :: OWL-S API
+Specification-Version: 3.1
+Specification-Vendor: University of Basel - Database and Information S
+ ystems Group
+Implementation-Title: ON :: OWL-S API
+Implementation-Version: 3.1
+Implementation-Vendor-Id: ch.unibas.on
+Implementation-Vendor: University of Basel - Database and Information 
+ Systems Group
+Class-Path: xsdlib-20030225.jar wstx-asl-3.2.9.jar xercesImpl-2.7.1.jar pellet-2.1.1.jar relaxngDatatype-20020414.jar saaj-api-1.2.jar slf4j-api-1.5.8.jar slf4j-log4j12-1.5.8.jar stax-api-1.0.1.jar upnp-1.0.jar junit-4.5.jar log4j-1.2.14.jar lucene-core-2.3.1.jar  iri-0.8.jar jaxrpc-api-1.1.jar jcl-over-slf4j-1.5.8.jar jena-2.6.3.jar jgrapht-jdk1.5-0.7.3.jar icu4j-3.4.4.jar commons-discovery-0.2.jar axis-1.4.jar axis-wsdl4j-1.5.1.jar arq-2.8.3.jar aterm-java-1.6.jar activation-1.0.2.jar   

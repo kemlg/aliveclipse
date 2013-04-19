@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Overview</title>
+  <link rel="stylesheet" href="shared.css" type="text/css" />	
+  </head>
+
+<body>
+<div class="menu">
+	<div class="tooltipy" style="margin-top:10px;"><a href="http://org.eclipse.ui.intro/showPage?id=overview"><img src="images/yellow.png" height="24" width="24" border="0" /><span class="yellow" style="font-size:9px;">Overview</span></a></div>
+    <div class="tooltip" style="margin-top:30px;"><a href="http://org.eclipse.ui.intro/showPage?id=tutorials"><img src="images/red.png" height="24" width="24" border="0" /><span style="font-size:9px;">Tutorials</span></a></div>
+    <div class="tooltip" style="margin-left:-10px;"><a href="http://org.eclipse.ui.intro/showPage?id=methodology"><img src="images/green.png" width="24" height="24" border="0" /><span style="font-size:9px;">Methodology</span></a></div>
+    <div class="tooltip" style="margin-left:50px;"><a href="http://org.eclipse.ui.intro/showPage?id=aliveclipse"><img src="images/left.png" width="24" height="24" border="0" /><span style="font-size:9px;">Previous</span></a></div>
+    <div class="tooltipup"><a href="http://org.eclipse.ui.intro/showPage?id=tutorials"><img src="images/up.png" width="24" height="24" border="0" /><span style="font-size:9px;">Up</span></a></div>
+    <div class="tooltip"><a href="http://org.eclipse.ui.intro/showPage?id=socialstructure"><img src="images/right.png" width="24" height="24" border="0" /><span style="font-size:9px;">Next</span></a></div>
+    <div class="tooltip" style="margin-left:50px;"><a href="http://org.eclipse.ui.intro/close"><img src="images/workspace.png" width="24" height="24" border="0" /><span style="font-size:9px;">Go to workbench</span></a></div>
+</div>
+
+<div class="bg">
+<img id="background-img" src="images/alive_background.jpg" class="bg" />
+</div>
+
+<div class="page-style">
+    <div id="content"> 	
+        <h1>Designing Organisation Models</h1>
+        <p>In this tutorial we show how to make an organisation model (OM) for a simplified information display scenario (based on the TMT use-case discussed in D7.2).<br />
+We start by creating a new organisation model, either by using the 'New' option in the 'File' menu (you will have to select the 'OperA OM Model' wizard in the list, which is in the 'OperettA' folder), using the right click menu of the 'ALIVE Navigator' view, or via the dashboard.</p>
+        <p>To create an organisation model via the dashboard, make sure that you first select your project in the 'ALIVE Navigator' view on the left of the ALIVEclipse window. This ensures that the dashboard is displaying the status of that project (The active project is also shown in the top-right corner of the dashboard). Clicking the 'Create' link in the Organisation Model box will bring up the 'OperA OM Model' wizard, shown below. </p>
+      <center><img style="margin-bottom: 10px;" src="images/operettaWizard.png" /></center>
+        <p>Select the correct location for the organisation model in the top part (if not done so already). Organisation Models typically go into the 'OrganisationModel' folder of an ALIVE project. Give the OperA OM Model a representative name in the 'File Name' field at the bottom. Make sure that the extension is '.opera' or the wizard will not let you finish the creation process.</p>
+        <p>After selecting 'Finish' ALIVEclipse will automatically open the new OperA OM in the editor area (the middle-right-top part of the window). For creating/designing organisation models we will not need the dashboard, but will need the 'Properties' view. You can switch the view from the dashboard to the properties view by selecting the correct tab in the lower left portion of the window. </p>
+      <center><img style="margin-bottom: 10px;" src="images/properties.png" /></center>
+      <p>If the lower view has no tab for the properties, you can open the properties in two different ways. Either right click any element in the editor area and select 'Show Properties View', or open the 'Window' menu, select the 'Show View' option, select the 'Other…' option, and find the Properties view in the General folder.</p>
+        <p> Although not mandatory for ALIVE systems, it is a good thing to name your Organisation Model. Click the 'OperAModel' element in the editor area of ALIVEclipse and change the name of your Organisation Model by changing the value in the 'Name' field shown in the Properties view.</p>
+        <p> On creation of an organisation model, some elements (which are mandatory for every OM) are already created for you. Clicking the small arrow next to the 'OperAModel' element will expand the tree to show these various elements already in your organisation model.</p>
+      <p> The elements already in an OperA OM file are:</p>
+        <ul style="margin-top:5px;">
+          <li>OperAModel: container for the other model elements, allows for setting the name of the organisation.</li>
+          <li>OM: stands for the Organisation Model.</li>
+          <li>SS: stands for Social Structure; this element is used for setting the social aspects of the organisation. Creation of the SS is detail <a href="http://org.eclipse.ui.intro/showPage?id=socialstructure">here</a>.</li>
+          <li>IS: stands for Interaction Structure; this element is used for specifying the interactions needed for achieving the organisational objectives, and any restrictions that apply to (the order of) these interactions. Specification of the IS is detailed <a href="http://org.eclipse.ui.intro/showPage?id=interactionstructure">here</a>.</li>
+          <li>CS: stands for Communicative Structure; used for specifying the communicative elements (such as formulas and ontologies) required by the organisation. Details about the CS can be found <a href="http://org.eclipse.ui.intro/showPage?id=communicativestructure">here</a>.</li>
+          <li>NS: stands for Normative Structure; this element contains  the normative aspects of the organisation (e.g., norms). Details on the creation of norms can be found <a href="http://org.eclipse.ui.intro/showPage?id=normativestructure">here</a>.</li>
+      </ul>
+      <center><img style="margin-bottom: 10px;" src="images/om.png" /></center>
+      <h4>Contents:</h4>
+      <a class="block" href="http://org.eclipse.ui.intro/showPage?id=socialstructure">Social Structure</a>
+      <a class="block" href="http://org.eclipse.ui.intro/showPage?id=interactionstructure">Interaction Structure</a>
+      <a class="block" href="http://org.eclipse.ui.intro/showPage?id=communicativestructure">Communicative Structure</a>
+      <a class="block" href="http://org.eclipse.ui.intro/showPage?id=normativestructure">Normative Structure</a>
+      <a class="block" href="http://org.eclipse.ui.intro/showPage?id=validation">Validating Organisational Models</a>
+  </div>
+    <br />
+    <div style="float:right; margin-right:10%;">Next: <a href="http://org.eclipse.ui.intro/showPage?id=socialstructure">Social Structure</a></div>
+</div>
+
+<div id="logo">
+	<img src="images/alive_logo.jpg" border="0" />
+</div>
+</body>
+</html>

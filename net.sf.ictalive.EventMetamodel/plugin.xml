@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://alive/architecture/event"
+            class="EventModel.Event.EventPackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="event"
+            class="EventModel.Event.util.EventResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://alive/architecture/actions"
+            class="EventModel.Action.ActionPackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="action"
+            class="EventModel.Action.util.ActionResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://alive/architecture/fact"
+            class="EventModel.Fact.FactPackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="fact"
+            class="EventModel.Fact.util.FactResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://alive/architecture/objects"
+            class="EventModel.Objects.ObjectsPackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://alive/coordinationLevel/tasks/0.3"
+            class="coordination.tasks.TasksPackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://alive/coordinationLevel/actions/0.3"
+            class="coordination.actions.ActionsPackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://alive/coordinationLevel/agents/0.3"
+            class="coordination.agents.AgentsPackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://alive/serviceLevel/0.5.4"
+            class="service.ServicePackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="service"
+            class="service.util.ServiceResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://alive/serviceLevel/syntax/0.5"
+            class="service.syntax.SyntaxPackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="syntax"
+            class="service.syntax.util.SyntaxResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://alive/serviceLevel/semantics/0.5"
+            class="service.semantics.SemanticsPackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="semantics"
+            class="service.semantics.util.SemanticsResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://alive/serviceLevel/template/0.5"
+            class="service.template.TemplatePackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="template"
+            class="service.template.util.TemplateResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://alive/serviceLevel/architecture/0.5"
+            class="service.architecture.ArchitecturePackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="architecture"
+            class="service.architecture.util.ArchitectureResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://opera/1.0"
+            class="opera.OperaPackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://opera/OM/1.0"
+            class="opera.OM.OMPackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://owls1.1/wsdlgrounding"
+            class="owls.wsdlGrounding.WsdlGroundingPackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://owls/process/1.1"
+            class="owls.process.ProcessPackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://owls1.1/service"
+            class="owls.service.ServicePackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://owls1.1/profile"
+            class="owls.profile.ProfilePackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://owls1.1/expr"
+            class="owls.expr.ExprPackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://owls1.1/time"
+            class="owls.time.TimePackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://alive/XMLSchema"
+            class="schema.SchemaPackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="schema"
+            class="schema.util.SchemaResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://swrl/v0.5"
+            class="swrl.SwrlPackage"
+            genModel="model/Event.genmodel"/>
+   </extension>
+
+</plugin>

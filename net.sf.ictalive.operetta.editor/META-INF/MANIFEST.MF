@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: OperettA Tree Editor
+Bundle-SymbolicName: net.sf.ictalive.operetta.editor;singleton:=true
+Bundle-Version: 2.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: net.sf.ictalive.operetta.OM.presentation.OperAEditorPlugin$Implementation
+Bundle-Vendor: ALIVE, Utrecht University
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: net.sf.ictalive.operetta.OM.presentation,
+ net.sf.ictalive.operetta.editor.modeltracker
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.resources;visibility:=reexport,
+ net.sf.ictalive.operetta.edit;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport,
+ org.eclipse.emf.edit.ui;visibility:=reexport,
+ org.eclipse.ui.ide;visibility:=reexport,
+ org.eclipse.emf.transaction;bundle-version="1.3.0",
+ net.sf.ictalive.operetta.diagram.ss;bundle-version="1.0.0",
+ net.sf.ictalive.operetta.diagram.is;bundle-version="1.0.0",
+ net.sf.ictalive.aliveclipse.dashboard;bundle-version="2.0.0"
+Bundle-ActivationPolicy: lazy

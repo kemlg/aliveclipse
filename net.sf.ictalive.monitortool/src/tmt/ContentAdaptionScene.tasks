@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tasks:TasksCollection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pr="http://owls/process/1.1" xmlns:tasks="http://alive/coordinationLevel/tasks/0.3">
+  <tasks>
+    <components xsi:type="pr:AnyOrder">
+      <components>
+        <first xsi:type="pr:Perform" name="">
+          <process href="Demo.actions#//@actions.10"/>
+        </first>
+        <rest>
+          <first xsi:type="pr:Perform" name="">
+            <process href="Demo.actions#//@actions.11"/>
+          </first>
+          <rest>
+            <first xsi:type="pr:Perform" name="">
+              <process href="Demo.actions#//@actions.12"/>
+            </first>
+            <rest>
+              <first xsi:type="pr:Perform" name="">
+                <process href="Demo.actions#//@actions.13"/>
+              </first>
+              <rest>
+                <first xsi:type="pr:Perform" name="">
+                  <process href="Demo.actions#//@actions.16"/>
+                </first>
+                <rest>
+                  <first xsi:type="pr:Perform">
+                    <process href="Demo.actions#//@actions.17"/>
+                  </first>
+                  <rest>
+                    <first xsi:type="pr:Perform">
+                      <process href="Demo.actions#//@actions.18"/>
+                    </first>
+                  </rest>
+                </rest>
+              </rest>
+            </rest>
+          </rest>
+        </rest>
+      </components>
+    </components>
+  </tasks>
+</tasks:TasksCollection>

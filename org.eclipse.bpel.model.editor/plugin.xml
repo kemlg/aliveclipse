@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.eclipse.bpel.model.presentation.BPELModelWizardID"
+            name="%_UI_BPELModelWizard_label"
+            class="org.eclipse.bpel.model.presentation.BPELModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/BPELModelFile.gif">
+         <description>%_UI_BPELModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.eclipse.bpel.model.presentation.BPELEditorID"
+            name="%_UI_BPELEditor_label"
+            icon="icons/full/obj16/BPELModelFile.gif"
+            extensions="bpel"
+            class="org.eclipse.bpel.model.presentation.BPELEditor"
+            contributorClass="org.eclipse.bpel.model.presentation.BPELActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.eclipse.bpel.model.partnerlinktype.presentation.PartnerlinktypeModelWizardID"
+            name="%_UI_PartnerlinktypeModelWizard_label"
+            class="org.eclipse.bpel.model.partnerlinktype.presentation.PartnerlinktypeModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/PartnerlinktypeModelFile.gif">
+         <description>%_UI_PartnerlinktypeModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.eclipse.bpel.model.partnerlinktype.presentation.PartnerlinktypeEditorID"
+            name="%_UI_PartnerlinktypeEditor_label"
+            icon="icons/full/obj16/PartnerlinktypeModelFile.gif"
+            extensions="partnerlinktype"
+            class="org.eclipse.bpel.model.partnerlinktype.presentation.PartnerlinktypeEditor"
+            contributorClass="org.eclipse.bpel.model.partnerlinktype.presentation.PartnerlinktypeActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.eclipse.bpel.model.messageproperties.presentation.MessagepropertiesModelWizardID"
+            name="%_UI_MessagepropertiesModelWizard_label"
+            class="org.eclipse.bpel.model.messageproperties.presentation.MessagepropertiesModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/MessagepropertiesModelFile.gif">
+         <description>%_UI_MessagepropertiesModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.eclipse.bpel.model.messageproperties.presentation.MessagepropertiesEditorID"
+            name="%_UI_MessagepropertiesEditor_label"
+            icon="icons/full/obj16/MessagepropertiesModelFile.gif"
+            extensions="messageproperties"
+            class="org.eclipse.bpel.model.messageproperties.presentation.MessagepropertiesEditor"
+            contributorClass="org.eclipse.bpel.model.messageproperties.presentation.MessagepropertiesActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,40 @@
+/* Give some space for main div.*/	
+.content-style {
+	text-align:justify;
+	z-index: 100;
+	position: absolute;
+	top: 175px;
+	left: 150px;
+	width: 315;
+	}
+	
+.workspace {
+	text-align: justify;
+	z-index:101;
+	position: absolute;
+	top: 400px;
+	left: 600px;
+	width: 70px;
+}	
+
+#alive {
+	position: fixed;
+	left: 16px;
+	bottom: 16px;	
+	z-index: 2;
+}
+	
+a:link {
+	text-decoration: none;
+	color: #545b5a;
+	margin: 0 0 0 0;
+}
+
+a:hover{
+	text-decoration: none;
+	font-weight: bold;
+	color:#000;
+}
+/*a:visited
+a:active
+*/

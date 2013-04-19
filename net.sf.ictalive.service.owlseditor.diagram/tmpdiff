@@ -1,0 +1,199 @@
+Index: plugin.xml
+===================================================================
+--- plugin.xml	(revision 2197)
++++ plugin.xml	(working copy)
+@@ -234,7 +234,7 @@
+          </object>
+          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
+          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Control"/>
+-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2027,2028,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033,3034,3035,3036,3037,3102,3094,3095,3096,3097,3098,3103,3099,3100,3101,3038,3040,3041,3042,3043,3044,3045,3046,3047,3048,3049,3050,3051,3052,3053,3054,3055,3056,3057,3058,3059,3060,3061,3062,3063,3064,3065,3066,3067,3068,3069,3070,3071,3072,3073,3074,3075,3076,3077,3078,3079,3080,3081,3082,3083,3084,3085,3086,3087,3088,3089,3090,3091,3092,3093"/>
++         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2027,2028,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2017,2018,2019,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033,3034,3104,3105,3106,3107,3094,3095,3096,3097,3098,3103,3099,3100,3101,3108,3109,3110,3043,3044,3045,3046,3047,3048,3049,3050,3051,3052,3053,3054,3055,3056,3057,3058,3059,3060,3061,3062,3063,3065,3066,3067,3068,3070,3071,3072,3073,3076,3077,3078,3079,3080,3082,3083,3084,3085,3086,3087,3088,3089,3090,3091,3093"/>
+          <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003,4004,4005"/>
+       </viewProvider>
+    </extension>
+@@ -247,16 +247,16 @@
+             <method name="getType()" value="Control"/>
+          </object>
+          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+-            <method name="getType()" value="2027,2028,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2017,2018,2019,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033,3034,3042,3036,3037,3102,3094,3095,3096,3097,3098,3103,3099,3100,3101,3038,3040,3043,3044,3045,3046,3047,3048,3049,3050,3051,3052,3053,3054,3055,3056,3057,3058,3059,3060,3061,3062,3063,3065,3066,3067,3068,3070,3071,3072,3073,3076,3077,3078,3079,3080,3082,3083,3084,3085,3086,3087,3088,3089,3090,3091,3093"/>
++            <method name="getType()" value="2027,2028,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2017,2018,2019,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033,3034,3104,3105,3106,3107,3094,3095,3096,3097,3098,3103,3099,3100,3101,3108,3109,3110,3043,3044,3045,3046,3047,3048,3049,3050,3051,3052,3053,3054,3055,3056,3057,3058,3059,3060,3061,3062,3063,3065,3066,3067,3068,3070,3071,3072,3073,3076,3077,3078,3079,3080,3082,3083,3084,3085,3086,3087,3088,3089,3090,3091,3093"/>
+          </object>
+          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+             <method name="getType()" value="4001,4002,4003,4004,4005"/>
+          </object>
+          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+-            <method name="getType()" value="5129,5130,5003,5097,5098,5099,5100,5101,5102,5103,5104,5105,5106,5107,5108,5110,5119,5120,5096,5004,5084,5083,5005,5006,5082,5081,5080,5079,5078,5077,5069,5007,5008,5009,5010,5011,5068,5067,5012,5013,5014,5015,5016,5066,5065,5017,5018,5019,5020,5021,5064,5030,5029,5022,5023,5121,5111,5112,5113,5114,5115,5131,5116,5117,5118,5025,5026,5034,5031,5032,5033,5038,5035,5036,5037,5039,5040,5041,5042,5043,5063,5056,5055,5054,5048,5044,5045,5046,5053,5049,5050,5051,5057,5058,5059,5060,5070,5071,5072,5073,5074,5076,5085,5086,5087,5088,5089,5090,5091,5092,5093,5095"/>
++            <method name="getType()" value="5129,5130,5003,5097,5098,5099,5100,5101,5102,5103,5104,5105,5106,5107,5108,5110,5119,5120,5096,5004,5084,5083,5005,5006,5082,5081,5080,5079,5078,5077,5069,5007,5008,5009,5010,5011,5068,5067,5012,5013,5014,5015,5016,5066,5065,5017,5018,5019,5020,5021,5064,5030,5137,5132,5133,5134,5111,5112,5113,5114,5115,5131,5116,5117,5118,5135,5136,5138,5034,5031,5032,5033,5038,5035,5036,5037,5039,5040,5041,5042,5043,5063,5056,5055,5054,5048,5044,5045,5046,5053,5049,5050,5051,5057,5058,5059,5060,5070,5071,5072,5073,5074,5076,5085,5086,5087,5088,5089,5090,5091,5092,5093,5095"/>
+          </object>
+          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+-            <method name="getType()" value="7001,7002,7003,7004,7005,7006,7007,7008,7009,7010,7011,7012,7013,7014,7015,7016,7017,7018,7019,7020,7021,7022,7023,7024,7025,7026,7027,7028,7029,7030,7031,7032,7033,7034,7035,7036,7037,7038,7039,7040,7041,7042,7043,7044,7111,7112,7113,7114,7115,7116,7117,7118,7119,7120,7047,7048,7049,7050,7051,7052,7053,7054,7055,7056,7057,7058,7059,7060,7061,7062,7063,7064,7065,7066,7067,7068,7069,7070,7071,7072,7073,7074,7075,7076,7077,7078,7079,7080,7081,7082,7083,7084,7085,7086,7087,7088,7089,7090,7091,7092,7093,7094,7095,7096,7097,7098,7099,7100,7121,7102,7103,7104,7105,7122"/>
++            <method name="getType()" value="7001,7002,7003,7004,7005,7006,7007,7008,7009,7010,7011,7012,7013,7014,7015,7016,7017,7018,7019,7020,7021,7022,7023,7024,7025,7026,7027,7028,7029,7030,7031,7032,7033,7034,7035,7036,7037,7038,7039,7040,7041,7042,7043,7044,7123,7124,7125,7126,7115,7116,7117,7118,7127,7128,7047,7048,7049,7050,7051,7052,7053,7054,7055,7056,7057,7058,7059,7060,7061,7062,7063,7064,7065,7066,7067,7068,7069,7070,7071,7072,7073,7074,7075,7076,7077,7078,7079,7080,7081,7082,7083,7084,7085,7086,7087,7088,7089,7090,7091,7092,7093,7094,7095,7096,7097,7098,7099,7100,7121,7102,7103,7104,7105,7122"/>
+          </object>
+          <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+       </editpartProvider>
+@@ -470,7 +470,7 @@
+                id="net.sf.ictalive.service.owlseditor.diagram.Result_2018"
+                name="%metatype.name.Result_2018"
+                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+-            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Result_3102"/>
++            <specializes id="net.sf.ictalive.service.owlseditor.diagram.Result_3107"/>
+             <param name="semanticHint" value="2018"/>
+          </specializationType>
+       </metamodel>
+@@ -801,40 +801,40 @@
+       </metamodel>
+       <metamodel nsURI="http://www.example.org">
+          <metamodelType
+-               id="net.sf.ictalive.service.owlseditor.diagram.InnerProcess_3042"
+-               name="%metatype.name.InnerProcess_3042"
++               id="net.sf.ictalive.service.owlseditor.diagram.RemoteProcess_3104"
++               name="%metatype.name.RemoteProcess_3104"
+                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+-               eclass="InnerProcess"
+-               edithelper="control.diagram.edit.helpers.InnerProcessEditHelper">
+-            <param name="semanticHint" value="3042"/>
++               eclass="RemoteProcess"
++               edithelper="control.diagram.edit.helpers.RemoteProcessEditHelper">
++            <param name="semanticHint" value="3104"/>
+          </metamodelType>
+       </metamodel>
+       <metamodel nsURI="http://www.example.org">
+          <specializationType
+-               id="net.sf.ictalive.service.owlseditor.diagram.Input_3036"
+-               name="%metatype.name.Input_3036"
++               id="net.sf.ictalive.service.owlseditor.diagram.Input_3105"
++               name="%metatype.name.Input_3105"
+                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+             <specializes id="net.sf.ictalive.service.owlseditor.diagram.Input_2027"/>
+-            <param name="semanticHint" value="3036"/>
++            <param name="semanticHint" value="3105"/>
+          </specializationType>
+       </metamodel>
+       <metamodel nsURI="http://www.example.org">
+          <specializationType
+-               id="net.sf.ictalive.service.owlseditor.diagram.Output_3037"
+-               name="%metatype.name.Output_3037"
++               id="net.sf.ictalive.service.owlseditor.diagram.Output_3106"
++               name="%metatype.name.Output_3106"
+                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+             <specializes id="net.sf.ictalive.service.owlseditor.diagram.Output_2028"/>
+-            <param name="semanticHint" value="3037"/>
++            <param name="semanticHint" value="3106"/>
+          </specializationType>
+       </metamodel>
+       <metamodel nsURI="http://www.example.org">
+          <metamodelType
+-               id="net.sf.ictalive.service.owlseditor.diagram.Result_3102"
+-               name="%metatype.name.Result_3102"
++               id="net.sf.ictalive.service.owlseditor.diagram.Result_3107"
++               name="%metatype.name.Result_3107"
+                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+                eclass="Result"
+                edithelper="control.diagram.edit.helpers.ResultEditHelper">
+-            <param name="semanticHint" value="3102"/>
++            <param name="semanticHint" value="3107"/>
+          </metamodelType>
+       </metamodel>
+       <metamodel nsURI="http://www.example.org">
+@@ -927,24 +927,34 @@
+       </metamodel>
+       <metamodel nsURI="http://www.example.org">
+          <specializationType
+-               id="net.sf.ictalive.service.owlseditor.diagram.Condition_3038"
+-               name="%metatype.name.Condition_3038"
++               id="net.sf.ictalive.service.owlseditor.diagram.Condition_3108"
++               name="%metatype.name.Condition_3108"
+                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+             <specializes id="net.sf.ictalive.service.owlseditor.diagram.Condition_3098"/>
+-            <param name="semanticHint" value="3038"/>
++            <param name="semanticHint" value="3108"/>
+          </specializationType>
+       </metamodel>
+       <metamodel nsURI="http://www.example.org">
+          <specializationType
+-               id="net.sf.ictalive.service.owlseditor.diagram.Expr_3040"
+-               name="%metatype.name.Expr_3040"
++               id="net.sf.ictalive.service.owlseditor.diagram.Expr_3109"
++               name="%metatype.name.Expr_3109"
+                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+             <specializes id="net.sf.ictalive.service.owlseditor.diagram.Expr_3100"/>
+-            <param name="semanticHint" value="3040"/>
++            <param name="semanticHint" value="3109"/>
+          </specializationType>
+       </metamodel>
+       <metamodel nsURI="http://www.example.org">
+          <metamodelType
++               id="net.sf.ictalive.service.owlseditor.diagram.TemplateProcess_3110"
++               name="%metatype.name.TemplateProcess_3110"
++               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
++               eclass="TemplateProcess"
++               edithelper="control.diagram.edit.helpers.TemplateProcessEditHelper">
++            <param name="semanticHint" value="3110"/>
++         </metamodelType>
++      </metamodel>
++      <metamodel nsURI="http://www.example.org">
++         <metamodelType
+                id="net.sf.ictalive.service.owlseditor.diagram.Produce_3043"
+                name="%metatype.name.Produce_3043"
+                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+@@ -1465,10 +1475,10 @@
+          <elementType ref="net.sf.ictalive.service.owlseditor.diagram.SplitJoin_3032"/>
+          <elementType ref="net.sf.ictalive.service.owlseditor.diagram.IfThenElse_3033"/>
+          <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Perform_3034"/>
+-         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.InnerProcess_3042"/>
+-         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Input_3036"/>
+-         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Output_3037"/>
+-         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Result_3102"/>
++         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.RemoteProcess_3104"/>
++         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Input_3105"/>
++         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Output_3106"/>
++         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Result_3107"/>
+          <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ValueSource_3094"/>
+          <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ValueForm_3095"/>
+          <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ValueFunction_3096"/>
+@@ -1478,8 +1488,9 @@
+          <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Condition_3099"/>
+          <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Expr_3100"/>
+          <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Expr_3101"/>
+-         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Condition_3038"/>
+-         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Expr_3040"/>
++         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Condition_3108"/>
++         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Expr_3109"/>
++         <elementType ref="net.sf.ictalive.service.owlseditor.diagram.TemplateProcess_3110"/>
+          <elementType ref="net.sf.ictalive.service.owlseditor.diagram.Produce_3043"/>
+          <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ValueSource_3044"/>
+          <elementType ref="net.sf.ictalive.service.owlseditor.diagram.ValueForm_3045"/>
+@@ -1718,15 +1729,6 @@
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+       <?gmfgen generated="true"?>
+       <category id="control.diagram.part.ControlDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+-      <command id="net.sf.ictalive.service.owlseditor.diagram.ExportOWLSAction"
+-         name="Export to OWL-S"
+-         categoryId="control.diagram.part.ControlDiagramEditorID"
+-         defaultHandler="control.diagram.part.ExportOWLSAction"/>
+-   </extension>
+-
+-   <extension point="org.eclipse.ui.commands" id="menu-commands">
+-      <?gmfgen generated="true"?>
+-      <category id="control.diagram.part.ControlDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+       <command id="net.sf.ictalive.service.owlseditor.diagram.LoadResourceAction"
+          name="Load Resource"
+          categoryId="control.diagram.part.ControlDiagramEditorID"
+@@ -1734,6 +1736,7 @@
+    </extension>
+ 
+    
++   
+       
+  
+ 
+@@ -1764,8 +1767,7 @@
+       <super type="org.eclipse.core.resources.problemmarker"/>
+       <super type="org.eclipse.gmf.runtime.common.ui.services.marker"/>
+       <persistent value="true"/>
+-   </extension>
+-<extension id="validationDecoratorProvider" name="ValidationDecorations" point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders">
++   </extension><extension id="validationDecoratorProvider" name="ValidationDecorations" point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders">
+       <?gmfgen generated="true"?>
+       <decoratorProvider class="control.diagram.providers.ControlValidationDecoratorProvider">
+          <Priority name="Lowest"/>

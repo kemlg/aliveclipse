@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<discoveryDocument uploadContents="true">
+  <object section="ontologies" lastUpdate="2010-05-05T11:28:04.509+01:00">
+    <description>ALIVE Templates Base Ontology - used in template
+    service descriptions. Provides slot definitions and additional ASP
+    constraints  for specifying template properties.</description>
+    <label>ALIVE Templates Ontology</label>
+    <mimeType>application/rdf+xml</mimeType>
+    <resourceURL>http://alis.cs.bath.ac.uk/anonsvn/alive-code/alive-templates/test/ALIVE-Template.owl</resourceURL>
+    <uri>http://www.ist-alive.eu/ontologies/ALIVE-Template.owl</uri>
+  </object>
+
+  <object section="ontologies" lastUpdate="2010-05-05T11:28:04.509+01:00">
+    <description>Test template ontology</description>
+    <label>Template Test Ontology</label>
+    <mimeType>application/rdf+xml</mimeType>
+    <resourceURL>http://alis.cs.bath.ac.uk/anonsvn/alive-code/alive-templates/test/ALIVE-Templates-Test.owl</resourceURL>
+    <uri>http://www.ist-alive.eu/ontologies/ALIVE-Templates-Test.owl</uri>
+  </object>
+
+  <object section="ontologies" lastUpdate="2010-05-05T11:28:04.509+01:00">
+    <description>Numbers ontology</description>
+    <label>Numbers Ontology</label>
+    <mimeType>application/rdf+xml</mimeType>
+    <resourceURL>http://alis.cs.bath.ac.uk/anonsvn/alive-code/alive-templates/test/Numbers.owl</resourceURL>
+    <uri>http://numbers.org/Numbers.owl</uri>
+  </object>
+
+  <object section="semanticservices" lastUpdate="2010-05-05T11:28:04.509+01:00">
+    <description>Simple Multiplication Service</description>
+    <label>Simple Multiplication Service </label>
+    <mimeType>application/rdf+xml</mimeType>
+    <resourceURL>http://alis.cs.bath.ac.uk/anonsvn/alive-code/alive-templates/test/MultiplyServiceSimple.owl</resourceURL>
+    <uri>http://alivetemplates.bath.edu/MultiplyServiceSimple</uri>
+  </object>
+
+
+  <object section="semanticservices" lastUpdate="2010-05-05T11:28:04.509+01:00">
+    <description>Simple Subtraction Service</description>
+    <label>Simple Subtraction Service </label>
+    <mimeType>application/rdf+xml</mimeType>
+    <resourceURL>http://alis.cs.bath.ac.uk/anonsvn/alive-code/alive-templates/test/SubtractServiceSimple.owl</resourceURL>
+    <uri>http://alivetemplates.bath.edu/SubtractServiceSimple</uri>
+  </object>
+
+
+  <object section="templates" lastUpdate="2010-05-05T11:28:04.509+01:00">
+    <description>Test template which constrains the solution to subtaction-like services</description>
+    <label>Test Template 1 - subtraction </label>
+    <mimeType>application/rdf+xml</mimeType>
+    <resourceURL>http://alis.cs.bath.ac.uk/anonsvn/alive-code/alive-templates/test/TestTemplate1.owl</resourceURL>
+    <uri>urn:test-composite-ont</uri>
+  </object>
+
+  <object section="templates" lastUpdate="2010-05-05T11:28:04.509+01:00">
+    <description>Test template which implements a QoS constraint across all services</description>
+    <label>Test Template 2  - qos</label>
+    <mimeType>application/rdf+xml</mimeType>
+    <resourceURL>http://alis.cs.bath.ac.uk/anonsvn/alive-code/alive-templates/test/TestTemplate2.owl</resourceURL>
+    <uri>urn:test-template-floatconstraint</uri>
+  </object>
+
+</discoveryDocument>

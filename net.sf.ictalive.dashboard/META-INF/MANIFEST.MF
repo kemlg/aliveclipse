@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ALIVE Dashboard
+Bundle-SymbolicName: net.sf.ictalive.dashboard
+Bundle-Version: 2.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.3.0,4.0.0)",
+ org.eclipse.draw2d;bundle-version="[3.2.0,4.0.0)",
+ org.eclipse.gmf.map.edit;bundle-version="[2.0.0,3.0.0)"
+Export-Package: net.sf.ictalive.dashboard,
+ net.sf.ictalive.dashboard.figure
+Bundle-Vendor: ALIVE

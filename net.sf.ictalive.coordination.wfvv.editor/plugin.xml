@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="net.sf.ictalive.coordination.CategoryID"
+            name="%_UI_Alive_Coordination_wizard_category"/>
+      <wizard
+            id="net.sf.ictalive.coordination.wfvv.presentation.WfvvModelWizardID"
+            name="%_UI_WfvvModelWizard_label"
+            class="net.sf.ictalive.coordination.wfvv.presentation.WfvvModelWizard"
+            category="net.sf.ictalive.coordination.CategoryID"
+            icon="icons/full/obj16/WfvvModelFile.gif">
+         <description>%_UI_WfvvModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="net.sf.ictalive.coordination.wfvv.presentation.WfvvEditorID"
+            name="%_UI_WfvvEditor_label"
+            icon="icons/full/obj16/WfvvModelFile.gif"
+            extensions="wfvv"
+            class="net.sf.ictalive.coordination.wfvv.presentation.WfvvEditor"
+            contributorClass="net.sf.ictalive.coordination.wfvv.presentation.WfvvActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

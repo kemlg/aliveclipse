@@ -4,3 +4,13 @@
 *.jar
 *.war
 *.ear
+
+bin
+*/bin
+bin/*
+*/bin/*
+
+.metadata
+*/.metadata
+.metadata/*
+*/.metadata/*

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trace:TraceModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:trace="http://www.eclipse.org/gmf/2006/Trace">
+  <nodeTraces
+      visualID="2101"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'Scene') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'IS') and _containmentMF_.name = 'scenes')">
+    <nodeLabelTraces
+        visualID="5101"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7101"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2102"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'Scene') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'IS') and _containmentMF_.name = 'scenes')">
+    <nodeLabelTraces
+        visualID="5102"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2103"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'Scene') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'IS') and _containmentMF_.name = 'scenes')">
+    <nodeLabelTraces
+        visualID="5103"
+        queryText="true"/>
+  </nodeTraces>
+  <nodeTraces
+      visualID="2104"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'Transition') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'IS') and _containmentMF_.name = 'transitions')"/>
+  <nodeTraces
+      visualID="2105"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'Transition') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'IS') and _containmentMF_.name = 'transitions')"/>
+  <nodeTraces
+      visualID="2106"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'Transition') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'IS') and _containmentMF_.name = 'transitions')"/>
+  <childNodeTraces
+      visualID="3101"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'LandmarkPattern') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'Scene') and _containmentMF_.name = 'interactionPattern')">
+    <compartmentTraces
+        visualID="7102"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3102"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'Landmark') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'LandmarkPattern') and _containmentMF_.name = 'landmarks')">
+    <nodeLabelTraces
+        visualID="5104"
+        queryText="true"/>
+  </childNodeTraces>
+  <linkTraces
+      visualID="4101"
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'TransitionToSceneArc')"/>
+  <linkTraces
+      visualID="4102"
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'SceneToTransitionArc')"/>
+  <linkTraces
+      visualID="4103"
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://ict-alive.sourceforge.net/operetta/OM/1.0' and _eClass_.name = 'PartialOrder')"/>
+</trace:TraceModel>

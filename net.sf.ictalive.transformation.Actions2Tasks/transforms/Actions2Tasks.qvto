@@ -1,0 +1,41 @@
+// Created by: Athanasios Staikopoulos
+// Copyright of Trinity College Dublin (TCD), Univeristy of Dublin, IE
+
+modeltype Actions 'strict' uses actions('http://ict-alive.sourceforge.net/coordination/actions');
+modeltype Tasks 'strict' uses tasks('http://ict-alive.sourceforge.net/coordination/tasks');
+modeltype Process 'strict' uses process('http://ict-alive.sourceforge.net/owls/process');
+
+transformation Actions2Tasks(in myActions:Actions, out myTask:Tasks);
+
+main() {
+	var myActCol := myActions.rootObjects()[actions::ActionsCollection];
+		
+	myActCol -> map actions2Tasks();	
+}
+
+mapping actions::ActionsCollection::actions2Tasks():tasks::TasksCollection{
+	tasks += self.actions -> map action2Task();
+}
+
+mapping actions::Action::action2Task():tasks::Task{
+
+	name := 'Task_For_' + self.name;
+	input += self.hasInput->map addParameter();	
+	components :=  object process::Perform{
+		process := self;
+	}
+			
+	/*
+	components := object process::_Sequence{
+		components := object process::ControlConstructList{
+			first := object process::Perform{
+				process := self;
+			}
+		}
+	}
+	*/
+}
+
+mapping process::Parameter::addParameter():tasks::InputMessageMap{
+	parameter :=  self;
+}

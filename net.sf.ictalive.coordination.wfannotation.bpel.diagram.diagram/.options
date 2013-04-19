@@ -1,0 +1,7 @@
+# Tracing options for the net.sf.ictalive.coordination.wfannotation.bpel.diagram.diagram plug-in
+
+# Common issues
+net.sf.ictalive.coordination.wfannotation.bpel.diagram.diagram/debug=false
+
+# Visual IDs
+net.sf.ictalive.coordination.wfannotation.bpel.diagram.diagram/debug/visualID=false

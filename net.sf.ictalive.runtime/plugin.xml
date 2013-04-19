@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://ict-alive.sourceforge.net/RunTime/actions"
+            class="net.sf.ictalive.runtime.action.ActionPackage"
+            genModel="model/runtime.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="action"
+            class="net.sf.ictalive.runtime.action.util.ActionResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://ict-alive.sourceforge.net/RunTime/enactment"
+            class="net.sf.ictalive.runtime.enactment.EnactmentPackage"
+            genModel="model/runtime.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="enactment"
+            class="net.sf.ictalive.runtime.enactment.util.EnactmentResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://ict-alive.sourceforge.net/RunTime/events"
+            class="net.sf.ictalive.runtime.event.EventPackage"
+            genModel="model/runtime.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="event"
+            class="net.sf.ictalive.runtime.event.util.EventResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://ict-alive.sourceforge.net/RunTime/facts"
+            class="net.sf.ictalive.runtime.fact.FactPackage"
+            genModel="model/runtime.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="fact"
+            class="net.sf.ictalive.runtime.fact.util.FactResourceFactoryImpl"/>
+   </extension>
+
+</plugin>

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Overview</title>
+  <link rel="stylesheet" href="shared.css" type="text/css" />	
+  </head>
+
+<body>
+<div class="menu">
+	<div class="tooltipy" style="margin-top:10px;"><a href="http://org.eclipse.ui.intro/showPage?id=overview"><img src="images/yellow.png" height="24" width="24" border="0" /><span class="yellow" style="font-size:9px;">Overview</span></a></div>
+    <div class="tooltip" style="margin-top:30px;"><a href="http://org.eclipse.ui.intro/showPage?id=tutorials"><img src="images/red.png" height="24" width="24" border="0" /><span style="font-size:9px;">Tutorials</span></a></div>
+    <div class="tooltip" style="margin-left:-10px;"><a href="http://org.eclipse.ui.intro/showPage?id=methodology"><img src="images/green.png" width="24" height="24" border="0" /><span style="font-size:9px;">Methodology</span></a></div>
+    <div class="tooltip" style="margin-left:50px;"><a href="http://org.eclipse.ui.intro/showPage?id=socialstructure"><img src="images/left.png" width="24" height="24" border="0" /><span style="font-size:9px;">Previous</span></a></div>
+    <div class="tooltipup"><a href="http://org.eclipse.ui.intro/showPage?id=organisation"><img src="images/up.png" width="24" height="24" border="0" /><span style="font-size:9px;">Up</span></a></div>
+    <div class="tooltip"><a href="http://org.eclipse.ui.intro/showPage?id=communicativestructure"><img src="images/right.png" width="24" height="24" border="0" /><span style="font-size:9px;">Next</span></a></div>
+    <div class="tooltip" style="margin-left:50px;"><a href="http://org.eclipse.ui.intro/close"><img src="images/workspace.png" width="24" height="24" border="0" /><span style="font-size:9px;">Go to workbench</span></a></div>
+</div>
+
+<div class="bg">
+<img id="background-img" src="images/alive_background.jpg" class="bg" />
+</div>
+
+<div class="page-style">
+<div id="content"> 	
+        <h2>Interaction Structure</h2>
+        <p>The interaction structure defines how roles should interact with each other to achieve the specified objectives. The interaction structure consists of scenes and transitions (connectors between scenes). Scenes are small pieces of the overall interaction in the organisation that can be seen independent of other scenes. They create a meaningful subset of the interaction, such that patterns of scenes (in some ordering) create the intended interaction patterns for the organisation as a whole. The transitions are used to define the allowed paths through the interaction structure, indicating the means of synchronisation and ordering between the different scenes in the organisation.</p>
+        <h3>Creating Scenes, Transitions and Arcs</h3>
+      <p>Click on the 'IS Diagram' tab to view the interaction structure graphical editor. Similar to the editor for the Social Structure, a palette with the concepts used in this diagram is placed on the right-hand side of the screen. Unlike the Social Diagram Editor, this editor does not start empty but with two objects already <a class="info">placed<sup>3</sup><span><sup>3</sup> Due to an EMF/GMF bug, on some platforms the Initial and End scenes are not shown on opening the Interaction Structure editor for the first time. The scenes will automatically appear when placing your first scene, however. </span></a>, namely the initial scene and the end scene. These scenes represent the start and end, respectively, of the interaction process of the organisation. </p>
+        <p> Creating a new scene is done simply by clicking the 'Scene' button on the palette and clicking anywhere in the diagram to create a scene. After creation you are requested to name the scene.</p>
+  <center><img src="images/newScene.png" /></center>
+  <p>The scene we just created will contain the interactions to prepare for personalisation of content. The gathering of the content, and the actual providing of the content will be handled in a later scene. Next to a name, we can give the scene a description (this is not mandatory, however). Click the &quot;Description&quot; property field after selecting the scene, and type a description of what this scene is meant to represent. </p>
+    <p> The scenes of the organisation will need to be ordered to indicate the 'flow' of the organisation. This ordering is done by means of transitions. Transitions dictate how the progression from scene to scene takes place. Transitions can, for instance, be used to indicate that there are different paths through the organisation, which cannot be enacted at the same time, or that certain scenes have to be finished in parallel. </p>
+    <p> There are three different types of transitions:</p>
+        <ul>
+          <li>AND: this transition indicates a parallel synchronisation between scenes. If there are multiple scenes leading into an AND transition, each of these should be finished before the scenes that follow this transition may be started. If multiple scenes follow an AND transition, agents/roles that visit this transition are obliged to visit all following scenes as well.</li>
+          <li>XOR: this transition indicates an exclusive choice synchronisation. If there are multiple scenes leading into a XOR transition, one and only one needs to be finished before allowing following scenes to be started. If multiple scenes follow a XOR, only one of those scenes may be started when agents/roles visit the transition.</li>
+          <li>OR: this transition indicates a free choice synchronisation. No synchronisation is required between incoming or outgoing scenes.</li>
+  </ul>
+  <center><img src="images/newTransition.png" /></center>
+  <p>Using these tools one can quickly build more complex interaction structures like the one shown below.</p>
+  <center><img src="images/is.png" /></center>
+  <h3>Creating Players</h3>
+  <p>The scenes we just created only give an overview of the ordering between subsets of interactions. The scenes currently have no clear meaning other than perhaps the interpretation of its name. Scenes themselves contain information about what the subset of interaction it represents. </p>
+  <p> There are two important elements of scenes: the landmark pattern and players. Players are an indication of which roles are typically required to achieve the scene. The landmark pattern indicates the pattern of interaction (on a high level of abstraction) to achieve the scene. This pattern of interaction is expressed through landmarks (important states in the life-cycle of the organisation) and landmark orderings.</p>
+  <center><img src="images/is-tree.png" /></center>
+  <p>Right-click the scene, select &quot;New Child&quot; and select &quot;Player&quot; in the list to add a new player to the scene. Open the scene, and select the new player to give it an ID. Players are typically identified by a single character. We name this player 'c'. To link the player to a role, click the &quot;Role&quot; property field and select &quot;Role ContentAdaptor&quot;. Also add a player 'i' enacting the &quot;Interface&quot; role to the scene.</p>
+<h3>Creating landmarks</h3>
+  <p>The landmark pattern of the scene was automatically created when we created the scene. It is still empty though, and needs to be filled. Right click the &quot;Landmark Pattern&quot; in the scene-tree and select &quot;New Child&quot; and &quot;Landmark&quot; to add a landmark to the scene. This landmark will indicate that the &quot;ContentAdaptor&quot; and &quot;Interface&quot; need to interact to determine the context of the user (which is based on its time and location). Open the landmark pattern-tree and click the landmark to show its details.</p>
+  <p> Landmarks are characterised as important states in the life-cycle of the organisation. The definition of which state is meant is done via the landmarks Partial State Description. We discuss how to assign a state description to a landmark later when we discuss how to create Partial State Descriptions below. </p>
+  <p> Instead of trying to figure out the meaning of the (possibly complex) state description attached to a landmark, it is simpler to just give it a meaningful name. Click the &quot;Name&quot; property field and type the name for the landmark. We name ours &quot;UserContextGathered&quot; to indicate that this landmark represents the moment when the context of the user is known to the &quot;ContentAdaptor&quot;.</p>
+  <p> Landmarks are linked to objectives in that both specify the 'desired' states for an organisation. A landmark pattern, moreover, specifies the ordering in which these important states should be reached, thus expressing in which ordering objectives are to be achieved. To indicate which objective(s) are achieved by reaching a landmark, you have to add these to the &quot;Entails&quot; property field of the landmark. To set an entailed objective you click on the &quot;…&quot; button in the right-hand side of the &quot;Entails&quot; property field.</p>
+  <p> To express the ordering between landmarks, the landmark pattern allows the use of &quot;Partial Order&quot; elements. This ordering is partial because it only indicates which landmarks should have been reached before the next landmark may be achieved.</p>
+  <p> Creating an ordering between landmarks works like creating a landmark. Right-click &quot;Landmark Pattern&quot;, select &quot;New Child&quot; and select &quot;Partial Order&quot;. In the &quot;from&quot; property field you select the source landmark, in the &quot;to&quot; property you select the destination landmark. This then defines that the landmark in the &quot;to&quot; field should only occur when the landmark in the &quot;from&quot; field has already occurred. </p>
+  <p> Landmarks can have several incoming and outgoing orderings. Landmark patterns, however, should never be cyclic or contain cyclic orderings.</p>
+  <center><img src="images/landmarks.png" /></center>
+  <h3>Scene Results</h3>
+  <p>While the beginning of a landmark pattern is implicitly defined with the orderings, the landmark pattern requires the explicit definition of the 'end points'. These landmarks of the landmark pattern are considered to be the results of the scene; that is, achieving these landmarks completes the scene. There are two ways to define the scene results.</p>
+  <p> Select the landmark that is a result landmark, in our case it is the landmark at the end of the landmark pattern: &quot;UserRequirementsAndPreferencesGathered&quot;. In the &quot;Is Result&quot; property field switch the value from &quot;false&quot; to &quot;true&quot; to set this landmark as a result landmark of the scene.</p>
+  <p> The other way is via the scene itself. Select the Scene in the tree. In the right-hand side of the &quot;Results&quot; property field click the button with &quot;…&quot;. Select the landmarks that are intended as the results of this scene.</p>
+  <h3>Best Practices</h3>
+  <p>Some considerations when creating an interaction structure:</p>
+  <ul style="margin-top:5px;">
+    <li>Every role in the organisation needs to be represented in the interaction structure in at least 1 place (that means, every role should have at least 1 player in a scene). If your role is not connected to a player it either means that:</li>
+    <ul>
+      <li>That role is superfluous in the interaction pattern and can be removed from the organisation; or</li>
+      <li>The interactions linked to that role (typically its dependencies and objectives) are not (correctly) modelled in the interaction structure, or the role is not included in the scenes where these are handled. </li>
+    </ul>
+    <li>Every objective that has no sub-objectives should be linked to an entailing landmark in the interaction structure. These objectives represent the 'atomic'/basic interactions that take place in the organisation, and the interaction structure needs to represent where that interaction is taking place.</li>
+    <li>If an objective has sub-objectives, it can still be linked to a landmark that entails it, but it is also possible that the objective is split over several landmarks entail different parts of the state description of the objective (e.g., like in the case where every sub-objective is entailed by a different landmark in which case the objective itself is only achieved when the last of its sub-objectives has been achieved).</li>
+    <li>Landmark patterns do not need an explicit representation of their starting points, as this is derived from the partial orderings and the set of result landmarks of that pattern. It does help, however, to create landmarks labelled &quot;Start&quot; in a landmark pattern to represent them explicitly. Labelling such landmarks as &quot;Start&quot; or &quot;start&quot; ensures that the validation framework will not check whether it has a state description attached.</li>
+    <li>Representing different paths in a landmark pattern is possible by having more than one landmark in the results set of the scene. In essence, every landmark in the results set is an exit point from the scene, at which time the scene is achieved and progression to the next scene(s) is possible.</li>
+    <li>The state descriptions of a landmark are generally easily derivable from the objectives that the landmark entails. Conceptually, the landmark describes the state in which that objective is achieved, and the state description of the objectives it entails should, therefore, be (logically) derivable from the state description of the landmark. In simple cases, this means that the state description of the landmark equals the conjunction of the state descriptions of the objectives that are entailed by that landmark. </li>
+  </ul>
+  </div>
+<br />
+    <div style="float:right; margin-right:10%;">Next: <a href="http://org.eclipse.ui.intro/showPage?id=communicativestructure">Communicative Structure</a></div>
+</div>
+
+<div id="logo">
+	<img src="images/alive_logo.jpg" border="0" />
+</div>
+</body>
+</html>

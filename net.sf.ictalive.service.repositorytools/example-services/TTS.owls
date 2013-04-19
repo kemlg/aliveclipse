@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://tts.cj.usecases.istalive.eu/TTSWrapperServiceImpl"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:expr="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
+    xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
+    xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:grounding="http://www.daml.org/services/owl-s/1.2/Grounding.owl#"
+    xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
+    xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://tts.cj.usecases.istalive.eu/TTSWrapperServiceImpl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl"/>
+  </owl:Ontology>
+  <service:Service rdf:ID="translateText">
+    <service:supports>
+      <grounding:WsdlGrounding rdf:ID="translateTextWSDLGrounding"/>
+    </service:supports>
+    <service:describedBy>
+      <process:AtomicProcess rdf:ID="translateTextProcess"/>
+    </service:describedBy>
+    <service:presents>
+      <profile:Profile rdf:ID="translateTextProfile"/>
+    </service:presents>
+  </service:Service>
+  <profile:Profile rdf:about="#translateTextProfile">
+    <profile:hasOutput>
+      <process:Output rdf:ID="outmessage">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#AudioMessage</process:parameterType>
+      </process:Output>
+    </profile:hasOutput>
+    <profile:hasInput>
+      <process:Input rdf:ID="inmessage">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Message</process:parameterType>
+      </process:Input>
+    </profile:hasInput>
+    <service:presentedBy rdf:resource="#translateText"/>
+  </profile:Profile>
+  <process:AtomicProcess rdf:about="#translateTextProcess">
+    <service:describes rdf:resource="#translateText"/>
+    <process:hasOutput rdf:resource="#outmessage"/>
+    <process:hasInput rdf:resource="#inmessage"/>
+  </process:AtomicProcess>
+  <grounding:WsdlGrounding rdf:about="#translateTextWSDLGrounding">
+    <service:supportedBy rdf:resource="#translateText"/>
+    <grounding:hasAtomicProcessGrounding>
+      <grounding:WsdlAtomicProcessGrounding rdf:ID="translateTextWSDLAtomicGrounding"/>
+    </grounding:hasAtomicProcessGrounding>
+  </grounding:WsdlGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:about="#translateTextWSDLAtomicGrounding">
+    <grounding:wsdlOperation>
+      <grounding:WsdlOperationRef>
+        <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://tts.cj.usecases.istalive.eu/#translateText</grounding:operation>
+        <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://tts.cj.usecases.istalive.eu/#TTSWrapperService</grounding:portType>
+      </grounding:WsdlOperationRef>
+    </grounding:wsdlOperation>
+    <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://tts.cj.usecases.istalive.eu/#translateTextResponse</grounding:wsdlOutputMessage>
+    <grounding:wsdlOutput>
+      <grounding:WsdlOutputMessageMap rdf:ID="outmessage_OutMessageMap">
+        <grounding:owlsParameter rdf:resource="#outmessage"/>
+        <grounding:xsltTransformationString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ont="http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#" xmlns:wsvc="http://tts.cj.usecases.istalive.eu/" xmlns:ns1="urn:cj-domain" xmlns:ns0="urn:alive-cj-message" xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" version="1.0"&gt;&#xD;
+  &lt;xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes" /&gt;&#xD;
+  &lt;xsl:template match="/"&gt;&#xD;
+    &lt;rdf:RDF&gt;&#xD;
+      &lt;xsl:for-each select="./wsvc:translateTextResponse/wsvc:return"&gt;&#xD;
+        &lt;ont:AudioMessage&gt;&#xD;
+          &lt;xsl:call-template name="extract_ont_Message" /&gt;&#xD;
+        &lt;/ont:AudioMessage&gt;&#xD;
+      &lt;/xsl:for-each&gt;&#xD;
+    &lt;/rdf:RDF&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="extract_ont_Message"&gt;&#xD;
+    &lt;xsl:for-each select="./ns0:content"&gt;&#xD;
+      &lt;ont:content&gt;&#xD;
+        &lt;xsl:attribute name="rdf:datatype"&gt;http://www.w3.org/2001/XMLSchema#string&lt;/xsl:attribute&gt;&#xD;
+        &lt;xsl:value-of select="." /&gt;&#xD;
+      &lt;/ont:content&gt;&#xD;
+    &lt;/xsl:for-each&gt;&#xD;
+    &lt;xsl:for-each select="./ns0:initiator"&gt;&#xD;
+      &lt;ont:initiator&gt;&#xD;
+        &lt;xsl:call-template name="extract_ont_Participant" /&gt;&#xD;
+      &lt;/ont:initiator&gt;&#xD;
+    &lt;/xsl:for-each&gt;&#xD;
+    &lt;xsl:for-each select="./ns0:recipient"&gt;&#xD;
+      &lt;ont:recipient&gt;&#xD;
+        &lt;xsl:call-template name="extract_ont_Participant" /&gt;&#xD;
+      &lt;/ont:recipient&gt;&#xD;
+    &lt;/xsl:for-each&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="extract_ont_ResourceType"&gt;&#xD;
+    &lt;xsl:for-each select="./ns1:objID"&gt;&#xD;
+      &lt;xsl:attribute name="about" namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;&#xD;
+        &lt;xsl:value-of select="." /&gt;&#xD;
+      &lt;/xsl:attribute&gt;&#xD;
+    &lt;/xsl:for-each&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="extract_ont_Participant"&gt;&#xD;
+    &lt;xsl:for-each select="./ns1:objID"&gt;&#xD;
+      &lt;xsl:attribute name="about" namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;&#xD;
+        &lt;xsl:value-of select="." /&gt;&#xD;
+      &lt;/xsl:attribute&gt;&#xD;
+    &lt;/xsl:for-each&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+&#xD;
+</grounding:xsltTransformationString>
+      </grounding:WsdlOutputMessageMap>
+    </grounding:wsdlOutput>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap rdf:ID="inmessage_InputMessageMap">
+        <grounding:xsltTransformationString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:wsvc="http://tts.cj.usecases.istalive.eu/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ont="http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#" xmlns:osvc="http://tts.cj.usecases.istalive.eu/TTSWrapperServiceImpl#" xmlns:ns1="urn:cj-domain" xmlns:ns0="urn:alive-cj-message" xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#" version="1.0"&gt;&#xD;
+  &lt;xsl:output method="xml" /&gt;&#xD;
+  &lt;xsl:template match="/rdf:RDF"&gt;&#xD;
+    &lt;!--Creating transformation of {http://tts.cj.usecases.istalive.eu/TTSWrapperServiceImpl#translateText}.{#http://tts.cj.usecases.istalive.eu/TTSWrapperServiceImpl#inmessage} to {$eu.istalive.usecases.cj.tts.TTSWrapperServiceImpl.translateText}.{#0}--&gt;&#xD;
+    &lt;ns0:Message&gt;&#xD;
+      &lt;xsl:for-each select="./ont:Message"&gt;&#xD;
+        &lt;xsl:call-template name="gen_uk.co.calicojack.alive.domain.Message" /&gt;&#xD;
+      &lt;/xsl:for-each&gt;&#xD;
+    &lt;/ns0:Message&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.Message"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Message}.{http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#content} to Message.content--&gt;&#xD;
+    &lt;ns0:content&gt;&#xD;
+      &lt;xsl:value-of select="./ont:content" /&gt;&#xD;
+    &lt;/ns0:content&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Message}.{http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#initiator} to Message.initiator--&gt;&#xD;
+    &lt;ns0:initiator&gt;&#xD;
+      &lt;xsl:for-each select="./ont:initiator"&gt;&#xD;
+        &lt;xsl:for-each select="./ont:Participant"&gt;&#xD;
+          &lt;xsl:call-template name="gen_uk.co.calicojack.alive.domain.Participant" /&gt;&#xD;
+        &lt;/xsl:for-each&gt;&#xD;
+      &lt;/xsl:for-each&gt;&#xD;
+    &lt;/ns0:initiator&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Message}.{http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#recipient} to Message.recipient--&gt;&#xD;
+    &lt;ns0:recipient&gt;&#xD;
+      &lt;xsl:for-each select="./ont:recipient"&gt;&#xD;
+        &lt;xsl:for-each select="./ont:Participant"&gt;&#xD;
+          &lt;xsl:call-template name="gen_uk.co.calicojack.alive.domain.Participant" /&gt;&#xD;
+        &lt;/xsl:for-each&gt;&#xD;
+      &lt;/xsl:for-each&gt;&#xD;
+    &lt;/ns0:recipient&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.ResourceType"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#ResourceType}.{id} to ResourceType.objID--&gt;&#xD;
+    &lt;ns1:objID&gt;&#xD;
+      &lt;xsl:value-of select="./@rdf:about" /&gt;&#xD;
+    &lt;/ns1:objID&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+  &lt;xsl:template name="gen_uk.co.calicojack.alive.domain.Participant"&gt;&#xD;
+    &lt;!--Creating transformation of {@http://www.csd.abdn.ac.uk/~dcorsar/ALIVE/CalicoJack.owl#Participant}.{id} to Participant.objID--&gt;&#xD;
+    &lt;ns1:objID&gt;&#xD;
+      &lt;xsl:value-of select="./@rdf:about" /&gt;&#xD;
+    &lt;/ns1:objID&gt;&#xD;
+  &lt;/xsl:template&gt;&#xD;
+&lt;/xsl:stylesheet&gt;&#xD;
+&#xD;
+</grounding:xsltTransformationString>
+        <grounding:owlsParameter rdf:resource="#inmessage"/>
+        <grounding:wsdlMessagePart>http://tts.cj.usecases.istalive.eu/#message</grounding:wsdlMessagePart>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://tts.cj.usecases.istalive.eu/#translateText</grounding:wsdlInputMessage>
+    <grounding:owlsProcess rdf:resource="#translateTextProcess"/>
+    <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://localhost:48223?wsdl</grounding:wsdlDocument>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlOperationRef>
+    <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://tts.cj.usecases.istalive.eu/#TTSWrapperService</grounding:portType>
+  </grounding:WsdlOperationRef>
+</rdf:RDF>

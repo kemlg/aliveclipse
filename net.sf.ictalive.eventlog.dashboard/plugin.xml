@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="net.sf.ictalive.eventlog.dashboard.start"
+         point="net.sf.ictalive.runtime.dashboard.actions">
+      <client
+            class="net.sf.ictalive.eventlog.dashboard.StartEventLog">
+      </client>
+   </extension>
+   <extension
+         id="net.sf.ictalive.eventlog.dashboard.restart"
+         point="net.sf.ictalive.runtime.dashboard.actions">
+      <client
+            class="net.sf.ictalive.eventlog.dashboard.RestartEventLog">
+      </client>
+   </extension>
+   <extension
+         id="net.sf.ictalive.eventlog.dashboard.stop"
+         point="net.sf.ictalive.runtime.dashboard.actions">
+      <client
+            class="net.sf.ictalive.eventlog.dashboard.StopEventLog">
+      </client>
+   </extension>
+   <extension
+         id="net.sf.ictalive.eventcollector.dashboard.start"
+         point="net.sf.ictalive.runtime.dashboard.actions">
+      <client
+            class="net.sf.ictalive.eventcollector.dashboard.StartEventCollector">
+      </client>
+   </extension>
+   <extension
+         id="net.sf.ictalive.eventcollector.dashboard.restart"
+         point="net.sf.ictalive.runtime.dashboard.actions">
+      <client
+            class="net.sf.ictalive.eventcollector.dashboard.RestartEventCollector">
+      </client>
+   </extension>
+   <extension
+         id="net.sf.ictalive.eventcollector.dashboard.stop"
+         point="net.sf.ictalive.runtime.dashboard.actions">
+      <client
+            class="net.sf.ictalive.eventcollector.dashboard.StopEventCollector">
+      </client>
+   </extension>
+
+</plugin>

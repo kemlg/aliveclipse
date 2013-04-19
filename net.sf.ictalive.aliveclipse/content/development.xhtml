@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Overview</title>
+  <link rel="stylesheet" href="shared.css" type="text/css" />	
+  </head>
+
+<body>
+<div class="menu">
+	<div class="tooltipy" style="margin-top:10px;"><a href="http://org.eclipse.ui.intro/showPage?id=overview"><img src="images/yellow.png" height="24" width="24" border="0" /><span class="yellow" style="font-size:9px;">Overview</span></a></div>
+  <div class="tooltip" style="margin-top:30px;"><a href="http://org.eclipse.ui.intro/showPage?id=tutorials"><img src="images/red.png" height="24" width="24" border="0" /><span style="font-size:9px;">Tutorials</span></a></div>
+<div class="tooltip" style="margin-left:-10px;"><a href="http://org.eclipse.ui.intro/showPage?id=methodology"><img src="images/green.png" width="24" height="24" border="0" /><span style="font-size:9px;">Methodology</span></a></div>
+    <div class="tooltip" style="margin-left:50px;"><a href="http://org.eclipse.ui.intro/showPage?id=approach"><img src="images/left.png" width="24" height="24" border="0" /><span style="font-size:9px;">Previous</span></a></div>
+    <div class="tooltipup"><a href="http://org.eclipse.ui.intro/showPage?id=methodology"><img src="images/up.png" width="24" height="24" border="0" /><span style="font-size:9px;">Up</span></a></div>
+    <div class="tooltip"><a href="http://org.eclipse.ui.intro/showPage?id=integration"><img src="images/right.png" width="24" height="24" border="0" /><span style="font-size:9px;">Next</span></a></div>
+    <div class="tooltip" style="margin-left:50px;"><a href="http://org.eclipse.ui.intro/close"><img src="images/workspace.png" width="24" height="24" border="0" /><span style="font-size:9px;">Go to workbench</span></a></div>
+</div>
+
+<div class="bg">
+<img id="background-img" src="images/alive_background.jpg" class="bg" />
+</div>
+
+<div class="page-style">
+<div id="content"> 	
+        <h2>Development Process</h2>
+      <p>In ALIVE, the actual development process is initiated by the design phase. The design can be initiated in any direction; top-down, bottom-up and middle, meaning that any layer in ALIVE can be used as a starting point.</p>
+<h3>Top-Down Approach</h3>
+    <p>The top-down approach describes how to develop ALIVE applications starting from the Organisation level, then moving to Coordination and finally to Services.</p>
+        <p> The following dashboard depicts the steps we need to follow in order to design and implement an ALIVE application from Top to Down.</p>
+        <center><img src="images/tdDashboard.png"/></center>
+        <p> More specifically, </p>
+        <ol>
+          <li>At the OL, the user has the capability to reuse standard (OWL) domain ontologies, which are defined with external tools such as Protégé. So, a user can load and reuse existing Ontologies in ALIVE, by using the select option on a Domain Ontology. Next, it is possible to generate the corresponding Organisation concepts from the ontology by using the import option. Similarly, the export functionality is used to generate Ontologies from corresponding Organisation concepts.</li>
+          <li>Next, the dashboard allows us to create an Organisation Model from scratch or select and edit an existing model with the corresponding diagramming editor.</li>
+          <li>Following, the derive option allows us to generate a partial description of an action model.&nbsp; </li>
+          <li>At the CL, we can either create an action model from scratch or select and edit/enhance an existing one - as the one generated previously, with the action diagramming editor.</li>
+          <li>After having an action model we can generate a Task model with the derive option.</li>
+          <li>Tasks can also be created from scratch or select and edit an existing one with the task diagramming editor.</li>
+          <li>Following, the task and action model can be combined to a plan model with the combine option.</li>
+          <li>As previously, we can create a plan Model from scratch or select and edit an existing one with the plan diagramming editor.</li>
+          <li>Similarly, after having an action and organisation model an agent model can be derived</li>
+          <li>The agent model can also be created from scratch or select and edit an existing one with the agent diagramming editor.</li>
+          <li>From the agent model we can revive the actual agent implementation.</li>
+          <li>At the SL, we first verify the service availability. The matchmaker will report if an existing service is found, otherwise a new service description is generated from a plan via transformation. </li>
+          <li>Service descriptions can be created, edited and adapted via templates with the provided corresponding options.</li>
+    </ol>
+<h3>Bottom-Up</h3>
+        <p>To be added.</p>
+        <h3>Middle-Up/Down</h3>
+        <p>To be added.</p>
+	</div><br />
+    <div style="float: right; margin-right:10%">Next: <a href="http://org.eclipse.ui.intro/showPage?id=integration">Integration</a></div>
+</div>
+
+<div id="logo">
+	<img src="images/alive_logo.jpg" border="0" />
+</div>
+</body>
+</html>

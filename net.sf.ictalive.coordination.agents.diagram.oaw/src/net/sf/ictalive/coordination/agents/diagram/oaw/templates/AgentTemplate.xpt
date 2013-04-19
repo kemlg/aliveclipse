@@ -1,0 +1,295 @@
+«EXTENSION net::sf::ictalive::coordination::agents::diagram::oaw::templates::util»
+
+«DEFINE Mas FOR agents::MasModel»
+	«EXPAND Agent FOREACH agents»
+	
+«ENDDEFINE»
+
+«DEFINE Agent FOR agents::Agent»
+	«FILE name+ ".java"»
+
+/*
+* 
+*/
+
+package generatedAgents;
+
+import org.iids.aos.agent.Agent;
+import org.iids.aos.AsStartup;
+import org.iids.aos.systemservices.communicator.structs.AgentHandle;
+import org.iids.aos.systemservices.communicator.structs.AgentScapeID; 
+import org.iids.aos.messagecenter.Envelope;
+import org.iids.aos.exception.AgentScapeException;
+
+import java.io.*;
+
+import net.sf.ictalive.operetta.OM.OMPackage;
+import net.sf.ictalive.coordination.actions.*;
+import net.sf.ictalive.coordination.actions.impl.*;
+import net.sf.ictalive.coordination.tasks.*;
+
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+
+import net.sf.ictalive.owls.expr.Condition;
+import net.sf.ictalive.owls.expr.impl.ConditionImpl;
+import net.sf.ictalive.owls.process.Input;
+import net.sf.ictalive.owls.process.impl.ProcessImpl;
+
+import java.util.*;
+import javax.swing.*;
+
+import taems.Taems;
+
+import net.sf.ictalive.agentcode.clAgent.*;
+import net.sf.ictalive.agentcode.utilities.Utilities;
+import agents.Message.*;
+import net.sf.ictalive.agentcode.eMessage.*;
+
+/**
+* Coordination agent.
+* <p/>
+* This agent runs everything.  For now it has a (String) task description which it wants enacting.
+* It sends the description to the class which communicates with the matchmaker agent to get service descriptions
+* (also strings).  When these descriptions are returned here, the agent tries to invoke one (not currently implemented) 
+* If there is a problem, it will try more descriptions. 
+* If it runs out then it calls the communication class again to get more.
+* If there are no more, then it calls this a failure and has to stopand replan.
+* <p/>
+* <p/>
+* @author A Chorley
+*/ 
+
+
+
+public class «this.name» extends Agent
+	{
+	static final String myKEY = "CoordinationAgent";
+	private transient PrintWriter out = null;
+	AgentHandle coordinationAgentHandle = null;
+	ActorManagement memory;
+	CLACommunication clAgentComm;
+	HashMap<String, AgentHandle> roleHandles = new HashMap<String, AgentHandle>();
+
+	String agentID = "«this.name»";
+
+	ResourceSet resourceSet;
+	ArrayList<PlanAction> listOfPlanActions;
+	ActionEnactment enactAction = null;	
+//------------------------------------------------------------------------
+	public void run ()
+		{
+ // Register the appropriate resource factory to handle all file extensions.
+		resourceSet = Utilities.registerFactories();
+	  
+ // Each agent creates a coordinationAgent*.out output file
+		createOutputStream();
+			
+		memory = new ActorManagement(out, this); 
+		memory.setAgentID(agentID); 
+		initialiseMemory();
+		
+ 		memory.setDomainOntologyNameSpace("«((agents::MasModel)this.eContainer).domainOntologyNameSpace»");
+ 		
+// create a new handle, publish it under the name KEY
+		createCLAgentHandle();
+	
+		out.println("o I am «name»: "+coordinationAgentHandle);
+		
+		clAgentComm = new CLACommunication(memory, coordinationAgentHandle, out, this);
+		
+		while(true)
+			{
+			// keep waiting for messages to arrive
+			clAgentComm.waitForMessages();
+			}
+		}
+	
+//-----------------------------------------------------------------------------------------------		
+	public void createOutputStream()
+		{
+		try {
+			File dir = new File(AsStartup.getTopDir()+ "/" + "output/");
+			dir.mkdir();
+			
+			File outFile = File.createTempFile(agentID+"_",".out", dir);
+			out = new PrintWriter (new FileOutputStream(outFile), true); 
+			}
+		catch (IOException e) {
+			System.err.println ("Problem creating output stream");
+			return;
+			}
+		}
+	
+//-----------------------------------------------------------------------------------------------		
+	public void createCLAgentHandle()
+		{
+		try
+			{
+			coordinationAgentHandle = getPrimaryHandle();
+			register (coordinationAgentHandle, myKEY);
+			
+			ArrayList<Role> roles = memory.getRoles();
+			for(int i=0; i<roles.size(); i++)
+				{
+				Role thisRole = roles.get(i);
+				String key = thisRole.getName();
+				AgentHandle handle = createAgentHandle();
+				register(coordinationAgentHandle, key);
+				roleHandles.put(key, coordinationAgentHandle);
+				}
+			memory.setRoleHandles(roleHandles);
+			}
+		catch (AgentScapeException e)
+			{
+			out.println ("Problem creating/registering handle, cause " +
+				e.getCause().getClass().getName() + ", reason: "
+				+ e.getMessage());
+			}
+		}
+//-----------------------------------------------------------------------------------------------		
+//agent has finished so tidy up
+	public void cleanUp ()
+		{
+		if (out != null)
+			{
+			out.println ("Agent " + getPrimaryHandle() + " is done!");
+			out.flush();
+			out.close();
+			out = null;
+			
+			System.err.println ("Agent " + getPrimaryHandle() + " is done!");
+			
+			JOptionPane.showMessageDialog(null, "!!! Agent has crashed : " + agentID + "  !!!");
+				
+			}
+		}
+		
+//---------------------------------------------------------------------------------- 
+	public void initialiseMemory()
+		{
+		initialiseRoles();
+		initialiseActions();
+		
+		}
+		
+	public void initialiseRoles()
+		{
+		String roleName = "";
+		String roleObjName = "";
+		String parentObjName = "";
+		String subObjName = "";
+		String usedByRoleName = "";
+		
+		ArrayList<Role> roleList = new ArrayList<Role>();
+		ArrayList<Objective> objectiveList = new ArrayList<Objective>();
+		
+		ArrayList<String> roleObjList;
+		ArrayList<String> parentObjList;
+		ArrayList<String> subObjList;
+		ArrayList<String> usedByRoleList;
+		
+		Objective newObjective;
+		Role newRole;
+		
+//get Roles		
+		«EXPAND role FOREACH this.hasRole»
+		
+//save role to memory
+		memory.setRoles(roleList);
+		memory.setObjectives(objectiveList);
+		}
+		
+	public void initialiseActions()
+		{
+		String actionName = "";
+		String performedByRole = "";
+		String type = "";
+		
+		ArrayList<AgentAction> actionList = new ArrayList<AgentAction>();
+
+	
+		AgentAction newAction;
+		StringTokenizer tokens;
+		String token1 = "";
+		String token2 = "";
+		
+		«EXPAND action FOREACH this.hasAction.typeSelect(actions::AtomicAction)»
+		
+		memory.setActions(actionList);
+		}   
+	}
+	«ENDFILE»
+«ENDDEFINE»
+
+
+«DEFINE role FOR OM::Role»
+//role «this.Name»
+		roleObjList = new ArrayList<String>();
+ 		roleName =  "«this.Name»";
+ 		
+//get role objectives 		
+ 		«EXPAND roleObjectives FOREACH this.objectives»
+ 		
+//make new role
+ 		newRole = new Role(roleName, roleObjList);
+ 		roleList.add(newRole);
+ 		
+«ENDDEFINE»
+
+«DEFINE roleObjectives FOR OM::Objective»
+//objective «this.Name»
+		parentObjList = new ArrayList<String>();
+		subObjList = new ArrayList<String>();
+		usedByRoleList = new ArrayList<String>();
+		roleObjName = "«this.Name»";
+		roleObjList.add(roleObjName);
+		
+//get the parent objectives
+		«EXPAND parentObjective FOREACH this.parentObjective»	
+//get the subObjectives
+		«EXPAND subObj FOREACH this.subObjectives»	
+//get the role using this objective (in case the agent has more than one role)
+		«EXPAND usedByrole FOREACH this.usedByRole»
+		newObjective = new Objective(roleObjName, usedByRoleList, parentObjList, subObjList);
+		objectiveList.add(newObjective);
+«ENDDEFINE»
+
+«DEFINE parentObjective FOR OM::Objective»
+		parentObjName = "«this.Name»";
+		if(!parentObjName.equals(""))
+			{
+			parentObjList.add(parentObjName);
+			}
+«ENDDEFINE»
+
+«DEFINE subObj FOR OM::Objective»
+		subObjName = "«this.Name»";
+		subObjList.add(subObjName);
+«ENDDEFINE»
+
+«DEFINE usedByrole FOR OM::Role»
+		usedByRoleName = "«this.Name»";
+		if(!usedByRoleName.equals(""))
+			{
+			usedByRoleList.add(usedByRoleName);
+			}
+«ENDDEFINE»
+
+«DEFINE action FOR actions::Action»
+//Action «this.name»
+		actionName =  "«this.name»";
+		performedByRole = "«this.performedByRole.get(0)»";
+		type = "Atomic";
+	
+		newAction = new AgentAction(actionName, performedByRole, type);
+				
+		actionList.add(newAction);
+
+«ENDDEFINE»

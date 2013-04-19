@@ -1,0 +1,17 @@
+# 1276423057211 Do not modify this line
+[13/Jun/2010:11:57:37 CEST] WARNING [B2001]: Unable to load default property file /Users/sergio/Documents/Alive/Runtime/net.sf.ictalive.eventbus.dashboard/lib/props/broker/default.properties:
+java.io.FileNotFoundException: /Users/sergio/Documents/Alive/Runtime/net.sf.ictalive.eventbus.dashboard/lib/props/broker/default.properties (No such file or directory)
+[13/Jun/2010:11:57:37 CEST] ERROR [B3001]: Defaulting to use the fallback properties. The Broker will only run in a minimal configuration using these settings. Fallback properties are being used because the defaults.property files could not be loaded. Please check the value of IMQ_HOME
+[13/Jun/2010:11:57:38 CEST] 
+================================================================================
+Open Message Queue 4.4
+Sun Microsystems, Inc.
+Version:  4.4  (Build 7-b)
+Compile:  01/12/2010 15:18:50
+
+Copyright (c) 2009 Sun Microsystems, Inc.  All rights reserved.  Use is
+subject to license terms.
+================================================================================
+Java Runtime: 1.6.0_20 Apple Inc. /System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home
+[13/Jun/2010:11:57:38 CEST] ERROR Failed to create default files:
+java.io.FileNotFoundException: /Users/sergio/Documents/Alive/Runtime/net.sf.ictalive.eventbus.dashboard/var/instances/imqbroker/etc/accesscontrol.properties (No such file or directory)

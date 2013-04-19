@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# remoteised clingo
+#
+#
+REMOTEHOST=fog.cs.bath.ac.uk
+REMOTECMD=/usr/local/bin/clingo
+
+
+CMDLINE=
+for i in $@ ; do
+   if [ -f $i ] ; then 
+      outf=$(cat $i | ssh ${REMOTEHOST} 'f=mktemp; cat >$f; echo $f');
+      CMDLINE="$CMDLINE $outf";
+   else
+      CMDLINE="$CMDLINE $i";
+      fi
+done
+
+ssh ${REMOTEHOST} ${REMOTECMD} $CMDLINE
+

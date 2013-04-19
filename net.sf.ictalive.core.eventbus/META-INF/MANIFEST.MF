@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ALIVE EventBus
+Bundle-SymbolicName: net.sf.ictalive.eventbus
+Bundle-Version: 0.0.1.qualifier
+Export-Package: net.sf.ictalive.eventbus;
+  uses:="net.sf.ictalive.runtime.event,
+   net.sf.ictalive.eventbus.transport,
+   net.sf.ictalive.metamodel.utils,
+   net.sf.ictalive.runtime.fact",
+ net.sf.ictalive.eventbus.exception,
+ net.sf.ictalive.eventbus.test,
+ net.sf.ictalive.eventbus.transport;uses:="javax.jms",
+ net.sf.ictalive.eventbus.transport.jms;uses:="javax.jms"
+Require-Bundle: net.sf.ictalive.runtime.NormInstances;bundle-version="1.0.0",
+ net.sf.ictalive.metamodel.utils;bundle-version="0.0.1";visibility:=reexport,
+ net.sf.ictalive.runtime;bundle-version="1.0.3"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ClassPath: lib/imq.jar,
+ lib/jms.jar,
+ .
+Bundle-Vendor: ALIVE, Universitat Politecnica de Catalunya

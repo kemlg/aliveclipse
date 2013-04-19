@@ -1,0 +1,1703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trace:Trace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:trace="http:///www.eclipse.org/m2m/qvt/operational/trace.ecore">
+  <traceRecords>
+    <mappingOperation name="toActionCollection" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/toActionCollection"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="OperAModel">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_6BUHAQvmEd-U8rFOYLDn8w"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="allObjectives" type="Set(Objective)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_bbq5wAvuEd-uCtjNYlQGww"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_dfZFAAvuEd-uCtjNYlQGww"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_SlrJcAvuEd-uCtjNYlQGww"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_hTOjAAvuEd-uCtjNYlQGww"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_7FcZUAvtEd-447t0sckqMw"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#__iqykAvtEd-447t0sckqMw"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_L84QgQvuEd-uCtjNYlQGww"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_26at4AvuEd-uCtjNYlQGww"/>
+          </collection>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="ActionsCollection">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#/"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="SimpleObjective2AtomicAction" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/SimpleObjective2AtomicAction"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_bbq5wAvuEd-uCtjNYlQGww"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="AtomicAction">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Objective2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Objective2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_bbq5wAvuEd-uCtjNYlQGww"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logObjective2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logObjective2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_bbq5wAvuEd-uCtjNYlQGww"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="a" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.0"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Objective2Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="toPartialState" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/toPartialState"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="PartialStateDescription">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_DD9eUAwKEd-oGOIW-FzhQQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Expression">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.0/@hasAtomicActionResult.0/@hasAddEffect.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="SimpleObjective2AtomicAction" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/SimpleObjective2AtomicAction"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_dfZFAAvuEd-uCtjNYlQGww"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="AtomicAction">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.1"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Objective2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Objective2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_dfZFAAvuEd-uCtjNYlQGww"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.1"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logObjective2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logObjective2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_dfZFAAvuEd-uCtjNYlQGww"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="a" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.1"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Objective2Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.1"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="toPartialState" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/toPartialState"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="PartialStateDescription">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_9GCpMAwbEd-T6JmC24Rnvg"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Expression">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.1/@hasAtomicActionResult.0/@hasAddEffect.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="SimpleObjective2AtomicAction" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/SimpleObjective2AtomicAction"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_SlrJcAvuEd-uCtjNYlQGww"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="AtomicAction">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.2"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Objective2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Objective2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_SlrJcAvuEd-uCtjNYlQGww"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.2"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logObjective2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logObjective2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_SlrJcAvuEd-uCtjNYlQGww"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="a" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.2"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Objective2Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.2"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="toPartialState" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/toPartialState"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="PartialStateDescription">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_4hCM8AwbEd-T6JmC24Rnvg"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Expression">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.2/@hasAtomicActionResult.0/@hasAddEffect.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="SimpleObjective2AtomicAction" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/SimpleObjective2AtomicAction"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_hTOjAAvuEd-uCtjNYlQGww"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="AtomicAction">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.3"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Objective2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Objective2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_hTOjAAvuEd-uCtjNYlQGww"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.3"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logObjective2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logObjective2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_hTOjAAvuEd-uCtjNYlQGww"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="a" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.3"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Objective2Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.3"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="toPartialState" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/toPartialState"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="PartialStateDescription">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_udU24AwcEd-T6JmC24Rnvg"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Expression">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.3/@hasAtomicActionResult.0/@hasAddEffect.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="SimpleObjective2AtomicAction" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/SimpleObjective2AtomicAction"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_7FcZUAvtEd-447t0sckqMw"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="AtomicAction">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.4"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Objective2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Objective2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_7FcZUAvtEd-447t0sckqMw"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.4"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logObjective2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logObjective2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_7FcZUAvtEd-447t0sckqMw"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="a" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.4"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Objective2Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.4"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="toPartialState" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/toPartialState"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="PartialStateDescription">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_A-0b8Av4Ed-oGOIW-FzhQQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Expression">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.4/@hasAtomicActionResult.0/@hasAddEffect.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="SimpleObjective2AtomicAction" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/SimpleObjective2AtomicAction"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#__iqykAvtEd-447t0sckqMw"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="AtomicAction">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.5"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Objective2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Objective2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#__iqykAvtEd-447t0sckqMw"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.5"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logObjective2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logObjective2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#__iqykAvtEd-447t0sckqMw"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="a" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.5"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Objective2Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.5"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="toPartialState" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/toPartialState"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="PartialStateDescription">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_r7elMAwcEd-T6JmC24Rnvg"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Expression">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.5/@hasAtomicActionResult.0/@hasAddEffect.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="SimpleObjective2AtomicAction" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/SimpleObjective2AtomicAction"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_L84QgQvuEd-uCtjNYlQGww"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="AtomicAction">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.6"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Objective2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Objective2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_L84QgQvuEd-uCtjNYlQGww"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.6"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logObjective2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logObjective2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_L84QgQvuEd-uCtjNYlQGww"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="a" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.6"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Objective2Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.6"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="toPartialState" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/toPartialState"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="PartialStateDescription">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_eTcpQAwcEd-T6JmC24Rnvg"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Expression">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.6/@hasAtomicActionResult.0/@hasAddEffect.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="CompositeObjective2CompositeAction" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/CompositeObjective2CompositeAction"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_26at4AvuEd-uCtjNYlQGww"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="CompositeAction">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.7"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Objective2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Objective2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_26at4AvuEd-uCtjNYlQGww"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.7"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logObjective2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logObjective2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Objective">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_26at4AvuEd-uCtjNYlQGww"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="a" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.7"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Objective2Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.7"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Landmark2CompositeAction" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Landmark2CompositeAction"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Landmark">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_FviSkAvwEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="col" type="ActionsCollection">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#/"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="CompositeAction">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.8"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logLandmark2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logLandmark2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Landmark">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_FviSkAvwEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="a" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.8"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Landmark2Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.8"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Landmark2CompositeAction" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Landmark2CompositeAction"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Landmark">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_HP5SEAvwEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="col" type="ActionsCollection">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#/"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="CompositeAction">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.9"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logLandmark2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logLandmark2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Landmark">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_HP5SEAvwEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="a" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.9"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Landmark2Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.9"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Landmark2CompositeAction" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Landmark2CompositeAction"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Landmark">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_JO58cAvwEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="col" type="ActionsCollection">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#/"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="CompositeAction">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.10"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logLandmark2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logLandmark2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Landmark">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_JO58cAvwEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="a" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.10"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Landmark2Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.10"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Landmark2CompositeAction" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Landmark2CompositeAction"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Landmark">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_K7bvsAvwEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="col" type="ActionsCollection">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#/"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="CompositeAction">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.11"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logLandmark2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logLandmark2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Landmark">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_K7bvsAvwEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="a" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.11"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Landmark2Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.11"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="LandmarkPattern2CompositeAction" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/LandmarkPattern2CompositeAction"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="LandmarkPattern">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_E68z8AvwEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="CompositeAction">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.12"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="createSequence" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/createSequence.1"/>
+    </mappingOperation>
+    <context/>
+    <parameters>
+      <parameters name="lm" type="OrderedSet(Landmark)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_FviSkAvwEd-w-tmaCPggKA"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_HP5SEAvwEd-w-tmaCPggKA"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_JO58cAvwEd-w-tmaCPggKA"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_K7bvsAvwEd-w-tmaCPggKA"/>
+          </collection>
+        </value>
+      </parameters>
+      <parameters name="po" type="OrderedSet(PartialOrder)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_OKY_AAvwEd-w-tmaCPggKA"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_Qaup8AvwEd-w-tmaCPggKA"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_SQAJgAvwEd-w-tmaCPggKA"/>
+          </collection>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Sequence">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.12/@composedOf"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="createList" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/createList"/>
+    </mappingOperation>
+    <context/>
+    <parameters>
+      <parameters name="lm" type="OrderedSet(Landmark)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_FviSkAvwEd-w-tmaCPggKA"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_HP5SEAvwEd-w-tmaCPggKA"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_JO58cAvwEd-w-tmaCPggKA"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_K7bvsAvwEd-w-tmaCPggKA"/>
+          </collection>
+        </value>
+      </parameters>
+      <parameters name="po" type="OrderedSet(PartialOrder)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_OKY_AAvwEd-w-tmaCPggKA"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_Qaup8AvwEd-w-tmaCPggKA"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_SQAJgAvwEd-w-tmaCPggKA"/>
+          </collection>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="ControlConstructList">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.12/@composedOf/@components"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="createList" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/createList"/>
+    </mappingOperation>
+    <context/>
+    <parameters>
+      <parameters name="lm" type="OrderedSet(Landmark)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_K7bvsAvwEd-w-tmaCPggKA"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_HP5SEAvwEd-w-tmaCPggKA"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_JO58cAvwEd-w-tmaCPggKA"/>
+          </collection>
+        </value>
+      </parameters>
+      <parameters name="po" type="OrderedSet(PartialOrder)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_Qaup8AvwEd-w-tmaCPggKA"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_SQAJgAvwEd-w-tmaCPggKA"/>
+          </collection>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="ControlConstructList">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.12/@composedOf/@components/@rest"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="createList" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/createList"/>
+    </mappingOperation>
+    <context/>
+    <parameters>
+      <parameters name="lm" type="OrderedSet(Landmark)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_K7bvsAvwEd-w-tmaCPggKA"/>
+          </collection>
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_JO58cAvwEd-w-tmaCPggKA"/>
+          </collection>
+        </value>
+      </parameters>
+      <parameters name="po" type="OrderedSet(PartialOrder)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_SQAJgAvwEd-w-tmaCPggKA"/>
+          </collection>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="ControlConstructList">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.12/@composedOf/@components/@rest/@rest"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="createList" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/createList"/>
+    </mappingOperation>
+    <context/>
+    <parameters>
+      <parameters name="lm" type="OrderedSet(Landmark)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_K7bvsAvwEd-w-tmaCPggKA"/>
+          </collection>
+        </value>
+      </parameters>
+      <parameters name="po" type="OrderedSet(PartialOrder)">
+        <value collectionType="OclCollection"/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="ControlConstructList">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.12/@composedOf/@components/@rest/@rest/@rest"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logLandmarkPattern2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logLandmarkPattern2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="LandmarkPattern">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_E68z8AvwEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="a" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.12"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="LandmarkPattern2Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.12"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Scene2CompositeAction" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Scene2CompositeAction"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Scene">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_6BhiYAvmEd-U8rFOYLDn8w"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="CompositeAction">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.13"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logScene2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logScene2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Scene">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_6BhiYAvmEd-U8rFOYLDn8w"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="a" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.13"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Scene2Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.13"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Scene2CompositeAction" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Scene2CompositeAction"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Scene">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_6BhiYQvmEd-U8rFOYLDn8w"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="CompositeAction">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.14"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logScene2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logScene2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Scene">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_6BhiYQvmEd-U8rFOYLDn8w"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="a" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.14"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Scene2Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.14"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Scene2CompositeAction" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Scene2CompositeAction"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Scene">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_bUMjUAvvEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="CompositeAction">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.15"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="createLandmarkPatternPerform" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/createLandmarkPatternPerform"/>
+    </mappingOperation>
+    <context/>
+    <parameters>
+      <parameters name="lmp" type="LandmarkPattern">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_E68z8AvwEd-w-tmaCPggKA"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Perform">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.15/@composedOf/@components/@first"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logScene2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logScene2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Scene">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_bUMjUAvvEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="a" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.15"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Scene2Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.15"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="IS2CompositeAction" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/IS2CompositeAction"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="IS">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_6BgUQAvmEd-U8rFOYLDn8w"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="CompositeAction">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.16"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="createSequence" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/createSequence"/>
+    </mappingOperation>
+    <context/>
+    <parameters>
+      <parameters name="s" type="OrderedSet(Scene)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_6BhiYAvmEd-U8rFOYLDn8w"/>
+          </collection>
+        </value>
+      </parameters>
+      <parameters name="m" type="OrderedSet(Scene)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_bUMjUAvvEd-w-tmaCPggKA"/>
+          </collection>
+        </value>
+      </parameters>
+      <parameters name="e" type="OrderedSet(Scene)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_6BhiYQvmEd-U8rFOYLDn8w"/>
+          </collection>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Sequence">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.16/@composedOf"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="createScenePerform" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/createScenePerform"/>
+    </mappingOperation>
+    <context/>
+    <parameters>
+      <parameters name="sc" type="Scene">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_6BhiYAvmEd-U8rFOYLDn8w"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Perform">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.16/@composedOf/@components/@first"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="createISList" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/createISList"/>
+    </mappingOperation>
+    <context/>
+    <parameters>
+      <parameters kind="INOUT" name="s" type="OrderedSet(Scene)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_6BhiYAvmEd-U8rFOYLDn8w"/>
+          </collection>
+        </value>
+      </parameters>
+      <parameters kind="INOUT" name="m" type="OrderedSet(Scene)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_bUMjUAvvEd-w-tmaCPggKA"/>
+          </collection>
+        </value>
+      </parameters>
+      <parameters kind="INOUT" name="e" type="OrderedSet(Scene)">
+        <value collectionType="OclCollection">
+          <collection>
+            <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_6BhiYQvmEd-U8rFOYLDn8w"/>
+          </collection>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="ControlConstructList">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.16/@composedOf/@components"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="createScenePerform" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/createScenePerform"/>
+    </mappingOperation>
+    <context/>
+    <parameters>
+      <parameters name="sc" type="Scene">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_6BhiYQvmEd-U8rFOYLDn8w"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Perform">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.16/@composedOf/@components/@rest/@first"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logIS2Action" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logIS2Action"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="IS">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_6BgUQAvmEd-U8rFOYLDn8w"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="a" type="Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@actions.16"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="IS2Action">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.16"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Player2Participant" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Player2Participant"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Player">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_5y9L0AvvEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Participant">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@participants.0"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logPlayer2Participant" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logPlayer2Participant"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Player">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_5y9L0AvvEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="p" type="Participant">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@participants.0"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Player2Participant">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.17"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Player2Participant" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Player2Participant"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Player">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_8wLx8AvvEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Participant">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@participants.1"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logPlayer2Participant" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logPlayer2Participant"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Player">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_8wLx8AvvEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="p" type="Participant">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@participants.1"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Player2Participant">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.18"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Player2Participant" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Player2Participant"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Player">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_-EHfAAvvEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Participant">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@participants.2"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logPlayer2Participant" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logPlayer2Participant"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Player">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_-EHfAAvvEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="p" type="Participant">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@participants.2"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Player2Participant">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.19"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Player2Participant" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Player2Participant"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Player">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#__94dAAvvEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Participant">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@participants.3"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logPlayer2Participant" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logPlayer2Participant"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Player">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#__94dAAvvEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="p" type="Participant">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@participants.3"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Player2Participant">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.20"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Player2Participant" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/Player2Participant"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Player">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_BnGdkAvwEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Participant">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@participants.4"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="logPlayer2Participant" package="Opera2Actions" module="Opera2Actions">
+      <runtimeMappingOperation href="qvto:/module.env#/0/logPlayer2Participant"/>
+    </mappingOperation>
+    <context>
+      <context name="self" type="Player">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/model/CalicoJack-1.0.0.opera#_BnGdkAvwEd-w-tmaCPggKA"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters kind="INOUT" name="p" type="Participant">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.actions#//@participants.4"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Player2Participant">
+        <value>
+          <modelElement href="platform:/resource/net.sf.ictalive.Opera2Actions/out/Opera2Actions.OLCLMap#//@entry.21"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+</trace:Trace>

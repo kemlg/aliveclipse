@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ALIVE Metamodel Utils
+Bundle-SymbolicName: net.sf.ictalive.metamodel.utils
+Bundle-Version: 0.0.1.qualifier
+Export-Package: net.sf.ictalive.metamodel.utils
+Require-Bundle: org.eclipse.emf.ecore;bundle-version="2.5.0",
+ org.eclipse.gmf.runtime.notation;bundle-version="1.2.0",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.5.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ClassPath: .
+Bundle-Vendor: ALIVE

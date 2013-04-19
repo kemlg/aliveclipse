@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+<extension point="org.eclipse.ui.popupMenus">
+	<objectContribution id="net.sf.ictalive.CL2SL.ui.popupMenus.contribution.IFile"
+			objectClass="org.eclipse.core.resources.IFile"
+			nameFilter="*.plans">
+            
+		<menu
+        icon="icons/transformation.gif"
+        id="net.sf.ictalive.transformations.menu"
+        label="&amp;Transformations"
+        path="additions">              
+			<separator name="group1"></separator>
+		</menu>
+
+		<action
+        class="net.sf.ictalive.cl2sl.ui.CL2SLAction"
+        enablesFor="1"
+        icon="icons/qvto.gif"
+        id="convertPlansToServices"
+        label="Convert to Services"
+        menubarPath="net.sf.ictalive.transformations.menu/group1"
+        tooltip="Convert Plans to Services">
+		</action>
+	</objectContribution>
+	
+</extension>
+<extension
+      point="net.sf.ictalive.aliveclipse.dashboard.actions">
+   <client
+         class="net.sf.ictalive.cl2sl.ui.CL2SLDashboardAction">
+   </client>
+</extension>
+
+</plugin>

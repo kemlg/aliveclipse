@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="ALIVE"
+            id="net.sf.ictalive.service.serviceui">
+         
+      </category>
+      <view
+               category="net.sf.ictalive.service.serviceui"
+               class="net.sf.ictalive.service.serviceui.views.ServiceRepositoryViewer"
+               icon="icons/sample.gif"
+               id="net.sf.ictalive.service.serviceui.views.ServiceRepositoryViewer"
+               name="ALIVE Repository View">
+         </view><view
+               category="net.sf.ictalive.service.serviceui"
+               class="net.sf.ictalive.service.serviceui.views.ServiceView"
+               icon="icons/sample.gif"
+               id="net.sf.ictalive.service.serviceui.views.ServiceView"
+               name="OWLS Service View">
+         </view>
+         <view
+               category="net.sf.ictalive.service.serviceui"
+               class="net.sf.ictalive.service.serviceui.views.ServiceListView"
+               icon="icons/sample.gif"
+               id="net.sf.ictalive.service.serviceui.views.ServiceListView"
+               name="Service List View">
+         </view>
+         <view
+               category="net.sf.ictalive.service.serviceui"
+               class="net.sf.ictalive.service.serviceui.views.KBView"
+               icon="icons/sample.gif"
+               id="net.sf.ictalive.service.serviceui.views.KBView"
+               name="KnowledgeBaseView">
+         </view>
+         <view
+               category="net.sf.ictalive.service.serviceui"
+               class="net.sf.ictalive.service.serviceui.views.ServiceView"
+               icon="icons/sample.gif"
+               id="net.sf.ictalive.service.serviceui.views.ServiceView"
+               name="Service View">
+         </view>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.TaskList"
+               relationship="right"
+               id="net.sf.ictalive.service.serviceui.views.ServiceRepositoryViewer">
+         </view>
+         <view
+               id="net.sf.ictalive.service.serviceui.views.ServiceView"
+               ratio="0.5"
+               relationship="right"
+               relative="org.eclipse.ui.views.TaskList">
+         </view>
+         <view
+               id="net.sf.ictalive.service.serviceui.views.ServiceListView"
+               ratio="0.5"
+               relationship="right"
+               relative="org.eclipse.ui.views.TaskList">
+         </view>
+         <view
+               id="net.sf.ictalive.service.serviceui.views.KBView"
+               ratio="0.5"
+               relationship="right"
+               relative="org.eclipse.ui.views.TaskList">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="net.sf.ictalive.service.serviceui.preferences.ServiceSetupPreferencesPage"
+            id="net.sf.ictalive.service.serviceui.preferences.ServiceSetupPreferencesPage"
+            name="Service Setup Preferences">
+      </page>
+   </extension>
+   <extension
+         name="Service Preferences"
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="net.sf.ictalive.service.serviceui.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="net.sf.ictalive.aliveclipse.dashboard.actions">
+      <client
+            class="net.sf.ictalive.service.serviceui.RepositoryImportOntologyAction">
+      </client>
+   </extension>
+   <extension
+         point="net.sf.ictalive.aliveclipse.dashboard.actions">
+      <client
+            class="net.sf.ictalive.service.serviceui.RepositoryImportServiceAction">
+      </client>
+   </extension>
+  
+ <extension point="org.eclipse.ui.popupMenus" id="syncPopup">
+<objectContribution 
+      id="org.eclipse.ui.articles.action.contribution.popup.object"
+   objectClass="org.eclipse.core.resources.IContainer">
+      <action
+         id="net.sf.ictalive.service.serviceUI.repoSyncAction" 
+         label="Synchronize with Repository"
+         menubarPath="additions" 
+      class="net.sf.ictalive.service.serviceui.RepoSyncAction"> 
+      </action> 
+   </objectContribution> 
+</extension>
+
+</plugin>

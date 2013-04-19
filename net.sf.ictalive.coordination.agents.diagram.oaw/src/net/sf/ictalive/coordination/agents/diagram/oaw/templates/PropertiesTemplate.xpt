@@ -1,0 +1,7 @@
+«EXTENSION net::sf::ictalive::coordination::agents::diagram::oaw::templates::util»
+«DEFINE Mas FOR agents::MasModel»
+	«FILE "/input/properties/details.properties"»
+domain_ontology_namespace=«this.domainOntologyNameSpace»
+
+	«ENDFILE»
+«ENDDEFINE»
