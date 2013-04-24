@@ -1,0 +1,9 @@
+file:/Users/sergio/Documents/Research/ecsdi/aliveclipse/ExampleOntology/ECSDIOntology.owl?forceReadOnly=false
+http://www.ai.sri.com/daml/services/owl-s/1.2/Service.owl
+http://www.ai.sri.com/daml/services/owl-s/1.2/Profile.owl
+http://www.daml.org/services/owl-s/1.2/Process.owl
+http://www.daml.org/services/owl-s/1.2/generic/Expression.owl
+http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl
+http://www.ai.sri.com/daml/services/owl-s/1.2/Process.owl
+http://www.ai.sri.com/daml/services/owl-s/1.2/Grounding.owl
+file:/Applications/Protege_3.4.8/plugins/com.sri.owlseditor/owl-s/?forceReadOnly=true&Recursive=true

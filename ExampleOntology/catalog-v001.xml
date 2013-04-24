@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.daml.org/services/owl-s/1.2/ActorDefault.owl" uri="http://www.ai.sri.com/daml/services/owl-s/1.2/ActorDefault.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.daml.org/services/owl-s/1.2/ProfileAdditionalParameters.owl" uri="http://www.ai.sri.com/daml/services/owl-s/1.2/ProfileAdditionalParameters.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.daml.org/services/owl-s/1.2/ServiceCategory.owl" uri="http://www.ai.sri.com/daml/services/owl-s/1.2/ServiceCategory.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.daml.org/services/owl-s/1.2/Process.owl" uri="http://www.ai.sri.com/daml/services/owl-s/1.2/Process.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.daml.org/services/owl-s/1.2/Grounding.owl" uri="http://www.ai.sri.com/daml/services/owl-s/1.2/Grounding.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.daml.org/services/owl-s/1.2/Profile.owl" uri="http://www.ai.sri.com/daml/services/owl-s/1.2/Profile.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.daml.org/services/owl-s/1.2/Service.owl" uri="http://www.ai.sri.com/daml/services/owl-s/1.2/Service.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1366799980265" name="http://www.owl-ontologies.com/ECSDI.owl" uri="ECSDIOntology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1366801649558" name="http://www.owl-ontologies.com/Ontology1366179964.owl" uri="ECSDIOntology.owl"/>
     </group>
 </catalog>

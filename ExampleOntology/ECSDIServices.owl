@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
+    xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:ecsdi="http://www.owl-ontologies.com/Ontology1366179964.owl#"
+    xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:expr="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:grounding="http://www.daml.org/services/owl-s/1.2/Grounding.owl#"
+    xmlns="http://www.owl-ontologies.com/ECSDIServices.owl#"
+    xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:time="http://www.isi.edu/~pan/damltime/time-entry.owl#"
+  xml:base="http://www.owl-ontologies.com/ECSDIServices.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.w3.org/2003/11/swrlb"/>
+    <owl:imports rdf:resource="http://www.w3.org/2003/11/swrl"/>
+    <owl:imports rdf:resource="http://www.owl-ontologies.com/ECSDI.owl"/>
+    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Profile.owl"/>
+    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Service.owl"/>
+    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Grounding.owl"/>
+  </owl:Ontology>
+  <process:Output rdf:ID="asdfasdf_4"/>
+  <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/ECSDI.owl#CentrosMedicosService"/>
+  <process:Output rdf:ID="Output_1"/>
+  <process:Output rdf:ID="Output_3"/>
+  <process:Output rdf:ID="fasdfasdfadf">
+    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >dfasdfs</process:parameterType>
+  </process:Output>
+  <process:Output rdf:ID="Output_4"/>
+  <process:Output rdf:ID="ListaDeHospitales"/>
+  <process:AtomicProcess rdf:ID="ListarHospitales"/>
+  <process:Output rdf:ID="Output_6"/>
+  <process:Output rdf:ID="Output_7"/>
+  <process:Input rdf:ID="Input_2">
+    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >dfasdf</process:parameterType>
+  </process:Input>
+  <process:Output rdf:ID="ListaHospitales">
+    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >dfsadfasdfasf</process:parameterType>
+    <process:parameterValue rdf:parseType="Literal">3</process:parameterValue>
+    <process:parameterValue rdf:parseType="Literal">4</process:parameterValue>
+  </process:Output>
+  <process:Output rdf:ID="Test">
+    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</process:parameterType>
+    <process:parameterValue rdf:parseType="Literal">true</process:parameterValue>
+  </process:Output>
+  <process:Output rdf:ID="Output_5"/>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.8, Build 629)  http://protege.stanford.edu -->
