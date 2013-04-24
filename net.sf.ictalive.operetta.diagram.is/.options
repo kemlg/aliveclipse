@@ -1,7 +1,0 @@
-# Tracing options for the net.sf.ictalive.operetta.diagram.is plug-in
-
-# Common issues
-net.sf.ictalive.operetta.diagram.is/debug=false
-
-# Visual IDs
-net.sf.ictalive.operetta.diagram.is/debug/visualID=false

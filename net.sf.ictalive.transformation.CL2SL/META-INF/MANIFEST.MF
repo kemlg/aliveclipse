@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: ALIVE Transformation: CL to SL
-Bundle-SymbolicName: net.sf.ictalive.CL2SL
-Bundle-Version: 1.0.3.qualifier
-Bundle-Vendor: ALIVE, Trinity College Dublin

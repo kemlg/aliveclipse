@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: ALIVE Transformation: Opera to Actions
-Bundle-SymbolicName: net.sf.ictalive.Opera2Actions
-Bundle-Version: 1.0.2.qualifier
-Bundle-Vendor: ALIVE, Trinity College Dublin

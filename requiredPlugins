@@ -1,8 +1,0 @@
-Required build components
-Acceleo version 2.7.0 - http://www.acceleo.org/update/ 
-Eclipse Web Developer Tools (3.1.1 or 3.1.2) and WST Web Plug-in Developer Resources (3.1.1 or 3.1.2) - http://download.eclipse.org/webtools/updates
-Eclipse (Galileo) Modeling - http://download.eclipse.org/releases/galileo (should be included in the modeling tools package of Eclipse)
-
-Optional
-EPP Modeling Feature (1.2.2) - http://download.eclipse.org/technology/epp/packages/galileo
-Eclipse Plug-in Development Environment (3.5.2) - http://download.eclipse.org/releases/galileo (under General Purpose Tools)

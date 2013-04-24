@@ -1,7 +1,0 @@
-# Tracing options for the net.sf.ictalive.service.owlseditor.diagram plug-in
-
-# Common issues
-net.sf.ictalive.service.owlseditor.diagram/debug=false
-
-# Visual IDs
-net.sf.ictalive.service.owlseditor.diagram/debug/visualID=false

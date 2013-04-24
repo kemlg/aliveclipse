@@ -14,3 +14,13 @@ bin/*
 */.metadata
 .metadata/*
 */.metadata/*
+
+build
+*/build
+build/*
+*/build/*
+
+dist
+*/dist
+dist/*
+*/dist/*

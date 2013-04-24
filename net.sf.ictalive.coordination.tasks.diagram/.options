@@ -1,7 +1,0 @@
-# Tracing options for the net.sf.ictalive.coordination.tasks.diagram plug-in
-
-# Common issues
-net.sf.ictalive.coordination.tasks.diagram/debug=false
-
-# Visual IDs
-net.sf.ictalive.coordination.tasks.diagram/debug/visualID=false
