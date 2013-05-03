@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project name="TestProject" modficated="2013-05-03T07:50:57.015+02:00">
+    <defaultxsdtype>http://www.w3.org/2001/XMLSchema#string</defaultxsdtype>
+    <elementDepth>0</elementDepth>
+    <typeInheritanceBehaviour>None</typeInheritanceBehaviour>
+    <ServiceCollection count10="0" count11="0">
+        <Service id="ECSDIService" version="1.2">
+            <Filename>file:/Users/sergio/Documents/Research/ecsdi/aliveclipse/ExampleOntology/ECSDIServices.owl</Filename>
+            <Name>ECSDIAgent</Name>
+            <Description>This is a dummy description.</Description>
+            <NamespaceEntry id="xmlns:protege" uri="http://protege.stanford.edu/plugins/owl/protege#"/>
+            <NamespaceEntry id="xmlns:xsd" uri="http://www.w3.org/2001/XMLSchema#"/>
+            <NamespaceEntry id="xmlns:profile" uri="http://www.daml.org/services/owl-s/1.2/Profile.owl#"/>
+            <NamespaceEntry id="xml:base" uri="http://www.owl-ontologies.com/ECSDIServices.owl"/>
+            <NamespaceEntry id="xmlns:list" uri="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"/>
+            <NamespaceEntry id="xmlns" uri="http://www.owl-ontologies.com/ECSDIServices.owl#"/>
+            <NamespaceEntry id="xmlns:rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+            <NamespaceEntry id="xmlns:time" uri="http://www.isi.edu/~pan/damltime/time-entry.owl#"/>
+            <NamespaceEntry id="xmlns:swrl" uri="http://www.w3.org/2003/11/swrl#"/>
+            <NamespaceEntry id="xmlns:service" uri="http://www.daml.org/services/owl-s/1.2/Service.owl#"/>
+            <NamespaceEntry id="xmlns:expr" uri="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"/>
+            <NamespaceEntry id="xmlns:ecsdi" uri="http://www.owl-ontologies.com/ECSDI.owl#"/>
+            <NamespaceEntry id="xmlns:process" uri="http://www.daml.org/services/owl-s/1.2/Process.owl#"/>
+            <NamespaceEntry id="xmlns:owl" uri="http://www.w3.org/2002/07/owl#"/>
+            <NamespaceEntry id="xmlns:rdfs" uri="http://www.w3.org/2000/01/rdf-schema#"/>
+            <NamespaceEntry id="xmlns:grounding" uri="http://www.daml.org/services/owl-s/1.2/Grounding.owl#"/>
+            <NamespaceEntry id="xmlns:p1" uri="file:/Applications/Protege_3.4.8/plugins/com.sri.owlseditor/owl-s/swrlb.owl#"/>
+            <NamespaceEntry id="xmlns:swrlb" uri="http://www.w3.org/2003/11/swrlb#"/>
+            <NamespaceEntry id="xmlns:xsp" uri="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"/>
+            <ImportedOWLFile>http://www.daml.org/services/owl-s/1.2/generic/Expression.owl</ImportedOWLFile>
+            <ImportedOWLFile>http://www.owl-ontologies.com/ECSDI.owl</ImportedOWLFile>
+            <ImportedOWLFile>http://www.daml.org/services/owl-s/1.2/Profile.owl</ImportedOWLFile>
+            <ImportedOWLFile>http://www.daml.org/services/owl-s/1.2/Process.owl</ImportedOWLFile>
+            <ImportedOWLFile>http://www.w3.org/2006/time-entry</ImportedOWLFile>
+            <ImportedOWLFile>file:/Applications/Protege_3.4.8/plugins/com.sri.owlseditor/owl-s/swrlb.owl</ImportedOWLFile>
+            <ImportedOWLFile>http://www.daml.org/services/owl-s/1.2/Grounding.owl</ImportedOWLFile>
+            <ImportedOWLFile>http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl</ImportedOWLFile>
+            <ImportedOWLFile>http://www.w3.org/2003/11/swrl</ImportedOWLFile>
+            <ImportedOWLFile>http://www.daml.org/services/owl-s/1.2/Service.owl</ImportedOWLFile>
+            <InputParameter id="InputNombreCiudad"
+                uri="http://www.w3.org/2001/XMLSchema#string" pos="1"/>
+            <OutputParameter id="OutputCentroMedico"
+                uri="http://www.owl-ontologies.com/ECSDI.owl#CentroMedico" pos="1"/>
+        </Service>
+    </ServiceCollection>
+    <DatatypeKB modficated="2013-05-03T07:50:57.016+02:00">
+        <OntologyURI>http://www.owl-ontologies.com/ECSDI.owl</OntologyURI>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Especialista">
+            <AbstractDatatype name="Especialista">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Especialista</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#Medico</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#PersonalSanitario" diff="2">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDPersonal</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Rehabilitacion">
+            <AbstractDatatype name="Rehabilitacion">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Rehabilitacion</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#Tratamiento</SuperClass>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#SanidadPrivada">
+            <AbstractDatatype name="SanidadPrivada">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#SanidadPrivada</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#ProveedorMedico</SuperClass>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Imagen">
+            <AbstractDatatype name="Imagen">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Imagen</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#Prueba</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#Prueba" diff="1">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDPrueba</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#MRI">
+            <AbstractDatatype name="MRI">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#MRI</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#Imagen</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#Prueba" diff="2">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDPrueba</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Hospital">
+            <AbstractDatatype name="Hospital">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Hospital</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#CentroMedico</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#CentroMedico" diff="1">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDCentroMedico</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Trauma">
+            <AbstractDatatype name="Trauma">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Trauma</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#Especialista</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#PersonalSanitario" diff="3">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDPersonal</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#CentroDiagnostico">
+            <AbstractDatatype name="CentroDiagnostico">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#CentroDiagnostico</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#CentroMedico</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#CentroMedico" diff="1">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDCentroMedico</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#CentroMedico">
+            <AbstractDatatype name="CentroMedico">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#CentroMedico</OwlRef>
+                <Element owlsource="DATATYPE" diff="0">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDCentroMedico</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Cirujano">
+            <AbstractDatatype name="Cirujano">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Cirujano</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#Especialista</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#PersonalSanitario" diff="3">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDPersonal</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Medico">
+            <AbstractDatatype name="Medico">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Medico</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#PersonalSanitario</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#PersonalSanitario" diff="1">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDPersonal</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#PersonalSanitario">
+            <AbstractDatatype name="PersonalSanitario">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#PersonalSanitario</OwlRef>
+                <Element owlsource="DATATYPE" diff="0">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDPersonal</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Sanguineo">
+            <AbstractDatatype name="Sanguineo">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Sanguineo</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#Panel</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#Prueba" diff="2">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDPrueba</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Tratamiento">
+            <AbstractDatatype name="Tratamiento">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Tratamiento</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#AccionMedica</SuperClass>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#CAP">
+            <AbstractDatatype name="CAP">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#CAP</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#CentroMedico</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#CentroMedico" diff="1">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDCentroMedico</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Enfermero">
+            <AbstractDatatype name="Enfermero">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Enfermero</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#PersonalSanitario</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#PersonalSanitario" diff="1">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDPersonal</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#AccionMedica">
+            <AbstractDatatype name="AccionMedica">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#AccionMedica</OwlRef>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Prueba">
+            <AbstractDatatype name="Prueba">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Prueba</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#AccionMedica</SuperClass>
+                <Element owlsource="DATATYPE" diff="0">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDPrueba</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Masajista">
+            <AbstractDatatype name="Masajista">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Masajista</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#PersonalSanitario</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#PersonalSanitario" diff="1">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDPersonal</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Generalista">
+            <AbstractDatatype name="Generalista">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Generalista</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#Medico</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#PersonalSanitario" diff="2">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDPersonal</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Tecnico">
+            <AbstractDatatype name="Tecnico">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Tecnico</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#PersonalSanitario</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#PersonalSanitario" diff="1">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDPersonal</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Clinica">
+            <AbstractDatatype name="Clinica">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Clinica</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#CentroMedico</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#CentroMedico" diff="1">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDCentroMedico</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#ProveedorMedico">
+            <AbstractDatatype name="ProveedorMedico">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#ProveedorMedico</OwlRef>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Panel">
+            <AbstractDatatype name="Panel">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Panel</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#Prueba</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#Prueba" diff="1">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDPrueba</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Cita">
+            <AbstractDatatype name="Cita">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Cita</OwlRef>
+                <Element owlsource="DATATYPE" diff="0">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#Dia</name>
+                    <type>http://www.w3.org/2001/XMLSchema#date</type>
+                </Element>
+                <Element owlsource="DATATYPE" diff="0">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#Hora</name>
+                    <type>http://www.w3.org/2001/XMLSchema#dateTime</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#PeticionCita">
+            <AbstractDatatype name="PeticionCita">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#PeticionCita</OwlRef>
+                <Element owlsource="DATATYPE" diff="0">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#FechaDisponibilidadFin</name>
+                    <type>http://www.w3.org/2001/XMLSchema#dateTime</type>
+                </Element>
+                <Element owlsource="DATATYPE" diff="0">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#FechaDisponibilidadInicio</name>
+                    <type>http://www.w3.org/2001/XMLSchema#dateTime</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Orina">
+            <AbstractDatatype name="Orina">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Orina</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#Panel</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#Prueba" diff="2">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDPrueba</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#OrdenPago">
+            <AbstractDatatype name="OrdenPago">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#OrdenPago</OwlRef>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Ecografia">
+            <AbstractDatatype name="Ecografia">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Ecografia</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#Imagen</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#Prueba" diff="2">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDPrueba</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Quirurgico">
+            <AbstractDatatype name="Quirurgico">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Quirurgico</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#Tratamiento</SuperClass>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#Paciente">
+            <AbstractDatatype name="Paciente">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#Paciente</OwlRef>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#SanidadPublica">
+            <AbstractDatatype name="SanidadPublica">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#SanidadPublica</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#ProveedorMedico</SuperClass>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+        <RegisteredDatatype id="http://www.owl-ontologies.com/ECSDI.owl#PET">
+            <AbstractDatatype name="PET">
+                <OwlRef>http://www.owl-ontologies.com/ECSDI.owl#PET</OwlRef>
+                <SuperClass>http://www.owl-ontologies.com/ECSDI.owl#Imagen</SuperClass>
+                <Element owlsource="DATATYPE"
+                    inheritedby="http://www.owl-ontologies.com/ECSDI.owl#Prueba" diff="2">
+                    <name>http://www.owl-ontologies.com/ECSDI.owl#IDPrueba</name>
+                    <type>http://www.w3.org/2001/XMLSchema#string</type>
+                </Element>
+            </AbstractDatatype>
+        </RegisteredDatatype>
+    </DatatypeKB>
+</Project>

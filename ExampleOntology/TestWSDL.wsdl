@@ -1,0 +1,36 @@
+<definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://sample/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://sample/" name="ExampleWebService">
+<types>
+<xsd:schema>
+<xsd:import namespace="http://sample/" schemaLocation="http://localhost:8080/ExampleWebApplication/ExampleWebService?xsd=1"/>
+</xsd:schema>
+</types>
+<message name="hello">
+<part name="parameters" element="tns:hello"/>
+</message>
+<message name="helloResponse">
+<part name="parameters" element="tns:helloResponse"/>
+</message>
+<portType name="ExampleWebService">
+<operation name="hello">
+<input wsam:Action="http://sample/ExampleWebService/helloRequest" message="tns:hello"/>
+<output wsam:Action="http://sample/ExampleWebService/helloResponse" message="tns:helloResponse"/>
+</operation>
+</portType>
+<binding name="ExampleWebServicePortBinding" type="tns:ExampleWebService">
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<operation name="hello">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+</binding>
+<service name="ExampleWebService">
+<port name="ExampleWebServicePort" binding="tns:ExampleWebServicePortBinding">
+<soap:address location="http://localhost:8080/ExampleWebApplication/ExampleWebService"/>
+</port>
+</service>
+</definitions>

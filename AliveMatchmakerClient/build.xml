@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this file. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<!-- By default, only the Clean and Build commands use this build script. -->
+<!-- Commands such as Run, Debug, and Test only use this build script if -->
+<!-- the Compile on Save feature is turned off for the project. -->
+<!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
+<!-- in the project's Project Properties dialog box.-->
+<project name="AliveMatchmakerClient" default="default" basedir=".">
+    <description>Builds, tests, and runs the project AliveMatchmakerClient.</description>
+    <import file="nbproject/build-impl.xml"/>
+    <!--
+
+    There exist several targets which are by default empty and which can be 
+    used for execution of your tasks. These targets are usually executed 
+    before and after some main targets. They are: 
+
+      -pre-init:                 called before initialization of project properties
+      -post-init:                called after initialization of project properties
+      -pre-compile:              called before javac compilation
+      -post-compile:             called after javac compilation
+      -pre-compile-single:       called before javac compilation of single file
+      -post-compile-single:      called after javac compilation of single file
+      -pre-compile-test:         called before javac compilation of JUnit tests
+      -post-compile-test:        called after javac compilation of JUnit tests
+      -pre-compile-test-single:  called before javac compilation of single JUnit test
+      -post-compile-test-single: called after javac compilation of single JUunit test
+      -pre-jar:                  called before JAR building
+      -post-jar:                 called after JAR building
+      -post-clean:               called after cleaning build products
+
+    (Targets beginning with '-' are not intended to be called on their own.)
+
+    Example of inserting an obfuscator after compilation could look like this:
+
+        <target name="-post-compile">
+            <obfuscate>
+                <fileset dir="${build.classes.dir}"/>
+            </obfuscate>
+        </target>
+
+    For list of available properties check the imported 
+    nbproject/build-impl.xml file. 
+
+
+    Another way to customize the build is by overriding existing main targets.
+    The targets of interest are: 
+
+      -init-macrodef-javac:     defines macro for javac compilation
+      -init-macrodef-junit:     defines macro for junit execution
+      -init-macrodef-debug:     defines macro for class debugging
+      -init-macrodef-java:      defines macro for class execution
+      -do-jar-with-manifest:    JAR building (if you are using a manifest)
+      -do-jar-without-manifest: JAR building (if you are not using a manifest)
+      run:                      execution of project 
+      -javadoc-build:           Javadoc generation
+      test-report:              JUnit report generation
+
+    An example of overriding the target for project execution could look like this:
+
+        <target name="run" depends="AliveMatchmakerClient-impl.jar">
+            <exec dir="bin" executable="launcher.exe">
+                <arg file="${dist.jar}"/>
+            </exec>
+        </target>
+
+    Notice that the overridden target depends on the jar target and not only on 
+    the compile target as the regular run target does. Again, for a list of available 
+    properties which you can use, check the target you are overriding in the
+    nbproject/build-impl.xml file. 
+
+    -->
+    <target name="-post-jar">
+    <jar jarfile="dist/alive-matchmaker-client-dist.jar">
+        <zipfileset src="${dist.jar}" excludes="META-INF/*" />
+        <zipfileset src="lib/Flexigraph/flexigraph.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/GoogleCollections/google-collect-1.0.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/activation-1.0.2.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/antlr-runtime-3.2.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/arq-2.8.7.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/aterm-java-1.6.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/axis-1.4.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/axis-wsdl4j-1.5.1.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/commons-discovery-0.2.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/commons-logging-api.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/icu4j-3.4.4.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/iri-0.8.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/jaxrpc-api-1.1.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/jcl-over-slf4j-1.5.6.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/jena-2.6.4.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/jetty.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/jgrapht-jdk1.5-0.7.3.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/jgrapht-jdk1.5.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/junit-4.5.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/log4j-1.2.14.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/lucene-core-2.3.1.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/owlapi-bin.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/owls-api-2.0.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/pellet-cli.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/pellet-core.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/pellet-datatypes.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/pellet-dig.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/pellet-el.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/pellet-explanation.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/pellet-jena.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/pellet-modularity.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/pellet-owlapi.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/pellet-owlapiv3.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/pellet-pellint.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/pellet-query.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/pellet-rules.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/pellet-test.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/relaxngDatatype.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/saaj-api-1.2.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/servlet.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/slf4j-api-1.5.8.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/slf4j-log4j12-1.5.8.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/stax-api-1.0.1.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/upnp-1.0.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/wstx-asl-3.2.9.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/xercesImpl-2.7.1.jar" excludes="META-INF/*" />
+        <zipfileset src="lib/OWLS-2.0/xsdlib.jar" excludes="META-INF/*" />
+    </jar>
+</target>
+</project>

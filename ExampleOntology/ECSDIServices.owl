@@ -5,9 +5,10 @@
     xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
     xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-    xmlns:ecsdi="http://www.owl-ontologies.com/Ontology1366179964.owl#"
     xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
+    xmlns:p1="file:/Applications/Protege_3.4.8/plugins/com.sri.owlseditor/owl-s/swrlb.owl#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ecsdi="http://www.owl-ontologies.com/ECSDI.owl#"
     xmlns:expr="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -19,42 +20,72 @@
     xmlns:time="http://www.isi.edu/~pan/damltime/time-entry.owl#"
   xml:base="http://www.owl-ontologies.com/ECSDIServices.owl">
   <owl:Ontology rdf:about="">
-    <owl:imports rdf:resource="http://www.w3.org/2003/11/swrlb"/>
-    <owl:imports rdf:resource="http://www.w3.org/2003/11/swrl"/>
+    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl"/>
     <owl:imports rdf:resource="http://www.owl-ontologies.com/ECSDI.owl"/>
     <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Profile.owl"/>
-    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Service.owl"/>
+    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl"/>
+    <owl:imports rdf:resource="http://www.w3.org/2006/time-entry"/>
+    <owl:imports rdf:resource="file:/Applications/Protege_3.4.8/plugins/com.sri.owlseditor/owl-s/swrlb.owl"/>
     <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Grounding.owl"/>
+    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl"/>
+    <owl:imports rdf:resource="http://www.w3.org/2003/11/swrl"/>
+    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Service.owl"/>
   </owl:Ontology>
-  <process:Output rdf:ID="asdfasdf_4"/>
-  <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/ECSDI.owl#CentrosMedicosService"/>
-  <process:Output rdf:ID="Output_1"/>
-  <process:Output rdf:ID="Output_3"/>
-  <process:Output rdf:ID="fasdfasdfadf">
-    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >dfasdfs</process:parameterType>
-  </process:Output>
-  <process:Output rdf:ID="Output_4"/>
-  <process:Output rdf:ID="ListaDeHospitales"/>
-  <process:AtomicProcess rdf:ID="ListarHospitales"/>
-  <process:Output rdf:ID="Output_6"/>
-  <process:Output rdf:ID="Output_7"/>
-  <process:Input rdf:ID="Input_2">
-    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >dfasdf</process:parameterType>
-  </process:Input>
-  <process:Output rdf:ID="ListaHospitales">
-    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >dfsadfasdfasf</process:parameterType>
-    <process:parameterValue rdf:parseType="Literal">3</process:parameterValue>
-    <process:parameterValue rdf:parseType="Literal">4</process:parameterValue>
-  </process:Output>
-  <process:Output rdf:ID="Test">
-    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >false</process:parameterType>
-    <process:parameterValue rdf:parseType="Literal">true</process:parameterValue>
-  </process:Output>
-  <process:Output rdf:ID="Output_5"/>
+  <grounding:WsdlOperationRef rdf:ID="WsdlOperationRef_11">
+    <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >test</grounding:operation>
+    <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >lala</grounding:portType>
+  </grounding:WsdlOperationRef>
+  <grounding:WsdlOperationRef rdf:ID="WsdlOperationRef_9"/>
+  <grounding:WsdlOperationRef rdf:ID="WsdlOperationRef_10"/>
+  <grounding:WsdlOperationRef rdf:ID="WsdlOperationRef_6"/>
+  <service:Service rdf:ID="ECSDIService">
+    <service:supports>
+      <grounding:WsdlGrounding rdf:ID="ECSDIGrounding">
+        <grounding:hasAtomicProcessGrounding>
+          <grounding:WsdlAtomicProcessGrounding rdf:ID="ListarHospitalesGrounding">
+            <grounding:owlsProcess>
+              <process:AtomicProcess rdf:ID="ListarHospitales">
+                <process:hasOutput>
+                  <process:Output rdf:ID="OutputCentroMedico">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://www.owl-ontologies.com/ECSDI.owl#CentroMedico</process:parameterType>
+                  </process:Output>
+                </process:hasOutput>
+                <process:hasInput>
+                  <process:Input rdf:ID="InputNombreCiudad">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+                  </process:Input>
+                </process:hasInput>
+              </process:AtomicProcess>
+            </grounding:owlsProcess>
+            <grounding:wsdlOperation>
+              <grounding:WsdlOperationRef rdf:ID="ListarHospitalesOperation">
+                <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://localhost:8080/ExampleWebApplication/ExampleWebService?WSDL#CentroMedicoService</grounding:portType>
+                <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://localhost:8080/ExampleWebApplication/ExampleWebService?WSDL#listarHospitales</grounding:operation>
+              </grounding:WsdlOperationRef>
+            </grounding:wsdlOperation>
+          </grounding:WsdlAtomicProcessGrounding>
+        </grounding:hasAtomicProcessGrounding>
+        <service:supportedBy rdf:resource="#ECSDIService"/>
+      </grounding:WsdlGrounding>
+    </service:supports>
+    <service:presents>
+      <profile:Profile rdf:ID="ECSDIProfile">
+        <profile:serviceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ECSDIAgent</profile:serviceName>
+        <profile:hasInput rdf:resource="#InputNombreCiudad"/>
+        <service:presentedBy rdf:resource="#ECSDIService"/>
+        <profile:textDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >This is a dummy description.</profile:textDescription>
+        <profile:hasOutput rdf:resource="#OutputCentroMedico"/>
+      </profile:Profile>
+    </service:presents>
+  </service:Service>
 </rdf:RDF>
 
 <!-- Created with Protege (with OWL Plugin 3.4.8, Build 629)  http://protege.stanford.edu -->

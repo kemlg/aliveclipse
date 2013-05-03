@@ -19,7 +19,7 @@ public class MatchMakerTest3 {
         MatchMakerWS ws = MatchMakerWSEndpoint.createClient("http://localhost:8080/AliveMatchmaker/MatchMaker");
         registerService("myService3", ws);
 
-        System.out.println(toString("test"));
+        //System.out.println(toString("test"));
 
         for (MatchResult result : ws.performMatch(toString("test"))) {
             System.out.println("Result: " + result.getService());

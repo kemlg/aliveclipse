@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.owl-ontologies.com/ECSDI.owl#"
     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -8,148 +9,145 @@
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xml:base="http://www.owl-ontologies.com/Ontology1366179964.owl">
-  <owl:Ontology rdf:about="http://www.owl-ontologies.com/ECSDI.owl"/>
+  xml:base="http://www.owl-ontologies.com/ECSDI.owl">
+  <owl:Ontology rdf:about=""/>
   <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
-  <owl:Class rdf:ID="ProveedorMedico"/>
-  <owl:Class rdf:ID="Rehabilitacion">
+  <owl:Class rdf:ID="SanidadPublica">
     <rdfs:subClassOf>
-      <owl:Class rdf:ID="Tratamiento"/>
+      <owl:Class rdf:ID="ProveedorMedico"/>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:ID="Medico">
+  <owl:Class rdf:ID="CentroDiagnostico">
     <rdfs:subClassOf>
-      <owl:Class rdf:ID="PersonalSanitario"/>
+      <owl:Class rdf:ID="CentroMedico"/>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:ID="Prueba">
+  <owl:Class rdf:ID="Clinica">
+    <rdfs:subClassOf rdf:resource="#CentroMedico"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PET">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Imagen"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Especialista">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Medico"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Tratamiento">
     <rdfs:subClassOf>
       <owl:Class rdf:ID="AccionMedica"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:ID="MRI">
     <rdfs:subClassOf>
-      <owl:Class rdf:ID="Imagen"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:ID="Cirujano">
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="Especialista"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="#Tratamiento">
-    <rdfs:subClassOf rdf:resource="#AccionMedica"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Trauma">
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="#Especialista"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:ID="PET">
-    <rdfs:subClassOf>
       <owl:Class rdf:about="#Imagen"/>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:ID="OrdenPago"/>
-  <owl:Class rdf:ID="Ecografia">
+  <owl:Class rdf:ID="PeticionCita"/>
+  <owl:Class rdf:ID="Panel">
     <rdfs:subClassOf>
-      <owl:Class rdf:about="#Imagen"/>
+      <owl:Class rdf:ID="Prueba"/>
     </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:ID="Clinica">
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="CentroMedico"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:ID="Quirurgico">
-    <rdfs:subClassOf rdf:resource="#Tratamiento"/>
   </owl:Class>
   <owl:Class rdf:ID="SanidadPrivada">
     <rdfs:subClassOf rdf:resource="#ProveedorMedico"/>
   </owl:Class>
-  <owl:Class rdf:ID="Hospital">
-    <rdfs:subClassOf rdf:resource="#CentroMedico"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Panel">
-    <rdfs:subClassOf rdf:resource="#Prueba"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Enfermero">
-    <rdfs:subClassOf rdf:resource="#PersonalSanitario"/>
-  </owl:Class>
-  <owl:Class rdf:ID="PeticionCita"/>
-  <owl:Class rdf:about="#Imagen">
-    <rdfs:subClassOf rdf:resource="#Prueba"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Generalista">
-    <rdfs:subClassOf rdf:resource="#Medico"/>
-  </owl:Class>
   <owl:Class rdf:ID="CAP">
     <rdfs:subClassOf rdf:resource="#CentroMedico"/>
   </owl:Class>
-  <owl:Class rdf:ID="Sanguineo">
-    <rdfs:subClassOf rdf:resource="#Panel"/>
+  <owl:Class rdf:ID="PersonalSanitario"/>
+  <owl:Class rdf:about="#Prueba">
+    <rdfs:subClassOf rdf:resource="#AccionMedica"/>
   </owl:Class>
-  <owl:Class rdf:ID="Masajista">
+  <owl:Class rdf:ID="Cirujano">
+    <rdfs:subClassOf rdf:resource="#Especialista"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Imagen">
+    <rdfs:subClassOf rdf:resource="#Prueba"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Tecnico">
     <rdfs:subClassOf rdf:resource="#PersonalSanitario"/>
-  </owl:Class>
-  <owl:Class rdf:ID="SanidadPublica">
-    <rdfs:subClassOf rdf:resource="#ProveedorMedico"/>
   </owl:Class>
   <owl:Class rdf:ID="Orina">
     <rdfs:subClassOf rdf:resource="#Panel"/>
   </owl:Class>
-  <owl:Class rdf:about="#Especialista">
-    <rdfs:subClassOf rdf:resource="#Medico"/>
-  </owl:Class>
-  <owl:Class rdf:ID="Paciente"/>
-  <owl:Class rdf:ID="Cita"/>
-  <owl:Class rdf:ID="Tecnico">
+  <owl:Class rdf:ID="Enfermero">
     <rdfs:subClassOf rdf:resource="#PersonalSanitario"/>
   </owl:Class>
-  <owl:Class rdf:ID="CentroDiagnostico">
+  <owl:Class rdf:ID="Generalista">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Medico"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Cita"/>
+  <owl:Class rdf:ID="Ecografia">
+    <rdfs:subClassOf rdf:resource="#Imagen"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Paciente"/>
+  <owl:Class rdf:about="#Medico">
+    <rdfs:subClassOf rdf:resource="#PersonalSanitario"/>
+  </owl:Class>
+  <owl:Class rdf:ID="OrdenPago"/>
+  <owl:Class rdf:ID="Masajista">
+    <rdfs:subClassOf rdf:resource="#PersonalSanitario"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Rehabilitacion">
+    <rdfs:subClassOf rdf:resource="#Tratamiento"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Trauma">
+    <rdfs:subClassOf rdf:resource="#Especialista"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Sanguineo">
+    <rdfs:subClassOf rdf:resource="#Panel"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Hospital">
     <rdfs:subClassOf rdf:resource="#CentroMedico"/>
   </owl:Class>
-  <owl:ObjectProperty rdf:ID="ParaAccionMedica">
+  <owl:Class rdf:ID="Quirurgico">
+    <rdfs:subClassOf rdf:resource="#Tratamiento"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="ParaPersonal">
     <rdfs:domain rdf:resource="#PeticionCita"/>
-    <rdfs:range rdf:resource="#AccionMedica"/>
+    <rdfs:range rdf:resource="#PersonalSanitario"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:ID="EnCentro">
     <rdfs:range rdf:resource="#CentroMedico"/>
     <rdfs:domain rdf:resource="#PeticionCita"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="ParaPersonal">
-    <rdfs:range rdf:resource="#PersonalSanitario"/>
+  <owl:ObjectProperty rdf:ID="ParaAccionMedica">
+    <rdfs:range rdf:resource="#AccionMedica"/>
     <rdfs:domain rdf:resource="#PeticionCita"/>
   </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="IDCentroMedico">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#CentroMedico"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Dia">
+    <rdfs:domain rdf:resource="#Cita"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="FechaDisponibilidadFin">
+    <rdfs:domain rdf:resource="#PeticionCita"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:ID="IDPersonal">
     <rdfs:domain rdf:resource="#PersonalSanitario"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:ID="FechaDisponibilidadInicio">
-    <rdfs:domain rdf:resource="#PeticionCita"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="#PeticionCita"/>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="FechaDisponibilidadFin">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    <rdfs:domain rdf:resource="#PeticionCita"/>
+  <owl:DatatypeProperty rdf:ID="IDPrueba">
+    <rdfs:domain rdf:resource="#Prueba"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:ID="Hora">
     <rdfs:domain rdf:resource="#Cita"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="Dia">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-    <rdfs:domain rdf:resource="#Cita"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="IDCentroMedico">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="#CentroMedico"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="IDPrueba">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="#Prueba"/>
-  </owl:DatatypeProperty>
-  <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/ECSDI.owl#CentrosMedicosService"/>
 </rdf:RDF>
 
 <!-- Created with Protege (with OWL Plugin 3.4.8, Build 629)  http://protege.stanford.edu -->
