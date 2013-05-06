@@ -1,4 +1,4 @@
-; Wed Apr 24 13:53:08 CEST 2013
+; Mon May 06 17:03:27 CEST 2013
 ; 
 ;+ (version "3.4.8")
 ;+ (build "Build 629")
@@ -6,11 +6,11 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[ECSDIOntology_ProjectKB_Class61]
-		[ECSDIOntology_ProjectKB_Class62]
-		[ECSDIOntology_ProjectKB_Class63]
-		[ECSDIOntology_ProjectKB_Class64]
-		[ECSDIOntology_ProjectKB_Class65]))
+		[ECSDIOntology_ProjectKB_Class93]
+		[ECSDIOntology_ProjectKB_Class94]
+		[ECSDIOntology_ProjectKB_Class95]
+		[ECSDIOntology_ProjectKB_Class96]
+		[ECSDIOntology_ProjectKB_Class97]))
 
 ([CLSES_TAB] of  Widget
 
@@ -161,7 +161,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ECSDIOntology_ProjectKB_Class38])
-	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalQueriesTab"))
+	(widget_class_name "com.sri.owlseditor.Owlstab"))
 
 ([ECSDIOntology_ProjectKB_Class38] of  Property_List
 )
@@ -170,7 +170,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ECSDIOntology_ProjectKB_Class40])
-	(widget_class_name "edu.stanford.smi.protegex.chatPlugin.ChatTab"))
+	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalQueriesTab"))
 
 ([ECSDIOntology_ProjectKB_Class4] of  Property_List
 )
@@ -182,7 +182,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ECSDIOntology_ProjectKB_Class42])
-	(widget_class_name "org.protege.owl.axiome.ui.AxiomeTab"))
+	(widget_class_name "edu.stanford.smi.protegex.chatPlugin.ChatTab"))
 
 ([ECSDIOntology_ProjectKB_Class42] of  Property_List
 )
@@ -191,7 +191,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ECSDIOntology_ProjectKB_Class44])
-	(widget_class_name "edu.stanford.smi.protege.keywordsearch.StringSearch"))
+	(widget_class_name "org.protege.owl.axiome.ui.AxiomeTab"))
 
 ([ECSDIOntology_ProjectKB_Class44] of  Property_List
 )
@@ -200,7 +200,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ECSDIOntology_ProjectKB_Class46])
-	(widget_class_name "script.ProtegeScriptTab"))
+	(widget_class_name "edu.stanford.smi.protege.keywordsearch.StringSearch"))
 
 ([ECSDIOntology_ProjectKB_Class46] of  Property_List
 )
@@ -209,7 +209,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ECSDIOntology_ProjectKB_Class48])
-	(widget_class_name "edu.stanford.smi.protegex.changes.ChangesTab"))
+	(widget_class_name "script.ProtegeScriptTab"))
 
 ([ECSDIOntology_ProjectKB_Class48] of  Property_List
 )
@@ -218,7 +218,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ECSDIOntology_ProjectKB_Class50])
-	(widget_class_name "edu.stanford.smi.protegex.fctab.FacetConstraintsTab"))
+	(widget_class_name "edu.stanford.smi.protegex.changes.ChangesTab"))
 
 ([ECSDIOntology_ProjectKB_Class5] of  Widget
 
@@ -233,7 +233,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ECSDIOntology_ProjectKB_Class52])
-	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.KnowledgeTreeTab"))
+	(widget_class_name "edu.stanford.smi.protegex.fctab.FacetConstraintsTab"))
 
 ([ECSDIOntology_ProjectKB_Class52] of  Property_List
 )
@@ -242,7 +242,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ECSDIOntology_ProjectKB_Class54])
-	(widget_class_name "edu.stanford.smi.protegex.datamaster.DataMasterTab"))
+	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.KnowledgeTreeTab"))
 
 ([ECSDIOntology_ProjectKB_Class54] of  Property_List
 )
@@ -251,7 +251,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ECSDIOntology_ProjectKB_Class56])
-	(widget_class_name "dfki.protege.ontoviz_tab.OntovizTab"))
+	(widget_class_name "edu.stanford.smi.protegex.datamaster.DataMasterTab"))
 
 ([ECSDIOntology_ProjectKB_Class56] of  Property_List
 )
@@ -260,7 +260,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ECSDIOntology_ProjectKB_Class58])
-	(widget_class_name "edu.stanford.smi.protegex.changes.stats.ChangeStatisticsTab"))
+	(widget_class_name "dfki.protege.ontoviz_tab.OntovizTab"))
 
 ([ECSDIOntology_ProjectKB_Class58] of  Property_List
 )
@@ -269,7 +269,7 @@
 
 	(is_hidden TRUE)
 	(property_list [ECSDIOntology_ProjectKB_Class60])
-	(widget_class_name "edu.stanford.smi.protegex.prompt.PromptTab"))
+	(widget_class_name "edu.stanford.smi.protegex.changes.stats.ChangeStatisticsTab"))
 
 ([ECSDIOntology_ProjectKB_Class6] of  Property_List
 )
@@ -277,30 +277,14 @@
 ([ECSDIOntology_ProjectKB_Class60] of  Property_List
 )
 
-([ECSDIOntology_ProjectKB_Class61] of  String
+([ECSDIOntology_ProjectKB_Class61] of  Widget
 
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
+	(is_hidden TRUE)
+	(property_list [ECSDIOntology_ProjectKB_Class62])
+	(widget_class_name "edu.stanford.smi.protegex.prompt.PromptTab"))
 
-([ECSDIOntology_ProjectKB_Class62] of  String
-
-	(name "http://www.w3.org/2002/07/owl#Class")
-	(string_value "%3ANAME"))
-
-([ECSDIOntology_ProjectKB_Class63] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([ECSDIOntology_ProjectKB_Class64] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([ECSDIOntology_ProjectKB_Class65] of  String
-
-	(name "http://www.w3.org/2002/07/owl#Thing")
-	(string_value "%3ANAME"))
+([ECSDIOntology_ProjectKB_Class62] of  Property_List
+)
 
 ([ECSDIOntology_ProjectKB_Class7] of  Widget
 
@@ -316,6 +300,31 @@
 	(is_hidden TRUE)
 	(property_list [ECSDIOntology_ProjectKB_Class10])
 	(widget_class_name "ca.uvic.csr.shrimp.jambalaya.JambalayaTab"))
+
+([ECSDIOntology_ProjectKB_Class93] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([ECSDIOntology_ProjectKB_Class94] of  String
+
+	(name "http://www.w3.org/2002/07/owl#Class")
+	(string_value "%3ANAME"))
+
+([ECSDIOntology_ProjectKB_Class95] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([ECSDIOntology_ProjectKB_Class96] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([ECSDIOntology_ProjectKB_Class97] of  String
+
+	(name "http://www.w3.org/2002/07/owl#Thing")
+	(string_value "%3ANAME"))
 
 ([empty.owl_ProjectKB_Class5] of  String
 
