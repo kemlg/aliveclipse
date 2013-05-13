@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pluginschema.xsd">
-        <jar>alive-matchmaker.jar</jar>
-        <class>edu.bath.matchmaker.util.sme2.Alive_MoreSpecificParams</class>
-        <directory recursive="true">lib</directory>
-        <name>ALIVE Matchmaker - More Specific Params</name>
-</plugin>

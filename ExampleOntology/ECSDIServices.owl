@@ -31,13 +31,14 @@
     <owl:imports rdf:resource="http://www.w3.org/2003/11/swrl"/>
     <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Service.owl"/>
   </owl:Ontology>
+  <grounding:WsdlOperationRef rdf:ID="WsdlOperationRef_9"/>
   <grounding:WsdlOperationRef rdf:ID="WsdlOperationRef_11">
     <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
     >test</grounding:operation>
     <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
     >lala</grounding:portType>
   </grounding:WsdlOperationRef>
-  <grounding:WsdlOperationRef rdf:ID="WsdlOperationRef_9"/>
+  <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/ECSDI.owl#CentrosMedicosService"/>
   <grounding:WsdlOperationRef rdf:ID="WsdlOperationRef_10"/>
   <grounding:WsdlOperationRef rdf:ID="WsdlOperationRef_6"/>
   <service:Service rdf:ID="ECSDIService">
