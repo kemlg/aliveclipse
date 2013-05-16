@@ -1,3 +1,4 @@
+.DS_Store
 .swp
 .DS_Store
 *.class
@@ -30,3 +31,4 @@ dist/*
 /AliveMatchmaker2/nbproject/private/
 /ExampleMatchmaker/nbproject/private/
 *.swp
+/WebApplication1/nbproject/private/

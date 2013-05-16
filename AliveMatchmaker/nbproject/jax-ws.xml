@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="MatchMakerWSImpl">
+      <implementation-class>edu.bath.matchmaker.ws.MatchMakerWSImpl</implementation-class>
+    </service>
+    <service name="MatchMakerWSFactory">
+      <implementation-class>edu.bath.matchmaker.ws.MatchMakerWSFactory</implementation-class>
+    </service>
+  </services>
+  <clients>
+    <client name="MatchMakerWSFactory">
+      <wsdl-url>http://localhost:8080/AliveMatchmaker/MatchMakerWSFactory?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_8080/AliveMatchmaker/MatchMakerWSFactory.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">edu.bath.matchmaker.ws.client</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://localhost:8080/AliveMatchmaker/MatchMakerWSFactory?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>package</wsimport-option-name>
+          <wsimport-option-value>edu.bath.matchmaker.ws.client</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+    <client name="MatchMaker">
+      <wsdl-url>http://localhost:8080/AliveMatchmaker/MatchMaker?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_8080/AliveMatchmaker/MatchMaker.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">edu.bath.matchmaker.ws.endpointclient</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://localhost:8080/AliveMatchmaker/MatchMaker?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>package</wsimport-option-name>
+          <wsimport-option-value>edu.bath.matchmaker.ws.endpointclient</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+  </clients>
+</jax-ws>
