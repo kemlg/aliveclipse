@@ -32,3 +32,5 @@ dist/*
 /ExampleMatchmaker/nbproject/private/
 *.swp
 /WebApplication1/nbproject/private/
+/MatchmakerWS/nbproject/private/
+/Matchmaker/nbproject/private/
