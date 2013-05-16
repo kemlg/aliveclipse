@@ -19,6 +19,8 @@ public interface MatchMakerWS {
     String SERVICE_NAME = "MatchMaker";
     String PORT_NAME = "MatchMakerPort";
 
+    @WebMethod int giveCount();
+
     @WebMethod MatchMakerWS.MatchResult[] performMatch(@WebParam(name = "queryOwls") String queryOwls);
 
     @WebMethod MatchMakerWS.MatchResult[] performSignatureMatch(

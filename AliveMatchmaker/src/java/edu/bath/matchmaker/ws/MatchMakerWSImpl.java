@@ -30,23 +30,12 @@ import org.mindswap.owl.OWLOntology;
  * 
  * @author Andreou Dimitris, email: jim.andreou (at) gmail.com
  */
-@Stateful
 @WebService(targetNamespace=MatchMakerWS.TARGET_NAMESPACE,
     serviceName=MatchMakerWS.SERVICE_NAME,
     portName=MatchMakerWS.PORT_NAME)
-@Addressing
 public class MatchMakerWSImpl implements MatchMakerWS {
     static MatchMaker delegate = new MatchMaker();
-    private static StatefulWebServiceManager<MatchMakerWSImpl> manager;
     private static int count = 0;
-    
-    public static void setManager(StatefulWebServiceManager<MatchMakerWSImpl> manager) {
-        MatchMakerWSImpl.manager = manager;
-    }
-    
-    public static StatefulWebServiceManager<MatchMakerWSImpl> getManager() {
-        return manager;
-    }
     
     public MatchMakerWSImpl() {
     }

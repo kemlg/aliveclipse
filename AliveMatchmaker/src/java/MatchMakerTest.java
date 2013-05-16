@@ -2,9 +2,8 @@
 import com.google.common.collect.ImmutableMap;
 import edu.bath.matchmaker.*;
 import edu.bath.matchmaker.ws.MatchMakerWS;
+import edu.bath.matchmaker.ws.MatchMakerWSEndpoint;
 import edu.bath.matchmaker.ws.MatchMakerWSImpl;
-import edu.bath.matchmaker.ws.client.MatchMakerWSFactory;
-import edu.bath.matchmaker.ws.client.MatchMakerWSFactory_Service;
 import java.net.URI;
 import javax.xml.ws.Service;
 import javax.xml.ws.wsaddressing.W3CEndpointReference;
@@ -32,20 +31,8 @@ public class MatchMakerTest {
         subs.addSubsumes(URI.create("typeA"), URI.create("typeB"));
         //System.out.println(subs);
 
-        MatchMakerWSFactory_Service factory = new MatchMakerWSFactory_Service();
-        MatchMakerWSFactory f = factory.getMatchMakerWSFactoryPort();
-        W3CEndpointReference session = f.startSession();
-        edu.bath.matchmaker.ws.endpointclient.MatchMaker service = new edu.bath.matchmaker.ws.endpointclient.MatchMaker();
-        edu.bath.matchmaker.ws.endpointclient.MatchMakerWSImpl client = service.getPort(session, edu.bath.matchmaker.ws.endpointclient.MatchMakerWSImpl.class);
-        System.out.println(client.giveCount());
-        System.out.println(client.giveCount());
-        System.out.println(client.giveCount());
-        System.out.println(client.giveCount());
-        System.out.println(client.giveCount());
-        System.out.println(client.giveCount());
-        System.out.println(client.giveCount());
-        System.out.println(client.giveCount());
-        System.out.println(client.giveCount());
+        MatchMakerWS client = MatchMakerWSEndpoint.createClient("http://localhost:8080/AliveMatchmaker/MatchMaker");
+        client.registerService(onto.toString());
     }
 
 }
