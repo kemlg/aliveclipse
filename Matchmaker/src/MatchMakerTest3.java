@@ -56,6 +56,13 @@ public class MatchMakerTest3 {
         onto = OwlsUtils.parseStream(new FileInputStream("../MatchmakerExample/src/ECSDIServices.owl"), null);
         mm.registerService(onto);
         
-        System.out.println(mm.match(onto, InputMatchers.EXACT, OutputMatchers.EXACT));        
+        onto = ServiceDescriptor.fromInputsOutputs(URI.create("myService"),
+                ImmutableMap.of(
+                    URI.create("input2"), URI.create("http://www.w3.org/2001/XMLSchema#string")),
+                ImmutableMap.of(
+                    URI.create("output2"), URI.create("http://www.owl-ontologies.com/ECSDI.owl#Hospital"))).toOwls("").getOntology();
+
+        
+        System.out.println(mm.match(onto, InputMatchers.EXACT, OutputMatchers.SUPERCLASSES));        
     }
 }
