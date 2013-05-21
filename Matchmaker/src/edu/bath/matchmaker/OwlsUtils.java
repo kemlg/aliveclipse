@@ -227,6 +227,8 @@ public class OwlsUtils {
         INPUT() {
             @Override
             Iterable<? extends Parameter> parametersOf(AtomicProcess process) {
+                System.out.println(process.getInputs());
+                System.out.println(process.getInputs().iterator().next().getParamType());
                 return process.getInputs();
             }
 

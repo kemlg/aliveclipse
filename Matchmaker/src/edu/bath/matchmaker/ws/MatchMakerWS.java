@@ -19,9 +19,11 @@ public interface MatchMakerWS {
     String SERVICE_NAME = "MatchMaker";
     String PORT_NAME = "MatchMakerPort";
 
-    @WebMethod int giveCount();
-
+    @WebMethod void mapDomainOntology(@WebParam(name = "newURI") String newURI, @WebParam(name = "ontologyURI") String ontologyURI);
+    
     @WebMethod MatchMakerWS.MatchResult[] performMatch(@WebParam(name = "queryOwls") String queryOwls);
+
+    @WebMethod MatchMakerWS.MatchResult[] performMatchByURL(@WebParam(name = "queryURL") String queryOwls);
 
     @WebMethod MatchMakerWS.MatchResult[] performSignatureMatch(
         @WebParam(name = "inputs") String[] inputs,

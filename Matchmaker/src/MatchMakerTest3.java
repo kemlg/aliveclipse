@@ -53,14 +53,15 @@ public class MatchMakerTest3 {
 
         OWLOntology onto = OwlsUtils.parseURI(MatchMakerTest3.class.getResource("/ECSDIOntology.owl").toURI());
         System.out.println(onto.getURI());
-        onto = OwlsUtils.parseStream(new FileInputStream("../MatchmakerExample/src/ECSDIServices.owl"), null);
+        onto = OwlsUtils.parseStream(new FileInputStream("/Users/sergio/Documents/Research/ecsdi/aliveclipse/ExampleOntology/ECSDIServices.owl"), null);
         mm.registerService(onto);
         
         onto = ServiceDescriptor.fromInputsOutputs(URI.create("myService"),
                 ImmutableMap.of(
-                    URI.create("input2"), URI.create("http://www.w3.org/2001/XMLSchema#string")),
+                    URI.create("input1"), URI.create("http://www.owl-ontologies.com/ECSDI.owl#MRI")).of(
+                URI.create("input2"), URI.create("http://www.owl-ontologies.com/ECSDI.owl#Paciente")),
                 ImmutableMap.of(
-                    URI.create("output2"), URI.create("http://www.owl-ontologies.com/ECSDI.owl#Hospital"))).toOwls("").getOntology();
+                    URI.create("output1"), URI.create("http://www.owl-ontologies.com/ECSDI.owl#Cita"))).toOwls("").getOntology();
 
         
         System.out.println(mm.match(onto, InputMatchers.EXACT, OutputMatchers.SUPERCLASSES));        

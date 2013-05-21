@@ -144,6 +144,7 @@ public class ServiceDescriptor implements Serializable {
                 itA = g.getAtomicGroundings().iterator();
                 while(itA.hasNext()) {
                     wag = (WSDLAtomicGrounding)itA.next();
+                    System.out.println("Operation: " + wag.getOperation());
                     sd.add(new ServiceDescriptor(wag.getOperation(),
                         paramsToTypes(OwlsUtils.Parameters.INPUT.parametersOf(wag.getProcess())),
                         paramsToTypes(OwlsUtils.Parameters.OUTPUT.parametersOf(wag.getProcess()))));
@@ -151,9 +152,26 @@ public class ServiceDescriptor implements Serializable {
             }
         }
         else {
-            sd.add(new ServiceDescriptor(service.getURI(),
-                paramsToTypes(OwlsUtils.Parameters.INPUT.parametersOf(ap)),
-                paramsToTypes(OwlsUtils.Parameters.OUTPUT.parametersOf(ap))));
+             try
+            {
+                sd.add(new ServiceDescriptor(((WSDLAtomicGrounding)ap.getService().getGrounding().getAtomicGroundings().iterator().next()).getOperation(), // service.getURI(),
+                    paramsToTypes(OwlsUtils.Parameters.INPUT.parametersOf(ap)),
+                    paramsToTypes(OwlsUtils.Parameters.OUTPUT.parametersOf(ap))));
+                }
+            catch(NullPointerException ex)
+            {
+                try{
+                sd.add(new ServiceDescriptor(((WSDLAtomicGrounding)service.getGroundings().iterator().next().getAtomicGroundings().iterator().next()).getOperationRef().getOperation(), // service.getURI(),
+                    paramsToTypes(OwlsUtils.Parameters.INPUT.parametersOf((AtomicProcess)service.getProcess())),
+                    paramsToTypes(OwlsUtils.Parameters.OUTPUT.parametersOf((AtomicProcess)service.getProcess()))));
+                } catch(NullPointerException ex2) {
+                    ex2.printStackTrace();
+                    System.out.println(service.getName());
+                sd.add(new ServiceDescriptor(service.getURI(),
+                    paramsToTypes(OwlsUtils.Parameters.INPUT.parametersOf((AtomicProcess)service.getProcess())),
+                    paramsToTypes(OwlsUtils.Parameters.OUTPUT.parametersOf((AtomicProcess)service.getProcess()))));
+                }
+            }
         }
         
         return sd;
@@ -172,10 +190,11 @@ public class ServiceDescriptor implements Serializable {
             Map<URI, URI> inputsToTypes, Map<URI, URI> outputsToTypes) {
         return new ServiceDescriptor(serviceURI, ImmutableMap.copyOf(inputsToTypes), ImmutableMap.copyOf(outputsToTypes));
     }
-
+    
     private static ImmutableMap<URI, URI> paramsToTypes(Iterable<? extends Parameter> params) {
         ImmutableMap.Builder<URI, URI> builder = ImmutableMap.builder();
         for (Parameter p : params) {
+            System.out.println("Parameter: " + p.getURI());
             builder.put(p.getURI(), p.getParamType().getURI());
         }
         return builder.build();

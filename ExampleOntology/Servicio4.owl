@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:p2="file:/home/bejar/bin/Protege_3.4.8/plugins/com.sri.owlseditor/owl-s/swrlb.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#"
+    xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:list="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl#"
+    xmlns="http://www.owl-ontologies.com/Servicio4.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:expr="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl#"
+    xmlns:p1="http://www.owl-ontologies.com/MiniECSDI.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:grounding="http://www.daml.org/services/owl-s/1.2/Grounding.owl#"
+    xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:time="http://www.isi.edu/~pan/damltime/time-entry.owl#"
+  xml:base="http://www.owl-ontologies.com/Servicio4.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl"/>
+    <owl:imports rdf:resource="http://www.owl-ontologies.com/MiniECSDI.owl"/>
+    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl"/>
+    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Profile.owl"/>
+    <owl:imports rdf:resource="file:/home/bejar/bin/Protege_3.4.8/plugins/com.sri.owlseditor/owl-s/swrlb.owl"/>
+    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl"/>
+    <owl:imports rdf:resource="http://www.w3.org/2006/time-entry"/>
+    <owl:imports rdf:resource="http://www.w3.org/2003/11/swrl"/>
+    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Service.owl"/>
+    <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Grounding.owl"/>
+  </owl:Ontology>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WsdlAtomicProcessGrounding_5">
+    <grounding:owlsProcess>
+      <process:AtomicProcess rdf:ID="AtomicProcess_1">
+        <process:hasInput>
+          <process:Input rdf:ID="Input_op1">
+            <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://www.owl-ontologies.com/MiniECSDI.owl#Cita</process:parameterType>
+          </process:Input>
+        </process:hasInput>
+        <process:hasOutput>
+          <process:Output rdf:ID="Output_op1">
+            <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+          </process:Output>
+        </process:hasOutput>
+      </process:AtomicProcess>
+    </grounding:owlsProcess>
+    <grounding:wsdlOperation>
+      <grounding:WsdlOperationRef rdf:ID="WsdlOperationRef_6">
+        <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://localhost:8080/EWA/EWS?WSDL#Serv1</grounding:operation>
+        <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://localhost:8080/EWA/EWS?WSDL#OpServ1</grounding:portType>
+      </grounding:WsdlOperationRef>
+    </grounding:wsdlOperation>
+  </grounding:WsdlAtomicProcessGrounding>
+  <service:Service rdf:ID="ServiceTwoOps">
+    <service:presents>
+      <profile:Profile rdf:ID="Profile_op1">
+        <profile:hasInput rdf:resource="#Input_op1"/>
+        <profile:hasInput>
+          <process:Input rdf:ID="Input_op2">
+            <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://www.owl-ontologies.com/MiniECSDI.owl#Especialista</process:parameterType>
+          </process:Input>
+        </profile:hasInput>
+        <profile:serviceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ServOp1</profile:serviceName>
+        <service:presentedBy rdf:resource="#ServiceTwoOps"/>
+        <profile:textDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Op1</profile:textDescription>
+        <profile:hasOutput rdf:resource="#Output_op1"/>
+        <profile:hasOutput>
+          <process:Output rdf:ID="Output_op2">
+            <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+          </process:Output>
+        </profile:hasOutput>
+      </profile:Profile>
+    </service:presents>
+    <service:supports>
+      <grounding:WsdlGrounding rdf:ID="WsdlGrounding_op2">
+        <service:supportedBy rdf:resource="#ServiceTwoOps"/>
+        <grounding:hasAtomicProcessGrounding>
+          <grounding:WsdlAtomicProcessGrounding rdf:ID="WsdlAtomicProcessGrounding_13">
+            <grounding:wsdlOperation>
+              <grounding:WsdlOperationRef rdf:ID="WsdlOperationRef_14">
+                <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://localhost:8080/EWA/EWS?WSDL#OpOp1</grounding:portType>
+                <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://localhost:8080/EWA/EWS?WDSL#Op1</grounding:operation>
+              </grounding:WsdlOperationRef>
+            </grounding:wsdlOperation>
+            <grounding:owlsProcess>
+              <process:AtomicProcess rdf:ID="AtomicProcess_2">
+                <process:hasOutput rdf:resource="#Output_op2"/>
+                <process:hasInput rdf:resource="#Input_op2"/>
+              </process:AtomicProcess>
+            </grounding:owlsProcess>
+          </grounding:WsdlAtomicProcessGrounding>
+        </grounding:hasAtomicProcessGrounding>
+      </grounding:WsdlGrounding>
+    </service:supports>
+    <service:supports>
+      <grounding:WsdlGrounding rdf:ID="WsdlGrounding_op1">
+        <service:supportedBy rdf:resource="#ServiceTwoOps"/>
+        <grounding:hasAtomicProcessGrounding>
+          <grounding:WsdlAtomicProcessGrounding rdf:ID="WsdlAtomicProcessGrounding_2">
+            <grounding:wsdlOperation rdf:resource="#WsdlOperationRef_14"/>
+            <grounding:owlsProcess rdf:resource="#AtomicProcess_1"/>
+          </grounding:WsdlAtomicProcessGrounding>
+        </grounding:hasAtomicProcessGrounding>
+      </grounding:WsdlGrounding>
+    </service:supports>
+  </service:Service>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.8, Build 629)  http://protege.stanford.edu -->

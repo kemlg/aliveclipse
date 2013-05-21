@@ -26,50 +26,25 @@
     <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl"/>
     <owl:imports rdf:resource="http://www.w3.org/2006/time-entry"/>
     <owl:imports rdf:resource="file:/Applications/Protege_3.4.8/plugins/com.sri.owlseditor/owl-s/swrlb.owl"/>
+    <owl:imports rdf:resource="http://www.w3.org/2003/11/swrlb"/>
     <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Grounding.owl"/>
     <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl"/>
     <owl:imports rdf:resource="http://www.w3.org/2003/11/swrl"/>
     <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Service.owl"/>
   </owl:Ontology>
-  <grounding:WsdlOperationRef rdf:ID="WsdlOperationRef_9"/>
-  <grounding:WsdlOperationRef rdf:ID="WsdlOperationRef_11">
-    <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >test</grounding:operation>
-    <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >lala</grounding:portType>
-  </grounding:WsdlOperationRef>
-  <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/ECSDI.owl#CentrosMedicosService"/>
-  <process:Input rdf:ID="Input_2">
-    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://www.owl-ontologies.com/ECSDI.owl#Cita</process:parameterType>
-  </process:Input>
-  <grounding:WsdlOperationRef rdf:ID="WsdlOperationRef_10"/>
-  <grounding:WsdlOperationRef rdf:ID="WsdlOperationRef_6"/>
-  <process:Output rdf:ID="Output_3">
-    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://www.owl-ontologies.com/ECSDI.owl#Paciente</process:parameterType>
-  </process:Output>
-  <process:Output rdf:ID="OutputCentroMedico">
-    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://www.owl-ontologies.com/ECSDI.owl#CentroMedico</process:parameterType>
-  </process:Output>
-  <process:Input rdf:ID="InputNombreCiudad">
-    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-    >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
-  </process:Input>
   <process:AtomicProcess rdf:ID="AsignarCita_2">
     <service:describes>
       <service:Service rdf:ID="MRIService">
         <service:presents>
-          <profile:Profile rdf:ID="ECSDIProfile">
-            <profile:serviceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >ECSDIAgent</profile:serviceName>
-            <profile:hasInput>
-              <process:Input rdf:ID="InputEcografia">
+          <profile:Profile rdf:ID="MRIProfile">
+            <service:presentedBy rdf:resource="#MRIService"/>
+            <profile:has_process rdf:resource="#AsignarCita_2"/>
+            <profile:hasOutput>
+              <process:Output rdf:ID="OutputCita">
                 <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-                >http://www.owl-ontologies.com/ECSDI.owl#Ecografia</process:parameterType>
-              </process:Input>
-            </profile:hasInput>
+                >http://www.owl-ontologies.com/ECSDI.owl#Cita</process:parameterType>
+              </process:Output>
+            </profile:hasOutput>
             <profile:hasInput>
               <process:Input rdf:ID="InputPaciente">
                 <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
@@ -82,48 +57,10 @@
                 >http://www.owl-ontologies.com/ECSDI.owl#MRI</process:parameterType>
               </process:Input>
             </profile:hasInput>
-            <service:presentedBy rdf:resource="#MRIService"/>
-            <service:presentedBy>
-              <service:Service rdf:ID="EcografiaService">
-                <service:describedBy>
-                  <process:AtomicProcess rdf:ID="AsignarCita_1">
-                    <process:hasInput rdf:resource="#InputEcografia"/>
-                    <process:hasInput rdf:resource="#InputPaciente"/>
-                    <service:describes rdf:resource="#EcografiaService"/>
-                    <process:hasOutput>
-                      <process:Output rdf:ID="OutputCita">
-                        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
-                        >http://www.owl-ontologies.com/ECSDI.owl#Cita</process:parameterType>
-                      </process:Output>
-                    </process:hasOutput>
-                  </process:AtomicProcess>
-                </service:describedBy>
-                <service:presents rdf:resource="#ECSDIProfile"/>
-                <service:supports>
-                  <grounding:WsdlGrounding rdf:ID="GroundingEcografia">
-                    <service:supportedBy rdf:resource="#EcografiaService"/>
-                    <grounding:hasAtomicProcessGrounding>
-                      <grounding:WsdlAtomicProcessGrounding rdf:ID="AtomicGroundingEcografia">
-                        <grounding:owlsProcess rdf:resource="#AsignarCita_1"/>
-                        <grounding:wsdlOperation>
-                          <grounding:WsdlOperationRef rdf:ID="AsignarCitaEcografia">
-                            <grounding:operation rdf:datatype=
-                            "http://www.w3.org/2001/XMLSchema#anyURI"
-                            >http://localhost:8080/ExampleWebApplication/EcografiaService?WSDL#AsignarCita</grounding:operation>
-                            <grounding:portType rdf:datatype=
-                            "http://www.w3.org/2001/XMLSchema#anyURI"
-                            >http://localhost:8080/ExampleWebApplication/EcografiaService?WSDL#AsignarCitaPortType</grounding:portType>
-                          </grounding:WsdlOperationRef>
-                        </grounding:wsdlOperation>
-                      </grounding:WsdlAtomicProcessGrounding>
-                    </grounding:hasAtomicProcessGrounding>
-                  </grounding:WsdlGrounding>
-                </service:supports>
-              </service:Service>
-            </service:presentedBy>
+            <profile:serviceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MRIService</profile:serviceName>
             <profile:textDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >This is a dummy description.</profile:textDescription>
-            <profile:hasOutput rdf:resource="#OutputCita"/>
+            >MRI</profile:textDescription>
           </profile:Profile>
         </service:presents>
         <service:describedBy rdf:resource="#AsignarCita_2"/>
@@ -147,9 +84,65 @@
         </service:supports>
       </service:Service>
     </service:describes>
-    <process:hasInput rdf:resource="#InputMRI"/>
     <process:hasInput rdf:resource="#InputPaciente"/>
+    <process:hasInput rdf:resource="#InputMRI"/>
     <process:hasOutput rdf:resource="#OutputCita"/>
+  </process:AtomicProcess>
+  <process:AtomicProcess rdf:ID="AsignarCita_1">
+    <service:describes>
+      <service:Service rdf:ID="EcografiaService">
+        <service:presents>
+          <profile:Profile rdf:ID="EcografiaProfile">
+            <service:presentedBy rdf:resource="#EcografiaService"/>
+            <profile:has_process rdf:resource="#AsignarCita_1"/>
+            <profile:hasOutput>
+              <process:Output rdf:ID="OutputCita2">
+                <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://www.owl-ontologies.com/ECSDI.owl#Cita</process:parameterType>
+              </process:Output>
+            </profile:hasOutput>
+            <profile:hasInput>
+              <process:Input rdf:ID="InputPaciente2">
+                <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://www.owl-ontologies.com/ECSDI.owl#Paciente</process:parameterType>
+              </process:Input>
+            </profile:hasInput>
+            <profile:hasInput>
+              <process:Input rdf:ID="InputEcografia">
+                <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://www.owl-ontologies.com/ECSDI.owl#Ecografia</process:parameterType>
+              </process:Input>
+            </profile:hasInput>
+            <profile:serviceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >EcografiaService</profile:serviceName>
+            <profile:textDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Ecografia</profile:textDescription>
+          </profile:Profile>
+        </service:presents>
+        <service:describedBy rdf:resource="#AsignarCita_1"/>
+        <service:supports>
+          <grounding:WsdlGrounding rdf:ID="GroundingEcografia">
+            <grounding:hasAtomicProcessGrounding>
+              <grounding:WsdlAtomicProcessGrounding rdf:ID="AtomicGroundingEcografia">
+                <grounding:owlsProcess rdf:resource="#AsignarCita_1"/>
+                <grounding:wsdlOperation>
+                  <grounding:WsdlOperationRef rdf:ID="AsignarCitaEcografia">
+                    <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://localhost:8080/ExampleWebApplication/EcografiaService?WSDL#AsignarCita</grounding:operation>
+                    <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://localhost:8080/ExampleWebApplication/EcografiaService?WSDL#AsignarCitaPortType</grounding:portType>
+                  </grounding:WsdlOperationRef>
+                </grounding:wsdlOperation>
+              </grounding:WsdlAtomicProcessGrounding>
+            </grounding:hasAtomicProcessGrounding>
+            <service:supportedBy rdf:resource="#EcografiaService"/>
+          </grounding:WsdlGrounding>
+        </service:supports>
+      </service:Service>
+    </service:describes>
+    <process:hasInput rdf:resource="#InputPaciente2"/>
+    <process:hasInput rdf:resource="#InputEcografia"/>
+    <process:hasOutput rdf:resource="#OutputCita2"/>
   </process:AtomicProcess>
 </rdf:RDF>
 

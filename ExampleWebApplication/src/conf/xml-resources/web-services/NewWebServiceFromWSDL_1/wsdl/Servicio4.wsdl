@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Servicetwoops" targetNamespace="http://dmas.dfki.de/axis/services/Servicetwoops" xmlns="http://dmas.dfki.de/axis/services/Servicetwoops" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://dmas.dfki.de/axis/services/Servicetwoops-impl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://dmas.dfki.de/axis/services/Servicetwoops" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:intf="http://dmas.dfki.de/axis/services/Servicetwoops" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://dmas.dfki.de/axis/services/Servicetwoops" version="OWLS2WSDL Thu May 16 15:06:51 CEST 2013" xmlns="http://dmas.dfki.de/axis/services/Servicetwoops" xmlns:tns="http://schemas.dmas.dfki.de/venetianblind"><xsd:annotation><xsd:documentation source="Translation (OWL2XSD-ComplexType) of http://www.owl-ontologies.com/MiniECSDI.owl#Cita"/><xsd:documentation source="Translation (OWL2XSD-ComplexType) of http://www.owl-ontologies.com/MiniECSDI.owl#Cita"/></xsd:annotation><xsd:element name="Especialista" type="EspecialistaType"/><xsd:element name="Cita" type="CitaType"/><xsd:complexType name="EspecialistaType"><xsd:sequence><xsd:element name="Nombre" type="xsd:string"/></xsd:sequence></xsd:complexType><xsd:complexType name="CitaType"><xsd:sequence><xsd:element name="Hora" type="xsd:time"/><xsd:element name="Dia" type="xsd:date"/></xsd:sequence></xsd:complexType></xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AtomicProcess_2Response">
+    <wsdl:part name="Output_op2" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AtomicProcess_1Response">
+    <wsdl:part name="Output_op1" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AtomicProcess_1Request">
+    <wsdl:part name="Input_op1" type="CitaType">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AtomicProcess_2Request">
+    <wsdl:part name="Input_op2" type="EspecialistaType">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ServicetwoopsPortType">
+    <wsdl:operation name="AtomicProcess_1">
+      <wsdl:input message="AtomicProcess_1Request">
+    </wsdl:input>
+      <wsdl:output message="AtomicProcess_1Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtomicProcess_2">
+      <wsdl:input message="AtomicProcess_2Request">
+    </wsdl:input>
+      <wsdl:output message="AtomicProcess_2Response">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicetwoopsBinding" type="ServicetwoopsPortType">
+    <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="AtomicProcess_1">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input>
+        <wsdlsoap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://dmas.dfki.de/axis/services/Servicetwoops"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://dmas.dfki.de/axis/services/Servicetwoops"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtomicProcess_2">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input>
+        <wsdlsoap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://dmas.dfki.de/axis/services/Servicetwoops"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://dmas.dfki.de/axis/services/Servicetwoops"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicetwoopsService">
+    <wsdl:port name="ServicetwoopsPort" binding="ServicetwoopsBinding">
+      <wsdlsoap:address location="http://dmas.dfki.de/axis/services/Servicetwoops"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

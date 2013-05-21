@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns="http://www.owl-ontologies.com/MiniECSDI.owl#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.owl-ontologies.com/MiniECSDI.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Especialista">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ServicioMedico"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Tratamiento">
+    <rdfs:subClassOf rdf:resource="#ServicioMedico"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Pr2">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Prueba"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Esp1">
+    <rdfs:subClassOf rdf:resource="#Especialista"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Cita"/>
+  <owl:Class rdf:ID="Tr1">
+    <rdfs:subClassOf rdf:resource="#Tratamiento"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PeticionCita"/>
+  <owl:Class rdf:ID="Pr1">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Prueba"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Prueba">
+    <rdfs:subClassOf rdf:resource="#ServicioMedico"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Esp2">
+    <rdfs:subClassOf rdf:resource="#Especialista"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Tr2">
+    <rdfs:subClassOf rdf:resource="#Tratamiento"/>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:ID="Hora">
+    <rdfs:domain rdf:resource="#Cita"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="HoraInicio">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#PeticionCita"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="DiaFin">
+    <rdfs:domain rdf:resource="#PeticionCita"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="DiaInicio">
+    <rdfs:domain rdf:resource="#PeticionCita"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="HoraFin">
+    <rdfs:domain rdf:resource="#PeticionCita"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Dia">
+    <rdfs:domain rdf:resource="#Cita"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Nombre">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Especialista"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="idServicio">
+    <rdfs:domain rdf:resource="#ServicioMedico"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.8, Build 629)  http://protege.stanford.edu -->
