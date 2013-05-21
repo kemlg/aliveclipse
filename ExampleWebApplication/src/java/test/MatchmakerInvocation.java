@@ -20,22 +20,22 @@ public class MatchmakerInvocation {
         MatchMaker mm = new MatchMaker();
         MatchMakerWSImpl mmp = mm.getMatchMakerPort();
         
-//        mmp.mapDomainOntology("http://www.owl-ontologies.com/ECSDI.owl", "file:/Users/sergio/Documents/Research/ecsdi/aliveclipse/ExampleOntology/ECSDIOntology.owl");
-//        mmp.registerServiceByURL("file:/Users/sergio/Documents/Research/ecsdi/aliveclipse/ExampleOntology/ECSDIServices.owl");
-//        List<MatchResult> lmr = mmp.performMatchByURL("file:/Users/sergio/Documents/Research/ecsdi/aliveclipse/ExampleOntology/ECSDIServicesQuery.owl");
-//        Iterator<MatchResult> it = lmr.iterator();
-//        while(it.hasNext()) {
-//            MatchResult mr = it.next();
-//            System.out.println(mr.getService());
-//        }
+        mmp.mapDomainOntology("http://www.owl-ontologies.com/ECSDI.owl", "file:/path/to/ECSDIOntology.owl");
+        mmp.registerServiceByURL("file:/path/to/ECSDIServices.owl");
+        List<MatchResult> lmr = mmp.performMatchByURL("file:/Users/sergio/Documents/Research/ecsdi/aliveclipse/ExampleOntology/ECSDIServicesQuery.owl");
+        Iterator<MatchResult> it = lmr.iterator();
+        while(it.hasNext()) {
+            MatchResult mr = it.next();
+            System.out.println(mr.getService());
+        }
         
         List<String> inputs = new LinkedList<String>();
         inputs.add("http://www.owl-ontologies.com/ECSDI.owl#Ecografia");
         inputs.add("http://www.owl-ontologies.com/ECSDI.owl#Paciente");
         List<String> outputs = new LinkedList<String>();
         outputs.add("http://www.owl-ontologies.com/ECSDI.owl#Cita");
-        List<MatchResult> lmr = mmp.performSignatureMatch(inputs, outputs);
-        Iterator<MatchResult> it = lmr.iterator();
+        lmr = mmp.performSignatureMatch(inputs, outputs);
+        it = lmr.iterator();
         while(it.hasNext()) {
             MatchResult mr = it.next();
             System.out.println(mr.getService());

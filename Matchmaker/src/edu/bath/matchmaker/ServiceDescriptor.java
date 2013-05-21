@@ -164,7 +164,7 @@ public class ServiceDescriptor implements Serializable {
                 sd.add(new ServiceDescriptor(((WSDLAtomicGrounding)service.getGroundings().iterator().next().getAtomicGroundings().iterator().next()).getOperationRef().getOperation(), // service.getURI(),
                     paramsToTypes(OwlsUtils.Parameters.INPUT.parametersOf((AtomicProcess)service.getProcess())),
                     paramsToTypes(OwlsUtils.Parameters.OUTPUT.parametersOf((AtomicProcess)service.getProcess()))));
-                } catch(NullPointerException ex2) {
+                } catch(Exception ex2) {
                     ex2.printStackTrace();
                     System.out.println(service.getName());
                 sd.add(new ServiceDescriptor(service.getURI(),

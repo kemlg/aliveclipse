@@ -60,9 +60,9 @@
         <service:describedBy rdf:resource="#AsignarCita_2"/>
       </service:Service>
     </service:describes>
-    <process:hasInput rdf:resource="#InputMRI"/>
-    <process:hasInput rdf:resource="#InputPaciente"/>
-    <process:hasOutput rdf:resource="#OutputCita"/>
+    <process:hasInput rdf:resource="#Input1"/>
+    <process:hasInput rdf:resource="#Input2"/>
+    <process:hasOutput rdf:resource="#Output2"/>
   </process:AtomicProcess>
 </rdf:RDF>
 
