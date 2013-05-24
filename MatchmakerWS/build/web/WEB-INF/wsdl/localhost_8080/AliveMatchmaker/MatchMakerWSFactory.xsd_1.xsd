@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1.1-b09 (branches/2.1-6834; 2011-07-16T17:14:48+0000) JAXWS-RI/2.2.5-promoted-b04 JAXWS/2.2. --><xs:schema xmlns:tns="http://ws.matchmaker.bath.edu/" xmlns:ns1="http://www.w3.org/2005/08/addressing" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.matchmaker.bath.edu/">
+
+<xs:import namespace="http://www.w3.org/2005/08/addressing" schemaLocation="http://www.w3.org/2006/03/addressing/ws-addr.xsd"/>
+
+<xs:element name="startSession" type="tns:startSession"/>
+
+<xs:element name="startSessionResponse" type="tns:startSessionResponse"/>
+
+<xs:complexType name="startSession">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="startSessionResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:EndpointReferenceType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

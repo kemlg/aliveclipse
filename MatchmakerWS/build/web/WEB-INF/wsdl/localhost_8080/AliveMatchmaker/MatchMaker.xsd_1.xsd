@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1.1-b09 (branches/2.1-6834; 2011-07-16T17:14:48+0000) JAXWS-RI/2.2.5-promoted-b04 JAXWS/2.2. --><xs:schema xmlns:tns="http://www.cs.bath.ac.uk/alive" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://www.cs.bath.ac.uk/alive">
+
+<xs:element name="giveCount" type="tns:giveCount"/>
+
+<xs:element name="giveCountResponse" type="tns:giveCountResponse"/>
+
+<xs:element name="performMatch" type="tns:performMatch"/>
+
+<xs:element name="performMatchResponse" type="tns:performMatchResponse"/>
+
+<xs:element name="performSignatureMatch" type="tns:performSignatureMatch"/>
+
+<xs:element name="performSignatureMatchResponse" type="tns:performSignatureMatchResponse"/>
+
+<xs:element name="registerService" type="tns:registerService"/>
+
+<xs:element name="registerServiceByURL" type="tns:registerServiceByURL"/>
+
+<xs:element name="registerServiceByURLResponse" type="tns:registerServiceByURLResponse"/>
+
+<xs:element name="registerServiceResponse" type="tns:registerServiceResponse"/>
+
+<xs:complexType name="performSignatureMatch">
+<xs:sequence>
+<xs:element name="inputs" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="outputs" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="performSignatureMatchResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:matchResult" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="matchResult">
+<xs:sequence>
+<xs:element name="service" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registerService">
+<xs:sequence>
+<xs:element name="serviceOwls" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registerServiceResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="registerServiceByURL">
+<xs:sequence>
+<xs:element name="serviceOwls" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registerServiceByURLResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="performMatch">
+<xs:sequence>
+<xs:element name="queryOwls" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="performMatchResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:matchResult" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="giveCount">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="giveCountResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Ecografia" targetNamespace="http://www.owl-ontologies.com/ECSDIServices" xmlns="http://www.owl-ontologies.com/ECSDIServices" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://www.owl-ontologies.com/ECSDIServices-impl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.owl-ontologies.com/ECSDIServices" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:intf="http://www.owl-ontologies.com/ECSDIServices" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.owl-ontologies.com/ECSDIServices" version="OWLS2WSDL Fri May 24 04:12:06 CEST 2013" xmlns="http://www.owl-ontologies.com/ECSDIServices" xmlns:tns="http://schemas.dmas.dfki.de/venetianblind"><xsd:annotation><xsd:documentation source="Translation (OWL2XSD-ComplexType) of http://www.owl-ontologies.com/ECSDI.owl#Ecografia"/><xsd:documentation source="Translation (OWL2XSD-ComplexType) of http://www.owl-ontologies.com/ECSDI.owl#Ecografia"/><xsd:documentation source="Translation (OWL2XSD-ComplexType) of http://www.owl-ontologies.com/ECSDI.owl#Ecografia"/></xsd:annotation><xsd:element name="Ecografia" type="EcografiaType"/><xsd:element name="Cita" type="CitaType"/><xsd:element name="Paciente" type="PacienteType"/><xsd:complexType name="EcografiaType"><xsd:sequence><xsd:element name="EcoFloat" type="xsd:float"/><xsd:element name="EcoDateTime" type="xsd:dateTime"/><xsd:element name="EcoString" type="xsd:string"/><xsd:element name="EcoDate" type="xsd:date"/><xsd:element name="EcoBool" type="xsd:boolean"/><xsd:element name="EcoTime" type="xsd:time"/><xsd:element name="EcoInt" type="xsd:int"/><xsd:element name="SubPrueba" type="Imagen"/><xsd:element name="IDPrueba" type="xsd:string"/></xsd:sequence></xsd:complexType><xsd:complexType name="Imagen"><xsd:sequence><xsd:element name="IDPrueba" type="xsd:string"/></xsd:sequence></xsd:complexType><xsd:complexType name="CitaType"><xsd:sequence><xsd:element name="Dia" type="xsd:date"/><xsd:element name="Hora" type="xsd:dateTime"/></xsd:sequence></xsd:complexType><xsd:simpleType name="PacienteType"><xsd:restriction base="xsd:string"/></xsd:simpleType></xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AsignarCita_1Request">
+    <wsdl:part name="InputEcografia" type="EcografiaType">
+    </wsdl:part>
+    <wsdl:part name="InputPaciente2" type="PacienteType">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AsignarCita_1Response">
+    <wsdl:part name="OutputCita2" type="CitaType">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="EcografiaPortType">
+    <wsdl:operation name="AsignarCita">
+      <wsdl:input message="AsignarCita_1Request">
+    </wsdl:input>
+      <wsdl:output message="AsignarCita_1Response">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EcografiaBinding" type="EcografiaPortType">
+    <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="AsignarCita">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input>
+        <wsdlsoap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.owl-ontologies.com/ECSDIServices"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.owl-ontologies.com/ECSDIServices"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EcografiaService">
+    <wsdl:port name="EcografiaPort" binding="EcografiaBinding">
+      <wsdlsoap:address location="http://www.owl-ontologies.com/ECSDIServices"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

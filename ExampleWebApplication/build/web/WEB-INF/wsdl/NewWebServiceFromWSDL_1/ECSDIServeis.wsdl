@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Centremèdic" targetNamespace="http://www.owl-ontologies.com/ECSDIServeis" xmlns="http://www.owl-ontologies.com/ECSDIServeis" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://www.owl-ontologies.com/ECSDIServeis-impl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.owl-ontologies.com/ECSDIServeis" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:intf="http://www.owl-ontologies.com/ECSDIServeis" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.owl-ontologies.com/ECSDIServeis" version="OWLS2WSDL Thu May 16 00:46:22 CEST 2013" xmlns="http://www.owl-ontologies.com/ECSDIServeis" xmlns:tns="http://schemas.dmas.dfki.de/venetianblind"><xsd:annotation><xsd:documentation source="Translation (OWL2XSD-ComplexType) of http://www.owl-ontologies.com/PracticaECSDI.owl#Petició_Servei_Mèdic"/><xsd:documentation source="Translation (OWL2XSD-ComplexType) of http://www.owl-ontologies.com/PracticaECSDI.owl#Petició_Servei_Mèdic"/></xsd:annotation><xsd:element name="Petició_Servei_Mèdic" substitutionGroup="Petició" type="Petició_Servei_MèdicType"/><xsd:element abstract="true" name="Petició" type="PeticióType"/><xsd:element name="Resposta_Servei_Mèdic" type="Resposta_Servei_MèdicType"/><xsd:complexType name="Resposta_Servei_MèdicType"><xsd:sequence><xsd:element name="id_resposta_servei_mèdic" type="xsd:string"/></xsd:sequence></xsd:complexType><xsd:complexType name="PeticióType"><xsd:sequence><xsd:element name="id_petició" type="xsd:string"/></xsd:sequence></xsd:complexType><xsd:complexType name="Petició_Servei_MèdicType"><xsd:complexContent><xsd:restriction base="PeticióType"><xsd:sequence><xsd:element name="Té" type="Restricció"/></xsd:sequence></xsd:restriction></xsd:complexContent></xsd:complexType><xsd:simpleType name="Restricció"><xsd:restriction base="xsd:string"/></xsd:simpleType></xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getOutputRespostaServeiMèdicRequest">
+    <wsdl:part name="InputPeticióServeiMèdic" type="Petició_Servei_MèdicType">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOutputRespostaServeiMèdicResponse">
+    <wsdl:part name="OutputRespostaServeiMèdic" type="Resposta_Servei_MèdicType">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CentremèdicSoap">
+    <wsdl:operation name="getOutputRespostaServeiMèdic">
+      <wsdl:input message="getOutputRespostaServeiMèdicRequest">
+    </wsdl:input>
+      <wsdl:output message="getOutputRespostaServeiMèdicResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CentremèdicSoapBinding" type="CentremèdicSoap">
+    <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getOutputRespostaServeiMèdic">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input>
+        <wsdlsoap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.owl-ontologies.com/ECSDIServeis"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.owl-ontologies.com/ECSDIServeis"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CentremèdicService">
+    <wsdl:port name="CentremèdicSoap" binding="CentremèdicSoapBinding">
+      <wsdlsoap:address location="http://www.owl-ontologies.com/ECSDIServeis"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
