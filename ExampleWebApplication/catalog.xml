@@ -6,4 +6,5 @@
     <system systemId="http://localhost:8080/ExampleWebApplication/EcografiaService?wsdl" uri="src/conf/xml-resources/web-service-references/EcografiaService/wsdl/localhost_8080/ExampleWebApplication/EcografiaService.wsdl"/>
     <system systemId="http://localhost:8080/MatchmakerWS/MatchMaker?wsdl" uri="src/conf/xml-resources/web-service-references/MatchMaker/wsdl/localhost_8080/MatchmakerWS/MatchMaker.wsdl"/>
     <system systemId="http://localhost:8080/MatchmakerWS/MatchMaker?xsd=1" uri="src/conf/xml-resources/web-service-references/MatchMaker/wsdl/localhost_8080/MatchmakerWS/MatchMaker.xsd_1.xsd"/>
+    <system systemId="file:/Users/sergio/ECSDIServices.wsdl" uri="src/conf/xml-resources/web-services/EcoService/wsdl/ECSDIServices.wsdl"/>
 </catalog>

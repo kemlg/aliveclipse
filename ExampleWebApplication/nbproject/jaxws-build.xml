@@ -19,7 +19,6 @@
             -->
     <target name="wsimport-init" depends="init">
         <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
-        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
         <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
         <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
             <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
@@ -28,76 +27,24 @@
             <isset property="conf.dir"/>
         </condition>
     </target>
-    <target name="wsimport-client-EcografiaService" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/EcografiaService"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/EcografiaService" destdir="${build.generated.dir}/jax-wsCache/EcografiaService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/EcografiaService/wsdl/localhost_8080/ExampleWebApplication/EcografiaService.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:8080/ExampleWebApplication/EcografiaService?wsdl" xnocompile="true" xendorsed="true" package="ecografiaclient">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/EcografiaService/wsdl/localhost_8080/ExampleWebApplication/EcografiaService.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/EcografiaService"/>
+    <target name="wsimport-service-EcoService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/service/EcoService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/EcoService" destdir="${build.generated.dir}/jax-wsCache/service/EcoService" wsdl="${basedir}/${conf-dir}xml-resources/web-services/EcoService/wsdl/ECSDIServices.wsdl" catalog="catalog.xml" extension="true" verbose="true" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-services/EcoService/wsdl/ECSDIServices.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/service/EcoService"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/EcografiaService">
+            <fileset dir="${build.generated.dir}/jax-wsCache/service/EcoService">
                 <include name="**/*.java"/>
             </fileset>
         </copy>
-    </target>
-    <target name="wsimport-client-clean-EcografiaService" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/ecografiaclient"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/EcografiaService"/>
-    </target>
-    <target name="wsimport-client-MatchMaker" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/MatchMaker"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/MatchMaker" destdir="${build.generated.dir}/jax-wsCache/MatchMaker" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/MatchMaker/wsdl/localhost_8080/MatchmakerWS/MatchMaker.wsdl" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:8080/MatchmakerWS/MatchMaker?wsdl" xnocompile="true" xendorsed="true" package="matchmakerclient">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/MatchMaker/wsdl/localhost_8080/MatchmakerWS/MatchMaker.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/MatchMaker"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/MatchMaker">
-                <include name="**/*.java"/>
-            </fileset>
+        <copy todir="${build.web.dir}/WEB-INF/wsdl/EcoService">
+            <fileset dir="${basedir}/${conf-dir}xml-resources/web-services/EcoService/wsdl/"/>
         </copy>
     </target>
-    <target name="wsimport-client-clean-MatchMaker" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/matchmakerclient"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/MatchMaker"/>
+    <target name="wsimport-service-clean-EcoService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/owl_ontologies/ecsdiservices"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/service/EcoService"/>
     </target>
-    <target name="wsimport-service-NewWebServiceFromWSDL_1" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/service/NewWebServiceFromWSDL_1"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/NewWebServiceFromWSDL_1" destdir="${build.generated.dir}/jax-wsCache/service/NewWebServiceFromWSDL_1" wsdl="${basedir}/${conf-dir}xml-resources/web-services/NewWebServiceFromWSDL_1/wsdl/EcografiaService.wsdl" catalog="catalog.xml" extension="true" verbose="true" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-services/NewWebServiceFromWSDL_1/wsdl/EcografiaService.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/service/NewWebServiceFromWSDL_1"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/service/NewWebServiceFromWSDL_1">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-        <copy todir="${build.web.dir}/WEB-INF/wsdl/NewWebServiceFromWSDL_1">
-            <fileset dir="${basedir}/${conf-dir}xml-resources/web-services/NewWebServiceFromWSDL_1/wsdl/"/>
-        </copy>
-    </target>
-    <target name="wsimport-service-clean-NewWebServiceFromWSDL_1" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/de/dfki/dmas/axis/services/ecografia"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/service/NewWebServiceFromWSDL_1"/>
-    </target>
-    <target name="wsimport-service-MRIService" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/service/MRIService"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/MRIService" destdir="${build.generated.dir}/jax-wsCache/service/MRIService" wsdl="${basedir}/${conf-dir}xml-resources/web-services/MRIService/wsdl/MRIService.wsdl" catalog="catalog.xml" extension="true" verbose="true" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-services/MRIService/wsdl/MRIService.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/service/MRIService"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/service/MRIService">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-        <copy todir="${build.web.dir}/WEB-INF/wsdl/MRIService">
-            <fileset dir="${basedir}/${conf-dir}xml-resources/web-services/MRIService/wsdl/"/>
-        </copy>
-    </target>
-    <target name="wsimport-service-clean-MRIService" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/de/dfki/dmas/axis/services/mri"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/service/MRIService"/>
-    </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-EcografiaService, wsimport-client-MatchMaker"/>
-    <target name="wsimport-service-generate" depends="wsimport-service-NewWebServiceFromWSDL_1, wsimport-service-MRIService"/>
+    <target name="wsimport-service-generate" depends="wsimport-service-EcoService"/>
 </project>

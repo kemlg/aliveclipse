@@ -1,41 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
-    <service name="NewWebServiceFromWSDL_1">
-      <implementation-class>ecografia.EcografiaService</implementation-class>
-      <wsdl-url>file:/Users/sergio/Documents/Research/ecsdi/aliveclipse/ExampleOntology/EcografiaService.wsdl</wsdl-url>
-      <local-wsdl-file>EcografiaService.wsdl</local-wsdl-file>
+    <service name="EcoService">
+      <implementation-class>eco.EcoService</implementation-class>
+      <wsdl-url>file:/Users/sergio/ECSDIServices.wsdl</wsdl-url>
+      <local-wsdl-file>ECSDIServices.wsdl</local-wsdl-file>
       <service-name>EcografiaService</service-name>
       <port-name>EcografiaPort</port-name>
-      <package-name>de.dfki.dmas.axis.services.ecografia</package-name>
-      <catalog-file>catalog.xml</catalog-file>
-      <use-provider>false</use-provider>
-      <wsimport-options>
-        <wsimport-option>
-          <wsimport-option-name>extension</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>verbose</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xnocompile</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xendorsed</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-      </wsimport-options>
-    </service>
-    <service name="MRIService">
-      <implementation-class>mri.MRIService</implementation-class>
-      <wsdl-url>file:/Users/sergio/Documents/Research/ecsdi/aliveclipse/ExampleOntology/MRIService.wsdl</wsdl-url>
-      <local-wsdl-file>MRIService.wsdl</local-wsdl-file>
-      <service-name>MriService</service-name>
-      <port-name>MriPort</port-name>
-      <package-name>de.dfki.dmas.axis.services.mri</package-name>
+      <package-name>com.owl_ontologies.ecsdiservices</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <use-provider>false</use-provider>
       <wsimport-options>
@@ -58,71 +30,6 @@
       </wsimport-options>
     </service>
   </services>
-  <clients>
-    <client name="EcografiaService">
-      <wsdl-url>http://localhost:8080/ExampleWebApplication/EcografiaService?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/ExampleWebApplication/EcografiaService.wsdl</local-wsdl-file>
-      <package-name forceReplace="true">ecografiaclient</package-name>
-      <catalog-file>catalog.xml</catalog-file>
-      <wsimport-options>
-        <wsimport-option>
-          <wsimport-option-name>extension</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>verbose</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/ExampleWebApplication/EcografiaService?wsdl</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xnocompile</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xendorsed</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>package</wsimport-option-name>
-          <wsimport-option-value>ecografiaclient</wsimport-option-value>
-        </wsimport-option>
-      </wsimport-options>
-    </client>
-    <client name="MatchMaker">
-      <wsdl-url>http://localhost:8080/MatchmakerWS/MatchMaker?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/MatchmakerWS/MatchMaker.wsdl</local-wsdl-file>
-      <package-name forceReplace="true">matchmakerclient</package-name>
-      <catalog-file>catalog.xml</catalog-file>
-      <wsimport-options>
-        <wsimport-option>
-          <wsimport-option-name>extension</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>verbose</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/MatchmakerWS/MatchMaker?wsdl</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xnocompile</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xendorsed</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>package</wsimport-option-name>
-          <wsimport-option-value>matchmakerclient</wsimport-option-value>
-        </wsimport-option>
-      </wsimport-options>
-    </client>
-  </clients>
+  <clients/>
   <jsr109>true</jsr109>
 </jax-ws>
