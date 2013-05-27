@@ -48,7 +48,7 @@ public class MatchMakerWSImpl implements MatchMakerWS {
     public void registerServiceByURL(@WebParam(name = "serviceOwls") String serviceOwlsURL) {
         try {
             delegate.registerService(OwlsUtils.parseURI(URI.create(serviceOwlsURL), defaultBaseURI)); //client should include a base URI
-        } catch (IOException e) { throw new RuntimeException(e); }
+        } catch (IOException e) { throw new RuntimeException(e); } catch(NullPointerException e) {}
     }
 
     @WebMethod
@@ -111,5 +111,67 @@ public class MatchMakerWSImpl implements MatchMakerWS {
         } catch (URISyntaxException ex) {
             Logger.getLogger(MatchMakerWSImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    @Override
+    public MatchResult[] performMatchWithParams(String queryOwls, boolean inputSuperClasses, boolean outputSuperClasses) {
+        InputMatcher    im;
+        if(inputSuperClasses) {
+            im = InputMatchers.SUPERCLASSES;
+        } else {
+            im = InputMatchers.SUBCLASSES;
+        }
+        OutputMatcher    om;
+        if(outputSuperClasses) {
+            om = OutputMatchers.SUPERCLASSES;
+        } else {
+            om = OutputMatchers.SUBCLASSES;
+        }
+         Collection<Match> matches = delegate.match(OwlsUtils.parseString(queryOwls, defaultBaseURI),
+                im, om, Predicates.alwaysTrue());
+        return MatchResult.fromMatches(matches);
+   }
+
+    @Override
+    public MatchResult[] performMatchWithParamsByURL(String queryOwls, boolean inputSuperClasses, boolean outputSuperClasses) {
+        InputMatcher    im;
+        if(inputSuperClasses) {
+            im = InputMatchers.SUPERCLASSES;
+        } else {
+            im = InputMatchers.SUBCLASSES;
+        }
+        OutputMatcher    om;
+        if(outputSuperClasses) {
+            om = OutputMatchers.SUPERCLASSES;
+        } else {
+            om = OutputMatchers.SUBCLASSES;
+        }
+        try {
+                    Collection<Match> matches = delegate.match(OwlsUtils.parseURI(URI.create(queryOwls), defaultBaseURI),
+                            im, om, Predicates.alwaysFalse());
+                    return MatchResult.fromMatches(matches);
+        } catch (IOException ex) {
+            Logger.getLogger(MatchMakerWSImpl.class.getName()).log(Level.SEVERE, null, ex);
+            throw new RuntimeException(ex);
+        }
+   }
+
+    @Override
+    public MatchResult[] performSignatureMatchWithParams(String[] inputTypes, String[] outputTypes, boolean inputSuperClasses, boolean outputSuperClasses) {
+        InputMatcher    im;
+        if(inputSuperClasses) {
+            im = InputMatchers.SUPERCLASSES;
+        } else {
+            im = InputMatchers.SUBCLASSES;
+        }
+        OutputMatcher    om;
+        if(outputSuperClasses) {
+            om = OutputMatchers.SUPERCLASSES;
+        } else {
+            om = OutputMatchers.SUBCLASSES;
+        }
+       Collection<Match> matches = delegate.match(owlsFromSignature(inputTypes, outputTypes),
+                im, om, Predicates.alwaysFalse());
+        return MatchResult.fromMatches(matches);
     }
 }

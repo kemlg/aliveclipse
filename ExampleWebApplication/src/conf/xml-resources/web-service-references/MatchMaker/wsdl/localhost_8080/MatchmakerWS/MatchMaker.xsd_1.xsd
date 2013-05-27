@@ -12,9 +12,21 @@
 
 <xs:element name="performMatchResponse" type="tns:performMatchResponse"/>
 
+<xs:element name="performMatchWithParams" type="tns:performMatchWithParams"/>
+
+<xs:element name="performMatchWithParamsByURL" type="tns:performMatchWithParamsByURL"/>
+
+<xs:element name="performMatchWithParamsByURLResponse" type="tns:performMatchWithParamsByURLResponse"/>
+
+<xs:element name="performMatchWithParamsResponse" type="tns:performMatchWithParamsResponse"/>
+
 <xs:element name="performSignatureMatch" type="tns:performSignatureMatch"/>
 
 <xs:element name="performSignatureMatchResponse" type="tns:performSignatureMatchResponse"/>
+
+<xs:element name="performSignatureMatchWithParams" type="tns:performSignatureMatchWithParams"/>
+
+<xs:element name="performSignatureMatchWithParamsResponse" type="tns:performSignatureMatchWithParamsResponse"/>
 
 <xs:element name="registerService" type="tns:registerService"/>
 
@@ -23,6 +35,41 @@
 <xs:element name="registerServiceByURLResponse" type="tns:registerServiceByURLResponse"/>
 
 <xs:element name="registerServiceResponse" type="tns:registerServiceResponse"/>
+
+<xs:complexType name="performSignatureMatchWithParams">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="arg1" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="arg2" type="xs:boolean"/>
+<xs:element name="arg3" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="performSignatureMatchWithParamsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:matchResult" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="matchResult">
+<xs:sequence>
+<xs:element name="service" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="performMatchWithParams">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:boolean"/>
+<xs:element name="arg2" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="performMatchWithParamsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:matchResult" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
 
 <xs:complexType name="performSignatureMatch">
 <xs:sequence>
@@ -34,12 +81,6 @@
 <xs:complexType name="performSignatureMatchResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:matchResult" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="matchResult">
-<xs:sequence>
-<xs:element name="service" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -96,5 +137,19 @@
 
 <xs:complexType name="mapDomainOntologyResponse">
 <xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="performMatchWithParamsByURL">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:boolean"/>
+<xs:element name="arg2" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="performMatchWithParamsByURLResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:matchResult" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
 </xs:complexType>
 </xs:schema>

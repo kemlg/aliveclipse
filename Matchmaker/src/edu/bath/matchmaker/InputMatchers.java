@@ -33,6 +33,8 @@ public class InputMatchers {
      */
     public static final InputMatcher SUPERCLASSES = new InputMatcher() {
         @Override public Predicate<URI> acceptableInputsFilter(Subsumption<URI> subsumption, Set<URI> inputs) {
+            System.out.println("Inputs: " + inputs);
+            System.out.println("Subsumption: " + Predicates.in(subsumption.subsumedBy().closureOfMany(inputs)));
             if (inputs.contains(OWL.Nothing.getURI())) {
                 //we know that nothing is subsumed by everything
                 return Predicates.alwaysTrue();

@@ -22,6 +22,12 @@
 <message name="performMatchResponse">
 <part name="parameters" element="tns:performMatchResponse"/>
 </message>
+<message name="performMatchByURL">
+<part name="parameters" element="tns:performMatchByURL"/>
+</message>
+<message name="performMatchByURLResponse">
+<part name="parameters" element="tns:performMatchByURLResponse"/>
+</message>
 <message name="performSignatureMatch">
 <part name="parameters" element="tns:performSignatureMatch"/>
 </message>
@@ -34,11 +40,23 @@
 <message name="mapDomainOntologyResponse">
 <part name="parameters" element="tns:mapDomainOntologyResponse"/>
 </message>
-<message name="performMatchByURL">
-<part name="parameters" element="tns:performMatchByURL"/>
+<message name="performMatchWithParams">
+<part name="parameters" element="tns:performMatchWithParams"/>
 </message>
-<message name="performMatchByURLResponse">
-<part name="parameters" element="tns:performMatchByURLResponse"/>
+<message name="performMatchWithParamsResponse">
+<part name="parameters" element="tns:performMatchWithParamsResponse"/>
+</message>
+<message name="performMatchWithParamsByURL">
+<part name="parameters" element="tns:performMatchWithParamsByURL"/>
+</message>
+<message name="performMatchWithParamsByURLResponse">
+<part name="parameters" element="tns:performMatchWithParamsByURLResponse"/>
+</message>
+<message name="performSignatureMatchWithParams">
+<part name="parameters" element="tns:performSignatureMatchWithParams"/>
+</message>
+<message name="performSignatureMatchWithParamsResponse">
+<part name="parameters" element="tns:performSignatureMatchWithParamsResponse"/>
 </message>
 <portType name="MatchMakerWSImpl">
 <operation name="registerService">
@@ -53,6 +71,10 @@
 <input wsam:Action="http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performMatchRequest" message="tns:performMatch"/>
 <output wsam:Action="http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performMatchResponse" message="tns:performMatchResponse"/>
 </operation>
+<operation name="performMatchByURL">
+<input wsam:Action="http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performMatchByURLRequest" message="tns:performMatchByURL"/>
+<output wsam:Action="http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performMatchByURLResponse" message="tns:performMatchByURLResponse"/>
+</operation>
 <operation name="performSignatureMatch">
 <input wsam:Action="http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performSignatureMatchRequest" message="tns:performSignatureMatch"/>
 <output wsam:Action="http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performSignatureMatchResponse" message="tns:performSignatureMatchResponse"/>
@@ -61,9 +83,17 @@
 <input wsam:Action="http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/mapDomainOntologyRequest" message="tns:mapDomainOntology"/>
 <output wsam:Action="http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/mapDomainOntologyResponse" message="tns:mapDomainOntologyResponse"/>
 </operation>
-<operation name="performMatchByURL">
-<input wsam:Action="http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performMatchByURLRequest" message="tns:performMatchByURL"/>
-<output wsam:Action="http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performMatchByURLResponse" message="tns:performMatchByURLResponse"/>
+<operation name="performMatchWithParams">
+<input wsam:Action="http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performMatchWithParamsRequest" message="tns:performMatchWithParams"/>
+<output wsam:Action="http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performMatchWithParamsResponse" message="tns:performMatchWithParamsResponse"/>
+</operation>
+<operation name="performMatchWithParamsByURL">
+<input wsam:Action="http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performMatchWithParamsByURLRequest" message="tns:performMatchWithParamsByURL"/>
+<output wsam:Action="http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performMatchWithParamsByURLResponse" message="tns:performMatchWithParamsByURLResponse"/>
+</operation>
+<operation name="performSignatureMatchWithParams">
+<input wsam:Action="http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performSignatureMatchWithParamsRequest" message="tns:performSignatureMatchWithParams"/>
+<output wsam:Action="http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performSignatureMatchWithParamsResponse" message="tns:performSignatureMatchWithParamsResponse"/>
 </operation>
 </portType>
 <binding name="MatchMakerPortBinding" type="tns:MatchMakerWSImpl">
@@ -95,6 +125,15 @@
 <soap:body use="literal"/>
 </output>
 </operation>
+<operation name="performMatchByURL">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="performSignatureMatch">
 <soap:operation soapAction=""/>
 <input>
@@ -113,7 +152,25 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="performMatchByURL">
+<operation name="performMatchWithParams">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="performMatchWithParamsByURL">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="performSignatureMatchWithParams">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

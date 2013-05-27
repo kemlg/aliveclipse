@@ -30,7 +30,7 @@
       </wsimport-options>
     </service>
     <service name="NewWebServiceFromWSDL">
-      <implementation-class>eco.EcoService</implementation-class>
+      <implementation-class>eco.EcografiaService</implementation-class>
       <wsdl-url>file:/Users/sergio/Documents/Research/ecsdi/aliveclipse/ExampleOntology/ECSDIServices.wsdl</wsdl-url>
       <local-wsdl-file>ECSDIServices.wsdl</local-wsdl-file>
       <service-name>EcografiaService</service-name>

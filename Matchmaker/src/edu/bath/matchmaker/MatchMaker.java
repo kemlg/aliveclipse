@@ -300,9 +300,11 @@ public class MatchMaker implements Serializable {
         }
 
         List<Match> findServices(Service queryService, InputMatcher inputMatcher, OutputMatcher outputMatcher) {
-            ServiceDescriptor query = ServiceDescriptor.fromService(queryService).get(0);
+           ServiceDescriptor query = ServiceDescriptor.fromService(queryService).get(0);
+           System.out.println("Query: " + query.getInputTypes());
 
             Set<URI> outputCandidates = uriToService.keySet(); //start with all services
+            System.out.println("Candidates, step 1: " + outputCandidates);
             
             //First, find those services that produce the required outputs
             {
@@ -324,6 +326,8 @@ public class MatchMaker implements Serializable {
                     outputCandidates = Sets.intersection(servicesProducingThisOutput, outputCandidates);
                 }
             }
+            System.out.println("Candidates, step 2: " + outputCandidates);
+          
 
             //Then, we only keep those services of which the inputs can be satisfied by the available query inputs
 
@@ -337,6 +341,7 @@ public class MatchMaker implements Serializable {
                 ServiceDescriptor service = uriToService.get(candidateServiceURI);
                 for (URI serviceInputType : service.getInputTypes()) {
                     if (!acceptableInputs.apply(serviceInputType)) {
+                        System.out.println("Not acceptable: " + serviceInputType);
                         continue out;
                     }
                 }

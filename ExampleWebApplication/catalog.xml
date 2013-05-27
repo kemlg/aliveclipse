@@ -3,8 +3,8 @@
     <system systemId="file:/Users/sergio/Documents/Research/ecsdi/aliveclipse/ExampleOntology/EcografiaService.wsdl" uri="src/conf/xml-resources/web-services/NewWebServiceFromWSDL_1/wsdl/EcografiaService.wsdl"/>
     <system systemId="file:/Users/sergio/Documents/Research/ecsdi/aliveclipse/ExampleOntology/MRIService.wsdl" uri="src/conf/xml-resources/web-services/MRIService/wsdl/MRIService.wsdl"/>
     <system systemId="http://localhost:8080/ExampleWebApplication/EcografiaService?wsdl" uri="src/conf/xml-resources/web-service-references/EcografiaService/wsdl/localhost_8080/ExampleWebApplication/EcografiaService.wsdl"/>
-    <system systemId="http://localhost:8080/MatchmakerWS/MatchMaker?wsdl" uri="src/conf/xml-resources/web-service-references/MatchMaker/wsdl/localhost_8080/MatchmakerWS/MatchMaker.wsdl"/>
-    <system systemId="http://localhost:8080/MatchmakerWS/MatchMaker?xsd=1" uri="src/conf/xml-resources/web-service-references/MatchMaker/wsdl/localhost_8080/MatchmakerWS/MatchMaker.xsd_1.xsd"/>
     <system systemId="file:/Users/sergio/ECSDIServices.wsdl" uri="src/conf/xml-resources/web-services/EcoService/wsdl/ECSDIServices.wsdl"/>
     <system systemId="file:/Users/sergio/Documents/Research/ecsdi/aliveclipse/ExampleOntology/ECSDIServices.wsdl" uri="src/conf/xml-resources/web-services/NewWebServiceFromWSDL/wsdl/ECSDIServices.wsdl"/>
+    <system systemId="http://localhost:8080/MatchmakerWS/MatchMaker?wsdl" uri="src/conf/xml-resources/web-service-references/MatchMaker/wsdl/localhost_8080/MatchmakerWS/MatchMaker.wsdl"/>
+    <system systemId="http://localhost:8080/MatchmakerWS/MatchMaker?xsd=1" uri="src/conf/xml-resources/web-service-references/MatchMaker/wsdl/localhost_8080/MatchmakerWS/MatchMaker.xsd_1.xsd"/>
 </catalog>

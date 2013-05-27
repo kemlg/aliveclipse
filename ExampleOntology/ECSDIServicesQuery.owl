@@ -14,11 +14,11 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
     xmlns:grounding="http://www.daml.org/services/owl-s/1.2/Grounding.owl#"
-    xmlns="http://www.owl-ontologies.com/ECSDIServices.owl#"
+    xmlns="http://www.owl-ontologies.com/ECSDIServicesQuery.owl#"
     xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:time="http://www.isi.edu/~pan/damltime/time-entry.owl#"
-  xml:base="http://www.owl-ontologies.com/ECSDIServices.owl">
+  xml:base="http://www.owl-ontologies.com/ECSDIServicesQuery.owl">
   <owl:Ontology rdf:about="">
     <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl"/>
     <owl:imports rdf:resource="http://www.owl-ontologies.com/ECSDI.owl"/>
@@ -57,12 +57,12 @@
             </profile:hasInput>
          </profile:Profile>
         </service:presents>
-        <service:describedBy rdf:resource="#AsignarCita_2"/>
+        <service:describedBy rdf:resource="#AnyProcess"/>
       </service:Service>
     </service:describes>
     <process:hasInput rdf:resource="#Input1"/>
     <process:hasInput rdf:resource="#Input2"/>
-    <process:hasOutput rdf:resource="#Output2"/>
+    <process:hasOutput rdf:resource="#Output1"/>
   </process:AtomicProcess>
 </rdf:RDF>
 

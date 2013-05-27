@@ -66,6 +66,21 @@ public interface MatchMakerWSImpl {
 
     /**
      * 
+     * @param queryOwls
+     * @return
+     *     returns java.util.List<matchmakerclient.MatchResult>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "performMatchByURL", targetNamespace = "http://www.cs.bath.ac.uk/alive", className = "matchmakerclient.PerformMatchByURL")
+    @ResponseWrapper(localName = "performMatchByURLResponse", targetNamespace = "http://www.cs.bath.ac.uk/alive", className = "matchmakerclient.PerformMatchByURLResponse")
+    @Action(input = "http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performMatchByURLRequest", output = "http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performMatchByURLResponse")
+    public List<MatchResult> performMatchByURL(
+        @WebParam(name = "queryOwls", targetNamespace = "")
+        String queryOwls);
+
+    /**
+     * 
      * @param inputs
      * @param outputs
      * @return
@@ -99,17 +114,68 @@ public interface MatchMakerWSImpl {
 
     /**
      * 
-     * @param queryOwls
+     * @param arg2
+     * @param arg1
+     * @param arg0
      * @return
      *     returns java.util.List<matchmakerclient.MatchResult>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "performMatchByURL", targetNamespace = "http://www.cs.bath.ac.uk/alive", className = "matchmakerclient.PerformMatchByURL")
-    @ResponseWrapper(localName = "performMatchByURLResponse", targetNamespace = "http://www.cs.bath.ac.uk/alive", className = "matchmakerclient.PerformMatchByURLResponse")
-    @Action(input = "http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performMatchByURLRequest", output = "http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performMatchByURLResponse")
-    public List<MatchResult> performMatchByURL(
-        @WebParam(name = "queryOwls", targetNamespace = "")
-        String queryOwls);
+    @RequestWrapper(localName = "performMatchWithParams", targetNamespace = "http://www.cs.bath.ac.uk/alive", className = "matchmakerclient.PerformMatchWithParams")
+    @ResponseWrapper(localName = "performMatchWithParamsResponse", targetNamespace = "http://www.cs.bath.ac.uk/alive", className = "matchmakerclient.PerformMatchWithParamsResponse")
+    @Action(input = "http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performMatchWithParamsRequest", output = "http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performMatchWithParamsResponse")
+    public List<MatchResult> performMatchWithParams(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        boolean arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        boolean arg2);
+
+    /**
+     * 
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.util.List<matchmakerclient.MatchResult>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "performMatchWithParamsByURL", targetNamespace = "http://www.cs.bath.ac.uk/alive", className = "matchmakerclient.PerformMatchWithParamsByURL")
+    @ResponseWrapper(localName = "performMatchWithParamsByURLResponse", targetNamespace = "http://www.cs.bath.ac.uk/alive", className = "matchmakerclient.PerformMatchWithParamsByURLResponse")
+    @Action(input = "http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performMatchWithParamsByURLRequest", output = "http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performMatchWithParamsByURLResponse")
+    public List<MatchResult> performMatchWithParamsByURL(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        boolean arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        boolean arg2);
+
+    /**
+     * 
+     * @param arg3
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.util.List<matchmakerclient.MatchResult>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "performSignatureMatchWithParams", targetNamespace = "http://www.cs.bath.ac.uk/alive", className = "matchmakerclient.PerformSignatureMatchWithParams")
+    @ResponseWrapper(localName = "performSignatureMatchWithParamsResponse", targetNamespace = "http://www.cs.bath.ac.uk/alive", className = "matchmakerclient.PerformSignatureMatchWithParamsResponse")
+    @Action(input = "http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performSignatureMatchWithParamsRequest", output = "http://www.cs.bath.ac.uk/alive/MatchMakerWSImpl/performSignatureMatchWithParamsResponse")
+    public List<MatchResult> performSignatureMatchWithParams(
+        @WebParam(name = "arg0", targetNamespace = "")
+        List<String> arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        List<String> arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        boolean arg2,
+        @WebParam(name = "arg3", targetNamespace = "")
+        boolean arg3);
 
 }

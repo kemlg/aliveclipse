@@ -25,9 +25,20 @@ public interface MatchMakerWS {
 
     @WebMethod MatchMakerWS.MatchResult[] performMatchByURL(@WebParam(name = "queryURL") String queryOwls);
 
+    @WebMethod MatchMakerWS.MatchResult[] performMatchWithParams(@WebParam(name = "queryOwls") String queryOwls, @WebParam(name = "inputSuperClasses") boolean inputSuperClasses, @WebParam(name = "outputSuperClasses") boolean outputSuperClasses);
+
+    @WebMethod MatchMakerWS.MatchResult[] performMatchWithParamsByURL(@WebParam(name = "queryURL") String queryOwls, @WebParam(name = "inputSuperClasses") boolean inputSuperClasses, @WebParam(name = "outputSuperClasses") boolean outputSuperClasses);
+
     @WebMethod MatchMakerWS.MatchResult[] performSignatureMatch(
         @WebParam(name = "inputs") String[] inputs,
         @WebParam(name = "outputs") String[] outputs
+        );
+
+    @WebMethod MatchMakerWS.MatchResult[] performSignatureMatchWithParams(
+        @WebParam(name = "inputs") String[] inputs,
+        @WebParam(name = "outputs") String[] outputs,
+        @WebParam(name = "inputSuperClasses") boolean inputSuperClasses,
+        @WebParam(name = "outputSuperClasses") boolean outputSuperClasses
         );
 
     @WebMethod void registerService(@WebParam(name = "serviceOwls") String serviceOwls);
