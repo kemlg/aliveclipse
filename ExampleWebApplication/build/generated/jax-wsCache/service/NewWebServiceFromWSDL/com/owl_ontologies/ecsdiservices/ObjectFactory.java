@@ -24,7 +24,9 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _CentroMedico_QNAME = new QName("http://www.owl-ontologies.com/ECSDIServices", "CentroMedico");
+    private final static QName _Paciente_QNAME = new QName("http://www.owl-ontologies.com/ECSDIServices", "Paciente");
+    private final static QName _Cita_QNAME = new QName("http://www.owl-ontologies.com/ECSDIServices", "Cita");
+    private final static QName _Ecografia_QNAME = new QName("http://www.owl-ontologies.com/ECSDIServices", "Ecografia");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.owl_ontologies.ecsdiservices
@@ -34,20 +36,54 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CentroMedicoType }
+     * Create an instance of {@link EcografiaType }
      * 
      */
-    public CentroMedicoType createCentroMedicoType() {
-        return new CentroMedicoType();
+    public EcografiaType createEcografiaType() {
+        return new EcografiaType();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CentroMedicoType }{@code >}}
+     * Create an instance of {@link CitaType }
      * 
      */
-    @XmlElementDecl(namespace = "http://www.owl-ontologies.com/ECSDIServices", name = "CentroMedico")
-    public JAXBElement<CentroMedicoType> createCentroMedico(CentroMedicoType value) {
-        return new JAXBElement<CentroMedicoType>(_CentroMedico_QNAME, CentroMedicoType.class, null, value);
+    public CitaType createCitaType() {
+        return new CitaType();
+    }
+
+    /**
+     * Create an instance of {@link Imagen }
+     * 
+     */
+    public Imagen createImagen() {
+        return new Imagen();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.owl-ontologies.com/ECSDIServices", name = "Paciente")
+    public JAXBElement<String> createPaciente(String value) {
+        return new JAXBElement<String>(_Paciente_QNAME, String.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CitaType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.owl-ontologies.com/ECSDIServices", name = "Cita")
+    public JAXBElement<CitaType> createCita(CitaType value) {
+        return new JAXBElement<CitaType>(_Cita_QNAME, CitaType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EcografiaType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.owl-ontologies.com/ECSDIServices", name = "Ecografia")
+    public JAXBElement<EcografiaType> createEcografia(EcografiaType value) {
+        return new JAXBElement<EcografiaType>(_Ecografia_QNAME, EcografiaType.class, null, value);
     }
 
 }

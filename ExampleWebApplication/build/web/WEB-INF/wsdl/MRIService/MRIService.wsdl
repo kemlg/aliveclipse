@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Mri" targetNamespace="http://dmas.dfki.de/axis/services/Mri" xmlns="http://dmas.dfki.de/axis/services/Mri" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://dmas.dfki.de/axis/services/Mri-impl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://dmas.dfki.de/axis/services/Mri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:intf="http://dmas.dfki.de/axis/services/Mri" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://dmas.dfki.de/axis/services/Mri" version="OWLS2WSDL Tue May 21 12:54:07 CEST 2013" xmlns="http://dmas.dfki.de/axis/services/Mri" xmlns:tns="http://schemas.dmas.dfki.de/venetianblind"><xsd:annotation><xsd:documentation source="Translation (OWL2XSD-SimpleType) of http://www.owl-ontologies.com/ECSDI.owl#MRI"/><xsd:documentation source="Translation (OWL2XSD-SimpleType) of http://www.owl-ontologies.com/ECSDI.owl#MRI"/><xsd:documentation source="Translation (OWL2XSD-SimpleType) of http://www.owl-ontologies.com/ECSDI.owl#MRI"/></xsd:annotation><xsd:element name="MRI" type="MRIType"/><xsd:element name="Cita" type="CitaType"/><xsd:element name="Paciente" type="PacienteType"/><xsd:complexType name="CitaType"><xsd:sequence><xsd:element name="Dia" type="xsd:date"/><xsd:element name="Hora" type="xsd:dateTime"/></xsd:sequence></xsd:complexType><xsd:simpleType name="MRIType"><xsd:restriction base="xsd:string"/></xsd:simpleType><xsd:simpleType name="PacienteType"><xsd:restriction base="xsd:string"/></xsd:simpleType></xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AsignarCita_2Response">
+    <wsdl:part name="OutputCita" type="CitaType">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AsignarCita_2Request">
+    <wsdl:part name="InputMRI" type="MRIType">
+    </wsdl:part>
+    <wsdl:part name="InputPaciente" type="PacienteType">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="MriPortType">
+    <wsdl:operation name="AsignarCita">
+      <wsdl:input message="AsignarCita_2Request">
+    </wsdl:input>
+      <wsdl:output message="AsignarCita_2Response">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MriBinding" type="MriPortType">
+    <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="AsignarCita">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input>
+        <wsdlsoap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://dmas.dfki.de/axis/services/Mri"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://dmas.dfki.de/axis/services/Mri"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MriService">
+    <wsdl:port name="MriPort" binding="MriBinding">
+      <wsdlsoap:address location="http://dmas.dfki.de/axis/services/Mri"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
