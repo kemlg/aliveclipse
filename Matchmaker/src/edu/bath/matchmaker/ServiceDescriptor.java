@@ -11,6 +11,7 @@ import java.net.URI;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.NoSuchElementException;
 import java.util.Vector;
 import org.mindswap.owl.OWLFactory;
 import org.mindswap.owl.OWLOntology;
@@ -157,20 +158,25 @@ public class ServiceDescriptor implements Serializable {
                 sd.add(new ServiceDescriptor(((WSDLAtomicGrounding)ap.getService().getGrounding().getAtomicGroundings().iterator().next()).getOperation(), // service.getURI(),
                     paramsToTypes(OwlsUtils.Parameters.INPUT.parametersOf(ap)),
                     paramsToTypes(OwlsUtils.Parameters.OUTPUT.parametersOf(ap))));
-                }
-            catch(NullPointerException ex)
-            {
-                try{
-                sd.add(new ServiceDescriptor(((WSDLAtomicGrounding)service.getGroundings().iterator().next().getAtomicGroundings().iterator().next()).getOperationRef().getOperation(), // service.getURI(),
-                    paramsToTypes(OwlsUtils.Parameters.INPUT.parametersOf((AtomicProcess)service.getProcess())),
-                    paramsToTypes(OwlsUtils.Parameters.OUTPUT.parametersOf((AtomicProcess)service.getProcess()))));
-                } catch(Exception ex2) {
-                    ex2.printStackTrace();
-                    System.out.println(service.getName());
-                sd.add(new ServiceDescriptor(service.getURI(),
-                    paramsToTypes(OwlsUtils.Parameters.INPUT.parametersOf((AtomicProcess)service.getProcess())),
-                    paramsToTypes(OwlsUtils.Parameters.OUTPUT.parametersOf((AtomicProcess)service.getProcess()))));
-                }
+             } catch (NullPointerException ex) {
+                 try {
+                     if (service.getGroundings().size() > 0 && service.getGroundings().iterator().next().getAtomicGroundings().size() > 0) {
+                         sd.add(new ServiceDescriptor(((WSDLAtomicGrounding) service.getGroundings().iterator().next().getAtomicGroundings().iterator().next()).getOperationRef().getOperation(), // service.getURI(),
+                                 paramsToTypes(OwlsUtils.Parameters.INPUT.parametersOf((AtomicProcess) service.getProcess())),
+                                 paramsToTypes(OwlsUtils.Parameters.OUTPUT.parametersOf((AtomicProcess) service.getProcess()))));
+                     } else {
+                         System.out.println(service.getName());
+                         sd.add(new ServiceDescriptor(service.getURI(),
+                                 paramsToTypes(OwlsUtils.Parameters.INPUT.parametersOf((AtomicProcess) service.getProcess())),
+                                 paramsToTypes(OwlsUtils.Parameters.OUTPUT.parametersOf((AtomicProcess) service.getProcess()))));
+                     }
+                 } catch (Exception ex3) {
+                     ex3.printStackTrace();
+                     System.out.println(service.getName());
+                     sd.add(new ServiceDescriptor(service.getURI(),
+                             paramsToTypes(OwlsUtils.Parameters.INPUT.parametersOf((AtomicProcess) service.getProcess())),
+                             paramsToTypes(OwlsUtils.Parameters.OUTPUT.parametersOf((AtomicProcess) service.getProcess()))));
+                 }
             }
         }
         
