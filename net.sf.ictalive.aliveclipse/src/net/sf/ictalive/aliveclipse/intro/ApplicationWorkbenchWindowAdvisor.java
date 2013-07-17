@@ -1,9 +1,8 @@
 package net.sf.ictalive.aliveclipse.intro;
 
 import org.eclipse.jface.action.IContributionItem;
-import org.eclipse.jface.action.MenuManager;
+import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.preference.IPreferenceStore;
-import org.eclipse.jface.window.ApplicationWindow;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.ui.IWorkbenchPreferenceConstants;
 import org.eclipse.ui.IWorkbenchWindow;
@@ -12,7 +11,9 @@ import org.eclipse.ui.application.ActionBarAdvisor;
 import org.eclipse.ui.application.IActionBarConfigurer;
 import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
 import org.eclipse.ui.application.WorkbenchWindowAdvisor;
+import org.eclipse.ui.internal.WorkbenchWindow;
 
+@SuppressWarnings("restriction")
 public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 
     public ApplicationWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer configurer) {
@@ -49,7 +50,9 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
     	IWorkbenchWindowConfigurer configurer = getWindowConfigurer();
     	IWorkbenchWindow window = configurer.getWindow();
     	
-    	MenuManager mbManager = ((ApplicationWindow)window.getWorkbench().getActiveWorkbenchWindow().getActivePage().getWorkbenchWindow()).getMenuBarManager();
+    	WorkbenchWindow workbenchWindow = (WorkbenchWindow) window.getWorkbench().getActiveWorkbenchWindow().getActivePage().getWorkbenchWindow();
+    	
+    	IMenuManager mbManager = workbenchWindow.getMenuBarManager();
     	for(int i=0; i<mbManager.getItems().length; i++)
     	{
     		IContributionItem item = mbManager.getItems()[i];
@@ -62,5 +65,4 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
     	//maximise the window
 //    	window.getShell().setMaximized(true);
     }
-    
 }
