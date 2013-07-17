@@ -9,16 +9,16 @@ import org.eclipse.jface.action.IContributionItem;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.action.Separator;
+import org.eclipse.ui.IWorkbenchActionConstants;
+import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.actions.ActionFactory;
-import org.eclipse.ui.actions.ContributionItemFactory;
 import org.eclipse.ui.actions.ActionFactory.IWorkbenchAction;
+import org.eclipse.ui.actions.ContributionItemFactory;
 import org.eclipse.ui.application.ActionBarAdvisor;
 import org.eclipse.ui.application.IActionBarConfigurer;
 import org.eclipse.ui.internal.WorkbenchPlugin;
 import org.eclipse.ui.internal.registry.ActionSetRegistry;
 import org.eclipse.ui.internal.registry.IActionSetDescriptor;
-import org.eclipse.ui.IWorkbenchActionConstants;
-import org.eclipse.ui.IWorkbenchWindow;
 
 public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 
@@ -206,14 +206,15 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 
 		ActionSetRegistry reg = WorkbenchPlugin.getDefault().getActionSetRegistry();
 		
+		// TODO: Keeping these removals gives a lot of exceptions, check whether it is necessary to remove them and how to do it if so.
 		// removing gotoLastPosition message
-		removeStandardAction(reg, "org.eclipse.ui.edit.text.actionSet.navigation");
+		//removeStandardAction(reg, "org.eclipse.ui.edit.text.actionSet.navigation");
 
-		// Removing “Convert Line Delimiters To” menu
-		removeStandardAction(reg, "org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo");
+		// Removing "Convert Line Delimiters To" menu
+		//removeStandardAction(reg, "org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo");
 		
 		//Remove "Open File..." menu item
-		removeStandardAction(reg, "org.eclipse.ui.actionSet.openFiles");
+		//removeStandardAction(reg, "org.eclipse.ui.actionSet.openFiles");
 	}
 
 	@SuppressWarnings("restriction")
