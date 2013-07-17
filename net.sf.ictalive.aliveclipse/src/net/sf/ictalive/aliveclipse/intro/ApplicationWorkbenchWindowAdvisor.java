@@ -37,7 +37,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
         IPreferenceStore apiStore = PlatformUI.getPreferenceStore();
         apiStore.setValue(IWorkbenchPreferenceConstants.DOCK_PERSPECTIVE_BAR, "TOP_RIGHT");
         apiStore.setValue(IWorkbenchPreferenceConstants.SHOW_TRADITIONAL_STYLE_TABS, false);
-        //apiStore.setValue(IWorkbenchPreferenceConstants.SHOW_OTHER_IN_PERSPECTIVE_MENU, false);//disables "other" in perspectives menu.
+        apiStore.setValue(IWorkbenchPreferenceConstants.SHOW_OTHER_IN_PERSPECTIVE_MENU, false);//disables "other" in perspectives menu.
         
         // We set the status line and progress indicator so that update
         // information can be shown there
@@ -56,13 +56,12 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
     	for(int i=0; i<mbManager.getItems().length; i++)
     	{
     		IContributionItem item = mbManager.getItems()[i];
-    		if(item.getId().equals("org.eclipse.search.menu")) {
+    		if(item.getId().equals("org.eclipse.search.menu") || item.getId().equals("org.eclipse.ui.run")) {
     			item.setVisible(false);
     			item.dispose();//remove the horrible search menu.
     		}
-    			
     	}
     	//maximise the window
-//    	window.getShell().setMaximized(true);
+    	window.getShell().setMaximized(true);
     }
 }

@@ -77,7 +77,7 @@ net.sf.ictalive.coordination.wfvv.edit,1.0.0.qualifier,file:/Users/sergio/Docume
 net.sf.ictalive.coordination.wfvv.editor,1.0.0.qualifier,file:/Users/sergio/Documents/Research/aliveclipse/net.sf.ictalive.coordination.wfvv.editor/,4,false
 net.sf.ictalive.dashboard,2.0.0.qualifier,file:/Users/sergio/Documents/Research/aliveclipse/net.sf.ictalive.dashboard/,4,false
 net.sf.ictalive.eventbus,0.0.1.qualifier,file:/Users/sergio/Documents/Research/aliveclipse/net.sf.ictalive.core.eventbus/,4,false
-net.sf.ictalive.eventbus.dashboard,1.0.0.qualifier,file:/Users/sergio/Documents/Research/aliveclipse/net.sf.ictalive.eventbus.dashboard/,4,false
+net.sf.ictalive.eventbus.dashboard,2.0.0.qualifier,file:/Users/sergio/Documents/Research/aliveclipse/net.sf.ictalive.eventbus.dashboard/,4,false
 net.sf.ictalive.eventlog,0.0.1.qualifier,file:/Users/sergio/Documents/Research/aliveclipse/net.sf.ictalive.eventlog/,4,false
 net.sf.ictalive.eventlog.dashboard,1.0.0.qualifier,file:/Users/sergio/Documents/Research/aliveclipse/net.sf.ictalive.eventlog.dashboard/,4,false
 net.sf.ictalive.log.analysis,2.0.0.qualifier,file:/Users/sergio/Documents/Research/aliveclipse/net.sf.ictalive.log.analysis/,4,false
