@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://ict-alive.sourceforge.net/operetta/OM/1.0"
+            class="net.sf.ictalive.operetta.OM.OMPackage"
+            genModel="model/OperA.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated OM -->
+      <package
+            uri="http://ict-alive.sourceforge.net/operetta/OM/1.0"
+            class="OM.OMPackage"
+            genModel="model/OM.xcore"/>
+   </extension>
+
+</plugin>

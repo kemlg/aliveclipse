@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uriMap:MappingContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uriMap="http:///www.eclipse.org/m2m/qvt/oml/MModelUriMap/1.0.0">
+  <mapping sourceURI="http://ict-alive.sourceforge.net/coordination/tasks" targetURI="platform:/resource/net.sf.ictalive.coordination/model/tasks.ecore"/>
+  <mapping sourceURI="http://ict-alive.sourceforge.net/services" targetURI="platform:/resource/net.sf.ictalive.services/model/services.ecore"/>
+  <mapping sourceURI="http://ict-alive.sourceforge.net/owls/process" targetURI="platform:/resource/net.sf.ictalive.owls/model/process.ecore"/>
+  <mapping sourceURI="http://ict-alive.sourceforge.net/coordination/actions" targetURI="platform:/resource/net.sf.ictalive.coordination/model/actions.ecore"/>
+  <mapping sourceURI="http://ict-alive.sourceforge.net/owls/service" targetURI="platform:/resource/net.sf.ictalive.owls/model/service.ecore"/>
+</uriMap:MappingContainer>

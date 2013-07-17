@@ -4,24 +4,40 @@
 	<item value="true" key="uiPlugin"/>
 	<item value="false" key="rcpPlugin"/>
 	<item value="false" key="apiAnalysis"/>
-	<item value="false" key="osgiProject"/>
 	<item value="3.5 or greater" key="targetName"/>
-	<section name="dependenciesView">
-	</section>
+	<item value="false" key="osgiProject"/>
 	<section name="org.eclipse.pde.ui.dialogs.PluginSelectionDialog">
 		<item value="true" key="ShowStatusLine"/>
 		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History/&gt;" key="History"/>
 		<section name="DialogBoundsSettings">
 			<item value="600" key="DIALOG_WIDTH"/>
 			<item value="194" key="DIALOG_Y_ORIGIN"/>
-			<item value="660" key="DIALOG_X_ORIGIN"/>
 			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="660" key="DIALOG_X_ORIGIN"/>
 			<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
 		</section>
+	</section>
+	<section name="dependenciesView">
 	</section>
 	<section name="quick_assist_proposal_size">
 	</section>
 	<section name="PluginExportWizard">
+		<item value="true" key="exportUpdate"/>
+		<item value="false" key="saveAsAnt"/>
+		<item value="" key="alias"/>
+		<item value="Generate source bundles" key="exportSourceFormat"/>
+		<item value="false" key="qualifier"/>
+		<item value="" key="password"/>
+		<item value="" key="keypass"/>
+		<item value="false" key="exportSource"/>
+		<item value="" key="keystore"/>
+		<item value="false" key="useWorkspaceCompiledClasses"/>
+		<item value="1" key="exportType"/>
+		<item value="false" key="signJAR"/>
+		<item value="/Applications/eclipse-classic/plugins" key="destination1"/>
+		<item value="/Applications/eclipse-classic/" key="destination0"/>
+		<item value="201307171216" key="qualifierName"/>
+		<item value="true" key="allowBinaryCycles"/>
 	</section>
 	<section name="PDEFormActionManager">
 		<list key="RecentLaunches">

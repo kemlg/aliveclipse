@@ -3,25 +3,25 @@
     <package visibility="1">
         <fragment handle="=net.sf.ictalive.service.repositorytools/src&lt;net.sf.ictalive.service.tool"/>
         <type handle="=net.sf.ictalive.service.repositorytools/src&lt;net.sf.ictalive.service.tool{AbstractFileSystemRepositoryCallback.java[AbstractFileSystemRepositoryCallback" modificationStamp="9133" restrictions="0" visibility="0"/>
-        <type handle="=net.sf.ictalive.service.repositorytools/src&lt;net.sf.ictalive.service.tool{FileSystemRepositoryCallbackImpl.java[FileSystemRepositoryCallbackImpl" modificationStamp="9137" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/src&lt;net.sf.ictalive.service.tool{MapLocationCallback.java[MapLocationCallback" modificationStamp="9138" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.ictalive.service.repositorytools/src&lt;net.sf.ictalive.service.tool{FileSystemRepositoryCallbackImpl.java[FileSystemRepositoryCallbackImpl" modificationStamp="9137" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/src&lt;net.sf.ictalive.service.tool{RemoteWebServiceRepositoryCallback.java[RemoteWebServiceRepositoryCallback" modificationStamp="9139" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/src&lt;net.sf.ictalive.service.tool{AliveOntRepoCallback.java[AliveOntRepoCallback" modificationStamp="9134" restrictions="0" visibility="0"/>
-        <type handle="=net.sf.ictalive.service.repositorytools/src&lt;net.sf.ictalive.service.tool{AliveRepoManagerHook.java[AliveRepoManagerHook" modificationStamp="9154" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.ictalive.service.repositorytools/src&lt;net.sf.ictalive.service.tool{AliveRepoManagerHook.java[AliveRepoManagerHook" modificationStamp="9155" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/src&lt;net.sf.ictalive.service.tool{ClassPathRepositoryCallback.java[ClassPathRepositoryCallback" modificationStamp="9136" restrictions="0" visibility="0"/>
     </package>
     <package visibility="1">
         <fragment handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery"/>
         <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery(RepoChangeListener.class[RepoChangeListener" modificationStamp="-1" restrictions="0" visibility="0"/>
-        <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery(WebServiceRepository.class[WebServiceRepository" modificationStamp="-1" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery(MetaDataEntry.class[MetaDataEntry" modificationStamp="-1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery(WebServiceRepository.class[WebServiceRepository" modificationStamp="-1" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery(LocalChangeNotifier.class[LocalChangeNotifier" modificationStamp="-1" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery(DiscoveryDocument.class[DiscoveryDocument" modificationStamp="-1" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery(ObjectListBase.class[ObjectListBase" modificationStamp="-1" restrictions="0" visibility="0"/>
-        <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery(ObjectRepository.class[ObjectRepository" modificationStamp="-1" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery(ObjectNotFound.class[ObjectNotFound" modificationStamp="-1" restrictions="0" visibility="0"/>
-        <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery(DiscoveryHelper.class[DiscoveryHelper" modificationStamp="-1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery(ObjectRepository.class[ObjectRepository" modificationStamp="-1" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery(ObjectDescriptor.class[ObjectDescriptor" modificationStamp="-1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery(DiscoveryHelper.class[DiscoveryHelper" modificationStamp="-1" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery(RepoChange.class[RepoChange" modificationStamp="-1" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery(ObjectListResult.class[ObjectListResult" modificationStamp="-1" restrictions="0" visibility="0"/>
     </package>
@@ -38,8 +38,8 @@
         <type handle="=net.sf.ictalive.service.repositorytools/src&lt;net.sf.ictalive.svcrepo{HandlerCallBack.java[HandlerCallBack" modificationStamp="5632" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/src&lt;net.sf.ictalive.svcrepo{RepositoryBase.java[RepositoryBase" modificationStamp="5637" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/src&lt;net.sf.ictalive.svcrepo{RemoteWebserviceRepository.java[RemoteWebserviceRepository" modificationStamp="5636" restrictions="0" visibility="0"/>
-        <type handle="=net.sf.ictalive.service.repositorytools/src&lt;net.sf.ictalive.svcrepo{StaticFileSystemServiceRepo.java[StaticFileSystemServiceRepo" modificationStamp="5657" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/src&lt;net.sf.ictalive.svcrepo{RepositoryException.java[RepositoryException" modificationStamp="5636" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.ictalive.service.repositorytools/src&lt;net.sf.ictalive.svcrepo{StaticFileSystemServiceRepo.java[StaticFileSystemServiceRepo" modificationStamp="5657" restrictions="0" visibility="0"/>
     </package>
     <package visibility="1">
         <fragment handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery.client"/>
@@ -50,8 +50,8 @@
     <package visibility="1">
         <fragment handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery.query"/>
         <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery.query(SearchPart.class[SearchPart" modificationStamp="-1" restrictions="0" visibility="0"/>
-        <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery.query(DiscoverySearch.class[DiscoverySearch" modificationStamp="-1" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery.query(Disjunction.class[Disjunction" modificationStamp="-1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery.query(DiscoverySearch.class[DiscoverySearch" modificationStamp="-1" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery.query(FieldMatch.class[FieldMatch" modificationStamp="-1" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery.query(ModifiedBetween.class[ModifiedBetween" modificationStamp="-1" restrictions="0" visibility="0"/>
         <type handle="=net.sf.ictalive.service.repositorytools/lib\/alive-repository-server-client.jar&lt;net.sf.ictalive.service.discovery.query(IsLocal.class[IsLocal" modificationStamp="-1" restrictions="0" visibility="0"/>

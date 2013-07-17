@@ -1,0 +1,43 @@
+!SESSION 2013-07-17 19:07:00.888 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_17
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product net.sf.ictalive.aliveclipse.product
+Command-line arguments:  -product net.sf.ictalive.aliveclipse.product -data /Users/sergio/Documents/Research/aliveclipse/../runtime-ALIVEclipse.macosx64.product -dev file:/Users/sergio/Documents/Research/aliveclipse/.metadata/.plugins/org.eclipse.pde.core/ALIVEclipse.macosx64.product/dev.properties -os macosx -ws cocoa -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.equinox.app 0 0 2013-07-17 19:07:01.767
+!MESSAGE Product net.sf.ictalive.aliveclipse.product could not be found.
+
+!ENTRY org.eclipse.osgi 2 0 2013-07-17 19:07:02.052
+!MESSAGE One or more bundles are not resolved because the following root constraints are not resolved:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 19:07:02.052
+!MESSAGE Bundle reference:file:/Users/sergio/Documents/Research/aliveclipse/net.sf.ictalive.aliveclipse/ was not resolved.
+!SUBENTRY 2 net.sf.ictalive.aliveclipse 2 0 2013-07-17 19:07:02.053
+!MESSAGE Missing required bundle net.sf.ictalive.eventbus.dashboard_1.0.0.
+
+!ENTRY org.eclipse.osgi 2 0 2013-07-17 19:07:02.072
+!MESSAGE The following is a complete list of bundles which are not resolved, see the prior log entry for the root cause if it exists:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 19:07:02.072
+!MESSAGE Bundle net.sf.ictalive.aliveclipse_3.0.7.qualifier [363] was not resolved.
+!SUBENTRY 2 net.sf.ictalive.aliveclipse 2 0 2013-07-17 19:07:02.072
+!MESSAGE Missing required bundle net.sf.ictalive.eventbus.dashboard_1.0.0.
+
+!ENTRY org.eclipse.osgi 4 0 2013-07-17 19:07:02.074
+!MESSAGE Application error
+!STACK 1
+java.lang.RuntimeException: No application id has been found.
+	at org.eclipse.equinox.internal.app.EclipseAppContainer.startDefaultApp(EclipseAppContainer.java:242)
+	at org.eclipse.equinox.internal.app.MainApplicationLauncher.run(MainApplicationLauncher.java:29)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)

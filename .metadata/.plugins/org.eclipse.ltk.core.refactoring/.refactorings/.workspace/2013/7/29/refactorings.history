@@ -1,4 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete 3 resources" deleteContents="true" description="Delete 3 resources" element1="/org.eclipse.bpel.common.model" element2="/org.eclipse.bpel.model" element3="/org.eclipse.bpel.model.editor" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="3" stamp="1374021334237"/>
+<session version="1.0">&#x0A;<refactoring comment="Delete 3 resources" deleteContents="true" description="Delete 3 resources" element1="/org.eclipse.bpel.common.model" element2="/org.eclipse.bpel.model" element3="/org.eclipse.bpel.model.editor" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="3" stamp="1374021334237"/>&#x0A;<refactoring comment="Delete resource &apos;Coordination&apos;" deleteContents="true" description="Delete resource &apos;Coordination&apos;" element1="/Coordination" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1374061368204"/>
 </session>

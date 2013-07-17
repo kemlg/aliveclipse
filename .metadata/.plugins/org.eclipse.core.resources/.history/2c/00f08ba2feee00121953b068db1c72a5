@@ -1,0 +1,71 @@
+package net.sf.ictalive.aliveclipse.intro;
+
+import org.eclipse.jface.action.IContributionItem;
+import org.eclipse.jface.action.IMenuManager;
+import org.eclipse.jface.action.MenuManager;
+import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.jface.window.ApplicationWindow;
+import org.eclipse.swt.graphics.Point;
+import org.eclipse.ui.IWorkbenchPreferenceConstants;
+import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.application.ActionBarAdvisor;
+import org.eclipse.ui.application.IActionBarConfigurer;
+import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
+import org.eclipse.ui.application.WorkbenchWindowAdvisor;
+import org.eclipse.ui.internal.WorkbenchWindow;
+
+public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
+
+    public ApplicationWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer configurer) {
+        super(configurer);
+    }
+
+    public ActionBarAdvisor createActionBarAdvisor(IActionBarConfigurer configurer) {
+        return new ApplicationActionBarAdvisor(configurer);
+    }
+    
+    public void preWindowOpen() {
+        IWorkbenchWindowConfigurer configurer = getWindowConfigurer();
+        configurer.setInitialSize(new Point(700, 550));
+        configurer.setShowCoolBar(true);
+        configurer.setShowStatusLine(false);
+        configurer.setShowPerspectiveBar(true);
+        configurer.setTitle("ALIVEclipse");
+        
+        //Set the preference toolbar to the left
+        //If other menus exist then this will be on the left of them
+        IPreferenceStore apiStore = PlatformUI.getPreferenceStore();
+        apiStore.setValue(IWorkbenchPreferenceConstants.DOCK_PERSPECTIVE_BAR, "TOP_RIGHT");
+        apiStore.setValue(IWorkbenchPreferenceConstants.SHOW_TRADITIONAL_STYLE_TABS, false);
+        //apiStore.setValue(IWorkbenchPreferenceConstants.SHOW_OTHER_IN_PERSPECTIVE_MENU, false);//disables "other" in perspectives menu.
+        
+        // We set the status line and progress indicator so that update
+        // information can be shown there
+        configurer.setShowStatusLine(true);
+        configurer.setShowProgressIndicator(true);
+    }
+    
+    @Override
+    public void postWindowCreate() {
+    	IWorkbenchWindowConfigurer configurer = getWindowConfigurer();
+    	IWorkbenchWindow window = configurer.getWindow();
+    	
+    	@SuppressWarnings("restriction")
+		WorkbenchWindow workbenchWindow = (WorkbenchWindow) window.getWorkbench().getActiveWorkbenchWindow().getActivePage().getWorkbenchWindow();
+    	
+    	@SuppressWarnings("restriction")
+		IMenuManager mbManager = workbenchWindow.getMenuBarManager();
+    	for(int i=0; i<mbManager.getItems().length; i++)
+    	{
+    		IContributionItem item = mbManager.getItems()[i];
+    		if(item.getId().equals("org.eclipse.search.menu")) {
+    			item.setVisible(false);
+    			item.dispose();//remove the horrible search menu.
+    		}
+    			
+    	}
+    	//maximise the window
+//    	window.getShell().setMaximized(true);
+    }
+}

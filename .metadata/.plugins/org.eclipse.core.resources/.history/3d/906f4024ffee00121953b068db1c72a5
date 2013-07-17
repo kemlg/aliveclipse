@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="ALIVEclipse" uid="net.sf.ictalive.aliveclipse.product" id="net.sf.ictalive.aliveclipse.product" application="net.sf.ictalive.aliveclipse.application" version="0.0.8.qualifier" useFeatures="false" includeLaunchers="true">
+
+   <aboutInfo>
+      <image path="icons/about.gif"/>
+      <text>
+         ALIVEclipse is a product of the ALIVE consortium. The research and development has been carried out within the FP7-215890 ALIVE project, funded by the European Commission.
+
+Copyright © 2008-2010 EU ALIVE project.
+
+Product partners:
+Universitat Politècnica de Catalunya
+University of Bath
+Calico Jack Ltd.
+Trinity College Dublin
+Thales Nederland B.V.
+Tech Media Telecom Factory SL
+The University Court of the University of Aberdeen
+Universiteit Utrecht.
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <windowImages i16="icons/icon_16x16x32.png" i32="icons/icon_32x32x32.png" i48="icons/icon_48x48x32.png" i64="icons/icon_64x64x32.png" i128="icons/icon_128x128x32.png"/>
+
+   <splash
+      startupProgressRect="350,25,140,15"
+      startupMessageRect="350,40,140,15"
+      startupForegroundColor="000000" />
+   <launcher>
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <intro introId="aliveclipse.intro"/>
+
+   <vm>
+      <macos include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7</macos>
+   </vm>
+
+   <license>
+        <url>http://www.ist-alive.eu</url>
+        <text>
+   GNU LESSER GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
+Copyright (C) 2007 Free Software Foundation, Inc. &lt;http://fsf.org/&gt;
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed. This
+version of the GNU Lesser General Public License incorporates
+the terms and conditions of version 3 of the GNU General Public
+License, supplemented by the additional permissions listed below.
+0. Additional Definitions.
+As used herein, &quot;this License&quot; refers to version 3 of the GNU
+Lesser General Public License, and the &quot;GNU GPL&quot; refers to version
+3 of the GNU General Public License. 
+&quot;The Library&quot; refers to a covered work governed by this License,
+other than an Application or a Combined Work as defined below.
+An &quot;Application&quot; is any work that makes use of an interface provided
+by the Library, but which is not otherwise based on the Library.
+Defining a subclass of a class defined by the Library is deemed
+a mode of using an interface provided by the  library.
+A &quot;Combined Work&quot; is a work produced by combining or linking
+an Application with the Library.  The particular version of the
+Library
+with which the Combined Work was made is also called the &quot;Linked
+Version&quot;.
+The &quot;Minimal Corresponding Source&quot; for a Combined Work means
+the Corresponding Source for the Combined Work, excluding any
+source
+code for portions of the Combined Work that, considered in isolation,
+are based on the Application, and not on the Linked Version.
+The &quot;Corresponding Application Code&quot; for a Combined Work means
+the object code and/or source code for the Application, including
+any data and utility programs needed for reproducing the Combined
+Work from the Application, but excluding the System Libraries
+of the Combined Work.
+1. Exception to Section 3 of the GNU GPL.
+You may convey a covered work under sections 3 and 4 of this
+License without being bound by section 3 of the GNU GPL.
+2. Conveying Modified Versions.
+If you modify a copy of the Library, and, in your modifications,
+a facility refers to a function or data to be supplied by an
+Application that uses the facility (other than as an argument
+passed when the facility is invoked), then you may convey a copy
+of the modified version:
+a) under this License, provided that you make a good faith effort
+to ensure that, in the event an Application does not supply the
+function or data, the facility still operates, and performs whatever
+part of its purpose remains meaningful, or
+b) under the GNU GPL, with none of the additional permissions
+of this License applicable to that copy.
+3. Object Code Incorporating Material from Library Header Files.
+The object code form of an Application may incorporate material
+from a header file that is part of the Library.  You may convey
+such
+object code under terms of your choice, provided that, if the
+incorporated material is not limited to numerical parameters,
+data structure layouts and accessors, or small macros, inline
+functions and templates (ten or fewer lines in length), you do
+both of the following:
+a) Give prominent notice with each copy of the object code that
+the Library is used in it and that the Library and its use are
+covered by this License.
+b) Accompany the object code with a copy of the GNU GPL and this
+license document.
+4. Combined Works.
+You may convey a Combined Work under terms of your choice that,
+taken together, effectively do not restrict modification of the
+portions of the Library contained in the Combined Work and reverse
+engineering for debugging such modifications, if you also do
+each of the following:
+a) Give prominent notice with each copy of the Combined Work
+that the Library is used in it and that the Library and its use
+are
+covered by this License.
+b) Accompany the Combined Work with a copy of the GNU GPL and
+this license document.
+c) For a Combined Work that displays copyright notices during
+execution, include the copyright notice for the Library among
+these notices, as well as a reference directing the user to the
+copies of the GNU GPL and this license document.
+d) Do one of the following:
+0) Convey the Minimal Corresponding Source under the terms of
+this License, and the Corresponding Application Code in a form
+suitable for, and under terms that permit, the user to recombine
+or relink the Application with a modified version of the Linked
+Version to produce a modified Combined Work, in the manner specified
+by section 6 of the GNU GPL for conveying Corresponding Source.
+1) Use a suitable shared library mechanism for linking with the
+Library.  A suitable mechanism is one that (a) uses at run time
+a copy of the Library already present on the user&apos;s computer
+system, and (b) will operate properly with a modified version
+of the Library that is interface-compatible with the Linked Version.
+e) Provide Installation Information, but only if you would otherwise
+be required to provide such information under section 6 of the
+GNU GPL, and only to the extent that such information is necessary
+to install and execute a modified version of the Combined Work
+produced by recombining or relinking the Application with a modified
+version of the Linked Version. (If you use option 4d0, the Installation
+Information must accompany the Minimal Corresponding Source and
+Corresponding Application Code. If you use option 4d1, you must
+provide the Installation Information in the manner specified
+by section 6 of the GNU GPL for conveying Corresponding Source.)
+5. Combined Libraries.
+You may place library facilities that are a work based on the
+Library side by side in a single library together with other
+library facilities that are not Applications and are not covered
+by this License, and convey such a combined library under terms
+of your
+choice, if you do both of the following:
+a) Accompany the combined library with a copy of the same work
+based on the Library, uncombined with any other library facilities,
+conveyed under the terms of this License.
+b) Give prominent notice with the combined library that part
+of it is a work based on the Library, and explaining where to
+find the accompanying uncombined form of the same work.
+6. Revised Versions of the GNU Lesser General Public License.
+The Free Software Foundation may publish revised and/or new versions
+of the GNU Lesser General Public License from time to time. Such
+new versions will be similar in spirit to the present version,
+but may differ in detail to address new problems or concerns.
+Each version is given a distinguishing version number. If the
+Library as you received it specifies that a certain numbered
+version of the GNU Lesser General Public License &quot;or any later
+version&quot; applies to it, you have the option of following the
+terms and
+conditions either of that published version or of any later version
+published by the Free Software Foundation. If the Library as
+you received it does not specify a version number of the GNU
+Lesser General Public License, you may choose any version of
+the GNU Lesser General Public License ever published by the Free
+Software Foundation. If the Library as you received it specifies
+that a proxy can
+decide whether future versions of the GNU Lesser General Public
+License shall apply, that proxy&apos;s public statement of acceptance
+of any version is permanent authorization for you to choose that
+version for the Library.
+         </text>
+   </license>
+
+   <plugins>
+      <plugin id="com.google.guava"/>
+      <plugin id="com.google.inject"/>
+      <plugin id="com.ibm.icu"/>
+      <plugin id="com.ning.async-http-client"/>
+      <plugin id="commons"/>
+      <plugin id="javax.annotation"/>
+      <plugin id="javax.inject"/>
+      <plugin id="javax.servlet"/>
+      <plugin id="javax.wsdl"/>
+      <plugin id="javax.xml"/>
+      <plugin id="lpg.runtime.java"/>
+      <plugin id="net.sf.ictalive.XSDSchema"/>
+      <plugin id="net.sf.ictalive.aliveclipse"/>
+      <plugin id="net.sf.ictalive.aliveclipse.dashboard"/>
+      <plugin id="net.sf.ictalive.coordination"/>
+      <plugin id="net.sf.ictalive.coordination.actions.diagram"/>
+      <plugin id="net.sf.ictalive.coordination.agents.diagram"/>
+      <plugin id="net.sf.ictalive.coordination.edit"/>
+      <plugin id="net.sf.ictalive.coordination.editor"/>
+      <plugin id="net.sf.ictalive.coordination.plans.diagram"/>
+      <plugin id="net.sf.ictalive.coordination.tasks.diagram"/>
+      <plugin id="net.sf.ictalive.coordination.wfannotation.bpel.diagram"/>
+      <plugin id="net.sf.ictalive.coordination.wfannotation.bpel.diagram.diagram"/>
+      <plugin id="net.sf.ictalive.coordination.wfannotation.bpel.diagram.edit"/>
+      <plugin id="net.sf.ictalive.coordination.wfannotation.bpel.diagram.editor"/>
+      <plugin id="net.sf.ictalive.coordination.wfannotation.mapping"/>
+      <plugin id="net.sf.ictalive.coordination.wfannotation.mapping.diagram"/>
+      <plugin id="net.sf.ictalive.coordination.wfannotation.mapping.edit"/>
+      <plugin id="net.sf.ictalive.coordination.wfannotation.mapping.editor"/>
+      <plugin id="net.sf.ictalive.coordination.wfvv"/>
+      <plugin id="net.sf.ictalive.coordination.wfvv.diagram"/>
+      <plugin id="net.sf.ictalive.coordination.wfvv.edit"/>
+      <plugin id="net.sf.ictalive.coordination.wfvv.editor"/>
+      <plugin id="net.sf.ictalive.dashboard"/>
+      <plugin id="net.sf.ictalive.operetta"/>
+      <plugin id="net.sf.ictalive.operetta.check"/>
+      <plugin id="net.sf.ictalive.operetta.diagram.is"/>
+      <plugin id="net.sf.ictalive.operetta.diagram.ss"/>
+      <plugin id="net.sf.ictalive.operetta.edit"/>
+      <plugin id="net.sf.ictalive.operetta.editor"/>
+      <plugin id="net.sf.ictalive.operetta.modeltracker"/>
+      <plugin id="net.sf.ictalive.operetta.ontology"/>
+      <plugin id="net.sf.ictalive.operetta.psdeditor"/>
+      <plugin id="net.sf.ictalive.owls"/>
+      <plugin id="net.sf.ictalive.owls.edit"/>
+      <plugin id="net.sf.ictalive.rules"/>
+      <plugin id="net.sf.ictalive.rules.edit"/>
+      <plugin id="net.sf.ictalive.runtime"/>
+      <plugin id="net.sf.ictalive.runtime.NormInstances"/>
+      <plugin id="net.sf.ictalive.runtime.NormInstances.edit"/>
+      <plugin id="net.sf.ictalive.runtime.dashboard"/>
+      <plugin id="net.sf.ictalive.runtime.edit"/>
+      <plugin id="net.sf.ictalive.runtime.editor"/>
+      <plugin id="net.sf.ictalive.schema.edit"/>
+      <plugin id="net.sf.ictalive.service.owlseditor"/>
+      <plugin id="net.sf.ictalive.service.owlseditor.diagram"/>
+      <plugin id="net.sf.ictalive.service.owlseditor.edit"/>
+      <plugin id="net.sf.ictalive.service.owlseditor.editor"/>
+      <plugin id="net.sf.ictalive.service.repositorytools"/>
+      <plugin id="net.sf.ictalive.services"/>
+      <plugin id="net.sf.ictalive.services.edit"/>
+      <plugin id="net.sf.ictalive.serviceui"/>
+      <plugin id="org.antlr.runtime"/>
+      <plugin id="org.apache.ant"/>
+      <plugin id="org.apache.batik.bridge"/>
+      <plugin id="org.apache.batik.css"/>
+      <plugin id="org.apache.batik.dom"/>
+      <plugin id="org.apache.batik.dom.svg"/>
+      <plugin id="org.apache.batik.ext.awt"/>
+      <plugin id="org.apache.batik.parser"/>
+      <plugin id="org.apache.batik.pdf"/>
+      <plugin id="org.apache.batik.svggen"/>
+      <plugin id="org.apache.batik.transcoder"/>
+      <plugin id="org.apache.batik.util"/>
+      <plugin id="org.apache.batik.util.gui"/>
+      <plugin id="org.apache.batik.xml"/>
+      <plugin id="org.apache.commons.cli"/>
+      <plugin id="org.apache.commons.codec"/>
+      <plugin id="org.apache.commons.lang"/>
+      <plugin id="org.apache.commons.logging"/>
+      <plugin id="org.apache.log4j"/>
+      <plugin id="org.apache.lucene"/>
+      <plugin id="org.apache.lucene.analysis"/>
+      <plugin id="org.apache.lucene.core"/>
+      <plugin id="org.apache.xerces"/>
+      <plugin id="org.apache.xml.resolver"/>
+      <plugin id="org.apache.xml.serializer"/>
+      <plugin id="org.eclipse.ant.core"/>
+      <plugin id="org.eclipse.ant.launching"/>
+      <plugin id="org.eclipse.ant.ui"/>
+      <plugin id="org.eclipse.bpel.common.model"/>
+      <plugin id="org.eclipse.bpel.model"/>
+      <plugin id="org.eclipse.bpel.model.edit"/>
+      <plugin id="org.eclipse.compare"/>
+      <plugin id="org.eclipse.compare.core"/>
+      <plugin id="org.eclipse.core.commands"/>
+      <plugin id="org.eclipse.core.contenttype"/>
+      <plugin id="org.eclipse.core.databinding"/>
+      <plugin id="org.eclipse.core.databinding.beans"/>
+      <plugin id="org.eclipse.core.databinding.observable"/>
+      <plugin id="org.eclipse.core.databinding.property"/>
+      <plugin id="org.eclipse.core.expressions"/>
+      <plugin id="org.eclipse.core.externaltools"/>
+      <plugin id="org.eclipse.core.filebuffers"/>
+      <plugin id="org.eclipse.core.filesystem"/>
+      <plugin id="org.eclipse.core.filesystem.macosx" fragment="true"/>
+      <plugin id="org.eclipse.core.jobs"/>
+      <plugin id="org.eclipse.core.resources"/>
+      <plugin id="org.eclipse.core.runtime"/>
+      <plugin id="org.eclipse.core.runtime.compatibility"/>
+      <plugin id="org.eclipse.core.runtime.compatibility.registry" fragment="true"/>
+      <plugin id="org.eclipse.core.variables"/>
+      <plugin id="org.eclipse.debug.core"/>
+      <plugin id="org.eclipse.debug.ui"/>
+      <plugin id="org.eclipse.draw2d"/>
+      <plugin id="org.eclipse.e4.core.commands"/>
+      <plugin id="org.eclipse.e4.core.contexts"/>
+      <plugin id="org.eclipse.e4.core.di"/>
+      <plugin id="org.eclipse.e4.core.di.extensions"/>
+      <plugin id="org.eclipse.e4.core.services"/>
+      <plugin id="org.eclipse.e4.ui.bindings"/>
+      <plugin id="org.eclipse.e4.ui.css.core"/>
+      <plugin id="org.eclipse.e4.ui.css.swt"/>
+      <plugin id="org.eclipse.e4.ui.css.swt.theme"/>
+      <plugin id="org.eclipse.e4.ui.di"/>
+      <plugin id="org.eclipse.e4.ui.model.workbench"/>
+      <plugin id="org.eclipse.e4.ui.services"/>
+      <plugin id="org.eclipse.e4.ui.widgets"/>
+      <plugin id="org.eclipse.e4.ui.workbench"/>
+      <plugin id="org.eclipse.e4.ui.workbench.addons.swt"/>
+      <plugin id="org.eclipse.e4.ui.workbench.renderers.swt"/>
+      <plugin id="org.eclipse.e4.ui.workbench.renderers.swt.cocoa" fragment="true"/>
+      <plugin id="org.eclipse.e4.ui.workbench.swt"/>
+      <plugin id="org.eclipse.e4.ui.workbench3"/>
+      <plugin id="org.eclipse.emf.codegen"/>
+      <plugin id="org.eclipse.emf.codegen.ecore"/>
+      <plugin id="org.eclipse.emf.codegen.ecore.ui"/>
+      <plugin id="org.eclipse.emf.common"/>
+      <plugin id="org.eclipse.emf.common.ui"/>
+      <plugin id="org.eclipse.emf.converter"/>
+      <plugin id="org.eclipse.emf.ecore"/>
+      <plugin id="org.eclipse.emf.ecore.change"/>
+      <plugin id="org.eclipse.emf.ecore.edit"/>
+      <plugin id="org.eclipse.emf.ecore.xcore.lib"/>
+      <plugin id="org.eclipse.emf.ecore.xmi"/>
+      <plugin id="org.eclipse.emf.edit"/>
+      <plugin id="org.eclipse.emf.edit.ui"/>
+      <plugin id="org.eclipse.emf.mwe.core"/>
+      <plugin id="org.eclipse.emf.mwe.ui"/>
+      <plugin id="org.eclipse.emf.mwe.utils"/>
+      <plugin id="org.eclipse.emf.mwe2.runtime"/>
+      <plugin id="org.eclipse.emf.transaction"/>
+      <plugin id="org.eclipse.emf.validation"/>
+      <plugin id="org.eclipse.emf.workspace"/>
+      <plugin id="org.eclipse.equinox.app"/>
+      <plugin id="org.eclipse.equinox.bidi"/>
+      <plugin id="org.eclipse.equinox.common"/>
+      <plugin id="org.eclipse.equinox.ds"/>
+      <plugin id="org.eclipse.equinox.event"/>
+      <plugin id="org.eclipse.equinox.frameworkadmin"/>
+      <plugin id="org.eclipse.equinox.frameworkadmin.equinox"/>
+      <plugin id="org.eclipse.equinox.http.jetty"/>
+      <plugin id="org.eclipse.equinox.http.servlet"/>
+      <plugin id="org.eclipse.equinox.p2.artifact.repository"/>
+      <plugin id="org.eclipse.equinox.p2.core"/>
+      <plugin id="org.eclipse.equinox.p2.director"/>
+      <plugin id="org.eclipse.equinox.p2.director.app"/>
+      <plugin id="org.eclipse.equinox.p2.engine"/>
+      <plugin id="org.eclipse.equinox.p2.garbagecollector"/>
+      <plugin id="org.eclipse.equinox.p2.jarprocessor"/>
+      <plugin id="org.eclipse.equinox.p2.metadata"/>
+      <plugin id="org.eclipse.equinox.p2.metadata.repository"/>
+      <plugin id="org.eclipse.equinox.p2.operations"/>
+      <plugin id="org.eclipse.equinox.p2.publisher"/>
+      <plugin id="org.eclipse.equinox.p2.publisher.eclipse"/>
+      <plugin id="org.eclipse.equinox.p2.repository"/>
+      <plugin id="org.eclipse.equinox.p2.repository.tools"/>
+      <plugin id="org.eclipse.equinox.p2.touchpoint.eclipse"/>
+      <plugin id="org.eclipse.equinox.p2.ui"/>
+      <plugin id="org.eclipse.equinox.p2.updatesite"/>
+      <plugin id="org.eclipse.equinox.preferences"/>
+      <plugin id="org.eclipse.equinox.registry"/>
+      <plugin id="org.eclipse.equinox.security"/>
+      <plugin id="org.eclipse.equinox.security.macosx" fragment="true"/>
+      <plugin id="org.eclipse.equinox.security.ui"/>
+      <plugin id="org.eclipse.equinox.simpleconfigurator"/>
+      <plugin id="org.eclipse.equinox.simpleconfigurator.manipulator"/>
+      <plugin id="org.eclipse.equinox.util"/>
+      <plugin id="org.eclipse.gef"/>
+      <plugin id="org.eclipse.gmf.common"/>
+      <plugin id="org.eclipse.gmf.graphdef"/>
+      <plugin id="org.eclipse.gmf.graphdef.edit"/>
+      <plugin id="org.eclipse.gmf.map"/>
+      <plugin id="org.eclipse.gmf.map.edit"/>
+      <plugin id="org.eclipse.gmf.runtime.common.core"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.action"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.action.ide"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.printing"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.printing.win32" fragment="true"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.services"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.services.action"/>
+      <plugin id="org.eclipse.gmf.runtime.common.ui.services.properties"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.core"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.actions"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.printing"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.printing.render"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.properties"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.providers"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.providers.ide"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.render"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.resources.editor"/>
+      <plugin id="org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide"/>
+      <plugin id="org.eclipse.gmf.runtime.draw2d.ui"/>
+      <plugin id="org.eclipse.gmf.runtime.draw2d.ui.render"/>
+      <plugin id="org.eclipse.gmf.runtime.draw2d.ui.render.awt"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.clipboard.core"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.commands.core"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.core"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.type.core"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.ui"/>
+      <plugin id="org.eclipse.gmf.runtime.emf.ui.properties"/>
+      <plugin id="org.eclipse.gmf.runtime.gef.ui"/>
+      <plugin id="org.eclipse.gmf.runtime.notation"/>
+      <plugin id="org.eclipse.gmf.tooldef"/>
+      <plugin id="org.eclipse.gmf.tooldef.edit"/>
+      <plugin id="org.eclipse.gmf.validate"/>
+      <plugin id="org.eclipse.gmf.xpand"/>
+      <plugin id="org.eclipse.gmf.xpand.qvtlibrary"/>
+      <plugin id="org.eclipse.help"/>
+      <plugin id="org.eclipse.help.base"/>
+      <plugin id="org.eclipse.help.ui"/>
+      <plugin id="org.eclipse.jdt.compiler.apt" fragment="true"/>
+      <plugin id="org.eclipse.jdt.compiler.tool" fragment="true"/>
+      <plugin id="org.eclipse.jdt.core"/>
+      <plugin id="org.eclipse.jdt.core.manipulation"/>
+      <plugin id="org.eclipse.jdt.debug"/>
+      <plugin id="org.eclipse.jdt.debug.ui"/>
+      <plugin id="org.eclipse.jdt.junit"/>
+      <plugin id="org.eclipse.jdt.junit.core"/>
+      <plugin id="org.eclipse.jdt.junit.runtime"/>
+      <plugin id="org.eclipse.jdt.launching"/>
+      <plugin id="org.eclipse.jdt.ui"/>
+      <plugin id="org.eclipse.jem.util"/>
+      <plugin id="org.eclipse.jetty.continuation"/>
+      <plugin id="org.eclipse.jetty.http"/>
+      <plugin id="org.eclipse.jetty.io"/>
+      <plugin id="org.eclipse.jetty.security"/>
+      <plugin id="org.eclipse.jetty.server"/>
+      <plugin id="org.eclipse.jetty.servlet"/>
+      <plugin id="org.eclipse.jetty.util"/>
+      <plugin id="org.eclipse.jface"/>
+      <plugin id="org.eclipse.jface.databinding"/>
+      <plugin id="org.eclipse.jface.text"/>
+      <plugin id="org.eclipse.ltk.core.refactoring"/>
+      <plugin id="org.eclipse.ltk.ui.refactoring"/>
+      <plugin id="org.eclipse.m2e.archetype.common"/>
+      <plugin id="org.eclipse.m2e.core"/>
+      <plugin id="org.eclipse.m2e.core.ui"/>
+      <plugin id="org.eclipse.m2e.maven.indexer"/>
+      <plugin id="org.eclipse.m2e.maven.runtime"/>
+      <plugin id="org.eclipse.m2e.model.edit"/>
+      <plugin id="org.eclipse.m2m.qvt.oml"/>
+      <plugin id="org.eclipse.m2m.qvt.oml.common"/>
+      <plugin id="org.eclipse.m2m.qvt.oml.cst.parser"/>
+      <plugin id="org.eclipse.m2m.qvt.oml.ecore.imperativeocl"/>
+      <plugin id="org.eclipse.m2m.qvt.oml.emf.util"/>
+      <plugin id="org.eclipse.m2m.qvt.oml.project"/>
+      <plugin id="org.eclipse.m2m.qvt.oml.runtime"/>
+      <plugin id="org.eclipse.ocl"/>
+      <plugin id="org.eclipse.ocl.common"/>
+      <plugin id="org.eclipse.ocl.ecore"/>
+      <plugin id="org.eclipse.osgi"/>
+      <plugin id="org.eclipse.osgi.services"/>
+      <plugin id="org.eclipse.osgi.util"/>
+      <plugin id="org.eclipse.pde.build"/>
+      <plugin id="org.eclipse.pde.core"/>
+      <plugin id="org.eclipse.pde.launching"/>
+      <plugin id="org.eclipse.pde.runtime"/>
+      <plugin id="org.eclipse.pde.ui"/>
+      <plugin id="org.eclipse.search"/>
+      <plugin id="org.eclipse.swt"/>
+      <plugin id="org.eclipse.swt.cocoa.macosx.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.team.core"/>
+      <plugin id="org.eclipse.team.ui"/>
+      <plugin id="org.eclipse.text"/>
+      <plugin id="org.eclipse.ui"/>
+      <plugin id="org.eclipse.ui.cheatsheets"/>
+      <plugin id="org.eclipse.ui.console"/>
+      <plugin id="org.eclipse.ui.editors"/>
+      <plugin id="org.eclipse.ui.externaltools"/>
+      <plugin id="org.eclipse.ui.forms"/>
+      <plugin id="org.eclipse.ui.ide"/>
+      <plugin id="org.eclipse.ui.intro"/>
+      <plugin id="org.eclipse.ui.navigator"/>
+      <plugin id="org.eclipse.ui.navigator.resources"/>
+      <plugin id="org.eclipse.ui.views"/>
+      <plugin id="org.eclipse.ui.views.log"/>
+      <plugin id="org.eclipse.ui.views.properties.tabbed"/>
+      <plugin id="org.eclipse.ui.workbench"/>
+      <plugin id="org.eclipse.ui.workbench.texteditor"/>
+      <plugin id="org.eclipse.update.configurator"/>
+      <plugin id="org.eclipse.wst.common.core"/>
+      <plugin id="org.eclipse.wst.common.emf"/>
+      <plugin id="org.eclipse.wst.common.emfworkbench.integration"/>
+      <plugin id="org.eclipse.wst.common.environment"/>
+      <plugin id="org.eclipse.wst.common.frameworks"/>
+      <plugin id="org.eclipse.wst.common.frameworks.ui"/>
+      <plugin id="org.eclipse.wst.common.project.facet.core"/>
+      <plugin id="org.eclipse.wst.common.ui"/>
+      <plugin id="org.eclipse.wst.common.uriresolver"/>
+      <plugin id="org.eclipse.wst.sse.core"/>
+      <plugin id="org.eclipse.wst.sse.ui"/>
+      <plugin id="org.eclipse.wst.validation"/>
+      <plugin id="org.eclipse.wst.validation.ui"/>
+      <plugin id="org.eclipse.wst.wsdl"/>
+      <plugin id="org.eclipse.wst.xml.core"/>
+      <plugin id="org.eclipse.wst.xml.ui"/>
+      <plugin id="org.eclipse.wst.xsd.core"/>
+      <plugin id="org.eclipse.xpand"/>
+      <plugin id="org.eclipse.xsd"/>
+      <plugin id="org.eclipse.xtend"/>
+      <plugin id="org.eclipse.xtend.typesystem.emf"/>
+      <plugin id="org.eclipse.xtext.xbase.lib"/>
+      <plugin id="org.hamcrest.core"/>
+      <plugin id="org.jboss.netty"/>
+      <plugin id="org.junit"/>
+      <plugin id="org.mindswap.owls-api"/>
+      <plugin id="org.sat4j.core"/>
+      <plugin id="org.sat4j.pb"/>
+      <plugin id="org.slf4j.api"/>
+      <plugin id="org.w3c.css.sac"/>
+      <plugin id="org.w3c.dom.events"/>
+      <plugin id="org.w3c.dom.smil"/>
+      <plugin id="org.w3c.dom.svg"/>
+   </plugins>
+
+
+</product>

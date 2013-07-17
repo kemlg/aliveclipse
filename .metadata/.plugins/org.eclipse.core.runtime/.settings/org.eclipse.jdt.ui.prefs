@@ -16,6 +16,9 @@ org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" 
 org.eclipse.jdt.ui.text.templates_migrated=true
 org.eclipse.jface.textfont=1|Monaco|11.0|0|COCOA|1|;
 proposalOrderMigrated=true
+smart_opening_brace=true
+smart_semicolon=true
+sourceHoverBackgroundColor=250,251,197
 spelling_locale_initialized=true
 tabWidthPropagated=true
 useAnnotationsPrefPage=true

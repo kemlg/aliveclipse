@@ -5,4 +5,6 @@
 <fullyQualifiedTypeName name="org.apache.thrift.server.TThreadPoolServer.Args"/>
 <fullyQualifiedTypeName name="org.mindswap.swrl.Variable"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="net.sf.ictalive.operetta.OM.OMFactory"/>
+<fullyQualifiedTypeName name="net.sf.ictalive.operetta.OM.Role"/>
 </qualifiedTypeNameHistroy>

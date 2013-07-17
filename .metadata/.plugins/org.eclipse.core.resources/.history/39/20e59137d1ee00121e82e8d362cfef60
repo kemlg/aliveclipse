@@ -1,0 +1,200 @@
+// Created by: Athanasios Staikopoulos
+// Copyright of Trinity College Dublin (TCD), Univeristy of Dublin, IE
+import utility;
+
+modeltype CL 'strict' uses tasks('http://ict-alive.sourceforge.net/coordination/tasks');
+modeltype Service 'strict' uses service('http://ict-alive.sourceforge.net/services');
+modeltype OWLSProcess 'strict' uses process('http://ict-alive.sourceforge.net/owls/process');
+modeltype Actions 'strict' uses actions('http://ict-alive.sourceforge.net/coordination/actions');
+modeltype OWLS 'strict' uses 'http://ict-alive.sourceforge.net/owls/service';
+
+modeltype OL "strict" uses OM('http://ict-alive.sourceforge.net/operetta/OM/1.0');
+modeltype Ecore "strict" uses ecore('http://www.eclipse.org/emf/2002/Ecore');
+
+transformation CL2SL(in myCL:CL, out myService:Service);
+
+//Configurations
+configuration property service_name : String;
+configuration property endpoint : String;
+configuration property name_space : String;
+configuration property binding : service::syntax::TransportProtocol;
+configuration property encoding :service::syntax::StyleEncoding ;
+
+	
+main() {
+    
+    var myPlanCol := myCL.rootObjects()![tasks::PlansCollection];
+			
+	myPlanCol.plans -> map plan2Service();
+	
+}
+
+
+mapping tasks::Plan::plan2Service():service::Service{
+init{
+					
+	var sn := if service_name.oclIsUndefined() or service_name.length()=0 then
+						removeGet(self.name).concat('Service')	else
+						service_name		
+					endif ;		
+					
+	var ns := if name_space.oclIsUndefined() or name_space.length()=0 then
+				self.container()![tasks::PlansCollection].ns else
+				name_space				
+				endif ;		
+	
+	service_name=sn;			
+}
+
+	name :=  service_name ;
+	namespace := ns;
+	description := 'This is an auto-generated service from plan ' + self.name;
+	
+	interface := self.forTask.task2Interface();
+	endpoint += self -> map plan2Endpoint();
+		
+	describedBy := self.map _addProcessModel();		
+	presents := self.map _addServiceProfile();	
+	supports += _addGrounding(result, result.describedBy, result.interface);
+}
+
+
+-------------------------SYNTAX ------------------------------------
+-- WSDL Endpoint
+mapping tasks::Plan::plan2Endpoint():service::syntax::Endpoint{
+	init{
+		
+	}
+	name := service_name + 'Port';
+	--?
+	location := endpoint;		
+	binding := map getBinding();
+}
+
+--WSDL Binding
+-- use default values - specify somewhere
+mapping getBinding():service::syntax::Binding{	
+		name := service_name+'Binding';		
+		
+		transport := binding;//service::syntax::TransportProtocol::SOAP;
+		style := encoding;// service::syntax::StyleEncoding::Document_Literal;	
+}
+
+mapping tasks::Task::task2Interface():service::syntax::InterfaceDescription{
+	name := removeGet(self.name) + "PortType";
+	operation += self.components[process::Perform] -> map ControlConstructAction2Operation();
+	
+	binding += late resolveIn(getBinding, service::syntax::Binding);
+}
+
+mapping process::Perform:: ControlConstructAction2Operation():service::syntax::OperationDescription{
+init{
+	var action := self.process.oclAsType(actions::Action);
+}
+	name := action.name;
+	input += action.hasInput.actionParameter2ServiceMessage('RequestMessage');
+	output += action.hasOutput.actionParameter2ServiceMessage('ResponseMessage');
+	//?not gennerated - no equivelent
+	--fault += 
+}
+
+query process::Parameter::actionParameter2ServiceMessage(in n :String):service::syntax::Message{	
+	return object service::syntax::Message{
+		name := n;
+		part += object service::syntax::Part{
+			name := self.name;
+			type := self.parameterType->any(true).URI;
+		} ;
+	}
+}
+
+------------------------------------------------------------------------------------------------------------------
+----------Semantics
+--OWLS ServiceProfile
+mapping tasks::Plan::_addServiceProfile():service::semantics::ServiceProfile{
+init{
+	var p := self.forTask.components[process::Perform]->collect(x | x.process.oclAsType(actions::Action))->first(); 
+}
+	name :=  service_name+'Profile';		
+	hasProcess := self.late resolveone(service::semantics::ProcessModel);	
+	hasInput += p.hasInput.resolve(service::semantics::ServiceInput);
+	hasOutput += p.hasOutput.resolve(service::semantics::ServiceOutput);
+
+end{	
+}	
+}     
+
+
+--OWLS ProcessModel
+mapping tasks::Plan::_addProcessModel():service::semantics::ProcessModel{
+init{
+	var p := self.forTask.components[process::Perform]->collect(x | x.process.oclAsType(actions::Action))->first(); 
+	
+}
+	name :=  service_name+'Process';
+	describes :=  self.late resolveone(service::Service);
+	hasInput +=  p.hasInput->map addSemanticInput();
+	hasOutput +=  p.hasOutput->map addSemanticOutput();
+}
+
+mapping process::Input::addSemanticInput():service::semantics::ServiceInput{
+	name:= self.name;
+	type1 := object EReference{
+		name := self.parameterType->any(true).URI;
+	};
+}
+
+mapping process::Output::addSemanticOutput():service::semantics::ServiceOutput{
+	name:= self.name;
+	type1 := object EReference{
+		name := self.parameterType->any(true).URI;
+	};
+}
+
+----------------------------------------------------------------------------
+--OWLS WSDL Grounding
+mapping _addGrounding(in s:service::Service, in pm: service::semantics::ProcessModel, in i: service::syntax::InterfaceDescription ):service::semantics::grounding::WsdlGrounding{
+	name := service_name+'WSDLGrounding';
+	supportedBy := s;
+	processModel := pm;
+	interface := i;
+	
+	hasAtomicProcessGrounding += addAtomicProcessGrounding2(s, i.binding->first() ,pm, i.operation->any(true));
+	
+}
+
+mapping addAtomicProcessGrounding2(in s:service::Service, in b:service::syntax::Binding, in pm: service::semantics::ProcessModel, in op: service::syntax::OperationDescription):service::semantics::grounding::WsdlAtomicProcessGrounding{
+init{
+	}	
+	name := op.name+'WSDLAtomicGrounding' ;
+	wsdlReference := '';
+	wsdlDocument := s.name+'.wsdl';
+	wsdlService := s;
+	//wsdlPort := b.container()![service::syntax::Endpoint];
+	
+	owlsProcess := pm;
+	wsdlOutputMessage := op.output->first();	
+	wsdlInputMessage := op.input->first();
+		
+	wsdlOperation := object service::semantics::grounding::WsdlOperationRef{
+	  portType := op.container()![service::syntax::InterfaceDescription] ;
+	  operation := op;
+	};
+	
+	wsdlInput := addWSDLInputMessageMap(pm, op);
+	
+	wsdlOutput := addWSDLOutputMessageMap(pm, op);
+		
+	end{	
+	}	
+}
+
+mapping addWSDLInputMessageMap(in pm: service::semantics::ProcessModel, in op: service::syntax::OperationDescription):service::semantics::grounding::WsdlInputMessageMap{
+	owlsParameter :=  pm.hasInput->first();	
+	wsdlMessagePart := op.input->first().part->first();	
+}
+
+mapping addWSDLOutputMessageMap(in pm: service::semantics::ProcessModel, in op: service::syntax::OperationDescription):service::semantics::grounding::WsdlOutputMessageMap{
+	owlsParameter :=  pm.hasOutput->first();	
+	wsdlMessagePart := op.output->first().part->first();		
+}
