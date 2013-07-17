@@ -58,6 +58,9 @@ public class Plugin extends AbstractUIPlugin {
 	}
 
 	public static Plugin getDefault() {
+		if(plugin == null) {
+			plugin = new Plugin();
+		}
 		return plugin;
 	}
 

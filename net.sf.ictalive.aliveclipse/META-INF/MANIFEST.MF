@@ -23,7 +23,11 @@ Require-Bundle: org.eclipse.ui.intro,
  net.sf.ictalive.operetta.diagram.ss;bundle-version="2.0.0",
  net.sf.ictalive.runtime.editor;bundle-version="1.0.1",
  net.sf.ictalive.service.owlseditor.diagram;bundle-version="1.0.0",
- net.sf.ictalive.service.owlseditor.editor;bundle-version="1.0.0"
+ net.sf.ictalive.service.owlseditor.editor;bundle-version="1.0.0",
+ net.sf.ictalive.aliveclipse.dashboard;bundle-version="2.0.1",
+ net.sf.ictalive.dashboard;bundle-version="2.0.0",
+ net.sf.ictalive.runtime.dashboard;bundle-version="2.0.0",
+ net.sf.ictalive.eventbus.dashboard;bundle-version="2.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Import-Package: org.eclipse.ui.console
