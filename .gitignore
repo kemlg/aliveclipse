@@ -13,3 +13,5 @@ org.eclipse.m2e.core/
 */org.eclipse.m2e.core/*
 .metadata/.plugins/org.eclipse.m2e.core/
 
+.metadata/.lock
+.metadata/.log
