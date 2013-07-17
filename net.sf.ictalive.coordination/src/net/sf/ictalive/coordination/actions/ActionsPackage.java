@@ -180,7 +180,7 @@ public interface ActionsPackage extends EPackage {
 	int ACTION__HAS_PRECONDITION = ProcessPackage.PROCESS__HAS_PRECONDITION;
 
 	/**
-	 * The feature id for the '<em><b>Performed By Role</b></em>' attribute list.
+	 * The feature id for the '<em><b>Performed By Role</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -316,7 +316,7 @@ public interface ActionsPackage extends EPackage {
 	int ATOMIC_ACTION__HAS_PRECONDITION = ACTION__HAS_PRECONDITION;
 
 	/**
-	 * The feature id for the '<em><b>Performed By Role</b></em>' attribute list.
+	 * The feature id for the '<em><b>Performed By Role</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -470,7 +470,7 @@ public interface ActionsPackage extends EPackage {
 	int COMPOSITE_ACTION__HAS_PRECONDITION = ACTION__HAS_PRECONDITION;
 
 	/**
-	 * The feature id for the '<em><b>Performed By Role</b></em>' attribute list.
+	 * The feature id for the '<em><b>Performed By Role</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -854,15 +854,15 @@ public interface ActionsPackage extends EPackage {
 	EClass getAction();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link net.sf.ictalive.coordination.actions.Action#getPerformedByRole <em>Performed By Role</em>}'.
+	 * Returns the meta object for the reference list '{@link net.sf.ictalive.coordination.actions.Action#getPerformedByRole <em>Performed By Role</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Performed By Role</em>'.
+	 * @return the meta object for the reference list '<em>Performed By Role</em>'.
 	 * @see net.sf.ictalive.coordination.actions.Action#getPerformedByRole()
 	 * @see #getAction()
 	 * @generated
 	 */
-	EAttribute getAction_PerformedByRole();
+	EReference getAction_PerformedByRole();
 
 	/**
 	 * Returns the meta object for class '{@link net.sf.ictalive.coordination.actions.AtomicAction <em>Atomic Action</em>}'.
@@ -1177,12 +1177,12 @@ public interface ActionsPackage extends EPackage {
 		EClass ACTION = eINSTANCE.getAction();
 
 		/**
-		 * The meta object literal for the '<em><b>Performed By Role</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Performed By Role</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ACTION__PERFORMED_BY_ROLE = eINSTANCE.getAction_PerformedByRole();
+		EReference ACTION__PERFORMED_BY_ROLE = eINSTANCE.getAction_PerformedByRole();
 
 		/**
 		 * The meta object literal for the '{@link net.sf.ictalive.coordination.actions.impl.AtomicActionImpl <em>Atomic Action</em>}' class.

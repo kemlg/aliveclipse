@@ -141,10 +141,10 @@ public class JungEventGraphBuilder
 		*/
 		
 		/*Deals with the following instances:
-			· NormInstanceActivatedImpl
-			· PartialStateDescriptionInstanceImpl
-			· PartialStateDescriptionImpl
-			· RoleDeonticStatementImpl
+			ï¿½ NormInstanceActivatedImpl
+			ï¿½ PartialStateDescriptionInstanceImpl
+			ï¿½ PartialStateDescriptionImpl
+			ï¿½ RoleDeonticStatementImpl
 		*/
 		private void ProcessContent(EObject EventContent,Graph<String, String> g, String rootCode, String archLabel) throws EventTypeNotSupportedException
 		{
@@ -1089,7 +1089,7 @@ public class JungEventGraphBuilder
 				if (CastedClass.getPerformedByRole() != null)
 				{
 					role = "<b>Performed By role:</b>" + "<UL>"; 
-					Iterator<String> it = CastedClass.getPerformedByRole().iterator();
+					Iterator<Role> it = CastedClass.getPerformedByRole().iterator();
 					while (it.hasNext())
 					{
 						role = role + "<IL>" + it.next();

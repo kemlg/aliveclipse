@@ -372,7 +372,7 @@ public class OperaLoaderHandler extends AbstractHandler {
 				EObject content = obj.next();
 				if (content instanceof AtomicAction) {
 					AtomicAction a = (AtomicAction) content;
-					for (String role : a.getPerformedByRole()) {
+					for (Role role : a.getPerformedByRole()) {
 						Agent agent = getAgent(role, agents);
 						if (agent != null) {
 							agent.getHasAction().add(a);
@@ -381,15 +381,6 @@ public class OperaLoaderHandler extends AbstractHandler {
 				}
 			}
 		}
-	}
-
-	private Agent getAgent(String role, EList<Agent> agents) {
-		for (Agent agent : agents) {
-			for (Role r : agent.getHasRole())
-				if (role.equals(r.getName()))
-					return agent;
-		}
-		return null;
 	}
 
 	private Agent getAgent(Role role, EList<Agent> agents) {

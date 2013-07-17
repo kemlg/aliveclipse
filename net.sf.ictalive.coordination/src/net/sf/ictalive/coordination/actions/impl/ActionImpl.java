@@ -10,14 +10,12 @@ import java.util.Collection;
 
 import net.sf.ictalive.coordination.actions.Action;
 import net.sf.ictalive.coordination.actions.ActionsPackage;
-
+import net.sf.ictalive.operetta.OM.Role;
 import net.sf.ictalive.owls.process.impl.ProcessImpl;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,14 +32,14 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  */
 public abstract class ActionImpl extends ProcessImpl implements Action {
 	/**
-	 * The cached value of the '{@link #getPerformedByRole() <em>Performed By Role</em>}' attribute list.
+	 * The cached value of the '{@link #getPerformedByRole() <em>Performed By Role</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPerformedByRole()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> performedByRole;
+	protected EList<Role> performedByRole;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -67,9 +65,9 @@ public abstract class ActionImpl extends ProcessImpl implements Action {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getPerformedByRole() {
+	public EList<Role> getPerformedByRole() {
 		if (performedByRole == null) {
-			performedByRole = new EDataTypeUniqueEList<String>(String.class, this, ActionsPackage.ACTION__PERFORMED_BY_ROLE);
+			performedByRole = new EObjectResolvingEList<Role>(Role.class, this, ActionsPackage.ACTION__PERFORMED_BY_ROLE);
 		}
 		return performedByRole;
 	}
@@ -99,7 +97,7 @@ public abstract class ActionImpl extends ProcessImpl implements Action {
 		switch (featureID) {
 			case ActionsPackage.ACTION__PERFORMED_BY_ROLE:
 				getPerformedByRole().clear();
-				getPerformedByRole().addAll((Collection<? extends String>)newValue);
+				getPerformedByRole().addAll((Collection<? extends Role>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -132,22 +130,6 @@ public abstract class ActionImpl extends ProcessImpl implements Action {
 				return performedByRole != null && !performedByRole.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (performedByRole: ");
-		result.append(performedByRole);
-		result.append(')');
-		return result.toString();
 	}
 
 	@Override

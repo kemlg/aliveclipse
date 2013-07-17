@@ -18,6 +18,10 @@ Export-Package: net.sf.ictalive.coordination.actions,
  net.sf.ictalive.coordination.tasks.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
+ net.sf.ictalive.operetta;visibility:=reexport,
  net.sf.ictalive.owls;bundle-version="1.0.0",
- net.sf.ictalive.rules;bundle-version="1.0.0"
+ net.sf.ictalive.rules;bundle-version="1.0.0",
+ org.eclipse.emf.ecore.xcore.lib,
+ org.eclipse.xtext.xbase.lib
 Bundle-ActivationPolicy: lazy
+

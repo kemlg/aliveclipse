@@ -31,7 +31,7 @@ public class ActionsFactoryImpl extends EFactoryImpl implements ActionsFactory {
 	 */
 	public static ActionsFactory init() {
 		try {
-			ActionsFactory theActionsFactory = (ActionsFactory)EPackage.Registry.INSTANCE.getEFactory("http://ict-alive.sourceforge.net/coordination/actions"); 
+			ActionsFactory theActionsFactory = (ActionsFactory)EPackage.Registry.INSTANCE.getEFactory(ActionsPackage.eNS_URI);
 			if (theActionsFactory != null) {
 				return theActionsFactory;
 			}

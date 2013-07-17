@@ -15,31 +15,22 @@ import net.sf.ictalive.coordination.actions.AtomicAction;
 import net.sf.ictalive.coordination.actions.AtomicActionResult;
 import net.sf.ictalive.coordination.actions.CompositeAction;
 import net.sf.ictalive.coordination.actions.Distribution;
-
 import net.sf.ictalive.coordination.agents.AgentsPackage;
-
 import net.sf.ictalive.coordination.agents.impl.AgentsPackageImpl;
-
 import net.sf.ictalive.coordination.tasks.TasksPackage;
-
 import net.sf.ictalive.coordination.tasks.impl.TasksPackageImpl;
-
+import net.sf.ictalive.operetta.OM.OMPackage;
 import net.sf.ictalive.owls.expr.ExprPackage;
-
 import net.sf.ictalive.owls.process.ProcessPackage;
-
 import net.sf.ictalive.owls.service.ServicePackage;
-
 import net.sf.ictalive.owls.time.TimePackage;
+import net.sf.ictalive.rules.swrl.SwrlPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -148,6 +139,7 @@ public class ActionsPackageImpl extends EPackageImpl implements ActionsPackage {
 		ProcessPackage.eINSTANCE.eClass();
 		ServicePackage.eINSTANCE.eClass();
 		TimePackage.eINSTANCE.eClass();
+		SwrlPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
 		AgentsPackageImpl theAgentsPackage = (AgentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AgentsPackage.eNS_URI) instanceof AgentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AgentsPackage.eNS_URI) : AgentsPackage.eINSTANCE);
@@ -186,8 +178,8 @@ public class ActionsPackageImpl extends EPackageImpl implements ActionsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAction_PerformedByRole() {
-		return (EAttribute)actionEClass.getEStructuralFeatures().get(0);
+	public EReference getAction_PerformedByRole() {
+		return (EReference)actionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -453,7 +445,7 @@ public class ActionsPackageImpl extends EPackageImpl implements ActionsPackage {
 
 		// Create classes and their features
 		actionEClass = createEClass(ACTION);
-		createEAttribute(actionEClass, ACTION__PERFORMED_BY_ROLE);
+		createEReference(actionEClass, ACTION__PERFORMED_BY_ROLE);
 
 		atomicActionEClass = createEClass(ATOMIC_ACTION);
 		createEReference(atomicActionEClass, ATOMIC_ACTION__HAS_ATOMIC_ACTION_RESULT);
@@ -513,7 +505,7 @@ public class ActionsPackageImpl extends EPackageImpl implements ActionsPackage {
 
 		// Obtain other dependent packages
 		ProcessPackage theProcessPackage = (ProcessPackage)EPackage.Registry.INSTANCE.getEPackage(ProcessPackage.eNS_URI);
-		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
+		OMPackage theOMPackage = (OMPackage)EPackage.Registry.INSTANCE.getEPackage(OMPackage.eNS_URI);
 		ExprPackage theExprPackage = (ExprPackage)EPackage.Registry.INSTANCE.getEPackage(ExprPackage.eNS_URI);
 
 		// Create type parameters
@@ -530,7 +522,7 @@ public class ActionsPackageImpl extends EPackageImpl implements ActionsPackage {
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(actionEClass, Action.class, "Action", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAction_PerformedByRole(), theXMLTypePackage.getAnyURI(), "performedByRole", null, 0, -1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAction_PerformedByRole(), theOMPackage.getRole(), null, "performedByRole", null, 0, -1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(atomicActionEClass, AtomicAction.class, "AtomicAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAtomicAction_HasAtomicActionResult(), this.getAtomicActionResult(), null, "hasAtomicActionResult", null, 0, -1, AtomicAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);

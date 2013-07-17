@@ -87,7 +87,7 @@ init{
 	var allRelatedRoles := allRelatedActions.performedByRole->asSet();
 	
 	var allRelatedParticipants:= allRelatedRoles->iterate(r; w: Sequence(process::Participant)=Sequence{}| 
-		w->append( allParticipants->select(p| p.name.equalsIgnoreCase(r) )->any(true) )
+		w->append( allParticipants->select(p| p.name.equalsIgnoreCase(r.oclAsType(process::Participant).name) )->any(true) )
 	);
 	
 	//Operate for roles		
@@ -114,7 +114,7 @@ init{
 
 mapping process(in action: actions::Action, in option: String, in containerAction:actions::Action, inout opera:Opera::OperAModel){
 init{
-	var related_participants := allParticipants->select(x| action.performedByRole->includes(x.name))->asSet();
+	var related_participants := allParticipants->select(x: OWLS::Participant | action.performedByRole->selectByType(OWLS::Participant)->includes(x))->asSet();
 
 	switch{
 		
@@ -275,7 +275,7 @@ init{
 	
 	self.performedByRole->forEach(e){
 		players += object Opera::Player{
-			role := late resolveoneIn( process::Participant::createRole, r: Opera::Role | r.Name.equalsIgnoreCase(e));
+			role := late resolveoneIn( process::Participant::createRole, r: Opera::Role | r.Name.equalsIgnoreCase(e.oclAsType(Opera::Role).Name) );
 		};
 	};		
 }
@@ -377,7 +377,7 @@ init{
 
 mapping process::Participant::createRole(in lst: List(actions::Action)):Opera::Role{
 init{
-	var temp := lst->select(x| x.performedByRole->includes(self.name));
+	var temp := lst->select(x : actions::Action | x.performedByRole->selectByType(Opera::Role)->collect(Name)->includes(self.name));
 	var ont:= resolveoneIn(createEmptyOntology, Opera::Ontology);
 	ont.classes +=  self.name.toConcept(ConceptType::Class);	
 }

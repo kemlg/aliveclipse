@@ -139,14 +139,14 @@ init{
 
 mapping process::Input::addSemanticInput():service::semantics::ServiceInput{
 	name:= self.name;
-	type := object EReference{
+	type := object EObject{
 		name := self.parameterType->any(true).URI;
 	};
 }
 
 mapping process::Output::addSemanticOutput():service::semantics::ServiceOutput{
 	name:= self.name;
-	type := object EReference{
+	type := object EObject{
 		name := self.parameterType->any(true).URI;
 	};
 }

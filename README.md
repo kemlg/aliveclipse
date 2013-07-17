@@ -6,16 +6,18 @@ Required software
 
 * Maven
 * Eclipse Kepler
-* Acceleo 2.8: http://www.acceleo.org/update/
+* Acceleo 3.4: http://download.eclipse.org/modeling/m2t/acceleo/updates/releases/3.4/R201306101458
 * Eclipse Modeling plugins (under Modeling), m2e, and Eclipse Web Developer Tools: http://download.eclipse.org/releases/kepler
 * Tycho Configurator: Preferences/Maven/Discovery -> Tycho Configurator
 * Graphical Editing Framework: http://download.eclipse.org/tools/gef/updates/releases/
-* Eclipse Modeling Components (from Eclipse menu, not Incubation) - Xpand, ATL,
-  Operational QVT
+* Operational QVT Plugin (at Install Modeling Components in the Eclipse
+  menu)
 
 Usage
 -----
 
+* Install all the required software before beginning the following steps
 * Run mvn install from the aliveclipse/net.sf.ictalive.commons folder
 * Open the Eclipse with the aliveclipse/ directory as the workspace
+
 

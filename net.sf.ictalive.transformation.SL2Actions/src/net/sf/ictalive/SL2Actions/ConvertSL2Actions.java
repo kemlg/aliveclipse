@@ -18,7 +18,7 @@ import net.sf.ictalive.operetta.OM.OM;
 import net.sf.ictalive.operetta.OM.OMFactory;
 import net.sf.ictalive.operetta.OM.Ontology;
 import net.sf.ictalive.operetta.OM.OperAModel;
-
+import net.sf.ictalive.operetta.OM.Role;
 import net.sf.ictalive.coordination.actions.*;
 import net.sf.ictalive.owls.expr.Condition;
 import net.sf.ictalive.owls.expr.ExprFactory;
@@ -263,7 +263,9 @@ public class ConvertSL2Actions {
 						
 		if(action!=null){
 			//action.setHasParticipant( participant );
-			action.getPerformedByRole().add( participant.getName() );
+			Role r = OMFactory.eINSTANCE.createRole();
+			r.setName(participant.getName());
+			action.getPerformedByRole().add( r );
 		}
 		
 		return  participant;

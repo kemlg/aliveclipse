@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="actions"
-    nsURI="http://ict-alive.sourceforge.net/coordination/actions" nsPrefix="actions">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="actions" nsURI="http://ict-alive.sourceforge.net/coordination/actions"
+    nsPrefix="actions">
   <eClassifiers xsi:type="ecore:EClass" name="Action" abstract="true" eSuperTypes="../../net.sf.ictalive.owls/model/process.ecore#//Process">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="performedByRole" upperBound="-1"
-        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/XMLType.ecore#//AnyURI"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="performedByRole" upperBound="-1"
+        eType="ecore:EClass ../../net.sf.ictalive.operetta/model/OperA.ecore#//Role"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AtomicAction" eSuperTypes="#//Action ../../net.sf.ictalive.owls/model/process.ecore#//AtomicProcess">
     <eStructuralFeatures xsi:type="ecore:EReference" name="hasAtomicActionResult"

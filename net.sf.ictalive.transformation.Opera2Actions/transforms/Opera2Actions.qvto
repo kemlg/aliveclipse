@@ -65,7 +65,7 @@ end{
 mapping OM::Objective::Objective2Action():actions::Action{
 init{
 	result.name := self.Name;
-	result.performedByRole += self.usedByRole->collect(e| e.Name); 
+	result.performedByRole += self.usedByRole->collect(e | e.oclAsType(OM::Role)); 
 }
 end{	
 	if isMapGenerated then 
@@ -212,7 +212,7 @@ query addBagOf(inout elem:OrderedSet(OclAny)): process::ControlConstructBag
 
 mapping OM::Landmark::Landmark2CompositeAction(inout col: actions::ActionsCollection):actions::CompositeAction{
 	name := '[LM]_'+ self.name  ;	
-	performedByRole += self.entails->collect(e| e.usedByRole.Name);
+	performedByRole += self.entails->collect(e| e.usedByRole.oclAsType(OM::Role));
 	
 	if(self.entails->size()>0) then {
 		composedOf := addAnyOrderOf(self.entails);		
@@ -251,7 +251,7 @@ query getGeneratedAction(in elem: OM::Objective):actions::Action{
 mapping OM::Scene::Scene2CompositeAction():actions::CompositeAction{
 	
 	name := '[Scene]_'+ self.sceneID ;	
-	performedByRole += self.players->collect(p|p.role.Name);
+	performedByRole += self.players->collect(p|p.role);
 	composedOf := addAnyOrderOf(self.interactionPattern->asOrderedSet());
 end{	
 	if isMapGenerated then 
@@ -269,7 +269,7 @@ counter := counter +1;
 	var lm:=self.landmarks;
 	
 	name := '[LMP]_' + (counter).toString() ;	
-	performedByRole += self.landmarks.entails->collect(e| e.usedByRole.Name);
+	performedByRole += self.landmarks.entails->collect(e| e.usedByRole);
 	
 	composedOf := map createSequence(lm, po);
 	
@@ -394,32 +394,33 @@ end{
 
 --------------------------------
 
+// TODO: Fix this!
 mapping OM::Objective::logObjective2Action(inout a:Actions::Action):OLCLMap::Objective2Action@myMap{ 
-	objective := self;
-	action :=	a;
+	var objective := self;
+	var action := a;
 }
 
 mapping OM::Landmark::logLandmark2Action(inout a:Actions::Action):OLCLMap::Landmark2Action@myMap{ 
-	landmark := self;
-	action :=	a;
+	var landmark := self;
+	var action :=	a;
 }
 
 mapping OM::LandmarkPattern::logLandmarkPattern2Action(inout a:Actions::Action):OLCLMap::LandmarkPattern2Action@myMap{ 
-	pattern := self;
-	action :=	a;
+	var pattern := self;
+	var action :=	a;
 }
 
 mapping OM::Scene::logScene2Action(inout a:Actions::Action):OLCLMap::Scene2Action@myMap{ 
-	scene := self;
-	action :=	a;
+	var scene := self;
+	var action :=	a;
 }
 
 mapping OM::IS::logIS2Action(inout a:Actions::Action):OLCLMap::IS2Action@myMap{ 
-	interactionScene := self;
-	action :=	a;
+	var interactionScene := self;
+	var action :=	a;
 }
 
 mapping OM::Player::logPlayer2Participant(inout p: process::Participant):OLCLMap::Player2Participant@myMap{ 
-	player := self;
-	participant :=	p;
+	var player := self;
+	var participant :=	p;
 }
