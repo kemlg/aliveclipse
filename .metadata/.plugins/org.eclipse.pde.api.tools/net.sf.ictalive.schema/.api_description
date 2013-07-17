@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component id="net.sf.ictalive.schema" modificationStamp="703" version="1.2">
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.schema/src&lt;net.sf.ictalive.schema.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.schema/src&lt;net.sf.ictalive.schema.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.schema/src&lt;net.sf.ictalive.schema"/>
+    </package>
+</component>

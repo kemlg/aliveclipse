@@ -1,0 +1,395 @@
+!SESSION 2013-07-17 10:06:44.307 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_17
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product net.sf.ictalive.aliveclipse.product
+Command-line arguments:  -product net.sf.ictalive.aliveclipse.product -data /Users/sergio/Documents/Research/aliveclipse/../runtime-ALIVEclipse.macosx64.product -dev file:/Users/sergio/Documents/Research/aliveclipse/.metadata/.plugins/org.eclipse.pde.core/ALIVEclipse.macosx64.product/dev.properties -os macosx -ws cocoa -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.equinox.app 0 0 2013-07-17 10:06:45.518
+!MESSAGE Product net.sf.ictalive.aliveclipse.product could not be found.
+
+!ENTRY org.eclipse.osgi 2 0 2013-07-17 10:06:45.813
+!MESSAGE One or more bundles are not resolved because the following root constraints are not resolved:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.813
+!MESSAGE Bundle reference:file:/Applications/eclipse-classic/plugins/org.eclipse.ui.ide_3.9.0.v20130517-0139.jar was not resolved.
+!SUBENTRY 2 org.eclipse.ui.ide 2 0 2013-07-17 10:06:45.813
+!MESSAGE Missing required bundle org.eclipse.equinox.bidi_[0.10.0,2.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.814
+!MESSAGE Bundle reference:file:/Users/sergio/Documents/Research/aliveclipse/net.sf.ictalive.operetta.ontology/ was not resolved.
+!SUBENTRY 2 net.sf.ictalive.operetta.ontology 2 0 2013-07-17 10:06:45.814
+!MESSAGE Missing required bundle org.mindswap.owls-api_3.1.1.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.814
+!MESSAGE Bundle reference:file:/Applications/eclipse-classic/plugins/org.eclipse.jdt.ui_3.9.0.v20130605-1748.jar was not resolved.
+!SUBENTRY 2 org.eclipse.jdt.ui 2 0 2013-07-17 10:06:45.814
+!MESSAGE Missing required bundle org.eclipse.equinox.bidi_[0.10.0,2.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.814
+!MESSAGE Bundle reference:file:/Applications/eclipse-classic/plugins/org.eclipse.m2e.core.ui_1.4.0.20130601-0317.jar was not resolved.
+!SUBENTRY 2 org.eclipse.m2e.core.ui 2 0 2013-07-17 10:06:45.815
+!MESSAGE Missing required capability Require-Capability: osgi.ee; filter="(|(&(osgi.ee=JavaSE)(version=1.6))(&(osgi.ee=JavaSE)(version=1.7)))".
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.815
+!MESSAGE Bundle reference:file:/Users/sergio/Documents/Research/aliveclipse/net.sf.ictalive.operetta.psdeditor/ was not resolved.
+!SUBENTRY 2 net.sf.ictalive.operetta.psdeditor 2 0 2013-07-17 10:06:45.815
+!MESSAGE Missing required bundle commons_1.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.815
+!MESSAGE Bundle reference:file:/Users/sergio/Documents/Research/aliveclipse/net.sf.ictalive.operetta/ was not resolved.
+!SUBENTRY 2 net.sf.ictalive.operetta 2 0 2013-07-17 10:06:45.815
+!MESSAGE Missing required bundle org.eclipse.emf.ecore.xcore.lib_0.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta 2 0 2013-07-17 10:06:45.816
+!MESSAGE Missing required bundle org.eclipse.xtext.xbase.lib_0.0.0.
+
+!ENTRY org.eclipse.osgi 2 0 2013-07-17 10:06:45.847
+!MESSAGE The following is a complete list of bundles which are not resolved, see the prior log entry for the root cause if it exists:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.847
+!MESSAGE Bundle net.sf.ictalive.aliveclipse_3.0.7.qualifier [10] was not resolved.
+!SUBENTRY 2 net.sf.ictalive.aliveclipse 2 0 2013-07-17 10:06:45.847
+!MESSAGE Missing required bundle net.sf.ictalive.operetta.check_1.0.0.
+!SUBENTRY 2 net.sf.ictalive.aliveclipse 2 0 2013-07-17 10:06:45.848
+!MESSAGE Missing required bundle net.sf.ictalive.operetta.editor_1.0.0.
+!SUBENTRY 2 net.sf.ictalive.aliveclipse 2 0 2013-07-17 10:06:45.848
+!MESSAGE Missing required bundle net.sf.ictalive.operetta.ontology_1.0.0.
+!SUBENTRY 2 net.sf.ictalive.aliveclipse 2 0 2013-07-17 10:06:45.848
+!MESSAGE Missing required bundle net.sf.ictalive.operetta.modeltracker_1.0.0.
+!SUBENTRY 2 net.sf.ictalive.aliveclipse 2 0 2013-07-17 10:06:45.848
+!MESSAGE Missing required bundle net.sf.ictalive.runtime.dashboard_2.0.0.
+!SUBENTRY 2 net.sf.ictalive.aliveclipse 2 0 2013-07-17 10:06:45.848
+!MESSAGE Missing required bundle net.sf.ictalive.aliveclipse.dashboard_2.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.849
+!MESSAGE Bundle net.sf.ictalive.aliveclipse.dashboard_2.0.1.qualifier [11] was not resolved.
+!SUBENTRY 2 net.sf.ictalive.aliveclipse.dashboard 2 0 2013-07-17 10:06:45.849
+!MESSAGE Missing required bundle org.eclipse.gmf.map.edit_[2.0.0,3.0.0).
+!SUBENTRY 2 net.sf.ictalive.aliveclipse.dashboard 2 0 2013-07-17 10:06:45.849
+!MESSAGE Missing required bundle net.sf.ictalive.dashboard_1.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.849
+!MESSAGE Bundle net.sf.ictalive.dashboard_2.0.0.qualifier [12] was not resolved.
+!SUBENTRY 2 net.sf.ictalive.dashboard 2 0 2013-07-17 10:06:45.849
+!MESSAGE Missing required bundle org.eclipse.gmf.map.edit_[2.0.0,3.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.850
+!MESSAGE Bundle net.sf.ictalive.operetta_2.0.0.qualifier [13] was not resolved.
+!SUBENTRY 2 net.sf.ictalive.operetta 2 0 2013-07-17 10:06:45.850
+!MESSAGE Missing required bundle org.eclipse.emf.ecore.xcore.lib_0.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta 2 0 2013-07-17 10:06:45.850
+!MESSAGE Missing required bundle org.eclipse.xtext.xbase.lib_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.850
+!MESSAGE Bundle net.sf.ictalive.operetta.check_2.0.0.qualifier [14] was not resolved.
+!SUBENTRY 2 net.sf.ictalive.operetta.check 2 0 2013-07-17 10:06:45.850
+!MESSAGE Missing required bundle net.sf.ictalive.operetta_1.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.850
+!MESSAGE Bundle net.sf.ictalive.operetta.diagram.is_2.0.0.qualifier [15] was not resolved.
+!SUBENTRY 2 net.sf.ictalive.operetta.diagram.is 2 0 2013-07-17 10:06:45.851
+!MESSAGE Missing required bundle org.eclipse.ui.ide_0.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.diagram.is 2 0 2013-07-17 10:06:45.851
+!MESSAGE Missing required bundle org.eclipse.ui.navigator.resources_0.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.diagram.is 2 0 2013-07-17 10:06:45.851
+!MESSAGE Missing required bundle org.eclipse.gmf.runtime.diagram.ui.providers.ide_0.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.diagram.is 2 0 2013-07-17 10:06:45.851
+!MESSAGE Missing required bundle org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide_0.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.diagram.is 2 0 2013-07-17 10:06:45.851
+!MESSAGE Missing required bundle net.sf.ictalive.operetta_0.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.diagram.is 2 0 2013-07-17 10:06:45.852
+!MESSAGE Missing required bundle net.sf.ictalive.operetta.edit_0.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.diagram.is 2 0 2013-07-17 10:06:45.852
+!MESSAGE Missing required bundle net.sf.ictalive.operetta.psdeditor_1.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.852
+!MESSAGE Bundle net.sf.ictalive.operetta.diagram.ss_2.0.0.qualifier [16] was not resolved.
+!SUBENTRY 2 net.sf.ictalive.operetta.diagram.ss 2 0 2013-07-17 10:06:45.852
+!MESSAGE Missing required bundle org.eclipse.ui.ide_0.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.diagram.ss 2 0 2013-07-17 10:06:45.852
+!MESSAGE Missing required bundle org.eclipse.ui.navigator.resources_0.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.diagram.ss 2 0 2013-07-17 10:06:45.853
+!MESSAGE Missing required bundle org.eclipse.gmf.runtime.diagram.ui.providers.ide_0.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.diagram.ss 2 0 2013-07-17 10:06:45.853
+!MESSAGE Missing required bundle org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide_0.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.diagram.ss 2 0 2013-07-17 10:06:45.853
+!MESSAGE Missing required bundle net.sf.ictalive.operetta_0.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.diagram.ss 2 0 2013-07-17 10:06:45.853
+!MESSAGE Missing required bundle net.sf.ictalive.operetta.edit_0.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.diagram.ss 2 0 2013-07-17 10:06:45.853
+!MESSAGE Missing required bundle net.sf.ictalive.operetta.psdeditor_1.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.854
+!MESSAGE Bundle net.sf.ictalive.operetta.edit_2.0.0.qualifier [17] was not resolved.
+!SUBENTRY 2 net.sf.ictalive.operetta.edit 2 0 2013-07-17 10:06:45.854
+!MESSAGE Missing required bundle net.sf.ictalive.operetta_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.854
+!MESSAGE Bundle net.sf.ictalive.operetta.editor_2.0.0.qualifier [18] was not resolved.
+!SUBENTRY 2 net.sf.ictalive.operetta.editor 2 0 2013-07-17 10:06:45.854
+!MESSAGE Missing required bundle net.sf.ictalive.operetta.edit_0.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.editor 2 0 2013-07-17 10:06:45.854
+!MESSAGE Missing required bundle org.eclipse.ui.ide_0.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.editor 2 0 2013-07-17 10:06:45.855
+!MESSAGE Missing required bundle net.sf.ictalive.operetta.diagram.ss_1.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.editor 2 0 2013-07-17 10:06:45.855
+!MESSAGE Missing required bundle net.sf.ictalive.operetta.diagram.is_1.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.editor 2 0 2013-07-17 10:06:45.855
+!MESSAGE Missing required bundle net.sf.ictalive.aliveclipse.dashboard_2.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.855
+!MESSAGE Bundle net.sf.ictalive.operetta.modeltracker_2.0.0.qualifier [19] was not resolved.
+!SUBENTRY 2 net.sf.ictalive.operetta.modeltracker 2 0 2013-07-17 10:06:45.855
+!MESSAGE Missing required bundle net.sf.ictalive.operetta.editor_1.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.855
+!MESSAGE Bundle net.sf.ictalive.operetta.ontology_2.0.0.qualifier [20] was not resolved.
+!SUBENTRY 2 net.sf.ictalive.operetta.ontology 2 0 2013-07-17 10:06:45.856
+!MESSAGE Missing required bundle net.sf.ictalive.operetta.editor_1.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.ontology 2 0 2013-07-17 10:06:45.856
+!MESSAGE Missing required bundle net.sf.ictalive.aliveclipse.dashboard_2.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.ontology 2 0 2013-07-17 10:06:45.856
+!MESSAGE Missing required bundle org.mindswap.owls-api_3.1.1.
+!SUBENTRY 2 net.sf.ictalive.operetta.ontology 2 0 2013-07-17 10:06:45.856
+!MESSAGE Missing imported package org.eclipse.gmf.internal.common_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.856
+!MESSAGE Bundle net.sf.ictalive.operetta.psdeditor_2.0.0.qualifier [21] was not resolved.
+!SUBENTRY 2 net.sf.ictalive.operetta.psdeditor 2 0 2013-07-17 10:06:45.857
+!MESSAGE Missing required bundle net.sf.ictalive.operetta_1.0.3.
+!SUBENTRY 2 net.sf.ictalive.operetta.psdeditor 2 0 2013-07-17 10:06:45.857
+!MESSAGE Missing required bundle net.sf.ictalive.operetta.edit_1.0.0.
+!SUBENTRY 2 net.sf.ictalive.operetta.psdeditor 2 0 2013-07-17 10:06:45.857
+!MESSAGE Missing required bundle commons_1.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.857
+!MESSAGE Bundle net.sf.ictalive.runtime.dashboard_2.0.0.qualifier [22] was not resolved.
+!SUBENTRY 2 net.sf.ictalive.runtime.dashboard 2 0 2013-07-17 10:06:45.857
+!MESSAGE Missing required bundle org.eclipse.gmf.map.edit_[2.0.0,3.0.0).
+!SUBENTRY 2 net.sf.ictalive.runtime.dashboard 2 0 2013-07-17 10:06:45.858
+!MESSAGE Missing required bundle net.sf.ictalive.dashboard_1.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.858
+!MESSAGE Bundle org.eclipse.ant.ui_3.5.400.v20130514-1341 [48] was not resolved.
+!SUBENTRY 2 org.eclipse.ant.ui 2 0 2013-07-17 10:06:45.858
+!MESSAGE Missing optionally required bundle org.eclipse.ui.ide_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ant.ui 2 0 2013-07-17 10:06:45.858
+!MESSAGE Missing optionally required bundle org.eclipse.ui.editors_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ant.ui 2 0 2013-07-17 10:06:45.858
+!MESSAGE Missing required bundle org.eclipse.ui.externaltools_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ant.ui 2 0 2013-07-17 10:06:45.859
+!MESSAGE Missing required bundle org.eclipse.debug.ui_[3.6.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ant.ui 2 0 2013-07-17 10:06:45.859
+!MESSAGE Missing required bundle org.eclipse.jdt.ui_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ant.ui 2 0 2013-07-17 10:06:45.859
+!MESSAGE Missing required bundle org.eclipse.jdt.debug.ui_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ant.ui 2 0 2013-07-17 10:06:45.859
+!MESSAGE Missing required bundle org.eclipse.jdt.junit_[3.5.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.859
+!MESSAGE Bundle org.eclipse.compare_3.5.400.v20130514-1224 [49] was not resolved.
+!SUBENTRY 2 org.eclipse.compare 2 0 2013-07-17 10:06:45.860
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.compare 2 0 2013-07-17 10:06:45.860
+!MESSAGE Missing required bundle org.eclipse.ui.editors_[3.5.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.860
+!MESSAGE Bundle org.eclipse.debug.ui_3.9.0.v20130516-1713 [69] was not resolved.
+!SUBENTRY 2 org.eclipse.debug.ui 2 0 2013-07-17 10:06:45.860
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.debug.ui 2 0 2013-07-17 10:06:45.860
+!MESSAGE Missing required bundle org.eclipse.ui.editors_[3.5.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.861
+!MESSAGE Bundle org.eclipse.emf.codegen.ecore.ui_2.9.0.v20130610-0406 [92] was not resolved.
+!SUBENTRY 2 org.eclipse.emf.codegen.ecore.ui 2 0 2013-07-17 10:06:45.861
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.5.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.861
+!MESSAGE Bundle org.eclipse.emf.mwe.ui_1.2.1.v201306110341 [103] was not resolved.
+!SUBENTRY 2 org.eclipse.emf.mwe.ui 2 0 2013-07-17 10:06:45.861
+!MESSAGE Missing required bundle org.eclipse.jdt.debug.ui_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.emf.mwe.ui 2 0 2013-07-17 10:06:45.861
+!MESSAGE Missing required bundle org.eclipse.debug.ui_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.emf.mwe.ui 2 0 2013-07-17 10:06:45.861
+!MESSAGE Missing required bundle org.eclipse.jdt.ui_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.emf.mwe.ui 2 0 2013-07-17 10:06:45.862
+!MESSAGE Missing required bundle org.eclipse.ui.editors_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.emf.mwe.ui 2 0 2013-07-17 10:06:45.862
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.5.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.862
+!MESSAGE Bundle org.eclipse.gmf.common_1.3.0.201306121424 [142] was not resolved.
+!SUBENTRY 2 org.eclipse.gmf.common 2 0 2013-07-17 10:06:45.862
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.gmf.common 2 0 2013-07-17 10:06:45.863
+!MESSAGE Missing required bundle org.eclipse.jdt.ui_[3.3.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.863
+!MESSAGE Bundle org.eclipse.gmf.graphdef_2.9.0.201306121424 [143] was not resolved.
+!SUBENTRY 2 org.eclipse.gmf.graphdef 2 0 2013-07-17 10:06:45.863
+!MESSAGE Missing required bundle org.eclipse.gmf.common_[1.1.0,2.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.863
+!MESSAGE Bundle org.eclipse.gmf.graphdef.edit_2.9.0.201306121424 [144] was not resolved.
+!SUBENTRY 2 org.eclipse.gmf.graphdef.edit 2 0 2013-07-17 10:06:45.863
+!MESSAGE Missing required bundle org.eclipse.gmf.graphdef_[2.9.0,4.0.0).
+!SUBENTRY 2 org.eclipse.gmf.graphdef.edit 2 0 2013-07-17 10:06:45.864
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.3.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.864
+!MESSAGE Bundle org.eclipse.gmf.map_2.9.0.201306121424 [145] was not resolved.
+!SUBENTRY 2 org.eclipse.gmf.map 2 0 2013-07-17 10:06:45.864
+!MESSAGE Missing required bundle org.eclipse.gmf.common_[1.1.0,2.0.0).
+!SUBENTRY 2 org.eclipse.gmf.map 2 0 2013-07-17 10:06:45.865
+!MESSAGE Missing required bundle org.eclipse.gmf.graphdef_[2.9.0,4.0.0).
+!SUBENTRY 2 org.eclipse.gmf.map 2 0 2013-07-17 10:06:45.865
+!MESSAGE Missing required bundle org.eclipse.gmf.tooldef_[2.0.0,3.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.865
+!MESSAGE Bundle org.eclipse.gmf.map.edit_2.9.0.201306121424 [146] was not resolved.
+!SUBENTRY 2 org.eclipse.gmf.map.edit 2 0 2013-07-17 10:06:45.866
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.gmf.map.edit 2 0 2013-07-17 10:06:45.866
+!MESSAGE Missing required bundle org.eclipse.gmf.common_[1.1.0,2.0.0).
+!SUBENTRY 2 org.eclipse.gmf.map.edit 2 0 2013-07-17 10:06:45.866
+!MESSAGE Missing required bundle org.eclipse.gmf.map_[2.9.0,4.0.0).
+!SUBENTRY 2 org.eclipse.gmf.map.edit 2 0 2013-07-17 10:06:45.867
+!MESSAGE Missing required bundle org.eclipse.gmf.graphdef.edit_[2.9.0,4.0.0).
+!SUBENTRY 2 org.eclipse.gmf.map.edit 2 0 2013-07-17 10:06:45.867
+!MESSAGE Missing required bundle org.eclipse.gmf.tooldef.edit_[2.0.0,3.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.867
+!MESSAGE Bundle org.eclipse.gmf.runtime.common.ui.action.ide_1.7.0.201306111432 [150] was not resolved.
+!SUBENTRY 2 org.eclipse.gmf.runtime.common.ui.action.ide 2 0 2013-07-17 10:06:45.868
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.5.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.868
+!MESSAGE Bundle org.eclipse.gmf.runtime.diagram.ui.providers.ide_1.7.0.201306111432 [163] was not resolved.
+!SUBENTRY 2 org.eclipse.gmf.runtime.diagram.ui.providers.ide 2 0 2013-07-17 10:06:45.869
+!MESSAGE Missing required bundle org.eclipse.gmf.runtime.common.ui.action.ide_[1.2.0,2.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.869
+!MESSAGE Bundle org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide_1.7.0.201306111432 [166] was not resolved.
+!SUBENTRY 2 org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide 2 0 2013-07-17 10:06:45.869
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.gmf.runtime.diagram.ui.resources.editor.ide 2 0 2013-07-17 10:06:45.870
+!MESSAGE Missing required bundle org.eclipse.ui.editors_[3.4.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.870
+!MESSAGE Bundle org.eclipse.gmf.tooldef_2.3.0.201306121424 [178] was not resolved.
+!SUBENTRY 2 org.eclipse.gmf.tooldef 2 0 2013-07-17 10:06:45.870
+!MESSAGE Missing required bundle org.eclipse.gmf.common_[1.1.0,2.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.871
+!MESSAGE Bundle org.eclipse.gmf.tooldef.edit_2.3.0.201306121424 [179] was not resolved.
+!SUBENTRY 2 org.eclipse.gmf.tooldef.edit 2 0 2013-07-17 10:06:45.871
+!MESSAGE Missing required bundle org.eclipse.gmf.tooldef_[2.0.0,3.0.0).
+!SUBENTRY 2 org.eclipse.gmf.tooldef.edit 2 0 2013-07-17 10:06:45.871
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.3.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.872
+!MESSAGE Bundle org.eclipse.jdt.debug.ui_3.6.200.v20130514-0841 [191] was not resolved.
+!SUBENTRY 2 org.eclipse.jdt.debug.ui 2 0 2013-07-17 10:06:45.872
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jdt.debug.ui 2 0 2013-07-17 10:06:45.872
+!MESSAGE Missing required bundle org.eclipse.ui.editors_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jdt.debug.ui 2 0 2013-07-17 10:06:45.873
+!MESSAGE Missing required bundle org.eclipse.debug.ui_[3.8.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jdt.debug.ui 2 0 2013-07-17 10:06:45.873
+!MESSAGE Missing required bundle org.eclipse.jdt.ui_[3.8.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jdt.debug.ui 2 0 2013-07-17 10:06:45.873
+!MESSAGE Missing required bundle org.eclipse.search_[3.5.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.874
+!MESSAGE Bundle org.eclipse.jdt.junit_3.7.200.v20130514-0733 [192] was not resolved.
+!SUBENTRY 2 org.eclipse.jdt.junit 2 0 2013-07-17 10:06:45.874
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jdt.junit 2 0 2013-07-17 10:06:45.874
+!MESSAGE Missing required bundle org.eclipse.ui.editors_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jdt.junit 2 0 2013-07-17 10:06:45.875
+!MESSAGE Missing required bundle org.eclipse.debug.ui_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jdt.junit 2 0 2013-07-17 10:06:45.875
+!MESSAGE Missing required bundle org.eclipse.jdt.ui_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jdt.junit 2 0 2013-07-17 10:06:45.875
+!MESSAGE Missing required bundle org.eclipse.jdt.debug.ui_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jdt.junit 2 0 2013-07-17 10:06:45.875
+!MESSAGE Missing required bundle org.eclipse.compare_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jdt.junit 2 0 2013-07-17 10:06:45.876
+!MESSAGE Missing required bundle org.eclipse.ltk.ui.refactoring_[3.5.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.876
+!MESSAGE Bundle org.eclipse.jdt.ui_3.9.0.v20130605-1748 [196] was not resolved.
+!SUBENTRY 2 org.eclipse.jdt.ui 2 0 2013-07-17 10:06:45.876
+!MESSAGE Missing required bundle org.eclipse.search_[3.7.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jdt.ui 2 0 2013-07-17 10:06:45.876
+!MESSAGE Missing required bundle org.eclipse.debug.ui_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jdt.ui 2 0 2013-07-17 10:06:45.877
+!MESSAGE Missing required bundle org.eclipse.compare_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jdt.ui 2 0 2013-07-17 10:06:45.877
+!MESSAGE Missing required bundle org.eclipse.team.ui_[3.4.100,4.0.0).
+!SUBENTRY 2 org.eclipse.jdt.ui 2 0 2013-07-17 10:06:45.877
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jdt.ui 2 0 2013-07-17 10:06:45.877
+!MESSAGE Missing required bundle org.eclipse.ui.editors_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jdt.ui 2 0 2013-07-17 10:06:45.878
+!MESSAGE Missing required bundle org.eclipse.ltk.ui.refactoring_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jdt.ui 2 0 2013-07-17 10:06:45.878
+!MESSAGE Missing required bundle org.eclipse.ui.navigator.resources_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jdt.ui 2 0 2013-07-17 10:06:45.878
+!MESSAGE Missing required bundle org.eclipse.equinox.bidi_[0.10.0,2.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.878
+!MESSAGE Bundle org.eclipse.ltk.ui.refactoring_3.7.100.v20130605-1748 [209] was not resolved.
+!SUBENTRY 2 org.eclipse.ltk.ui.refactoring 2 0 2013-07-17 10:06:45.879
+!MESSAGE Missing required bundle org.eclipse.compare_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ltk.ui.refactoring 2 0 2013-07-17 10:06:45.879
+!MESSAGE Missing required bundle org.eclipse.team.ui_[3.4.100,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.879
+!MESSAGE Bundle org.eclipse.m2e.core.ui_1.4.0.20130601-0317 [212] was not resolved.
+!SUBENTRY 2 org.eclipse.m2e.core.ui 2 0 2013-07-17 10:06:45.880
+!MESSAGE Missing required bundle org.eclipse.ui.ide_3.5.2.
+!SUBENTRY 2 org.eclipse.m2e.core.ui 2 0 2013-07-17 10:06:45.880
+!MESSAGE Missing required capability Require-Capability: osgi.ee; filter="(|(&(osgi.ee=JavaSE)(version=1.6))(&(osgi.ee=JavaSE)(version=1.7)))".
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.880
+!MESSAGE Bundle org.eclipse.pde.ui_3.8.0.v20130515-1659 [232] was not resolved.
+!SUBENTRY 2 org.eclipse.pde.ui 2 0 2013-07-17 10:06:45.880
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.pde.ui 2 0 2013-07-17 10:06:45.881
+!MESSAGE Missing required bundle org.eclipse.ui.editors_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.pde.ui 2 0 2013-07-17 10:06:45.881
+!MESSAGE Missing required bundle org.eclipse.debug.ui_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.pde.ui 2 0 2013-07-17 10:06:45.881
+!MESSAGE Missing required bundle org.eclipse.jdt.debug.ui_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.pde.ui 2 0 2013-07-17 10:06:45.882
+!MESSAGE Missing required bundle org.eclipse.jdt.ui_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.pde.ui 2 0 2013-07-17 10:06:45.882
+!MESSAGE Missing required bundle org.eclipse.search_[3.7.0,4.0.0).
+!SUBENTRY 2 org.eclipse.pde.ui 2 0 2013-07-17 10:06:45.882
+!MESSAGE Missing required bundle org.eclipse.ant.ui_[3.1.0,4.0.0).
+!SUBENTRY 2 org.eclipse.pde.ui 2 0 2013-07-17 10:06:45.882
+!MESSAGE Missing required bundle org.eclipse.jdt.junit_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.pde.ui 2 0 2013-07-17 10:06:45.883
+!MESSAGE Missing required bundle org.eclipse.compare_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.pde.ui 2 0 2013-07-17 10:06:45.883
+!MESSAGE Missing required bundle org.eclipse.ltk.ui.refactoring_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.pde.ui 2 0 2013-07-17 10:06:45.884
+!MESSAGE Missing required bundle org.eclipse.ui.navigator.resources_[3.3.100,4.0.0).
+!SUBENTRY 2 org.eclipse.pde.ui 2 0 2013-07-17 10:06:45.884
+!MESSAGE Missing required bundle org.eclipse.team.ui_[3.6.100,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.885
+!MESSAGE Bundle org.eclipse.search_3.9.0.v20130312-1625 [233] was not resolved.
+!SUBENTRY 2 org.eclipse.search 2 0 2013-07-17 10:06:45.885
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.5.0,4.0.0).
+!SUBENTRY 2 org.eclipse.search 2 0 2013-07-17 10:06:45.885
+!MESSAGE Missing required bundle org.eclipse.ltk.ui.refactoring_[3.5.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.886
+!MESSAGE Bundle org.eclipse.team.ui_3.7.0.v20130514-1224 [237] was not resolved.
+!SUBENTRY 2 org.eclipse.team.ui 2 0 2013-07-17 10:06:45.886
+!MESSAGE Missing optionally required bundle org.eclipse.ui.ide_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.team.ui 2 0 2013-07-17 10:06:45.887
+!MESSAGE Missing required bundle org.eclipse.compare_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.team.ui 2 0 2013-07-17 10:06:45.887
+!MESSAGE Missing required bundle org.eclipse.ui.editors_[3.3.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.888
+!MESSAGE Bundle org.eclipse.ui.editors_3.8.100.v20130513-1637 [242] was not resolved.
+!SUBENTRY 2 org.eclipse.ui.editors 2 0 2013-07-17 10:06:45.888
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.5.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.889
+!MESSAGE Bundle org.eclipse.ui.externaltools_3.2.200.v20130508-2007 [243] was not resolved.
+!SUBENTRY 2 org.eclipse.ui.externaltools 2 0 2013-07-17 10:06:45.889
+!MESSAGE Missing optionally required bundle org.eclipse.ui.ide_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.externaltools 2 0 2013-07-17 10:06:45.889
+!MESSAGE Missing required bundle org.eclipse.debug.ui_[3.2.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.890
+!MESSAGE Bundle org.eclipse.ui.ide_3.9.0.v20130517-0139 [245] was not resolved.
+!SUBENTRY 2 org.eclipse.ui.ide 2 0 2013-07-17 10:06:45.890
+!MESSAGE Missing required bundle org.eclipse.equinox.bidi_[0.10.0,2.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2013-07-17 10:06:45.890
+!MESSAGE Bundle org.eclipse.ui.navigator.resources_3.4.500.v20130516-1049 [248] was not resolved.
+!SUBENTRY 2 org.eclipse.ui.navigator.resources 2 0 2013-07-17 10:06:45.891
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.6.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.navigator.resources 2 0 2013-07-17 10:06:45.891
+!MESSAGE Missing required bundle org.eclipse.ltk.ui.refactoring_[3.5.0,4.0.0).
+
+!ENTRY org.eclipse.osgi 4 0 2013-07-17 10:06:45.893
+!MESSAGE Application error
+!STACK 1
+java.lang.RuntimeException: No application id has been found.
+	at org.eclipse.equinox.internal.app.EclipseAppContainer.startDefaultApp(EclipseAppContainer.java:242)
+	at org.eclipse.equinox.internal.app.MainApplicationLauncher.run(MainApplicationLauncher.java:29)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)

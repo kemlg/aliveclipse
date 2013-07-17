@@ -36,7 +36,7 @@ import org.w3c.dom.Element;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TargetsItemProvider extends ExtensibleElementItemProvider
+public class TargetsItemProvider extends BPELExtensibleElementItemProvider
 		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -104,8 +104,8 @@ public class TargetsItemProvider extends ExtensibleElementItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Targets")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Targets")); //$NON-NLS-1$
 	}
 
 	/**
@@ -136,8 +136,8 @@ public class TargetsItemProvider extends ExtensibleElementItemProvider
 		switch (notification.getFeatureID(Targets.class)) {
 		case BPELPackage.TARGETS__CHILDREN:
 		case BPELPackage.TARGETS__JOIN_CONDITION:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -156,8 +156,8 @@ public class TargetsItemProvider extends ExtensibleElementItemProvider
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.TARGETS__CHILDREN, BPELFactory.eINSTANCE
-						.createTarget()));
+				BPELPackage.Literals.TARGETS__CHILDREN,
+				BPELFactory.eINSTANCE.createTarget()));
 
 		newChildDescriptors.add(createChildParameter(
 				BPELPackage.Literals.TARGETS__JOIN_CONDITION,

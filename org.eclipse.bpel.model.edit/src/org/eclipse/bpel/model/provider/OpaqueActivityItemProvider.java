@@ -63,8 +63,8 @@ public class OpaqueActivityItemProvider extends ActivityItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/OpaqueActivity")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/OpaqueActivity")); //$NON-NLS-1$
 	}
 
 	/**

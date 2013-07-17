@@ -85,8 +85,8 @@ public class ValidateItemProvider extends ActivityItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Validate")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Validate")); //$NON-NLS-1$
 	}
 
 	/**

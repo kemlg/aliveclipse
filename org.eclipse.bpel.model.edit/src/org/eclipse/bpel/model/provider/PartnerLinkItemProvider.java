@@ -31,7 +31,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PartnerLinkItemProvider extends ExtensibleElementItemProvider
+public class PartnerLinkItemProvider extends BPELExtensibleElementItemProvider
 		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -169,8 +169,8 @@ public class PartnerLinkItemProvider extends ExtensibleElementItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/PartnerLink")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/PartnerLink")); //$NON-NLS-1$
 	}
 
 	/**
@@ -200,8 +200,8 @@ public class PartnerLinkItemProvider extends ExtensibleElementItemProvider
 		switch (notification.getFeatureID(PartnerLink.class)) {
 		case BPELPackage.PARTNER_LINK__NAME:
 		case BPELPackage.PARTNER_LINK__INITIALIZE_PARTNER_ROLE:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);

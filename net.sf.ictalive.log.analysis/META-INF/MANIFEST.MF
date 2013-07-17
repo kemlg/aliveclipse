@@ -21,7 +21,8 @@ Require-Bundle: org.eclipse.ui,
  net.sf.ictalive.coordination.agents.diagram;bundle-version="1.0.0",
  net.sf.ictalive.coordination;bundle-version="1.0.2",
  net.sf.ictalive.eventlog;bundle-version="0.0.1",
- net.sf.ictalive.eventbus;bundle-version="0.0.1"
+ net.sf.ictalive.eventbus;bundle-version="0.0.1",
+ commons;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-ClassPath: .,
@@ -37,8 +38,4 @@ Bundle-ClassPath: .,
  lib/jfreechart/servlet.jar,
  lib/jfreechart/swtgraphics2d.jar,
  lib/libthrift-r917130.jar
-Export-Package: weka.classifiers,
- weka.classifiers.trees.j48,
- weka.core,
- weka.core.converters
 Bundle-Vendor: ALIVE, University of Aberdeen

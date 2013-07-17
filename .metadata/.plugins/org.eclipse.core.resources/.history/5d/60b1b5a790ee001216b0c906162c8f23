@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Matchmaker agent
+Bundle-SymbolicName: net.sf.ictalive.matchmaker.agent;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .,
+ lib/agentscape-common.jar,
+ eclipsedeps/alive-matchmaker.jar,
+ eclipsedeps/google-collect-1.0.jar,
+ eclipsedeps/transitivity-utils.jar
+Export-Package: agents,
+ agents.qos,
+ agents.ws,
+ com.google.common.annotations,
+ com.google.common.base,
+ com.google.common.base.internal,
+ com.google.common.collect,
+ edu.bath.matchmaker,
+ edu.bath.matchmaker.grounding,
+ edu.bath.matchmaker.grounding.impl,
+ edu.bath.matchmaker.prefs,
+ edu.bath.matchmaker.similarity,
+ edu.bath.matchmaker.ws,
+ edu.bath.transitivityutils,
+ net.sf.ictalive.matchmaker.agent
+Require-Bundle: org.mindswap.owls-api;bundle-version="3.1.1",
+ net.sf.ictalive.service.repositorytools;bundle-version="1.0.1",
+ net.sf.ictalive.runtime;bundle-version="1.0.5",
+ net.sf.ictalive.eventbus;bundle-version="0.0.1",
+ org.eclipse.ui;bundle-version="3.5.2",
+ org.eclipse.core.runtime;bundle-version="3.5.0"
+Bundle-ActivationPolicy: lazy
+Bundle-Activator: net.sf.ictalive.matchmaker.agent.Activator
+Bundle-Vendor: ALIVE, University of Bath

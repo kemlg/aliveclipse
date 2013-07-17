@@ -31,8 +31,9 @@ import org.w3c.dom.Element;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MessageExchangesItemProvider extends ExtensibleElementItemProvider
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+public class MessageExchangesItemProvider extends
+		BPELExtensibleElementItemProvider implements
+		IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -87,8 +88,8 @@ public class MessageExchangesItemProvider extends ExtensibleElementItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/MessageExchanges")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/MessageExchanges")); //$NON-NLS-1$
 	}
 
 	/**

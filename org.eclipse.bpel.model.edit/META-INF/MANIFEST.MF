@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.bpel.model.edit;singleton:=true
-Bundle-Version: 1.0.0
+Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.eclipse.bpel.model.provider.BpelEditPlugin$Implementation
 Bundle-Vendor: %providerName
@@ -18,5 +18,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.edit;visibility:=reexport,
  org.eclipse.wst.wsdl;visibility:=reexport,
  org.eclipse.xsd;visibility:=reexport,
- javax.wsdl;bundle-version="1.5.1"
+ javax.wsdl
 Bundle-ActivationPolicy: lazy

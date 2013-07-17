@@ -163,8 +163,8 @@ public class ReceiveItemProvider extends PartnerActivityItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Receive")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Receive")); //$NON-NLS-1$
 	}
 
 	/**
@@ -193,12 +193,12 @@ public class ReceiveItemProvider extends PartnerActivityItemProvider implements
 
 		switch (notification.getFeatureID(Receive.class)) {
 		case BPELPackage.RECEIVE__CREATE_INSTANCE:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		case BPELPackage.RECEIVE__MESSAGE_EXCHANGE:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);

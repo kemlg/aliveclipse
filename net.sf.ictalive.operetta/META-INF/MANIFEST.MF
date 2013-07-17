@@ -4,12 +4,23 @@ Bundle-Name: OperettA
 Bundle-SymbolicName: net.sf.ictalive.operetta;singleton:=true
 Bundle-Version: 2.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Vendor: ALIVE, Utrecht University
+Bundle-Vendor: ALIVE,
+ Utrecht University
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: net.sf.ictalive.operetta.OM,
- net.sf.ictalive.operetta.OM.impl,
- net.sf.ictalive.operetta.OM.util
-Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+Export-Package: net.sf.ictalive.operetta.OM;uses:="org.eclipse.emf.ecore,net.sf.ictalive.operetta.OM.util,org.eclipse.emf.common.util",
+ net.sf.ictalive.operetta.OM.impl;
+  uses:="org.eclipse.emf.ecore,
+   net.sf.ictalive.operetta.OM.util,
+   org.eclipse.emf.common.util,
+   net.sf.ictalive.operetta.OM,
+   org.eclipse.emf.common.notify,
+   org.eclipse.emf.ecore.impl",
+ net.sf.ictalive.operetta.OM.util;
+  uses:="org.eclipse.emf.ecore.util,
+   org.eclipse.emf.ecore,
+   org.eclipse.emf.common.notify.impl,
+   net.sf.ictalive.operetta.OM,
+   org.eclipse.emf.common.notify"
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy

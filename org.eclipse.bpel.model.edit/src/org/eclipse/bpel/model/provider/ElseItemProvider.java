@@ -34,8 +34,8 @@ import org.w3c.dom.Element;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ElseItemProvider extends ExtensibleElementItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
+public class ElseItemProvider extends BPELExtensibleElementItemProvider
+		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -101,8 +101,8 @@ public class ElseItemProvider extends ExtensibleElementItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Else")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Else")); //$NON-NLS-1$
 	}
 
 	/**
@@ -132,8 +132,8 @@ public class ElseItemProvider extends ExtensibleElementItemProvider implements
 
 		switch (notification.getFeatureID(Else.class)) {
 		case BPELPackage.ELSE__ACTIVITY:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -152,100 +152,100 @@ public class ElseItemProvider extends ExtensibleElementItemProvider implements
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createActivity()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createActivity()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createPartnerActivity()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createPartnerActivity()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createInvoke()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createInvoke()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createReply()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createReply()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createReceive()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createReceive()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createExit()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createExit()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createThrow()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createThrow()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createWait()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createWait()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createEmpty()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createEmpty()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createSequence()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createSequence()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createWhile()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createWhile()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createPick()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createPick()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createFlow()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createFlow()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createAssign()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createAssign()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createScope()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createScope()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createCompensateScope()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createCompensateScope()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createRethrow()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createRethrow()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createExtensionActivity()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createExtensionActivity()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createOpaqueActivity()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createOpaqueActivity()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createForEach()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createForEach()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createRepeatUntil()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createRepeatUntil()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createValidate()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createValidate()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createIf()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createIf()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ELSE__ACTIVITY, BPELFactory.eINSTANCE
-						.createCompensate()));
+				BPELPackage.Literals.ELSE__ACTIVITY,
+				BPELFactory.eINSTANCE.createCompensate()));
 	}
 
 }

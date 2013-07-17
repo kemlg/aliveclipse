@@ -1,0 +1,12 @@
+output.. = bin/
+bin.includes = .,\
+               META-INF/,\
+               eclipsedeps/,\
+               lib/,\
+               lib/agentscape-common.jar,\
+               lib/alive-matchmaker.jar,\
+               lib/transitivity-utils.jar
+              
+source.. = src/,\
+           test/,\
+           eclipse_src/

@@ -82,17 +82,19 @@ public class PartnerLinkTypeItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addDocumentationElementPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_WSDLElement_documentationElement_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_WSDLElement_documentationElement_feature", "_UI_WSDLElement_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						WSDLPackage.Literals.WSDL_ELEMENT__DOCUMENTATION_ELEMENT,
-						true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WSDLElement_documentationElement_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WSDLElement_documentationElement_feature", "_UI_WSDLElement_type"),
+				 WSDLPackage.Literals.WSDL_ELEMENT__DOCUMENTATION_ELEMENT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -102,17 +104,19 @@ public class PartnerLinkTypeItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addElementPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_WSDLElement_element_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_WSDLElement_element_feature", "_UI_WSDLElement_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						WSDLPackage.Literals.WSDL_ELEMENT__ELEMENT, true,
-						false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WSDLElement_element_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WSDLElement_element_feature", "_UI_WSDLElement_type"),
+				 WSDLPackage.Literals.WSDL_ELEMENT__ELEMENT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -122,17 +126,19 @@ public class PartnerLinkTypeItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addRequiredPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_ExtensibilityElement_required_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_ExtensibilityElement_required_feature", "_UI_ExtensibilityElement_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						WSDLPackage.Literals.EXTENSIBILITY_ELEMENT__REQUIRED,
-						true, false, false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ExtensibilityElement_required_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ExtensibilityElement_required_feature", "_UI_ExtensibilityElement_type"),
+				 WSDLPackage.Literals.EXTENSIBILITY_ELEMENT__REQUIRED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -142,17 +148,19 @@ public class PartnerLinkTypeItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addElementTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_ExtensibilityElement_elementType_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_ExtensibilityElement_elementType_feature", "_UI_ExtensibilityElement_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						WSDLPackage.Literals.EXTENSIBILITY_ELEMENT__ELEMENT_TYPE,
-						true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ExtensibilityElement_elementType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ExtensibilityElement_elementType_feature", "_UI_ExtensibilityElement_type"),
+				 WSDLPackage.Literals.EXTENSIBILITY_ELEMENT__ELEMENT_TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -162,17 +170,19 @@ public class PartnerLinkTypeItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_PartnerLinkType_name_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_PartnerLinkType_name_feature", "_UI_PartnerLinkType_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						PartnerlinktypePackage.Literals.PARTNER_LINK_TYPE__NAME,
-						true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PartnerLinkType_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PartnerLinkType_name_feature", "_UI_PartnerLinkType_type"),
+				 PartnerlinktypePackage.Literals.PARTNER_LINK_TYPE__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -182,17 +192,19 @@ public class PartnerLinkTypeItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addIDPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_PartnerLinkType_ID_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_PartnerLinkType_ID_feature", "_UI_PartnerLinkType_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						PartnerlinktypePackage.Literals.PARTNER_LINK_TYPE__ID,
-						false, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PartnerLinkType_ID_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PartnerLinkType_ID_feature", "_UI_PartnerLinkType_type"),
+				 PartnerlinktypePackage.Literals.PARTNER_LINK_TYPE__ID,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -208,8 +220,7 @@ public class PartnerLinkTypeItemProvider extends ItemProviderAdapter implements
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures
-					.add(PartnerlinktypePackage.Literals.PARTNER_LINK_TYPE__ROLE);
+			childrenFeatures.add(PartnerlinktypePackage.Literals.PARTNER_LINK_TYPE__ROLE);
 		}
 		return childrenFeatures;
 	}
@@ -235,8 +246,7 @@ public class PartnerLinkTypeItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/PartnerLinkType")); //$NON-NLS-1$
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/PartnerLinkType"));
 	}
 
 	/**
@@ -247,9 +257,10 @@ public class PartnerLinkTypeItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PartnerLinkType) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_PartnerLinkType_type") : //$NON-NLS-1$
-				getString("_UI_PartnerLinkType_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
+		String label = ((PartnerLinkType)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_PartnerLinkType_type") :
+			getString("_UI_PartnerLinkType_type") + " " + label;
 	}
 
 	/**
@@ -264,19 +275,17 @@ public class PartnerLinkTypeItemProvider extends ItemProviderAdapter implements
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PartnerLinkType.class)) {
-		case PartnerlinktypePackage.PARTNER_LINK_TYPE__DOCUMENTATION_ELEMENT:
-		case PartnerlinktypePackage.PARTNER_LINK_TYPE__ELEMENT:
-		case PartnerlinktypePackage.PARTNER_LINK_TYPE__REQUIRED:
-		case PartnerlinktypePackage.PARTNER_LINK_TYPE__ELEMENT_TYPE:
-		case PartnerlinktypePackage.PARTNER_LINK_TYPE__NAME:
-		case PartnerlinktypePackage.PARTNER_LINK_TYPE__ID:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
-			return;
-		case PartnerlinktypePackage.PARTNER_LINK_TYPE__ROLE:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
-			return;
+			case PartnerlinktypePackage.PARTNER_LINK_TYPE__DOCUMENTATION_ELEMENT:
+			case PartnerlinktypePackage.PARTNER_LINK_TYPE__ELEMENT:
+			case PartnerlinktypePackage.PARTNER_LINK_TYPE__REQUIRED:
+			case PartnerlinktypePackage.PARTNER_LINK_TYPE__ELEMENT_TYPE:
+			case PartnerlinktypePackage.PARTNER_LINK_TYPE__NAME:
+			case PartnerlinktypePackage.PARTNER_LINK_TYPE__ID:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case PartnerlinktypePackage.PARTNER_LINK_TYPE__ROLE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -293,9 +302,10 @@ public class PartnerLinkTypeItemProvider extends ItemProviderAdapter implements
 			Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				PartnerlinktypePackage.Literals.PARTNER_LINK_TYPE__ROLE,
-				PartnerlinktypeFactory.eINSTANCE.createRole()));
+		newChildDescriptors.add
+			(createChildParameter
+				(PartnerlinktypePackage.Literals.PARTNER_LINK_TYPE__ROLE,
+				 PartnerlinktypeFactory.eINSTANCE.createRole()));
 	}
 
 	/**
@@ -306,7 +316,7 @@ public class PartnerLinkTypeItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return BpelEditPlugin.INSTANCE;
+		return PartnerlinktypeEditPlugin.INSTANCE;
 	}
 
 }

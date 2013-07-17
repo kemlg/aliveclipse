@@ -196,8 +196,10 @@ public class UnknownExtensibilityAttributeItemProvider extends
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/UnknownExtensibilityAttribute")); //$NON-NLS-1$
+		return overlayImage(
+				object,
+				getResourceLocator().getImage(
+						"full/obj16/UnknownExtensibilityAttribute")); //$NON-NLS-1$
 	}
 
 	/**
@@ -231,12 +233,12 @@ public class UnknownExtensibilityAttributeItemProvider extends
 		case BPELPackage.UNKNOWN_EXTENSIBILITY_ATTRIBUTE__ELEMENT:
 		case BPELPackage.UNKNOWN_EXTENSIBILITY_ATTRIBUTE__REQUIRED:
 		case BPELPackage.UNKNOWN_EXTENSIBILITY_ATTRIBUTE__ELEMENT_TYPE:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		case BPELPackage.UNKNOWN_EXTENSIBILITY_ATTRIBUTE__CHILDREN:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="957" localization="OSGI-INF/l10n/bundle" name="commons" project="net.sf.ictalive.commons">
+		<library name="lib/castor-1.2.jar"/>
+		<library name="."/>
+		<library name="lib/antlr-2.7.7.jar"/>
+		<library name="lib/groovy-all-2.1.6.jar"/>
+		<library name="lib/axis-1.4.jar"/>
+		<library name="lib/commons-discovery-0.5.jar"/>
+		<library name="lib/commons-logging-1.1.3.jar"/>
+		<library name="lib/log4j-1.2.16.jar"/>
+		<library name="lib/wsdl4j-1.6.3.jar"/>
+		<library name="lib/icu4j-51.2.jar"/>
+		<library name="lib/wsdl-1.1.100-v200707201214.jar"/>
+		<library name="lib/xercesImpl-2.11.0.jar"/>
+		<library name="lib/imq-1.0.0.jar"/>
+		<library name="lib/imqbroker-1.0.0.jar"/>
+		<library name="lib/imqjmx-1.0.0.jar"/>
+		<library name="lib/jms-1.0.0.jar"/>
+		<library name="lib/slf4j-log4j13-1.0.1.jar"/>
+		<library name="lib/commons-collections-3.2.1.jar"/>
+		<library name="lib/commons-lang-2.6.jar"/>
+		<library name="lib/google-collections-1.0.jar"/>
+		<library name="lib/high-scale-lib-1.1.4.jar"/>
+		<library name="lib/weka-stable-3.6.9.jar"/>
+		<library name="lib/jfreechart-1.0.15.jar"/>
+		<library name="lib/antlr-runtime-3.5.jar"/>
+		<library name="lib/jdom-1.1.3.jar"/>
+		<library name="lib/junit-4.11.jar"/>
+		<library name="lib/axis-jaxrpc-1.4.jar"/>
+		<library name="lib/slf4j-api-1.7.4.jar"/>
+		<library name="lib/drools-core-5.5.0.Final.jar"/>
+		<library name="lib/knowledge-api-5.5.0.Final.jar"/>
+		<library name="lib/jung-algorithms-2.0.1.jar"/>
+		<library name="lib/jung-api-2.0.1.jar"/>
+		<library name="lib/jung-graph-impl-2.0.1.jar"/>
+		<library name="lib/jung-visualization-2.0.1.jar"/>
+		<library name="lib/collections-generic-4.01.jar"/>
+	</bundle>
+	<bundle bundleID="958" localization="plugin" name="%pluginName" project="net.sf.ictalive.owls" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="959" class="net.sf.ictalive.operetta.OM.provider.OperAEditPlugin$Implementation" localization="plugin" name="OperettA Edit Providers" project="net.sf.ictalive.operetta.edit" provider="ALIVE">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="960" localization="plugin" name="%pluginName" project="net.sf.ictalive.transformation.OL2CLMap" provider="ALIVE">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="961" class="net.sf.ictalive.actions2opera.ui.InvokeActivator" localization="plugin" name="ALIVE Transformation: Actions To OperA UI" project="net.sf.ictalive.transformation.Actions2Opera.ui" provider="ALIVE"/>
+	<bundle bundleID="962" class="net.sf.ictalive.service.serviceui.Activator" localization="OSGI-INF/l10n/bundle" name="ALIVE service UI components" project="net.sf.ictalive.service.serviceui" provider="ALIVE">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="963" class="net.sf.ictalive.coordination.wfannotation.bpel.diagram.bpeldiag.diagram.part.BpeldiagDiagramEditorPlugin" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination.wfannotation.bpel.diagram.diagram" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="964" class="net.sf.ictalive.schema.provider.SchemaEditPlugin$Implementation" localization="plugin" name="%pluginName" project="net.sf.ictalive.schema.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="965" localization="OSGI-INF/l10n/bundle" name="ALIVE EventLog" project="net.sf.ictalive.eventlog" provider="ALIVE">
+		<library name="."/>
+		<library name="lib/apache-cassandra-0.6.1.jar"/>
+		<library name="lib/libthrift-r917130.jar"/>
+	</bundle>
+	<bundle bundleID="966" class="net.sf.ictalive.operetta.psdeditor.Activator" localization="OSGI-INF/l10n/bundle" name="OperettA Formula Editor" project="net.sf.ictalive.operetta.psdeditor" provider="ALIVE">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="967" localization="plugin" name="%pluginName" project="net.sf.ictalive.schema" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="968" class="net.sf.ictalive.rules.swrl.provider.RulesEditPlugin$Implementation" localization="plugin" name="%pluginName" project="net.sf.ictalive.rules.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="969" class="net.sf.ictalive.runtime.action.presentation.RuntimeEditorPlugin$Implementation" localization="plugin" name="%pluginName" project="net.sf.ictalive.runtime.editor" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="971" localization="OSGI-INF/l10n/bundle" name="ALIVE Templates" project="net.sf.ictalive.service.templates" provider="ALIVE">
+		<library name="."/>
+		<library name="lib/antlr-3.0.1.jar"/>
+		<library name="lib/jaspwrapper-0.9.jar"/>
+		<library name="lib/OWLSBuilder.jar"/>
+	</bundle>
+	<bundle bundleID="970" class="net.sf.ictalive.opera2actions.ui.InvokeActivator" localization="plugin" name="ALIVE Transformation: Opera to Actions UI" project="net.sf.ictalive.transformation.Opera2Actions.ui" provider="ALIVE"/>
+	<bundle bundleID="972" localization="OSGI-INF/l10n/bundle" name="ALIVE Transformation: Actions To OperA" project="net.sf.ictalive.transformation.Actions2Opera" provider="ALIVE"/>
+	<bundle bundleID="973" localization="plugin" name="%pluginName" project="net.sf.ictalive.service.owlseditor" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="974" class="net.sf.ictalive.aliveclipse.Activator" localization="OSGI-INF/l10n/bundle" name="ALIVEclipse" project="net.sf.ictalive.aliveclipse" provider="ALIVE"/>
+	<bundle bundleID="975" class="net.sf.ictalive.operetta.OM.presentation.OperAEditorPlugin$Implementation" localization="plugin" name="OperettA Tree Editor" project="net.sf.ictalive.operetta.editor" provider="ALIVE">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="976" class="net.sf.ictalive.SL2Actions.ui.Activator" localization="OSGI-INF/l10n/bundle" name="ALIVE Transformation: OWLS to Actions and OperA" project="net.sf.ictalive.transformation.SL2Actions" provider="ALIVE">
+		<library name="lib/alive-repository-server-client.jar"/>
+		<library name="lib/alive-service-repository-tools.jar"/>
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="977" class="net.sf.ictalive.coordination.wfvv.presentation.WfvvEditorPlugin$Implementation" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination.wfvv.editor" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="978" class="net.sf.ictalive.coordination.wfannotation.mapping.provider.MappingEditPlugin$Implementation" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination.wfannotation.mapping.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="979" localization="plugin" name="%pluginName" project="net.sf.ictalive.rules" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="980" class="net.sf.ictalive.coordination.wfannotation.bpel.diagram.bpeldiag.provider.BpeldiagEditPlugin$Implementation" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination.wfannotation.bpel.diagram.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="981" localization="OSGI-INF/l10n/bundle" name="OWL-S API" project="org.mindswap.owls-api" provider="ALIVE">
+		<library name="lib/upnp-1.0.jar"/>
+		<library name="lib/arq-2.8.3.jar"/>
+		<library name="lib/aterm-java-1.6.jar"/>
+		<library name="lib/iri-0.8.jar"/>
+		<library name="lib/jena-2.6.3.jar"/>
+		<library name="lib/jgrapht-jdk1.5-0.7.3.jar"/>
+		<library name="lib/lucene-core-2.3.1.jar"/>
+		<library name="lib/pellet-2.1.1.jar"/>
+		<library name="lib/relaxngDatatype-20020414.jar"/>
+		<library name="lib/stax-api-1.0.1.jar"/>
+		<library name="lib/wstx-asl-3.2.9.jar"/>
+		<library name="lib/xsdlib-20030225.jar"/>
+		<library name="lib/activation-1.0.2.jar"/>
+		<library name="lib/axis-1.4.jar"/>
+		<library name="lib/axis-wsdl4j-1.5.1.jar"/>
+		<library name="lib/commons-discovery-0.2.jar"/>
+		<library name="lib/icu4j-3.4.4.jar"/>
+		<library name="lib/jaxrpc-api-1.1.jar"/>
+		<library name="lib/jcl-over-slf4j-1.5.8.jar"/>
+		<library name="lib/saaj-api-1.2.jar"/>
+		<library name="lib/slf4j-api-1.5.8.jar"/>
+		<library name="lib/slf4j-log4j12-1.5.8.jar"/>
+		<library name="lib/xercesImpl-2.7.1.jar"/>
+	</bundle>
+	<bundle bundleID="982" class="net.sf.ictalive.service.matchmakertab.Activator" localization="OSGI-INF/l10n/bundle" name="Matchmaker Tab" project="net.sf.ictalive.service.matchmakertab" provider="ALIVE">
+		<library name="."/>
+		<library name="lib/alive-matchmaker.jar"/>
+	</bundle>
+	<bundle bundleID="983" localization="OSGI-INF/l10n/bundle" name="ALIVE EventBus Dashboard Additions" project="net.sf.ictalive.eventbus.dashboard" provider="ALIVE">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="984" localization="OSGI-INF/l10n/bundle" name="Multi-Agent System (MAS) Diagram Plugin Library" project="net.sf.ictalive.coordination.agents.library" provider="ALIVE">
+		<library name="lib/agentscape-common.jar;lib/tools.jar;lib/castor-0.9.5.4.jar;lib/taems.jar;lib/utilities.jar"/>
+		<library name="lib/agentscape-common.jar"/>
+		<library name="lib/taems.jar"/>
+		<library name="lib/utilities.jar"/>
+	</bundle>
+	<bundle bundleID="985" localization="OSGI-INF/l10n/bundle" name="ALIVE Transformation: Opera to Actions" project="net.sf.ictalive.transformation.Opera2Actions" provider="ALIVE"/>
+	<bundle bundleID="986" localization="OSGI-INF/l10n/bundle" name="ALIVE EventBus" project="net.sf.ictalive.core.eventbus" provider="ALIVE">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="987" class="net.sf.ictalive.SL2Code.Activator" localization="OSGI-INF/l10n/bundle" name="ALIVE Transformation: Service Code Generator" project="net.sf.ictalive.transformation.SL2Code" provider="ALIVE"/>
+	<bundle bundleID="988" localization="OSGI-INF/l10n/bundle" name="ALIVE Service Enactment Component" project="net.sf.ictalive.service.enactment" provider="ALIVE"/>
+	<bundle bundleID="989" class="net.sf.ictalive.coordination.wfannotation.mapping.diagram.part.MappingDiagramEditorPlugin" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination.wfannotation.mapping.diagram" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="990" localization="OSGI-INF/l10n/bundle" name="ALIVE Transformation: OperA to Actions" project="net.sf.ictalive.transformation.Actions2Tasks" provider="ALIVE"/>
+	<bundle bundleID="991" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="992" class="net.sf.ictalive.coordination.plans.diagram.part.PlanDiagramEditorPlugin" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination.plans.diagram" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="993" class="net.sf.ictalive.runtime.dashboard.Plugin" localization="plugin" name="ALIVE Runtime Dashboard" project="net.sf.ictalive.runtime.dashboard" provider="ALIVE"/>
+	<bundle bundleID="994" class="net.sf.ictalive.runtime.NormInstances.provider.NormInstanceEditPlugin$Implementation" localization="plugin" name="%pluginName" project="net.sf.ictalive.runtime.NormInstances.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="995" class="net.sf.ictalive.coordination.actions.provider.CoordinationEditPlugin$Implementation" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1043" localization="plugin" name="OperettA" project="net.sf.ictalive.operetta" provider="ALIVE">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="996" class="net.sf.ictalive.coordination.wfvv.diagram.part.WfvvDiagramEditorPlugin" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination.wfvv.diagram" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="998" class="control.presentation.ControlEditorPlugin$Implementation" localization="plugin" name="%pluginName" project="net.sf.ictalive.service.owlseditor.editor" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="999" localization="plugin" name="%pluginName" project="net.sf.ictalive.EventMetamodel" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1000" class="net.sf.ictalive.cl2sl.ui.InvokeActivator" localization="plugin" name="ALIVE Transformation: Coordination to Services" project="net.sf.ictalive.transformation.CL2SL.ui" provider="ALIVE"/>
+	<bundle bundleID="1001" class="net.sf.ictalive.matchmaker.agent.Activator" localization="OSGI-INF/l10n/bundle" name="Matchmaker agent" project="net.sf.ictalive.matchmaker.agent" provider="ALIVE">
+		<library name="."/>
+		<library name="lib/alive-matchmaker.jar"/>
+		<library name="lib/transitivity-utils.jar"/>
+		<library name="lib/agentscape-common.jar"/>
+	</bundle>
+	<bundle bundleID="1002" class="net.sf.ictalive.service.template.ui.Activator" localization="OSGI-INF/l10n/bundle" name="ALIVE Service Template UI Integration" project="net.sf.ictalive.service.template.ui" provider="ALIVE"/>
+	<bundle bundleID="1003" localization="OSGI-INF/l10n/bundle" name="Alive Enactment Tab" project="net.sf.ictalive.service.enactmenttab" provider="ALIVE">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1004" localization="OSGI-INF/l10n/bundle" name="ALIVE Monitor Tool" project="net.sf.ictalive.monitortool" provider="ALIVE">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1005" class="net.sf.ictalive.coordination.wfvv.provider.WfvvEditPlugin$Implementation" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination.wfvv.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1006" class="net.sf.ictalive.coordination.wfannotation.bpel.diagram.bpeldiag.presentation.BpeldiagEditorPlugin$Implementation" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination.wfannotation.bpel.diagram.editor" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1007" class="net.sf.ictalive.coordination.agents.diagram.oaw.Activator" localization="OSGI-INF/l10n/bundle" name="Multi-Agent System (MAS) Diagram Extensions" project="net.sf.ictalive.coordination.agents.diagram.oaw" provider="ALIVE">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1008" class="net.sf.ictalive.coordination.wfannotation.mapping.presentation.MappingEditorPlugin$Implementation" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination.wfannotation.mapping.editor" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1009" class="net.sf.ictalive.runtime.action.provider.RuntimeEditPlugin$Implementation" localization="plugin" name="%pluginName" project="net.sf.ictalive.runtime.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1010" class="control.diagram.part.ControlDiagramEditorPlugin" localization="plugin" name="%pluginName" project="net.sf.ictalive.service.owlseditor.diagram" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1012" localization="OSGI-INF/l10n/bundle" name="ALIVE Dashboard" project="net.sf.ictalive.dashboard" provider="ALIVE"/>
+	<bundle bundleID="1011" class="net.sf.ictalive.aliveclipse.dashboard.Plugin" localization="plugin" name="ALIVE Design Dashboard" project="net.sf.ictalive.aliveclipse.dashboard" provider="ALIVE"/>
+	<bundle bundleID="1014" class="net.sf.ictalive.operetta.OM.diagram.ss.part.OperASSDiagramEditorPlugin" localization="plugin" name="OperettA SS Diagram Editor" project="net.sf.ictalive.operetta.diagram.ss" provider="ALIVE">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1013" class="net.sf.ictalive.log.analysis_v2.Activator" localization="OSGI-INF/l10n/bundle" name="ALIVE Log Analysis" project="net.sf.ictalive.log.analysis" provider="ALIVE">
+		<library name="."/>
+		<library name="lib/weka.jar"/>
+		<library name="lib/jdom.jar"/>
+		<library name="lib/jfreechart/gnujaxp.jar"/>
+		<library name="lib/jfreechart/iText-2.1.5.jar"/>
+		<library name="lib/jfreechart/jcommon-1.0.16.jar"/>
+		<library name="lib/jfreechart/jfreechart-1.0.13-experimental.jar"/>
+		<library name="lib/jfreechart/jfreechart-1.0.13-swt.jar"/>
+		<library name="lib/jfreechart/jfreechart-1.0.13.jar"/>
+		<library name="lib/jfreechart/junit.jar"/>
+		<library name="lib/jfreechart/servlet.jar"/>
+		<library name="lib/jfreechart/swtgraphics2d.jar"/>
+		<library name="lib/libthrift-r917130.jar"/>
+	</bundle>
+	<bundle bundleID="1016" localization="plugin" name="%pluginName" project="net.sf.ictalive.services" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1015" class="net.sf.ictalive.SL2Code.ui.Activator" localization="OSGI-INF/l10n/bundle" name="ALIVE Transformation: Service Code Generator UI" project="net.sf.ictalive.transformation.SL2Code.ui" provider="ALIVE"/>
+	<bundle bundleID="1017" class="net.sf.ictalive.operetta.OM.diagram.is.part.OperAISDiagramEditorPlugin" localization="plugin" name="OperettA IS Diagram Editor" project="net.sf.ictalive.operetta.diagram.is" provider="ALIVE">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1018" class="net.sf.ictalive.coordination.tasks.diagram.part.TaskDiagramEditorPlugin" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination.tasks.diagram" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1019" class="org.eclipse.bpel.model.provider.BpelEditPlugin$Implementation" localization="plugin" name="%pluginName" project="org.eclipse.bpel.model.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1020" class="net.sf.ictalive.operetta.ontology.Activator" localization="OSGI-INF/l10n/bundle" name="OperettA Ontology Manager" project="net.sf.ictalive.operetta.ontology" provider="ALIVE">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1021" class="net.sf.ictalive.operetta.modeltracker.Activator" localization="OSGI-INF/l10n/bundle" name="OperettA Model Tracker" project="net.sf.ictalive.operetta.modeltracker" provider="ALIVE"/>
+	<bundle bundleID="1022" class="net.sf.ictalive.coordination.actions.diagram.part.ActionDiagramEditorPlugin" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination.actions.diagram" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1023" class="net.sf.ictalive.actions2tasks.ui.InvokeActivator" localization="plugin" name="ALIVE Transformation: Actions to Tasks UI" project="net.sf.ictalive.transformation.Actions2Tasks.ui" provider="ALIVE"/>
+	<bundle bundleID="1024" localization="plugin" name="%pluginName" project="net.sf.ictalive.runtime" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1025" localization="OSGI-INF/l10n/bundle" name="ALIVE EventLog Dashboard Additions" project="net.sf.ictalive.eventlog.dashboard" provider="ALIVE">
+		<library name="lib/clhm-production.jar"/>
+		<library name="lib/commons-collections-3.2.1.jar"/>
+		<library name="lib/commons-lang-2.4.jar"/>
+		<library name="lib/google-collections-1.0.jar"/>
+		<library name="lib/high-scale-lib.jar"/>
+		<library name="lib/libthrift-r917130.jar"/>
+		<library name="lib/log4j-1.2.14.jar"/>
+		<library name="."/>
+		<library name="lib/slf4j-api-1.5.8.jar"/>
+		<library name="lib/slf4j-log4j12-1.5.8.jar"/>
+	</bundle>
+	<bundle bundleID="1026" localization="plugin" name="%pluginName" project="net.sf.ictalive.runtime.NormInstances" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1027" class="net.sf.ictalive.coordination.actions.presentation.CoordinationEditorPlugin$Implementation" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination.editor" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1028" localization="OSGI-INF/l10n/bundle" name="ALIVE Metamodel Utils" project="net.sf.ictalive.metamodel.utils" provider="ALIVE">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1029" class="OLCLMap.provider.OL2CLMapEditPlugin$Implementation" localization="plugin" name="%pluginName" project="net.sf.ictalive.transformation.OL2CLMap.edit" provider="ALIVE">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1030" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination.wfvv" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1032" class="net.sf.ictalive.owls.expr.provider.OwlsEditPlugin$Implementation" localization="plugin" name="%pluginName" project="net.sf.ictalive.owls.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1031" class="net.sf.ictalive.coordination.agents.diagram.part.AgentsDiagramEditorPlugin" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination.agents.diagram" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1034" localization="OSGI-INF/l10n/bundle" name="ALIVE Monitoring Framework" project="net.sf.ictalive.monitoring" provider="ALIVE">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1033" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination.wfannotation.mapping" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1036" localization="OSGI-INF/l10n/bundle" name="ALIVE Service repository tools" project="net.sf.ictalive.service.repositorytools" provider="ALIVE">
+		<library name="."/>
+		<library name="lib/alive-repository-server-client.jar"/>
+	</bundle>
+	<bundle bundleID="1035" class="net.sf.ictalive.service.provider.ServicesEditPlugin$Implementation" localization="plugin" name="%pluginName" project="net.sf.ictalive.services.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1038" class="control.provider.ControlEditPlugin$Implementation" localization="plugin" name="%pluginName" project="net.sf.ictalive.service.owlseditor.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="1037" localization="OSGI-INF/l10n/bundle" name="ALIVE Transformation: CL to SL" project="net.sf.ictalive.transformation.CL2SL" provider="ALIVE"/>
+	<bundle bundleID="1039" class="net.sf.ictalive.coordination.plansynthesis.eclipseplugin.Activator" localization="OSGI-INF/l10n/bundle" name="net.sf.ictalive.coordination.plansynthesis.eclipseplugin" project="net.sf.ictalive.coordination.plansynthesis.eclipseplugin" provider="ALIVE">
+		<library name="lib/net.sf.ictalive.coordination.plansynthesis.webserviceclient.jar"/>
+		<library name="."/>
+		<library name="plan-synth-lib/JSHOP2_abdn.jar"/>
+		<library name="plan-synth-lib/net.sf.ictalive.coordination.plansynthesis.planner.jar"/>
+		<library name="plan-synth-lib/net.sf.ictalive.coordination.plansynthesis.planner.jshop2.jar"/>
+		<library name="plan-synth-lib/net.sf.ictalive.coordination.plansynthesis.webservice.jar"/>
+	</bundle>
+	<bundle bundleID="1040" class="net.sf.ictalive.operetta.check.Activator" localization="OSGI-INF/l10n/bundle" name="OperettA Check" project="net.sf.ictalive.operetta.check" provider="ALIVE">
+		<library name="."/>
+		<library name="check/"/>
+	</bundle>
+	<bundle bundleID="1041" localization="plugin" name="%pluginName" project="net.sf.ictalive.coordination.wfannotation.bpel.diagram" provider="%providerName">
+		<library name="."/>
+	</bundle>
+</map>

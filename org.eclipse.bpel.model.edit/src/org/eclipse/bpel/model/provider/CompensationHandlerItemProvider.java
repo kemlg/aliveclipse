@@ -35,9 +35,9 @@ import org.w3c.dom.Element;
  * @generated
  */
 public class CompensationHandlerItemProvider extends
-		ExtensibleElementItemProvider implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider,
-		IItemLabelProvider, IItemPropertySource {
+		BPELExtensibleElementItemProvider implements
+		IEditingDomainItemProvider, IStructuredItemContentProvider,
+		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -103,8 +103,8 @@ public class CompensationHandlerItemProvider extends
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/CompensationHandler")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/CompensationHandler")); //$NON-NLS-1$
 	}
 
 	/**
@@ -135,8 +135,8 @@ public class CompensationHandlerItemProvider extends
 
 		switch (notification.getFeatureID(CompensationHandler.class)) {
 		case BPELPackage.COMPENSATION_HANDLER__ACTIVITY:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component id="net.sf.ictalive.service.matchmakertab" modificationStamp="656" version="1.2">
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.service.matchmakertab/src&lt;net.sf.ictalive.service.matchmakertab.dashboard"/>
+        <type handle="=net.sf.ictalive.service.matchmakertab/src&lt;net.sf.ictalive.service.matchmakertab.dashboard{SelectMatchedServicePage.java[SelectMatchedServicePage" modificationStamp="9156" restrictions="0" visibility="0"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.service.matchmakertab/src&lt;net.sf.ictalive.service.matchmakertab.views"/>
+        <type handle="=net.sf.ictalive.service.matchmakertab/src&lt;net.sf.ictalive.service.matchmakertab.views{MatchResultDraw2d.java[MatchResultDraw2d" modificationStamp="9161" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.ictalive.service.matchmakertab/src&lt;net.sf.ictalive.service.matchmakertab.views{MatchMakerTestView.java[MatchMakerTestView" modificationStamp="9159" restrictions="0" visibility="0"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.service.matchmakertab/src&lt;net.sf.ictalive.service.matchmakertab"/>
+        <type handle="=net.sf.ictalive.service.matchmakertab/src&lt;net.sf.ictalive.service.matchmakertab{ActionToOWLS.java[ActionToOWLS" modificationStamp="9146" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.ictalive.service.matchmakertab/src&lt;net.sf.ictalive.service.matchmakertab{Activator.java[Activator" modificationStamp="9147" restrictions="0" visibility="0"/>
+    </package>
+</component>

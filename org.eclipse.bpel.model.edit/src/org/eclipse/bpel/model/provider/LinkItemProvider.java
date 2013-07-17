@@ -31,8 +31,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LinkItemProvider extends ExtensibleElementItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
+public class LinkItemProvider extends BPELExtensibleElementItemProvider
+		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -127,8 +127,8 @@ public class LinkItemProvider extends ExtensibleElementItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Link")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Link")); //$NON-NLS-1$
 	}
 
 	/**
@@ -157,8 +157,8 @@ public class LinkItemProvider extends ExtensibleElementItemProvider implements
 
 		switch (notification.getFeatureID(Link.class)) {
 		case BPELPackage.LINK__NAME:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);

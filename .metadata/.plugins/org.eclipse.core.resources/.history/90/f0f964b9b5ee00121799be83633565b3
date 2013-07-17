@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ALIVE Service Template UI Integration
+Bundle-SymbolicName: net.sf.ictalive.service.template.ui;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: net.sf.ictalive.service.template.ui.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ net.sf.ictalive.aliveclipse.dashboard;bundle-version="2.0.0",
+ org.eclipse.emf.common;bundle-version="2.5.0",
+ org.eclipse.core.resources;bundle-version="3.5.2",
+ net.sf.ictalive.service.matchmakertab;bundle-version="1.0.0",
+ net.sf.ictalive.coordination;bundle-version="1.0.2",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.5.0",
+ org.eclipse.ui.ide;bundle-version="3.5.2",
+ net.sf.ictalive.service.repositorytools;bundle-version="1.0.1",
+ net.sf.ictalive.serviceui;bundle-version="1.0.0",
+ org.mindswap.owls-api;bundle-version="3.1.1",
+ org.apache.log4j;bundle-version="1.2.13",
+ net.sf.ictalive.matchmaker.agent;bundle-version="1.0.0",
+ net.sf.ictalive.service.templates;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: net.sf.ictalive.service.template.ui,
+ net.sf.ictalive.service.template.ui.dashboard
+Bundle-Vendor: ALIVE, University of Bath

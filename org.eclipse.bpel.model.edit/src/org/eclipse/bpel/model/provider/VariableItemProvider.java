@@ -31,7 +31,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class VariableItemProvider extends ExtensibleElementItemProvider
+public class VariableItemProvider extends BPELExtensibleElementItemProvider
 		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -168,8 +168,8 @@ public class VariableItemProvider extends ExtensibleElementItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Variable")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Variable")); //$NON-NLS-1$
 	}
 
 	/**
@@ -198,8 +198,8 @@ public class VariableItemProvider extends ExtensibleElementItemProvider
 
 		switch (notification.getFeatureID(Variable.class)) {
 		case BPELPackage.VARIABLE__NAME:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);

@@ -31,8 +31,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ImportItemProvider extends ExtensibleElementItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
+public class ImportItemProvider extends BPELExtensibleElementItemProvider
+		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -130,8 +130,8 @@ public class ImportItemProvider extends ExtensibleElementItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Import")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Import")); //$NON-NLS-1$
 	}
 
 	/**
@@ -162,8 +162,8 @@ public class ImportItemProvider extends ExtensibleElementItemProvider implements
 		case BPELPackage.IMPORT__NAMESPACE:
 		case BPELPackage.IMPORT__LOCATION:
 		case BPELPackage.IMPORT__IMPORT_TYPE:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);

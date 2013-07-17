@@ -32,7 +32,7 @@ import org.w3c.dom.Element;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FromPartItemProvider extends ExtensibleElementItemProvider
+public class FromPartItemProvider extends BPELExtensibleElementItemProvider
 		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -108,8 +108,8 @@ public class FromPartItemProvider extends ExtensibleElementItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/FromPart")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/FromPart")); //$NON-NLS-1$
 	}
 
 	/**
@@ -139,8 +139,8 @@ public class FromPartItemProvider extends ExtensibleElementItemProvider
 
 		switch (notification.getFeatureID(FromPart.class)) {
 		case BPELPackage.FROM_PART__PART:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);

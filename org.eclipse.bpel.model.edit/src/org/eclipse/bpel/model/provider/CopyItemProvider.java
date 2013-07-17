@@ -34,8 +34,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CopyItemProvider extends ExtensibleElementItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
+public class CopyItemProvider extends BPELExtensibleElementItemProvider
+		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -144,8 +144,8 @@ public class CopyItemProvider extends ExtensibleElementItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Copy")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Copy")); //$NON-NLS-1$
 	}
 
 	/**
@@ -176,13 +176,13 @@ public class CopyItemProvider extends ExtensibleElementItemProvider implements
 		switch (notification.getFeatureID(Copy.class)) {
 		case BPELPackage.COPY__KEEP_SRC_ELEMENT_NAME:
 		case BPELPackage.COPY__IGNORE_MISSING_FROM_DATA:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		case BPELPackage.COPY__TO:
 		case BPELPackage.COPY__FROM:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -205,8 +205,8 @@ public class CopyItemProvider extends ExtensibleElementItemProvider implements
 						BPELFactory.eINSTANCE.createTo()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.COPY__FROM, BPELFactory.eINSTANCE
-						.createFrom()));
+				BPELPackage.Literals.COPY__FROM,
+				BPELFactory.eINSTANCE.createFrom()));
 	}
 
 }

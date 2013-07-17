@@ -1625,27 +1625,27 @@ public class BPELItemProviderAdapterFactory extends BPELAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.bpel.model.ExtensibleElement} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.bpel.model.BPELExtensibleElement} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ExtensibleElementItemProvider extensibleElementItemProvider;
+	protected BPELExtensibleElementItemProvider bpelExtensibleElementItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.bpel.model.ExtensibleElement}.
+	 * This creates an adapter for a {@link org.eclipse.bpel.model.BPELExtensibleElement}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createExtensibleElementAdapter() {
-		if (extensibleElementItemProvider == null) {
-			extensibleElementItemProvider = new ExtensibleElementItemProvider(
+	public Adapter createBPELExtensibleElementAdapter() {
+		if (bpelExtensibleElementItemProvider == null) {
+			bpelExtensibleElementItemProvider = new BPELExtensibleElementItemProvider(
 					this);
 		}
 
-		return extensibleElementItemProvider;
+		return bpelExtensibleElementItemProvider;
 	}
 
 	/**
@@ -1976,8 +1976,8 @@ public class BPELItemProviderAdapterFactory extends BPELAdapterFactory
 			completionConditionItemProvider.dispose();
 		if (branchesItemProvider != null)
 			branchesItemProvider.dispose();
-		if (extensibleElementItemProvider != null)
-			extensibleElementItemProvider.dispose();
+		if (bpelExtensibleElementItemProvider != null)
+			bpelExtensibleElementItemProvider.dispose();
 		if (documentationItemProvider != null)
 			documentationItemProvider.dispose();
 		if (compensateItemProvider != null)

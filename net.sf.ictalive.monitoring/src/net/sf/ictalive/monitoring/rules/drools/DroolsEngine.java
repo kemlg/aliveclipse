@@ -23,16 +23,17 @@ import net.sf.ictalive.monitoring.rules.drools.schema.Package;
 import net.sf.ictalive.monitoring.rules.drools.schema.Rule;
 import net.sf.ictalive.runtime.event.Event;
 
+import org.drools.FactHandle;
 import org.drools.KnowledgeBase;
 import org.drools.KnowledgeBaseFactory;
+import org.drools.QueryResults;
 import org.drools.builder.KnowledgeBuilder;
 import org.drools.builder.KnowledgeBuilderFactory;
 import org.drools.builder.ResourceType;
 import org.drools.io.ResourceFactory;
 import org.drools.runtime.StatefulKnowledgeSession;
-import org.drools.runtime.rule.FactHandle;
-import org.drools.runtime.rule.QueryResults;
 import org.drools.runtime.rule.QueryResultsRow;
+
 
 public class DroolsEngine implements RuleEngine
 {
@@ -216,7 +217,7 @@ public class DroolsEngine implements RuleEngine
 	
 	public Set<Action> getActions()
 	{
-		QueryResults				qr;
+		org.drools.runtime.rule.QueryResults				qr;
 		Set<Action>					sa;
 		Iterator<QueryResultsRow>	it;
 		QueryResultsRow				qrr;
@@ -234,7 +235,7 @@ public class DroolsEngine implements RuleEngine
 		return sa;
 	}
 
-	public FactHandle handleObservation(Proposition predicate)
+	public org.drools.runtime.rule.FactHandle handleObservation(Proposition predicate)
 	{
 		return ksession.insert(predicate);
 	}
@@ -249,7 +250,7 @@ public class DroolsEngine implements RuleEngine
 		DroolsEngine			de;
 		Opera2Drools			o2d;
 		ParsedNorms				pn;
-		FactHandle				p;
+		org.drools.runtime.rule.FactHandle				p;
 		
 		o2d = new Opera2Drools("Warcraft3ResourceGathering.opera");
 		o2d.parse();
@@ -268,7 +269,7 @@ public class DroolsEngine implements RuleEngine
 		de.dump();
 	}
 	
-	private void remove(FactHandle p)
+	private void remove(org.drools.runtime.rule.FactHandle p)
 	{
 		ksession.retract(p);
 	}

@@ -17,4 +17,12 @@
             genModel="model/OperA.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated OM -->
+      <package
+            uri="http://ict-alive.sourceforge.net/operetta/OM/1.0"
+            class="OM.OMPackage"
+            genModel="model/OM.xcore"/>
+   </extension>
+
 </plugin>

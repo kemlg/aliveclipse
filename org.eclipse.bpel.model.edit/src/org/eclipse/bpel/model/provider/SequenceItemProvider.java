@@ -99,8 +99,8 @@ public class SequenceItemProvider extends ActivityItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Sequence")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Sequence")); //$NON-NLS-1$
 	}
 
 	/**
@@ -129,8 +129,8 @@ public class SequenceItemProvider extends ActivityItemProvider implements
 
 		switch (notification.getFeatureID(Sequence.class)) {
 		case BPELPackage.SEQUENCE__ACTIVITIES:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);

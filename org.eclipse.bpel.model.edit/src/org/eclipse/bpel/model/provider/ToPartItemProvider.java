@@ -32,8 +32,8 @@ import org.w3c.dom.Element;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ToPartItemProvider extends ExtensibleElementItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
+public class ToPartItemProvider extends BPELExtensibleElementItemProvider
+		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -108,8 +108,8 @@ public class ToPartItemProvider extends ExtensibleElementItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/ToPart")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/ToPart")); //$NON-NLS-1$
 	}
 
 	/**
@@ -139,8 +139,8 @@ public class ToPartItemProvider extends ExtensibleElementItemProvider implements
 
 		switch (notification.getFeatureID(ToPart.class)) {
 		case BPELPackage.TO_PART__PART:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);

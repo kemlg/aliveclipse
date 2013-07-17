@@ -182,8 +182,8 @@ public class InvokeItemProvider extends PartnerActivityItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Invoke")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Invoke")); //$NON-NLS-1$
 	}
 
 	/**
@@ -213,8 +213,8 @@ public class InvokeItemProvider extends PartnerActivityItemProvider implements
 		switch (notification.getFeatureID(Invoke.class)) {
 		case BPELPackage.INVOKE__COMPENSATION_HANDLER:
 		case BPELPackage.INVOKE__FAULT_HANDLER:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);

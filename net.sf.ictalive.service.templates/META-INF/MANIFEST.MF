@@ -4,9 +4,9 @@ Bundle-Name: ALIVE Templates
 Bundle-SymbolicName: net.sf.ictalive.service.templates
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .,
- dep/jaspwrapper-0.9.jar,
- dep/OWLSBuilder.jar,
- dep/antlr-3.0.1.jar
+ lib/antlr-3.0.1.jar,
+ lib/jaspwrapper-0.9.jar,
+ lib/OWLSBuilder.jar
 Export-Package: edu.bath.alivetemplates,
  edu.bath.alivetemplates.buildtest,
  edu.bath.alivetemplates.test,
@@ -29,5 +29,6 @@ Export-Package: edu.bath.alivetemplates,
 Require-Bundle: net.sf.ictalive.matchmaker.agent;bundle-version="1.0.0",
  org.mindswap.owls-api;bundle-version="3.1.1",
  net.sf.ictalive.service.repositorytools;bundle-version="1.0.1",
- org.junit4
+ commons;bundle-version="1.0.0",
+ net.sf.ictalive.service.matchmakertab;bundle-version="1.0.0"
 Bundle-Vendor: ALIVE, University of Bath

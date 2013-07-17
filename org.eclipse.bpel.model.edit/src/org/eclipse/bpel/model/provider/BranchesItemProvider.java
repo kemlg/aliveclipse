@@ -90,8 +90,8 @@ public class BranchesItemProvider extends ExpressionItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Branches")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Branches")); //$NON-NLS-1$
 	}
 
 	/**
@@ -121,8 +121,8 @@ public class BranchesItemProvider extends ExpressionItemProvider implements
 
 		switch (notification.getFeatureID(Branches.class)) {
 		case BPELPackage.BRANCHES__COUNT_COMPLETED_BRANCHES_ONLY:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);

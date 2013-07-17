@@ -65,8 +65,8 @@ public class BooleanExpressionItemProvider extends ExpressionItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/BooleanExpression")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/BooleanExpression")); //$NON-NLS-1$
 	}
 
 	/**

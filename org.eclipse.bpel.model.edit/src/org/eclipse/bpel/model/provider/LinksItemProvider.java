@@ -34,8 +34,8 @@ import org.w3c.dom.Element;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LinksItemProvider extends ExtensibleElementItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
+public class LinksItemProvider extends BPELExtensibleElementItemProvider
+		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -101,8 +101,8 @@ public class LinksItemProvider extends ExtensibleElementItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Links")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Links")); //$NON-NLS-1$
 	}
 
 	/**
@@ -132,8 +132,8 @@ public class LinksItemProvider extends ExtensibleElementItemProvider implements
 
 		switch (notification.getFeatureID(Links.class)) {
 		case BPELPackage.LINKS__CHILDREN:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -152,8 +152,8 @@ public class LinksItemProvider extends ExtensibleElementItemProvider implements
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.LINKS__CHILDREN, BPELFactory.eINSTANCE
-						.createLink()));
+				BPELPackage.Literals.LINKS__CHILDREN,
+				BPELFactory.eINSTANCE.createLink()));
 	}
 
 }

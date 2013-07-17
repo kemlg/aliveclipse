@@ -34,7 +34,7 @@ import org.w3c.dom.Element;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PartnerLinksItemProvider extends ExtensibleElementItemProvider
+public class PartnerLinksItemProvider extends BPELExtensibleElementItemProvider
 		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -101,8 +101,8 @@ public class PartnerLinksItemProvider extends ExtensibleElementItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/PartnerLinks")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/PartnerLinks")); //$NON-NLS-1$
 	}
 
 	/**
@@ -132,8 +132,8 @@ public class PartnerLinksItemProvider extends ExtensibleElementItemProvider
 
 		switch (notification.getFeatureID(PartnerLinks.class)) {
 		case BPELPackage.PARTNER_LINKS__CHILDREN:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);

@@ -34,7 +34,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ActivityItemProvider extends ExtensibleElementItemProvider
+public class ActivityItemProvider extends BPELExtensibleElementItemProvider
 		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -144,8 +144,8 @@ public class ActivityItemProvider extends ExtensibleElementItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Activity")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Activity")); //$NON-NLS-1$
 	}
 
 	/**
@@ -175,14 +175,18 @@ public class ActivityItemProvider extends ExtensibleElementItemProvider
 		switch (notification.getFeatureID(Activity.class)) {
 		case BPELPackage.ACTIVITY__NAME:
 		case BPELPackage.ACTIVITY__SUPPRESS_JOIN_FAILURE:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		case BPELPackage.ACTIVITY__TARGETS:
 		case BPELPackage.ACTIVITY__SOURCES:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
+//		case BPELPackage.ACTIVITY_COLOR:
+//			fireNotifyChanged(new ViewerNotification(notification,
+//					notification.getNotifier(), true, true));
+//			return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -200,12 +204,12 @@ public class ActivityItemProvider extends ExtensibleElementItemProvider
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ACTIVITY__TARGETS, BPELFactory.eINSTANCE
-						.createTargets()));
+				BPELPackage.Literals.ACTIVITY__TARGETS,
+				BPELFactory.eINSTANCE.createTargets()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ACTIVITY__SOURCES, BPELFactory.eINSTANCE
-						.createSources()));
+				BPELPackage.Literals.ACTIVITY__SOURCES,
+				BPELFactory.eINSTANCE.createSources()));
 	}
 
 }

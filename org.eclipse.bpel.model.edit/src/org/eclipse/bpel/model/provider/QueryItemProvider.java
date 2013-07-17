@@ -157,8 +157,8 @@ public class QueryItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Query")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Query")); //$NON-NLS-1$
 	}
 
 	/**
@@ -191,8 +191,8 @@ public class QueryItemProvider extends ItemProviderAdapter implements
 		case BPELPackage.QUERY__ELEMENT:
 		case BPELPackage.QUERY__VALUE:
 		case BPELPackage.QUERY__QUERY_LANGUAGE:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);

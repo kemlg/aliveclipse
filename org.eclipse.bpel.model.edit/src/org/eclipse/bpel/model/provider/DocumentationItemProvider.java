@@ -15,8 +15,6 @@ import org.eclipse.bpel.model.Documentation;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -25,8 +23,9 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import org.w3c.dom.Element;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.bpel.model.Documentation} object.
@@ -34,7 +33,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DocumentationItemProvider extends ItemProviderAdapter implements
+public class DocumentationItemProvider extends
+		BPELExtensibleElementItemProvider implements
 		IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -133,8 +133,8 @@ public class DocumentationItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Documentation")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Documentation")); //$NON-NLS-1$
 	}
 
 	/**
@@ -145,7 +145,8 @@ public class DocumentationItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Documentation) object).getLang();
+		Element labelValue = ((Documentation) object).getDocumentationElement();
+		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ? getString("_UI_Documentation_type") : //$NON-NLS-1$
 				getString("_UI_Documentation_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
 	}
@@ -165,8 +166,8 @@ public class DocumentationItemProvider extends ItemProviderAdapter implements
 		case BPELPackage.DOCUMENTATION__LANG:
 		case BPELPackage.DOCUMENTATION__SOURCE:
 		case BPELPackage.DOCUMENTATION__VALUE:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -183,17 +184,6 @@ public class DocumentationItemProvider extends ItemProviderAdapter implements
 	protected void collectNewChildDescriptors(
 			Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return BpelEditPlugin.INSTANCE;
 	}
 
 }

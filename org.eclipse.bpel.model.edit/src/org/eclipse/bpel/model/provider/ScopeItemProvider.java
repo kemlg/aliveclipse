@@ -172,8 +172,8 @@ public class ScopeItemProvider extends ActivityItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Scope")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Scope")); //$NON-NLS-1$
 	}
 
 	/**
@@ -203,8 +203,8 @@ public class ScopeItemProvider extends ActivityItemProvider implements
 		switch (notification.getFeatureID(Scope.class)) {
 		case BPELPackage.SCOPE__ISOLATED:
 		case BPELPackage.SCOPE__EXIT_ON_STANDARD_FAULT:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		case BPELPackage.SCOPE__FAULT_HANDLERS:
 		case BPELPackage.SCOPE__COMPENSATION_HANDLER:
@@ -214,8 +214,8 @@ public class ScopeItemProvider extends ActivityItemProvider implements
 		case BPELPackage.SCOPE__EVENT_HANDLERS:
 		case BPELPackage.SCOPE__PARTNER_LINKS:
 		case BPELPackage.SCOPE__TERMINATION_HANDLER:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -242,104 +242,104 @@ public class ScopeItemProvider extends ActivityItemProvider implements
 				BPELFactory.eINSTANCE.createCompensationHandler()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createActivity()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createActivity()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createPartnerActivity()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createPartnerActivity()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createInvoke()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createInvoke()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createReply()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createReply()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createReceive()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createReceive()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createExit()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createExit()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createThrow()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createThrow()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createWait()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createWait()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createEmpty()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createEmpty()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createSequence()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createSequence()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createWhile()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createWhile()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createPick()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createPick()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createFlow()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createFlow()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createAssign()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createAssign()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createScope()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createScope()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createCompensateScope()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createCompensateScope()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createRethrow()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createRethrow()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createExtensionActivity()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createExtensionActivity()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createOpaqueActivity()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createOpaqueActivity()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createForEach()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createForEach()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createRepeatUntil()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createRepeatUntil()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createValidate()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createValidate()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createIf()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createIf()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__ACTIVITY, BPELFactory.eINSTANCE
-						.createCompensate()));
+				BPELPackage.Literals.SCOPE__ACTIVITY,
+				BPELFactory.eINSTANCE.createCompensate()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SCOPE__VARIABLES, BPELFactory.eINSTANCE
-						.createVariables()));
+				BPELPackage.Literals.SCOPE__VARIABLES,
+				BPELFactory.eINSTANCE.createVariables()));
 
 		newChildDescriptors.add(createChildParameter(
 				BPELPackage.Literals.SCOPE__CORRELATION_SETS,

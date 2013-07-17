@@ -31,8 +31,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MessageExchangeItemProvider extends ExtensibleElementItemProvider
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+public class MessageExchangeItemProvider extends
+		BPELExtensibleElementItemProvider implements
+		IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -88,8 +89,8 @@ public class MessageExchangeItemProvider extends ExtensibleElementItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/MessageExchange")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/MessageExchange")); //$NON-NLS-1$
 	}
 
 	/**
@@ -118,8 +119,8 @@ public class MessageExchangeItemProvider extends ExtensibleElementItemProvider
 
 		switch (notification.getFeatureID(MessageExchange.class)) {
 		case BPELPackage.MESSAGE_EXCHANGE__NAME:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);

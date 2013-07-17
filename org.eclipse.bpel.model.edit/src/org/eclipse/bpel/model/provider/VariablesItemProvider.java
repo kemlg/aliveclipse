@@ -34,7 +34,7 @@ import org.w3c.dom.Element;
  * <!-- end-user-doc -->
  * @generated
  */
-public class VariablesItemProvider extends ExtensibleElementItemProvider
+public class VariablesItemProvider extends BPELExtensibleElementItemProvider
 		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -101,8 +101,8 @@ public class VariablesItemProvider extends ExtensibleElementItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Variables")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Variables")); //$NON-NLS-1$
 	}
 
 	/**
@@ -132,8 +132,8 @@ public class VariablesItemProvider extends ExtensibleElementItemProvider
 
 		switch (notification.getFeatureID(Variables.class)) {
 		case BPELPackage.VARIABLES__CHILDREN:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -152,8 +152,8 @@ public class VariablesItemProvider extends ExtensibleElementItemProvider
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.VARIABLES__CHILDREN, BPELFactory.eINSTANCE
-						.createVariable()));
+				BPELPackage.Literals.VARIABLES__CHILDREN,
+				BPELFactory.eINSTANCE.createVariable()));
 	}
 
 }

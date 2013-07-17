@@ -108,8 +108,8 @@ public class ThrowItemProvider extends ActivityItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Throw")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Throw")); //$NON-NLS-1$
 	}
 
 	/**
@@ -138,8 +138,8 @@ public class ThrowItemProvider extends ActivityItemProvider implements
 
 		switch (notification.getFeatureID(Throw.class)) {
 		case BPELPackage.THROW__FAULT_NAME:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);

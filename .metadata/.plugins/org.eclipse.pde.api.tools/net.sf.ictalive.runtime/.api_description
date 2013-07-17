@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component id="net.sf.ictalive.runtime" modificationStamp="786" version="1.2">
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.runtime/src&lt;net.sf.ictalive.runtime.event"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.runtime/src&lt;net.sf.ictalive.runtime.event.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.runtime/src&lt;net.sf.ictalive.runtime.action"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.runtime/src&lt;net.sf.ictalive.runtime.fact"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.runtime/src&lt;net.sf.ictalive.runtime.fact.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.runtime/src&lt;net.sf.ictalive.runtime.enactment.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.runtime/src&lt;net.sf.ictalive.runtime.action.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.runtime/src&lt;net.sf.ictalive.runtime.fact.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.runtime/src&lt;net.sf.ictalive.runtime.enactment.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.runtime/src&lt;net.sf.ictalive.runtime.enactment"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.runtime/src&lt;net.sf.ictalive.runtime.action.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.runtime/src&lt;net.sf.ictalive.runtime.event.util"/>
+    </package>
+</component>

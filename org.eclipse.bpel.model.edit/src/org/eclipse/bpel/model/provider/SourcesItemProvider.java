@@ -34,7 +34,7 @@ import org.w3c.dom.Element;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SourcesItemProvider extends ExtensibleElementItemProvider
+public class SourcesItemProvider extends BPELExtensibleElementItemProvider
 		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -101,8 +101,8 @@ public class SourcesItemProvider extends ExtensibleElementItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Sources")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Sources")); //$NON-NLS-1$
 	}
 
 	/**
@@ -132,8 +132,8 @@ public class SourcesItemProvider extends ExtensibleElementItemProvider
 
 		switch (notification.getFeatureID(Sources.class)) {
 		case BPELPackage.SOURCES__CHILDREN:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -152,8 +152,8 @@ public class SourcesItemProvider extends ExtensibleElementItemProvider
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.SOURCES__CHILDREN, BPELFactory.eINSTANCE
-						.createSource()));
+				BPELPackage.Literals.SOURCES__CHILDREN,
+				BPELFactory.eINSTANCE.createSource()));
 	}
 
 }

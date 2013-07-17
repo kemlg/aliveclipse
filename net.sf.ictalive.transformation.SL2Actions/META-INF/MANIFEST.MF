@@ -18,3 +18,6 @@ Import-Package: org.eclipse.ui.dialogs,
  org.eclipse.ui.ide,
  org.eclipse.ui.model
 Bundle-Vendor: ALIVE, Trinity College Dublin
+Bundle-ClassPath: lib/alive-repository-server-client.jar,
+ lib/alive-service-repository-tools.jar,
+ .

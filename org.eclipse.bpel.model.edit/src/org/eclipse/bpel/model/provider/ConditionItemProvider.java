@@ -65,8 +65,8 @@ public class ConditionItemProvider extends ExpressionItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Condition")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Condition")); //$NON-NLS-1$
 	}
 
 	/**

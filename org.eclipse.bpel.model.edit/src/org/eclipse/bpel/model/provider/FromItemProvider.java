@@ -38,8 +38,8 @@ import org.w3c.dom.Element;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FromItemProvider extends ExtensibleElementItemProvider implements
-		IEditingDomainItemProvider, IStructuredItemContentProvider,
+public class FromItemProvider extends BPELExtensibleElementItemProvider
+		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -62,17 +62,93 @@ public class FromItemProvider extends ExtensibleElementItemProvider implements
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addVariablePropertyDescriptor(object);
+			addPartPropertyDescriptor(object);
+			addPartnerLinkPropertyDescriptor(object);
+			addPropertyPropertyDescriptor(object);
 			addOpaquePropertyDescriptor(object);
 			addEndpointReferencePropertyDescriptor(object);
 			addLiteralPropertyDescriptor(object);
 			addUnsafeLiteralPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
-			addVariablePropertyDescriptor(object);
-			addPartPropertyDescriptor(object);
-			addPartnerLinkPropertyDescriptor(object);
-			addPropertyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Variable feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVariablePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(
+						((ComposeableAdapterFactory) adapterFactory)
+								.getRootAdapterFactory(),
+						getResourceLocator(),
+						getString("_UI_AbstractAssignBound_variable_feature"), //$NON-NLS-1$
+						getString(
+								"_UI_PropertyDescriptor_description", "_UI_AbstractAssignBound_variable_feature", "_UI_AbstractAssignBound_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+						BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__VARIABLE,
+						true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Part feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPartPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(
+						((ComposeableAdapterFactory) adapterFactory)
+								.getRootAdapterFactory(),
+						getResourceLocator(),
+						getString("_UI_AbstractAssignBound_part_feature"), //$NON-NLS-1$
+						getString(
+								"_UI_PropertyDescriptor_description", "_UI_AbstractAssignBound_part_feature", "_UI_AbstractAssignBound_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+						BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__PART, true,
+						false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Partner Link feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPartnerLinkPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(
+						((ComposeableAdapterFactory) adapterFactory)
+								.getRootAdapterFactory(),
+						getResourceLocator(),
+						getString("_UI_AbstractAssignBound_partnerLink_feature"), //$NON-NLS-1$
+						getString(
+								"_UI_PropertyDescriptor_description", "_UI_AbstractAssignBound_partnerLink_feature", "_UI_AbstractAssignBound_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+						BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__PARTNER_LINK,
+						true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Property feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPropertyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(
+						((ComposeableAdapterFactory) adapterFactory)
+								.getRootAdapterFactory(),
+						getResourceLocator(),
+						getString("_UI_AbstractAssignBound_property_feature"), //$NON-NLS-1$
+						getString(
+								"_UI_PropertyDescriptor_description", "_UI_AbstractAssignBound_property_feature", "_UI_AbstractAssignBound_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+						BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__PROPERTY,
+						true, false, true, null, null, null));
 	}
 
 	/**
@@ -173,82 +249,6 @@ public class FromItemProvider extends ExtensibleElementItemProvider implements
 	}
 
 	/**
-	 * This adds a property descriptor for the Variable feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addVariablePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_From_variable_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_From_variable_feature", "_UI_From_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						BPELPackage.Literals.FROM__VARIABLE, true, false, true,
-						null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Part feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPartPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_From_part_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_From_part_feature", "_UI_From_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						BPELPackage.Literals.FROM__PART, true, false, true,
-						null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Partner Link feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPartnerLinkPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_From_partnerLink_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_From_partnerLink_feature", "_UI_From_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						BPELPackage.Literals.FROM__PARTNER_LINK, true, false,
-						true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Property feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPropertyPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_From_property_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_From_property_feature", "_UI_From_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						BPELPackage.Literals.FROM__PROPERTY, true, false, true,
-						null, null, null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -261,9 +261,11 @@ public class FromItemProvider extends ExtensibleElementItemProvider implements
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(BPELPackage.Literals.FROM__EXPRESSION);
+			childrenFeatures
+					.add(BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__QUERY);
+			childrenFeatures
+					.add(BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__EXPRESSION);
 			childrenFeatures.add(BPELPackage.Literals.FROM__SERVICE_REF);
-			childrenFeatures.add(BPELPackage.Literals.FROM__QUERY);
 		}
 		return childrenFeatures;
 	}
@@ -289,8 +291,8 @@ public class FromItemProvider extends ExtensibleElementItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/From")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/From")); //$NON-NLS-1$
 	}
 
 	/**
@@ -323,14 +325,14 @@ public class FromItemProvider extends ExtensibleElementItemProvider implements
 		case BPELPackage.FROM__ENDPOINT_REFERENCE:
 		case BPELPackage.FROM__LITERAL:
 		case BPELPackage.FROM__UNSAFE_LITERAL:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
+		case BPELPackage.FROM__QUERY:
 		case BPELPackage.FROM__EXPRESSION:
 		case BPELPackage.FROM__SERVICE_REF:
-		case BPELPackage.FROM__QUERY:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -349,28 +351,28 @@ public class FromItemProvider extends ExtensibleElementItemProvider implements
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.FROM__EXPRESSION, BPELFactory.eINSTANCE
-						.createExpression()));
+				BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__QUERY,
+				BPELFactory.eINSTANCE.createQuery()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.FROM__EXPRESSION, BPELFactory.eINSTANCE
-						.createBooleanExpression()));
+				BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__EXPRESSION,
+				BPELFactory.eINSTANCE.createExpression()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.FROM__EXPRESSION, BPELFactory.eINSTANCE
-						.createCondition()));
+				BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__EXPRESSION,
+				BPELFactory.eINSTANCE.createBooleanExpression()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.FROM__EXPRESSION, BPELFactory.eINSTANCE
-						.createBranches()));
+				BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__EXPRESSION,
+				BPELFactory.eINSTANCE.createCondition()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.FROM__SERVICE_REF, BPELFactory.eINSTANCE
-						.createServiceRef()));
+				BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__EXPRESSION,
+				BPELFactory.eINSTANCE.createBranches()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.FROM__QUERY, BPELFactory.eINSTANCE
-						.createQuery()));
+				BPELPackage.Literals.FROM__SERVICE_REF,
+				BPELFactory.eINSTANCE.createServiceRef()));
 	}
 
 	/**
@@ -386,7 +388,7 @@ public class FromItemProvider extends ExtensibleElementItemProvider implements
 		Object childObject = child;
 
 		boolean qualify = childFeature == WSDLPackage.Literals.EXTENSIBLE_ELEMENT__EEXTENSIBILITY_ELEMENTS
-				|| childFeature == BPELPackage.Literals.FROM__EXPRESSION;
+				|| childFeature == BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__EXPRESSION;
 
 		if (qualify) {
 			return getString("_UI_CreateChild_text2", //$NON-NLS-1$

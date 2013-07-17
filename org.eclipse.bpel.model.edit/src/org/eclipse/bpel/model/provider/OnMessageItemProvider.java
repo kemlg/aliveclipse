@@ -35,7 +35,7 @@ import org.w3c.dom.Element;
  * <!-- end-user-doc -->
  * @generated
  */
-public class OnMessageItemProvider extends ExtensibleElementItemProvider
+public class OnMessageItemProvider extends BPELExtensibleElementItemProvider
 		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -205,8 +205,8 @@ public class OnMessageItemProvider extends ExtensibleElementItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/OnMessage")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/OnMessage")); //$NON-NLS-1$
 	}
 
 	/**
@@ -238,8 +238,8 @@ public class OnMessageItemProvider extends ExtensibleElementItemProvider
 		case BPELPackage.ON_MESSAGE__ACTIVITY:
 		case BPELPackage.ON_MESSAGE__CORRELATIONS:
 		case BPELPackage.ON_MESSAGE__MESSAGE_EXCHANGE:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);

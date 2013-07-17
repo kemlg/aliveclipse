@@ -81,17 +81,19 @@ public class QueryItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addDocumentationElementPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_WSDLElement_documentationElement_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_WSDLElement_documentationElement_feature", "_UI_WSDLElement_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						WSDLPackage.Literals.WSDL_ELEMENT__DOCUMENTATION_ELEMENT,
-						true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WSDLElement_documentationElement_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WSDLElement_documentationElement_feature", "_UI_WSDLElement_type"),
+				 WSDLPackage.Literals.WSDL_ELEMENT__DOCUMENTATION_ELEMENT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -101,17 +103,19 @@ public class QueryItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addElementPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_WSDLElement_element_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_WSDLElement_element_feature", "_UI_WSDLElement_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						WSDLPackage.Literals.WSDL_ELEMENT__ELEMENT, true,
-						false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WSDLElement_element_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WSDLElement_element_feature", "_UI_WSDLElement_type"),
+				 WSDLPackage.Literals.WSDL_ELEMENT__ELEMENT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -121,17 +125,19 @@ public class QueryItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addRequiredPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_ExtensibilityElement_required_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_ExtensibilityElement_required_feature", "_UI_ExtensibilityElement_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						WSDLPackage.Literals.EXTENSIBILITY_ELEMENT__REQUIRED,
-						true, false, false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ExtensibilityElement_required_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ExtensibilityElement_required_feature", "_UI_ExtensibilityElement_type"),
+				 WSDLPackage.Literals.EXTENSIBILITY_ELEMENT__REQUIRED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -141,17 +147,19 @@ public class QueryItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addElementTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_ExtensibilityElement_elementType_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_ExtensibilityElement_elementType_feature", "_UI_ExtensibilityElement_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						WSDLPackage.Literals.EXTENSIBILITY_ELEMENT__ELEMENT_TYPE,
-						true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ExtensibilityElement_elementType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ExtensibilityElement_elementType_feature", "_UI_ExtensibilityElement_type"),
+				 WSDLPackage.Literals.EXTENSIBILITY_ELEMENT__ELEMENT_TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -161,17 +169,19 @@ public class QueryItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addQueryLanguagePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_Query_queryLanguage_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_Query_queryLanguage_feature", "_UI_Query_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						MessagepropertiesPackage.Literals.QUERY__QUERY_LANGUAGE,
-						true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Query_queryLanguage_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Query_queryLanguage_feature", "_UI_Query_type"),
+				 MessagepropertiesPackage.Literals.QUERY__QUERY_LANGUAGE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -181,17 +191,19 @@ public class QueryItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addValuePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_Query_value_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_Query_value_feature", "_UI_Query_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						MessagepropertiesPackage.Literals.QUERY__VALUE, true,
-						false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Query_value_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Query_value_feature", "_UI_Query_type"),
+				 MessagepropertiesPackage.Literals.QUERY__VALUE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -202,8 +214,7 @@ public class QueryItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Query")); //$NON-NLS-1$
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Query"));
 	}
 
 	/**
@@ -214,10 +225,11 @@ public class QueryItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public String getText(Object object) {
-		Element labelValue = ((Query) object).getDocumentationElement();
+		Element labelValue = ((Query)object).getDocumentationElement();
 		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ? getString("_UI_Query_type") : //$NON-NLS-1$
-				getString("_UI_Query_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
+		return label == null || label.length() == 0 ?
+			getString("_UI_Query_type") :
+			getString("_UI_Query_type") + " " + label;
 	}
 
 	/**
@@ -232,15 +244,14 @@ public class QueryItemProvider extends ItemProviderAdapter implements
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Query.class)) {
-		case MessagepropertiesPackage.QUERY__DOCUMENTATION_ELEMENT:
-		case MessagepropertiesPackage.QUERY__ELEMENT:
-		case MessagepropertiesPackage.QUERY__REQUIRED:
-		case MessagepropertiesPackage.QUERY__ELEMENT_TYPE:
-		case MessagepropertiesPackage.QUERY__QUERY_LANGUAGE:
-		case MessagepropertiesPackage.QUERY__VALUE:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
-			return;
+			case MessagepropertiesPackage.QUERY__DOCUMENTATION_ELEMENT:
+			case MessagepropertiesPackage.QUERY__ELEMENT:
+			case MessagepropertiesPackage.QUERY__REQUIRED:
+			case MessagepropertiesPackage.QUERY__ELEMENT_TYPE:
+			case MessagepropertiesPackage.QUERY__QUERY_LANGUAGE:
+			case MessagepropertiesPackage.QUERY__VALUE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -266,7 +277,7 @@ public class QueryItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return BpelEditPlugin.INSTANCE;
+		return messagepropertiesEditPlugin.INSTANCE;
 	}
 
 }

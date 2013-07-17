@@ -123,8 +123,8 @@ public class PickItemProvider extends ActivityItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Pick")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Pick")); //$NON-NLS-1$
 	}
 
 	/**
@@ -153,13 +153,13 @@ public class PickItemProvider extends ActivityItemProvider implements
 
 		switch (notification.getFeatureID(Pick.class)) {
 		case BPELPackage.PICK__CREATE_INSTANCE:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		case BPELPackage.PICK__MESSAGES:
 		case BPELPackage.PICK__ALARM:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -178,12 +178,12 @@ public class PickItemProvider extends ActivityItemProvider implements
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.PICK__MESSAGES, BPELFactory.eINSTANCE
-						.createOnMessage()));
+				BPELPackage.Literals.PICK__MESSAGES,
+				BPELFactory.eINSTANCE.createOnMessage()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.PICK__ALARM, BPELFactory.eINSTANCE
-						.createOnAlarm()));
+				BPELPackage.Literals.PICK__ALARM,
+				BPELFactory.eINSTANCE.createOnAlarm()));
 	}
 
 }

@@ -1,0 +1,7 @@
+source.. = src/
+bin.includes = META-INF/,\
+               dep/antlr-3.0.1.jar,\
+               dep/jaspwrapper-0.9.jar,\
+               .
+             
+additional.bundles = org.junit4

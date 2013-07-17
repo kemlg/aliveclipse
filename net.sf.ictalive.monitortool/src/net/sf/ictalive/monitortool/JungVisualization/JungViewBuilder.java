@@ -78,7 +78,7 @@ import org.eclipse.swt.layout.FormAttachment;
 
 
 /** 
- * @author Ignasi Gómez-Sebastià (ignasi.gomez@lsi.upc.edu)
+ * @author Ignasi Gï¿½mez-Sebastiï¿½ (ignasi.gomez@lsi.upc.edu)
  */
 @SuppressWarnings("serial")
 public class JungViewBuilder extends JApplet {

@@ -1,0 +1,2316 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component id="net.sf.ictalive.commons" modificationStamp="63739" version="1.2">
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.data.function"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-visualization-2.0.1.jar&lt;edu.uci.ics.jung.visualization.annotations"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/icu4j-51.2.jar&lt;com.ibm.icu.impl.duration"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.internal.runners"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovyjarjarantlr.ASdebug"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-algorithms-2.0.1.jar&lt;edu.uci.ics.jung.algorithms.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.control.io"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.multibroker"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.gui.arffviewer"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.multibroker.falcon"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.data.xml"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/antlr-runtime-3.5.jar&lt;org.antlr.runtime"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.bridge.resources"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl.binding.soap.internal.generator"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/knowledge-api-5.5.0.Final.jar&lt;org.drools.definition"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;javax.wsdl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.jmsclient.zip"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.xml.jaxb.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-algorithms-2.0.1.jar&lt;edu.uci.ics.jung.algorithms.scoring"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.jmsclient.protocol.http"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.mi"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.clusterers.forOPTICSAndDBScan.DataObjects"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-lang-2.6.jar&lt;org.apache.commons.lang"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.impl.xs.identity"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/icu4j-51.2.jar&lt;com.ibm.icu.math"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.lf5"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovyjarjarasm.asm.commons"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;javax.wsdl.extensions"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.data.category"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/icu4j-51.2.jar&lt;com.ibm.icu.impl.data"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.core"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.runtime.memoize"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.persist.inmemory"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.example"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.reteoo.builder"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.experiment.xml"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.varia"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovyjarjarantlr.actions.csharp"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.util.memory.levels"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.trees.m5"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl.internal.generator.extension"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-api-2.0.1.jar&lt;edu.uci.ics.jung.graph.event"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.service"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl.internal.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.util.dialog"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-jaxrpc-1.4.jar&lt;javax.xml.namespace"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.management.agent"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.clusterers.forOPTICSAndDBScan.Utils"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;antlr.debug.misc"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/antlr-2.7.7.jar&lt;antlr.debug.misc"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.core.neighboursearch"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.io"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.security.servlet"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.filters.supervised.attribute"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-algorithms-2.0.1.jar&lt;edu.uci.ics.jung.algorithms.shortestpath"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.tools.ast"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.matchers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/collections-generic-4.01.jar&lt;org.apache.commons.collections15.functors"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.management.mbeans"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.core.migration"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.axis"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.internal.runners.rules"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.process.instance"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.jsr223"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.core.logging"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.groovydoc"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.bayes.net.search.global"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.ast.expr"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.net.https"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.lf5.viewer"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/collections-generic-4.01.jar&lt;org.apache.commons.collections15.buffer"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.utils"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.runtime.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovyjarjarasm.asm.signature"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.filters"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.server"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.mapping.loader"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.facttemplates"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.resources"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.resources"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqjmx-1.0.0.jar&lt;com.sun.messaging.jmq.resources"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/jms-1.0.0.jar&lt;com.sun.messaging.jmq.resources"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.tools.shell"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.cluster"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.auth.api.client"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.auth.api.client"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.process.core.datatype"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/slf4j-api-1.7.4.jar&lt;org.slf4j.helpers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jdom-1.1.3.jar&lt;org.jdom.transform"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovyjarjarantlr.debug"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovyjarjarantlr.build"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jdom-1.1.3.jar&lt;org.jdom.output"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.antlr"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-discovery-0.5.jar&lt;org.apache.commons.discovery.tools"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.management.jmx"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.ui.text"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl.binding.soap.internal.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.auth.file"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.xni.parser"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl.binding.http.internal.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.net.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.core.exceptions"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;javax.wsdl.extensions.soap12"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.model"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.io.internal"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.core.matrix"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovyjarjarantlr.actions.java"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.experimental.theories"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/knowledge-api-5.5.0.Final.jar&lt;org.drools.conf"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.jmsclient.protocol.direct"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/knowledge-api-5.5.0.Final.jar&lt;org.drools.definition.process"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.management.mbeans.resources"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.naming"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-jaxrpc-1.4.jar&lt;javax.xml.rpc.handler.soap"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.time.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;javax.wsdl.xml"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.xs.datatypes"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.dom.events"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.classgen"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-jaxrpc-1.4.jar&lt;javax.xml.rpc"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl.internal.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.lazy.kstar"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.bridge"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.gui.boundaryvisualizer"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/google-collections-1.0.jar&lt;com.google.common.annotations"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.core.util.asm"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;com.ibm.wsdl.extensions.mime"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.mapping.handlers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.control.customizers.builder"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.constants"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.gui.experiment"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.runtime.wrappers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.bridge.admin.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.impl.xs"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.deployment.wsdd"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-collections-3.2.1.jar&lt;org.apache.commons.collections.set"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.control.customizers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.gui.sql.event"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.common"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;com.ibm.wsdl.factory"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.persist.file"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.internal.runners.statements"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.filters.unsupervised.attribute"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.audit.event"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.nt"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.builder"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.management"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl.binding.mime"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-algorithms-2.0.1.jar&lt;edu.uci.ics.jung.algorithms.layout"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovyjarjarantlr.collections.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-algorithms-2.0.1.jar&lt;edu.uci.ics.jung.algorithms.layout.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.auth.api"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.auth.api"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.demo"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.runners"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.util.pool"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.title"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.event.knowlegebase.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.core.stemmers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.utils.bytecode"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.components.compiler"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;antlr.collections.impl"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/antlr-2.7.7.jar&lt;antlr.collections.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;com.ibm.wsdl.extensions"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.or"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.datagenerators.classifiers.regression"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.runners.model"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.transport.local"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqjmx-1.0.0.jar&lt;com.sun.messaging"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/jms-1.0.0.jar&lt;com.sun.messaging"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-jaxrpc-1.4.jar&lt;javax.xml.rpc.soap"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-api-2.0.1.jar&lt;edu.uci.ics.jung.graph"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-graph-impl-2.0.1.jar&lt;edu.uci.ics.jung.graph"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.control.messages"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.data.contour"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-lang-2.6.jar&lt;org.apache.commons.lang.enums"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/knowledge-api-5.5.0.Final.jar&lt;org.drools.event.knowledgebase"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.or.jms"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-visualization-2.0.1.jar&lt;edu.uci.ics.jung.visualization.renderers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.block"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.gui.hierarchyvisualizer"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.plugin"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl.binding.mime.internal.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.data.time.ohlc"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-algorithms-2.0.1.jar&lt;edu.uci.ics.jung.algorithms.filters"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqjmx-1.0.0.jar&lt;com.sun.messaging.jms.management.server"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.data.migration"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.imagemap"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.bayes.net.search"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.fluent.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jdom-1.1.3.jar&lt;org.jdom.input"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.experimental.results"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.gui.explorer"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-visualization-2.0.1.jar&lt;edu.uci.ics.jung.visualization.control"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.dom"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.tools.groovydoc.gstringTemplates"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.classgen.asm.sc"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.jmsspi"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.castor.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.license"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.spi"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.vmplugin"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.plot.dial"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.functions"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/collections-generic-4.01.jar&lt;org.apache.commons.collections15.collection"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;com.ibm.wsdl.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.clusterers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.gui.streams"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.parsers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.needle"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.transform.sc.transformers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.beans"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.runtime.callsite"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.trees.adtree"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.definitions.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovyjarjarasm.asm.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.jmx.builder"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-discovery-0.5.jar&lt;org.apache.commons.discovery.resource.classes"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/knowledge-api-5.5.0.Final.jar&lt;org.drools.definition.type"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.jmsclient.runtime.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.renderer.category"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;com.ibm.wsdl.extensions.schema"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.jdbc"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.jaxp.validation"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.xml"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.data.statistics"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.castor.core.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;junit.textui"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.jmsclient.notification"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;antlr.build"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/antlr-2.7.7.jar&lt;antlr.build"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.multibroker.raptor"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.antlr.treewalker"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.multibroker.fullyconnected"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.bayes.net.search.fixed"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.wsdl.gen"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.xml.validators"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.grid"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xml.serialize"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.lf5.viewer.configure"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/knowledge-api-5.5.0.Final.jar&lt;org.drools.event.io"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.runtime"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.core.neighboursearch.kdtrees"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.config"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.util.slurpersupport"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.core.mathematicalexpression"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.tools.shell.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-collections-3.2.1.jar&lt;org.apache.commons.collections.map"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.dsml.mozilla"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-jaxrpc-1.4.jar&lt;javax.xml.rpc.holders"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.xml"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.core.neighboursearch.covertrees"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.tools.groovydoc"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.datagenerators"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovyjarjarasm.asm.tree"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-jaxrpc-1.4.jar&lt;javax.xml.messaging"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.impl.xs.models"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqjmx-1.0.0.jar&lt;com.sun.messaging.jmq"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/jms-1.0.0.jar&lt;com.sun.messaging.jmq"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jms"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqjmx-1.0.0.jar&lt;com.sun.messaging.jms"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/jms-1.0.0.jar&lt;com.sun.messaging.jms"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.util"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.util"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqjmx-1.0.0.jar&lt;com.sun.messaging.jmq.util"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/jms-1.0.0.jar&lt;com.sun.messaging.jmq.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.xni.grammars"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.deployment.wsdd.providers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/collections-generic-4.01.jar&lt;org.apache.commons.collections15.keyvalue"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.jmsclient.validation"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.bsf"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-collections-3.2.1.jar&lt;org.apache.commons.collections.iterators"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.meta.nestedDichotomies"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.components.net"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-algorithms-2.0.1.jar&lt;edu.uci.ics.jung.algorithms.generators.random"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.multibroker.heartbeat.spi"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;com.ibm.wsdl.extensions.soap12"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.experiment"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.core.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.factmodel"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovyjarjarasm.asm"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.jmsclient.runtime"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.resources"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-algorithms-2.0.1.jar&lt;edu.uci.ics.jung.algorithms.scoring.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.holders"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.core.xml"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.concurrent"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.labels"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.experimental.theories.internal"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.command.assertion"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/icu4j-51.2.jar&lt;com.ibm.icu.lang"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.wsdl.symbolTable"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.bridge.service"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;junit.framework"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.runtime.typehandling"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.swing.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.lazy"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.net"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-algorithms-2.0.1.jar&lt;edu.uci.ics.jung.algorithms.flows"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.components.encoding"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.base.extractors"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.persist"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.xinclude"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.net"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.classgen.asm"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/icu4j-51.2.jar&lt;com.ibm.icu.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.transform.sc"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.gui.beans"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.jmsclient.auth"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.mapping.xml.types.descriptors"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.mapping"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.dsml"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl.binding.soap"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.data.time"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.lf5.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jms-1.0.0.jar&lt;javax.jms"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.transport.jms"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;antlr.actions.python"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/antlr-2.7.7.jar&lt;antlr.actions.python"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.clusterers.forOPTICSAndDBScan.OPTICS_GUI"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.configuration"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.gui.sql"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.core.tokenizers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.bridge.admin.handlers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/icu4j-51.2.jar&lt;com.ibm.icu.text"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.event.rule"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jms.notification"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.auth.api.server"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.auth.api.server"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.wsdl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-algorithms-2.0.1.jar&lt;edu.uci.ics.jung.algorithms.importance"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.data"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl.internal.extensibility"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/knowledge-api-5.5.0.Final.jar&lt;org.drools.event.process"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;com.ibm.wsdl.util.xml"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-algorithms-2.0.1.jar&lt;edu.uci.ics.jung.algorithms.blockmodel"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.security.simple"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.clusterers.forOPTICSAndDBScan.Databases"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.command.runtime.rule"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.components.jms"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-collections-3.2.1.jar&lt;org.apache.commons.collections.bidimap"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.base.dataproviders"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.builder.conf.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.tools.gse"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.pmml.consumer"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-visualization-2.0.1.jar&lt;edu.uci.ics.jung.visualization.picking"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/icu4j-51.2.jar&lt;com.ibm.icu.impl.duration.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.command.runtime.process"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.attachments"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.runner"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.audit"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;antlr"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/antlr-2.7.7.jar&lt;antlr"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.mi.supportVector"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.core.util.debug"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.io"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/google-collections-1.0.jar&lt;com.google.common.base.internal"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.renderer.xy"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.castor.core.exceptions"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-collections-3.2.1.jar&lt;org.apache.commons.collections.buffer"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-lang-2.6.jar&lt;org.apache.commons.lang.time"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovyjarjarantlr"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.persist.jdbc.ext"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.ast.stmt"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.net"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/google-collections-1.0.jar&lt;com.google.common.base"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.antlr.java"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.bayes.net"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;antlr.preprocessor"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/antlr-2.7.7.jar&lt;antlr.preprocessor"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.trees.j48"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/knowledge-api-5.5.0.Final.jar&lt;org.drools.runtime.conf"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-jaxrpc-1.4.jar&lt;javax.xml.rpc.server"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-lang-2.6.jar&lt;org.apache.commons.lang.reflect"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.wsdl.fromJava"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.xml"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.multibroker.heartbeat"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-discovery-0.5.jar&lt;org.apache.commons.discovery.log"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.marshalling.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jdom-1.1.3.jar&lt;org.jdom.filter"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.or.sax"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;com.ibm.wsdl.extensions.http"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.impl.dtd"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.tools.shell.commands"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.components.image"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.impl.xpath.regex"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.experimental"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovyjarjarantlr.actions.python"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.encoding"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.jms.spi.xa"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.xml.streamingmarkupsupport"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.filters.unsupervised.instance.subsetbyexpression"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;com.ibm.wsdl.xml"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.internal"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.process.core.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.castor.mapping"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.annotations"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.service.imq"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jdom-1.1.3.jar&lt;org.jdom.xpath"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.builder.conf"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.inspect.swingui"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.jmsclient.protocol.ssl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.runtime.m12n"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.servlet"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.gui.visualize.plugins"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jdom-1.1.3.jar&lt;org.jdom"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.base.field"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/knowledge-api-5.5.0.Final.jar&lt;org.drools.osgi.api"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-api-2.0.1.jar&lt;edu.uci.ics.jung.graph.util"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-graph-impl-2.0.1.jar&lt;edu.uci.ics.jung.graph.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.wml"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.data.resources"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.types"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.servlet"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-algorithms-2.0.1.jar&lt;edu.uci.ics.jung.algorithms.cluster"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-visualization-2.0.1.jar&lt;edu.uci.ics.jung.visualization.decorators"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.command.runtime"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.command"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.management"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqjmx-1.0.0.jar&lt;com.sun.messaging.jmq.management"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-logging-1.1.3.jar&lt;org.apache.commons.logging"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;junit.runner"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.process.instance.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.transport.httptunnel"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.transport.httptunnel"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.soap"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.impl.dv.xs"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-algorithms-2.0.1.jar&lt;edu.uci.ics.jung.algorithms.matrix"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.core.util.index"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.tools"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.runtime.powerassert"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-lang-2.6.jar&lt;org.apache.commons.lang.text"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.mock.interceptor"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-collections-3.2.1.jar&lt;org.apache.commons.collections.functors"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-visualization-2.0.1.jar&lt;edu.uci.ics.jung.visualization.transform"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.test"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.internal.matchers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.estimators"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.security"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-discovery-0.5.jar&lt;org.apache.commons.discovery.jdk"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.internal.requests"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.agent"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.xml.location"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.gui.visualize"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-visualization-2.0.1.jar&lt;edu.uci.ics.jung.visualization.layout"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/antlr-runtime-3.5.jar&lt;org.antlr.runtime.debug"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/collections-generic-4.01.jar&lt;org.apache.commons.collections15.set"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.bayes.blr"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-collections-3.2.1.jar&lt;org.apache.commons.collections.collection"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.rules"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.util.timer"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.data.gantt"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.runtime.process"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/icu4j-51.2.jar&lt;com.ibm.icu.impl.locale"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.xml"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.description"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.functions.neural"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.transport.mail"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.time"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.rules"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.binding"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.mapping.xml.descriptors"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovyjarjarantlr.actions.cpp"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.jmsservice"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsservice"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.ast.tools"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.reflection.stdclasses"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.io.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.helpers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.xpointer"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.gui.treevisualizer"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/antlr-runtime-3.5.jar&lt;org.antlr.runtime.misc"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/slf4j-log4j13-1.0.1.jar&lt;org.slf4j.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.transform"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.xml"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.xml.util.resolvers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.multibroker.standalone"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.panel"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/knowledge-api-5.5.0.Final.jar&lt;org.drools.definition.rule"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.data.protocol"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.providers.java"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.functions.supportVector"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.net.tls"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;antlr.collections"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/antlr-2.7.7.jar&lt;antlr.collections"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.functions.pace"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.runner.notification"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.schema"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.transport.java"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.multibroker.raptor.handlers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.transport.httptunnel.client"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.agent.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.util.memory"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.runtime.help.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.w3c.dom.html"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.types"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-collections-3.2.1.jar&lt;org.apache.commons.collections.keyvalue"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;javax.wsdl.extensions.http"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.text"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.persist.jdbc"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.auth.api.server.model"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.auth.api.server.model"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.strategies"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.dsml.schema"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-algorithms-2.0.1.jar&lt;edu.uci.ics.jung.algorithms.metrics"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl.binding.http.internal.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.persist.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.service.imq.group"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.xml.dom"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.tools"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.reteoo.compiled"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-algorithms-2.0.1.jar&lt;edu.uci.ics.jung.algorithms.transformation"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.mapping.xml"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.auth.jaas"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/knowledge-api-5.5.0.Final.jar&lt;org.drools.builder.help"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-lang-2.6.jar&lt;org.apache.commons.lang.builder"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/knowledge-api-5.5.0.Final.jar&lt;org.drools.persistence.jpa"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-logging-1.1.3.jar&lt;org.apache.commons.logging.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.definitions.rule.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.data.migration.thrasher2"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-collections-3.2.1.jar&lt;org.apache.commons.collections"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/slf4j-log4j13-1.0.1.jar&lt;org.slf4j.spi"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.json"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.base"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.transport.httptunnel.server"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.misc"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-lang-2.6.jar&lt;org.apache.commons.lang.exception"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.mapping.xml.types"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.castor.util.concurrent"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.editor"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.transform.stc"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-discovery-0.5.jar&lt;org.apache.commons.discovery"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.data.general"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/collections-generic-4.01.jar&lt;org.apache.commons.collections15.iterators"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.plot"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.utils.cache"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/knowledge-api-5.5.0.Final.jar&lt;org.drools.task.service"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.encoding.ser"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.gui.graphvisualizer"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.xml.changeset"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.providers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/collections-generic-4.01.jar&lt;org.apache.commons.collections15.multimap"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.command.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl.internal.impl.wsdl4j"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.associations.tertius"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.security"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovyjarjarantlr.preprocessor"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.syntax"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.swing.factory"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-visualization-2.0.1.jar&lt;edu.uci.ics.jung.visualization.subLayout"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.handlers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.rule"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.process.core.datatype.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.runtime.help"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.data.xy"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.ast"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-discovery-0.5.jar&lt;org.apache.commons.discovery.resource.names"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.associations"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.components.logger"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.experimental.max"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.lf5.viewer.categoryexplorer"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovyjarjarantlr.debug.misc"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-jaxrpc-1.4.jar&lt;javax.xml.rpc.handler"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.castor.xml"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.command.builder"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.jmsclient.logging"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.swing.binding"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-lang-2.6.jar&lt;org.apache.commons.lang.math"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/antlr-runtime-3.5.jar&lt;org.antlr.runtime.tree"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-collections-3.2.1.jar&lt;org.apache.commons.collections.comparators"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.factmodel.traits"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.trees"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.runtime.rule.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.dom3.as"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.lang"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.bayes.net.search.local"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.dsml.jndi"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.net.tcp"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.components.script"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.transport.http"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.core.converters"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;com.ibm.wsdl.extensions.soap"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.util.logging"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.data"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.event"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.io"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.time"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.inspect"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.xml.wls8"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.tools.javac"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.testng"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.experimental.theories.suppliers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.auth.acl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.audit"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;javax.wsdl.extensions.mime"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-visualization-2.0.1.jar&lt;edu.uci.ics.jung.visualization.transform.shape"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.components.threadpool"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.conflict"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.xml.handlers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.auth"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.data.handlers.admin"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl.binding.http.internal.generator"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-collections-3.2.1.jar&lt;org.apache.commons.collections.list"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.pattern"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.ui.view"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;antlr.actions.java"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/antlr-2.7.7.jar&lt;antlr.actions.java"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/icu4j-51.2.jar&lt;com.ibm.icu.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.components.uuid"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.rules.part"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.attributeSelection"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.datagenerators.classifiers.classification"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.jmsclient.resources"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.encoding.ser.castor"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.urls"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-discovery-0.5.jar&lt;org.apache.commons.discovery.resource"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.process.core"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.jmsclient"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.process.core.datatype.impl.type"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;javax.wsdl.factory"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.reflection"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.auth.handlers"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.auth.handlers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.impl.xs.traversers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.internal.builders"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/slf4j-log4j13-1.0.1.jar&lt;org.slf4j"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/collections-generic-4.01.jar&lt;org.apache.commons.collections15.map"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.core.neighboursearch.balltrees"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.stax"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.bayes.net.estimate"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.internal.runners.model"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;javax.wsdl.extensions.schema"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.runner.manipulation"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.reteoo"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl.binding.soap.internal.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-discovery-0.5.jar&lt;org.apache.commons.discovery.ant"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-visualization-2.0.1.jar&lt;edu.uci.ics.jung.visualization.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.world.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.swing"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.auth.jaas"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.auth.jaas"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.data.handlers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/collections-generic-4.01.jar&lt;org.apache.commons.collections15.list"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.grape"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.sql"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.wsdl.toJava"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.rule.builder.dialect.asm"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.handlers.http"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.jmx"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.config"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;com.ibm.wsdl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.base.mvel"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.ant"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.wml.dom"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.base.accumulators"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.entity"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.core.cluster"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;junit.extensions"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/collections-generic-4.01.jar&lt;org.apache.commons.collections15.bag"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.gui"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.xni"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.renderer"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.service.imq.dedicated"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl4j-1.6.3.jar&lt;javax.wsdl.extensions.soap"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.experimental.runners"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.control"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.xs"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.client"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovyjarjarantlr.collections"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.message"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/collections-generic-4.01.jar&lt;org.apache.commons.collections15"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.trees.lmt"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.data.jdbc"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.net.http"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.impl.dtd.models"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/junit-4.11.jar&lt;org.junit.experimental.categories"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.jaxp"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-collections-3.2.1.jar&lt;org.apache.commons.collections.bag"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.chainsaw"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.handlers.soap"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.i18n"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.event.rule.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.base.evaluators"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.datagenerators.clusterers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.runtime.metaclass"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.dsml.tools"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.transform.sc.optimizers"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.trees.ft"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl.binding.http"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.management.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.meta"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.evaluation"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.filters.unsupervised.instance"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.filters.supervised.instance"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.transform"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.runtime.dgmimpl.arrays"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/knowledge-api-5.5.0.Final.jar&lt;org.drools.logger"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.ast.builder"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.impl.xs.opti"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.cluster.ha"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.vmplugin.v5"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.util.codec"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.vmplugin.v6"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.impl.io"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.antlr.parser"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.rule.constraint"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.impl.dv.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.util.lists"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl.internal.generator"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/collections-generic-4.01.jar&lt;org.apache.commons.collections15.comparators"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;antlr.ASdebug"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/antlr-2.7.7.jar&lt;antlr.ASdebug"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.client.async"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.chart.encoders"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.cli"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.impl.xs.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.type"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.impl.xpath"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/commons-lang-2.6.jar&lt;org.apache.commons.lang.mutable"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-visualization-2.0.1.jar&lt;edu.uci.ics.jung.visualization"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/knowledge-api-5.5.0.Final.jar&lt;org.drools.agent.conf"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;antlr.debug"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/antlr-2.7.7.jar&lt;antlr.debug"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.collections"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;antlr.actions.csharp"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/antlr-2.7.7.jar&lt;antlr.actions.csharp"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.spi"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovy.ui"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.stax.events"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/knowledge-api-5.5.0.Final.jar&lt;org.drools.event.knowledgeagent"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.osgi.core"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/google-collections-1.0.jar&lt;com.google.common.collect"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.jaxp.datatype"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.xml.descriptors"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.castor.core"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.impl.dv.dtd"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.core.migration.thrasher"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.runtime.dgmimpl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.bayes"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.monitor"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jdom-1.1.3.jar&lt;org.jdom.adapters"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.auth.usermgr"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/log4j-1.2.16.jar&lt;org.apache.log4j.net"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-1.4.jar&lt;org.apache.axis.session"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.event"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/high-scale-lib-1.1.4.jar&lt;org.cliffc.high_scale_lib"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;antlr.actions.cpp"/>
+        <fragment handle="=net.sf.ictalive.commons/lib\/antlr-2.7.7.jar&lt;antlr.actions.cpp"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.data.migration.finch"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;groovyjarjarcommonscli"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.resources"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jfreechart-1.0.15.jar&lt;org.jfree.data.io"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.impl.dv"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.classifiers.bayes.net.search.ci"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.impl.msg"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.auth.ldap"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.core.pmml"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/wsdl-1.1.100-v200707201214.jar&lt;org.eclipse.wst.wsdl.binding.mime.internal.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.tools.xml"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.html.dom"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.associations.gsp"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/drools-core-5.5.0.Final.jar&lt;org.drools.runtime.rule"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/castor-1.2.jar&lt;org.exolab.castor.xml.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/jung-algorithms-2.0.1.jar&lt;edu.uci.ics.jung.algorithms.generators"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imqbroker-1.0.0.jar&lt;com.sun.messaging.jmq.jmsserver.core"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/weka-stable-3.6.9.jar&lt;weka.gui.beans.xml"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/xercesImpl-2.11.0.jar&lt;org.apache.xerces.impl.validation"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/axis-jaxrpc-1.4.jar&lt;javax.xml.rpc.encoding"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/collections-generic-4.01.jar&lt;org.apache.commons.collections15.bidimap"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/groovy-all-2.1.6.jar&lt;org.codehaus.groovy.runtime"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.jmsclient.protocol.tcp"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.commons/lib\/imq-1.0.0.jar&lt;com.sun.messaging.jmq.jmsclient.protocol"/>
+    </package>
+</component>

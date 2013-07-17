@@ -31,8 +31,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CorrelationSetItemProvider extends ExtensibleElementItemProvider
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+public class CorrelationSetItemProvider extends
+		BPELExtensibleElementItemProvider implements
+		IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -108,8 +109,8 @@ public class CorrelationSetItemProvider extends ExtensibleElementItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/CorrelationSet")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/CorrelationSet")); //$NON-NLS-1$
 	}
 
 	/**
@@ -138,8 +139,8 @@ public class CorrelationSetItemProvider extends ExtensibleElementItemProvider
 
 		switch (notification.getFeatureID(CorrelationSet.class)) {
 		case BPELPackage.CORRELATION_SET__NAME:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);

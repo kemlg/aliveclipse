@@ -34,7 +34,7 @@ import org.w3c.dom.Element;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EventHandlerItemProvider extends ExtensibleElementItemProvider
+public class EventHandlerItemProvider extends BPELExtensibleElementItemProvider
 		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -102,8 +102,8 @@ public class EventHandlerItemProvider extends ExtensibleElementItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/EventHandler")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/EventHandler")); //$NON-NLS-1$
 	}
 
 	/**
@@ -134,8 +134,8 @@ public class EventHandlerItemProvider extends ExtensibleElementItemProvider
 		switch (notification.getFeatureID(EventHandler.class)) {
 		case BPELPackage.EVENT_HANDLER__ALARM:
 		case BPELPackage.EVENT_HANDLER__EVENTS:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);

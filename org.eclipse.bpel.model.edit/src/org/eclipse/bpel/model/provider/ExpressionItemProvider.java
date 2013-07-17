@@ -221,8 +221,8 @@ public class ExpressionItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Expression")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Expression")); //$NON-NLS-1$
 	}
 
 	/**
@@ -258,8 +258,8 @@ public class ExpressionItemProvider extends ItemProviderAdapter implements
 		case BPELPackage.EXPRESSION__BODY:
 		case BPELPackage.EXPRESSION__EXPRESSION_LANGUAGE:
 		case BPELPackage.EXPRESSION__OPAQUE:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);

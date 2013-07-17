@@ -102,8 +102,8 @@ public class WaitItemProvider extends ActivityItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Wait")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Wait")); //$NON-NLS-1$
 	}
 
 	/**
@@ -133,8 +133,8 @@ public class WaitItemProvider extends ActivityItemProvider implements
 		switch (notification.getFeatureID(Wait.class)) {
 		case BPELPackage.WAIT__FOR:
 		case BPELPackage.WAIT__UNTIL:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -153,36 +153,36 @@ public class WaitItemProvider extends ActivityItemProvider implements
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.WAIT__FOR, BPELFactory.eINSTANCE
-						.createExpression()));
+				BPELPackage.Literals.WAIT__FOR,
+				BPELFactory.eINSTANCE.createExpression()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.WAIT__FOR, BPELFactory.eINSTANCE
-						.createBooleanExpression()));
+				BPELPackage.Literals.WAIT__FOR,
+				BPELFactory.eINSTANCE.createBooleanExpression()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.WAIT__FOR, BPELFactory.eINSTANCE
-						.createCondition()));
+				BPELPackage.Literals.WAIT__FOR,
+				BPELFactory.eINSTANCE.createCondition()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.WAIT__FOR, BPELFactory.eINSTANCE
-						.createBranches()));
+				BPELPackage.Literals.WAIT__FOR,
+				BPELFactory.eINSTANCE.createBranches()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.WAIT__UNTIL, BPELFactory.eINSTANCE
-						.createExpression()));
+				BPELPackage.Literals.WAIT__UNTIL,
+				BPELFactory.eINSTANCE.createExpression()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.WAIT__UNTIL, BPELFactory.eINSTANCE
-						.createBooleanExpression()));
+				BPELPackage.Literals.WAIT__UNTIL,
+				BPELFactory.eINSTANCE.createBooleanExpression()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.WAIT__UNTIL, BPELFactory.eINSTANCE
-						.createCondition()));
+				BPELPackage.Literals.WAIT__UNTIL,
+				BPELFactory.eINSTANCE.createCondition()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.WAIT__UNTIL, BPELFactory.eINSTANCE
-						.createBranches()));
+				BPELPackage.Literals.WAIT__UNTIL,
+				BPELFactory.eINSTANCE.createBranches()));
 	}
 
 	/**

@@ -33,7 +33,7 @@ import org.w3c.dom.Element;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CorrelationItemProvider extends ExtensibleElementItemProvider
+public class CorrelationItemProvider extends BPELExtensibleElementItemProvider
 		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -131,8 +131,8 @@ public class CorrelationItemProvider extends ExtensibleElementItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Correlation")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Correlation")); //$NON-NLS-1$
 	}
 
 	/**
@@ -163,8 +163,8 @@ public class CorrelationItemProvider extends ExtensibleElementItemProvider
 		switch (notification.getFeatureID(Correlation.class)) {
 		case BPELPackage.CORRELATION__INITIATE:
 		case BPELPackage.CORRELATION__PATTERN:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);

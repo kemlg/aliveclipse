@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ALIVE Service Enactment Component
+Bundle-SymbolicName: net.sf.ictalive.service.enactment
+Bundle-Version: 1.0.0.qualifier
+Export-Package: net.sf.ictalive.service.enactment;
+  uses:="net.sf.ictalive.EventModel.Event,
+   net.sf.ictalive.eventbus,
+   org.mindswap.owls.process.execution,
+   org.mindswap.owls.process,
+   org.mindswap.query,
+   org.mindswap.exceptions",
+ net.sf.ictalive.service.enactment.policy,
+ net.sf.ictalive.service.enactment.simpleevents
+Require-Bundle: org.eclipse.emf;bundle-version="2.5.0",
+ org.eclipse.emf.common;bundle-version="2.5.0",
+ org.eclipse.emf.ecore;bundle-version="2.5.0",
+ org.junit4;bundle-version="4.5.0",
+ org.mindswap.owls-api;bundle-version="3.0.0",
+ org.apache.log4j;bundle-version="1.2.13",
+ net.sf.ictalive.service.repositorytools;bundle-version="1.0.0",
+ net.sf.ictalive.eventbus;bundle-version="0.0.1",
+ net.sf.ictalive.runtime;bundle-version="1.0.3"
+Bundle-Vendor: ALIVE, University of Bath
+

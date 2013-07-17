@@ -37,7 +37,7 @@ import org.w3c.dom.Element;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ToItemProvider extends ExtensibleElementItemProvider implements
+public class ToItemProvider extends BPELExtensibleElementItemProvider implements
 		IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -81,11 +81,11 @@ public class ToItemProvider extends ExtensibleElementItemProvider implements
 						((ComposeableAdapterFactory) adapterFactory)
 								.getRootAdapterFactory(),
 						getResourceLocator(),
-						getString("_UI_To_variable_feature"), //$NON-NLS-1$
+						getString("_UI_AbstractAssignBound_variable_feature"), //$NON-NLS-1$
 						getString(
-								"_UI_PropertyDescriptor_description", "_UI_To_variable_feature", "_UI_To_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						BPELPackage.Literals.TO__VARIABLE, true, false, false,
-						null, null, null));
+								"_UI_PropertyDescriptor_description", "_UI_AbstractAssignBound_variable_feature", "_UI_AbstractAssignBound_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+						BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__VARIABLE,
+						true, false, true, null, null, null));
 	}
 
 	/**
@@ -100,11 +100,11 @@ public class ToItemProvider extends ExtensibleElementItemProvider implements
 						((ComposeableAdapterFactory) adapterFactory)
 								.getRootAdapterFactory(),
 						getResourceLocator(),
-						getString("_UI_To_part_feature"), //$NON-NLS-1$
+						getString("_UI_AbstractAssignBound_part_feature"), //$NON-NLS-1$
 						getString(
-								"_UI_PropertyDescriptor_description", "_UI_To_part_feature", "_UI_To_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						BPELPackage.Literals.TO__PART, true, false, false,
-						null, null, null));
+								"_UI_PropertyDescriptor_description", "_UI_AbstractAssignBound_part_feature", "_UI_AbstractAssignBound_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+						BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__PART, true,
+						false, true, null, null, null));
 	}
 
 	/**
@@ -119,11 +119,11 @@ public class ToItemProvider extends ExtensibleElementItemProvider implements
 						((ComposeableAdapterFactory) adapterFactory)
 								.getRootAdapterFactory(),
 						getResourceLocator(),
-						getString("_UI_To_partnerLink_feature"), //$NON-NLS-1$
+						getString("_UI_AbstractAssignBound_partnerLink_feature"), //$NON-NLS-1$
 						getString(
-								"_UI_PropertyDescriptor_description", "_UI_To_partnerLink_feature", "_UI_To_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						BPELPackage.Literals.TO__PARTNER_LINK, true, false,
-						false, null, null, null));
+								"_UI_PropertyDescriptor_description", "_UI_AbstractAssignBound_partnerLink_feature", "_UI_AbstractAssignBound_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+						BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__PARTNER_LINK,
+						true, false, true, null, null, null));
 	}
 
 	/**
@@ -138,11 +138,11 @@ public class ToItemProvider extends ExtensibleElementItemProvider implements
 						((ComposeableAdapterFactory) adapterFactory)
 								.getRootAdapterFactory(),
 						getResourceLocator(),
-						getString("_UI_To_property_feature"), //$NON-NLS-1$
+						getString("_UI_AbstractAssignBound_property_feature"), //$NON-NLS-1$
 						getString(
-								"_UI_PropertyDescriptor_description", "_UI_To_property_feature", "_UI_To_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						BPELPackage.Literals.TO__PROPERTY, true, false, false,
-						null, null, null));
+								"_UI_PropertyDescriptor_description", "_UI_AbstractAssignBound_property_feature", "_UI_AbstractAssignBound_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+						BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__PROPERTY,
+						true, false, true, null, null, null));
 	}
 
 	/**
@@ -158,8 +158,10 @@ public class ToItemProvider extends ExtensibleElementItemProvider implements
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(BPELPackage.Literals.TO__QUERY);
-			childrenFeatures.add(BPELPackage.Literals.TO__EXPRESSION);
+			childrenFeatures
+					.add(BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__QUERY);
+			childrenFeatures
+					.add(BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__EXPRESSION);
 		}
 		return childrenFeatures;
 	}
@@ -185,8 +187,8 @@ public class ToItemProvider extends ExtensibleElementItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/To")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/To")); //$NON-NLS-1$
 	}
 
 	/**
@@ -217,8 +219,8 @@ public class ToItemProvider extends ExtensibleElementItemProvider implements
 		switch (notification.getFeatureID(To.class)) {
 		case BPELPackage.TO__QUERY:
 		case BPELPackage.TO__EXPRESSION:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -237,24 +239,24 @@ public class ToItemProvider extends ExtensibleElementItemProvider implements
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.TO__QUERY, BPELFactory.eINSTANCE
-						.createQuery()));
+				BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__QUERY,
+				BPELFactory.eINSTANCE.createQuery()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.TO__EXPRESSION, BPELFactory.eINSTANCE
-						.createExpression()));
+				BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__EXPRESSION,
+				BPELFactory.eINSTANCE.createExpression()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.TO__EXPRESSION, BPELFactory.eINSTANCE
-						.createBooleanExpression()));
+				BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__EXPRESSION,
+				BPELFactory.eINSTANCE.createBooleanExpression()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.TO__EXPRESSION, BPELFactory.eINSTANCE
-						.createCondition()));
+				BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__EXPRESSION,
+				BPELFactory.eINSTANCE.createCondition()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.TO__EXPRESSION, BPELFactory.eINSTANCE
-						.createBranches()));
+				BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__EXPRESSION,
+				BPELFactory.eINSTANCE.createBranches()));
 	}
 
 	/**
@@ -270,7 +272,7 @@ public class ToItemProvider extends ExtensibleElementItemProvider implements
 		Object childObject = child;
 
 		boolean qualify = childFeature == WSDLPackage.Literals.EXTENSIBLE_ELEMENT__EEXTENSIBILITY_ELEMENTS
-				|| childFeature == BPELPackage.Literals.TO__EXPRESSION;
+				|| childFeature == BPELPackage.Literals.ABSTRACT_ASSIGN_BOUND__EXPRESSION;
 
 		if (qualify) {
 			return getString("_UI_CreateChild_text2", //$NON-NLS-1$

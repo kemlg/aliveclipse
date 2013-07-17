@@ -122,8 +122,8 @@ public class AssignItemProvider extends ActivityItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Assign")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Assign")); //$NON-NLS-1$
 	}
 
 	/**
@@ -152,12 +152,12 @@ public class AssignItemProvider extends ActivityItemProvider implements
 
 		switch (notification.getFeatureID(Assign.class)) {
 		case BPELPackage.ASSIGN__VALIDATE:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		case BPELPackage.ASSIGN__COPY:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -176,8 +176,8 @@ public class AssignItemProvider extends ActivityItemProvider implements
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ASSIGN__COPY, BPELFactory.eINSTANCE
-						.createCopy()));
+				BPELPackage.Literals.ASSIGN__COPY,
+				BPELFactory.eINSTANCE.createCopy()));
 	}
 
 }

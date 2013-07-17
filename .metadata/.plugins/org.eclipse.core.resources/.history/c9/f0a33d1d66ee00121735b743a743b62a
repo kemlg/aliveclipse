@@ -1,0 +1,7 @@
+source.. = src/
+output.. = bin/
+bin.includes = META-INF/,\
+               .,\
+               lib/
+src.includes = lib/
+jre.compilation.profile = J2SE-1.5

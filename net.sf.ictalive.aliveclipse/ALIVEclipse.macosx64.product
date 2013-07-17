@@ -189,21 +189,39 @@ version for the Library.
    </license>
 
    <plugins>
-      <plugin id="ch.qos.logback.classic"/>
-      <plugin id="ch.qos.logback.core"/>
-      <plugin id="ch.qos.logback.slf4j" fragment="true"/>
+      <plugin id="com.google.guava"/>
       <plugin id="com.google.inject"/>
       <plugin id="com.ibm.icu"/>
       <plugin id="com.ning.async-http-client"/>
-      <plugin id="javax.activation"/>
+      <plugin id="commons"/>
       <plugin id="javax.annotation"/>
       <plugin id="javax.inject"/>
-      <plugin id="javax.mail"/>
       <plugin id="javax.servlet"/>
+      <plugin id="javax.wsdl"/>
       <plugin id="javax.xml"/>
       <plugin id="lpg.runtime.java"/>
+      <plugin id="net.sf.ictalive.XSDSchema"/>
       <plugin id="net.sf.ictalive.aliveclipse"/>
       <plugin id="net.sf.ictalive.aliveclipse.dashboard"/>
+      <plugin id="net.sf.ictalive.coordination"/>
+      <plugin id="net.sf.ictalive.coordination.actions.diagram"/>
+      <plugin id="net.sf.ictalive.coordination.agents.diagram"/>
+      <plugin id="net.sf.ictalive.coordination.edit"/>
+      <plugin id="net.sf.ictalive.coordination.editor"/>
+      <plugin id="net.sf.ictalive.coordination.plans.diagram"/>
+      <plugin id="net.sf.ictalive.coordination.tasks.diagram"/>
+      <plugin id="net.sf.ictalive.coordination.wfannotation.bpel.diagram"/>
+      <plugin id="net.sf.ictalive.coordination.wfannotation.bpel.diagram.diagram"/>
+      <plugin id="net.sf.ictalive.coordination.wfannotation.bpel.diagram.edit"/>
+      <plugin id="net.sf.ictalive.coordination.wfannotation.bpel.diagram.editor"/>
+      <plugin id="net.sf.ictalive.coordination.wfannotation.mapping"/>
+      <plugin id="net.sf.ictalive.coordination.wfannotation.mapping.diagram"/>
+      <plugin id="net.sf.ictalive.coordination.wfannotation.mapping.edit"/>
+      <plugin id="net.sf.ictalive.coordination.wfannotation.mapping.editor"/>
+      <plugin id="net.sf.ictalive.coordination.wfvv"/>
+      <plugin id="net.sf.ictalive.coordination.wfvv.diagram"/>
+      <plugin id="net.sf.ictalive.coordination.wfvv.edit"/>
+      <plugin id="net.sf.ictalive.coordination.wfvv.editor"/>
       <plugin id="net.sf.ictalive.dashboard"/>
       <plugin id="net.sf.ictalive.operetta"/>
       <plugin id="net.sf.ictalive.operetta.check"/>
@@ -214,7 +232,25 @@ version for the Library.
       <plugin id="net.sf.ictalive.operetta.modeltracker"/>
       <plugin id="net.sf.ictalive.operetta.ontology"/>
       <plugin id="net.sf.ictalive.operetta.psdeditor"/>
+      <plugin id="net.sf.ictalive.owls"/>
+      <plugin id="net.sf.ictalive.owls.edit"/>
+      <plugin id="net.sf.ictalive.rules"/>
+      <plugin id="net.sf.ictalive.rules.edit"/>
+      <plugin id="net.sf.ictalive.runtime"/>
+      <plugin id="net.sf.ictalive.runtime.NormInstances"/>
+      <plugin id="net.sf.ictalive.runtime.NormInstances.edit"/>
       <plugin id="net.sf.ictalive.runtime.dashboard"/>
+      <plugin id="net.sf.ictalive.runtime.edit"/>
+      <plugin id="net.sf.ictalive.runtime.editor"/>
+      <plugin id="net.sf.ictalive.schema.edit"/>
+      <plugin id="net.sf.ictalive.service.owlseditor"/>
+      <plugin id="net.sf.ictalive.service.owlseditor.diagram"/>
+      <plugin id="net.sf.ictalive.service.owlseditor.edit"/>
+      <plugin id="net.sf.ictalive.service.owlseditor.editor"/>
+      <plugin id="net.sf.ictalive.service.repositorytools"/>
+      <plugin id="net.sf.ictalive.services"/>
+      <plugin id="net.sf.ictalive.services.edit"/>
+      <plugin id="net.sf.ictalive.serviceui"/>
       <plugin id="org.antlr.runtime"/>
       <plugin id="org.apache.ant"/>
       <plugin id="org.apache.batik.bridge"/>
@@ -230,6 +266,7 @@ version for the Library.
       <plugin id="org.apache.batik.util.gui"/>
       <plugin id="org.apache.batik.xml"/>
       <plugin id="org.apache.commons.cli"/>
+      <plugin id="org.apache.commons.codec"/>
       <plugin id="org.apache.commons.lang"/>
       <plugin id="org.apache.commons.logging"/>
       <plugin id="org.apache.log4j"/>
@@ -242,6 +279,9 @@ version for the Library.
       <plugin id="org.eclipse.ant.core"/>
       <plugin id="org.eclipse.ant.launching"/>
       <plugin id="org.eclipse.ant.ui"/>
+      <plugin id="org.eclipse.bpel.common.model"/>
+      <plugin id="org.eclipse.bpel.model"/>
+      <plugin id="org.eclipse.bpel.model.edit"/>
       <plugin id="org.eclipse.compare"/>
       <plugin id="org.eclipse.compare.core"/>
       <plugin id="org.eclipse.core.commands"/>
@@ -259,7 +299,6 @@ version for the Library.
       <plugin id="org.eclipse.core.resources"/>
       <plugin id="org.eclipse.core.runtime"/>
       <plugin id="org.eclipse.core.runtime.compatibility"/>
-      <plugin id="org.eclipse.core.runtime.compatibility.auth"/>
       <plugin id="org.eclipse.core.runtime.compatibility.registry" fragment="true"/>
       <plugin id="org.eclipse.core.variables"/>
       <plugin id="org.eclipse.debug.core"/>
@@ -293,6 +332,7 @@ version for the Library.
       <plugin id="org.eclipse.emf.ecore"/>
       <plugin id="org.eclipse.emf.ecore.change"/>
       <plugin id="org.eclipse.emf.ecore.edit"/>
+      <plugin id="org.eclipse.emf.ecore.xcore.lib"/>
       <plugin id="org.eclipse.emf.ecore.xmi"/>
       <plugin id="org.eclipse.emf.edit"/>
       <plugin id="org.eclipse.emf.edit.ui"/>
@@ -304,6 +344,7 @@ version for the Library.
       <plugin id="org.eclipse.emf.validation"/>
       <plugin id="org.eclipse.emf.workspace"/>
       <plugin id="org.eclipse.equinox.app"/>
+      <plugin id="org.eclipse.equinox.bidi"/>
       <plugin id="org.eclipse.equinox.common"/>
       <plugin id="org.eclipse.equinox.ds"/>
       <plugin id="org.eclipse.equinox.event"/>
@@ -408,7 +449,6 @@ version for the Library.
       <plugin id="org.eclipse.m2e.archetype.common"/>
       <plugin id="org.eclipse.m2e.core"/>
       <plugin id="org.eclipse.m2e.core.ui"/>
-      <plugin id="org.eclipse.m2e.logback.appender" fragment="true"/>
       <plugin id="org.eclipse.m2e.maven.indexer"/>
       <plugin id="org.eclipse.m2e.maven.runtime"/>
       <plugin id="org.eclipse.m2e.model.edit"/>
@@ -457,22 +497,27 @@ version for the Library.
       <plugin id="org.eclipse.wst.common.emfworkbench.integration"/>
       <plugin id="org.eclipse.wst.common.environment"/>
       <plugin id="org.eclipse.wst.common.frameworks"/>
+      <plugin id="org.eclipse.wst.common.frameworks.ui"/>
       <plugin id="org.eclipse.wst.common.project.facet.core"/>
+      <plugin id="org.eclipse.wst.common.ui"/>
       <plugin id="org.eclipse.wst.common.uriresolver"/>
       <plugin id="org.eclipse.wst.sse.core"/>
+      <plugin id="org.eclipse.wst.sse.ui"/>
       <plugin id="org.eclipse.wst.validation"/>
+      <plugin id="org.eclipse.wst.validation.ui"/>
+      <plugin id="org.eclipse.wst.wsdl"/>
       <plugin id="org.eclipse.wst.xml.core"/>
+      <plugin id="org.eclipse.wst.xml.ui"/>
       <plugin id="org.eclipse.wst.xsd.core"/>
       <plugin id="org.eclipse.xpand"/>
       <plugin id="org.eclipse.xsd"/>
       <plugin id="org.eclipse.xtend"/>
-      <plugin id="org.eclipse.xtend.shared.ui"/>
       <plugin id="org.eclipse.xtend.typesystem.emf"/>
-      <plugin id="org.eclipse.xtend.typesystem.emf.ui"/>
-      <plugin id="org.eclipse.xtext.logging" fragment="true"/>
+      <plugin id="org.eclipse.xtext.xbase.lib"/>
       <plugin id="org.hamcrest.core"/>
       <plugin id="org.jboss.netty"/>
       <plugin id="org.junit"/>
+      <plugin id="org.mindswap.owls-api"/>
       <plugin id="org.sat4j.core"/>
       <plugin id="org.sat4j.pb"/>
       <plugin id="org.slf4j.api"/>

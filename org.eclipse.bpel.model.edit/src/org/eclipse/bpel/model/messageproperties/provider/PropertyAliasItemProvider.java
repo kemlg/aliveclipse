@@ -87,17 +87,19 @@ public class PropertyAliasItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addDocumentationElementPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_WSDLElement_documentationElement_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_WSDLElement_documentationElement_feature", "_UI_WSDLElement_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						WSDLPackage.Literals.WSDL_ELEMENT__DOCUMENTATION_ELEMENT,
-						true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WSDLElement_documentationElement_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WSDLElement_documentationElement_feature", "_UI_WSDLElement_type"),
+				 WSDLPackage.Literals.WSDL_ELEMENT__DOCUMENTATION_ELEMENT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -107,17 +109,19 @@ public class PropertyAliasItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addElementPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_WSDLElement_element_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_WSDLElement_element_feature", "_UI_WSDLElement_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						WSDLPackage.Literals.WSDL_ELEMENT__ELEMENT, true,
-						false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WSDLElement_element_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WSDLElement_element_feature", "_UI_WSDLElement_type"),
+				 WSDLPackage.Literals.WSDL_ELEMENT__ELEMENT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -127,17 +131,19 @@ public class PropertyAliasItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addRequiredPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_ExtensibilityElement_required_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_ExtensibilityElement_required_feature", "_UI_ExtensibilityElement_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						WSDLPackage.Literals.EXTENSIBILITY_ELEMENT__REQUIRED,
-						true, false, false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ExtensibilityElement_required_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ExtensibilityElement_required_feature", "_UI_ExtensibilityElement_type"),
+				 WSDLPackage.Literals.EXTENSIBILITY_ELEMENT__REQUIRED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -147,17 +153,19 @@ public class PropertyAliasItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addElementTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_ExtensibilityElement_elementType_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_ExtensibilityElement_elementType_feature", "_UI_ExtensibilityElement_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						WSDLPackage.Literals.EXTENSIBILITY_ELEMENT__ELEMENT_TYPE,
-						true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ExtensibilityElement_elementType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ExtensibilityElement_elementType_feature", "_UI_ExtensibilityElement_type"),
+				 WSDLPackage.Literals.EXTENSIBILITY_ELEMENT__ELEMENT_TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -167,17 +175,19 @@ public class PropertyAliasItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addMessageTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_PropertyAlias_messageType_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_PropertyAlias_messageType_feature", "_UI_PropertyAlias_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						MessagepropertiesPackage.Literals.PROPERTY_ALIAS__MESSAGE_TYPE,
-						true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PropertyAlias_messageType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PropertyAlias_messageType_feature", "_UI_PropertyAlias_type"),
+				 MessagepropertiesPackage.Literals.PROPERTY_ALIAS__MESSAGE_TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -187,17 +197,19 @@ public class PropertyAliasItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addPartPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_PropertyAlias_part_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_PropertyAlias_part_feature", "_UI_PropertyAlias_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						MessagepropertiesPackage.Literals.PROPERTY_ALIAS__PART,
-						true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PropertyAlias_part_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PropertyAlias_part_feature", "_UI_PropertyAlias_type"),
+				 MessagepropertiesPackage.Literals.PROPERTY_ALIAS__PART,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -207,17 +219,19 @@ public class PropertyAliasItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addPropertyNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_PropertyAlias_propertyName_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_PropertyAlias_propertyName_feature", "_UI_PropertyAlias_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						MessagepropertiesPackage.Literals.PROPERTY_ALIAS__PROPERTY_NAME,
-						true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PropertyAlias_propertyName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PropertyAlias_propertyName_feature", "_UI_PropertyAlias_type"),
+				 MessagepropertiesPackage.Literals.PROPERTY_ALIAS__PROPERTY_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -227,17 +241,19 @@ public class PropertyAliasItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addIDPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_PropertyAlias_ID_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_PropertyAlias_ID_feature", "_UI_PropertyAlias_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						MessagepropertiesPackage.Literals.PROPERTY_ALIAS__ID,
-						false, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PropertyAlias_ID_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PropertyAlias_ID_feature", "_UI_PropertyAlias_type"),
+				 MessagepropertiesPackage.Literals.PROPERTY_ALIAS__ID,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -247,16 +263,19 @@ public class PropertyAliasItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addWsdlPartPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_PropertyAlias_wsdlPart_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_PropertyAlias_wsdlPart_feature", "_UI_PropertyAlias_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						MessagepropertiesPackage.Literals.PROPERTY_ALIAS__WSDL_PART,
-						true, false, true, null, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PropertyAlias_wsdlPart_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PropertyAlias_wsdlPart_feature", "_UI_PropertyAlias_type"),
+				 MessagepropertiesPackage.Literals.PROPERTY_ALIAS__WSDL_PART,
+				 true,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -266,17 +285,19 @@ public class PropertyAliasItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_PropertyAlias_type_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_PropertyAlias_type_feature", "_UI_PropertyAlias_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						MessagepropertiesPackage.Literals.PROPERTY_ALIAS__TYPE,
-						true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PropertyAlias_type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PropertyAlias_type_feature", "_UI_PropertyAlias_type"),
+				 MessagepropertiesPackage.Literals.PROPERTY_ALIAS__TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -286,17 +307,19 @@ public class PropertyAliasItemProvider extends ItemProviderAdapter implements
 	 * @generated
 	 */
 	protected void addXSDElementPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(
-						((ComposeableAdapterFactory) adapterFactory)
-								.getRootAdapterFactory(),
-						getResourceLocator(),
-						getString("_UI_PropertyAlias_XSDElement_feature"), //$NON-NLS-1$
-						getString(
-								"_UI_PropertyDescriptor_description", "_UI_PropertyAlias_XSDElement_feature", "_UI_PropertyAlias_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-						MessagepropertiesPackage.Literals.PROPERTY_ALIAS__XSD_ELEMENT,
-						true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PropertyAlias_XSDElement_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PropertyAlias_XSDElement_feature", "_UI_PropertyAlias_type"),
+				 MessagepropertiesPackage.Literals.PROPERTY_ALIAS__XSD_ELEMENT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -312,8 +335,7 @@ public class PropertyAliasItemProvider extends ItemProviderAdapter implements
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures
-					.add(MessagepropertiesPackage.Literals.PROPERTY_ALIAS__QUERY);
+			childrenFeatures.add(MessagepropertiesPackage.Literals.PROPERTY_ALIAS__QUERY);
 		}
 		return childrenFeatures;
 	}
@@ -339,8 +361,7 @@ public class PropertyAliasItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/PropertyAlias")); //$NON-NLS-1$
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/PropertyAlias"));
 	}
 
 	/**
@@ -351,10 +372,11 @@ public class PropertyAliasItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public String getText(Object object) {
-		Object labelValue = ((PropertyAlias) object).getPropertyName();
+		Object labelValue = ((PropertyAlias)object).getPropertyName();
 		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ? getString("_UI_PropertyAlias_type") : //$NON-NLS-1$
-				getString("_UI_PropertyAlias_type") + " " + label; //$NON-NLS-1$ //$NON-NLS-2$
+		return label == null || label.length() == 0 ?
+			getString("_UI_PropertyAlias_type") :
+			getString("_UI_PropertyAlias_type") + " " + label;
 	}
 
 	/**
@@ -369,23 +391,21 @@ public class PropertyAliasItemProvider extends ItemProviderAdapter implements
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PropertyAlias.class)) {
-		case MessagepropertiesPackage.PROPERTY_ALIAS__DOCUMENTATION_ELEMENT:
-		case MessagepropertiesPackage.PROPERTY_ALIAS__ELEMENT:
-		case MessagepropertiesPackage.PROPERTY_ALIAS__REQUIRED:
-		case MessagepropertiesPackage.PROPERTY_ALIAS__ELEMENT_TYPE:
-		case MessagepropertiesPackage.PROPERTY_ALIAS__MESSAGE_TYPE:
-		case MessagepropertiesPackage.PROPERTY_ALIAS__PART:
-		case MessagepropertiesPackage.PROPERTY_ALIAS__PROPERTY_NAME:
-		case MessagepropertiesPackage.PROPERTY_ALIAS__ID:
-		case MessagepropertiesPackage.PROPERTY_ALIAS__TYPE:
-		case MessagepropertiesPackage.PROPERTY_ALIAS__XSD_ELEMENT:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
-			return;
-		case MessagepropertiesPackage.PROPERTY_ALIAS__QUERY:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
-			return;
+			case MessagepropertiesPackage.PROPERTY_ALIAS__DOCUMENTATION_ELEMENT:
+			case MessagepropertiesPackage.PROPERTY_ALIAS__ELEMENT:
+			case MessagepropertiesPackage.PROPERTY_ALIAS__REQUIRED:
+			case MessagepropertiesPackage.PROPERTY_ALIAS__ELEMENT_TYPE:
+			case MessagepropertiesPackage.PROPERTY_ALIAS__MESSAGE_TYPE:
+			case MessagepropertiesPackage.PROPERTY_ALIAS__PART:
+			case MessagepropertiesPackage.PROPERTY_ALIAS__PROPERTY_NAME:
+			case MessagepropertiesPackage.PROPERTY_ALIAS__ID:
+			case MessagepropertiesPackage.PROPERTY_ALIAS__TYPE:
+			case MessagepropertiesPackage.PROPERTY_ALIAS__XSD_ELEMENT:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case MessagepropertiesPackage.PROPERTY_ALIAS__QUERY:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -402,9 +422,10 @@ public class PropertyAliasItemProvider extends ItemProviderAdapter implements
 			Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(
-				MessagepropertiesPackage.Literals.PROPERTY_ALIAS__QUERY,
-				MessagepropertiesFactory.eINSTANCE.createQuery()));
+		newChildDescriptors.add
+			(createChildParameter
+				(MessagepropertiesPackage.Literals.PROPERTY_ALIAS__QUERY,
+				 MessagepropertiesFactory.eINSTANCE.createQuery()));
 	}
 
 	/**
@@ -415,7 +436,7 @@ public class PropertyAliasItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return BpelEditPlugin.INSTANCE;
+		return messagepropertiesEditPlugin.INSTANCE;
 	}
 
 }

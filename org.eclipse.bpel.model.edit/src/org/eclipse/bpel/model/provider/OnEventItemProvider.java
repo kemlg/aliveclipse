@@ -35,7 +35,7 @@ import org.w3c.dom.Element;
  * <!-- end-user-doc -->
  * @generated
  */
-public class OnEventItemProvider extends ExtensibleElementItemProvider
+public class OnEventItemProvider extends BPELExtensibleElementItemProvider
 		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -63,6 +63,7 @@ public class OnEventItemProvider extends ExtensibleElementItemProvider
 			addOperationPropertyDescriptor(object);
 			addPortTypePropertyDescriptor(object);
 			addMessageTypePropertyDescriptor(object);
+			addXSDElementPropertyDescriptor(object);
 			addFromPartsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -145,6 +146,25 @@ public class OnEventItemProvider extends ExtensibleElementItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the XSD Element feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addXSDElementPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(
+						((ComposeableAdapterFactory) adapterFactory)
+								.getRootAdapterFactory(),
+						getResourceLocator(),
+						getString("_UI_OnEvent_XSDElement_feature"), //$NON-NLS-1$
+						getString(
+								"_UI_PropertyDescriptor_description", "_UI_OnEvent_XSDElement_feature", "_UI_OnEvent_type"), //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+						BPELPackage.Literals.ON_EVENT__XSD_ELEMENT, true,
+						false, true, null, null, null));
+	}
+
+	/**
 	 * This adds a property descriptor for the From Parts feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -208,8 +228,8 @@ public class OnEventItemProvider extends ExtensibleElementItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/OnEvent")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/OnEvent")); //$NON-NLS-1$
 	}
 
 	/**
@@ -243,8 +263,8 @@ public class OnEventItemProvider extends ExtensibleElementItemProvider
 		case BPELPackage.ON_EVENT__CORRELATIONS:
 		case BPELPackage.ON_EVENT__CORRELATION_SETS:
 		case BPELPackage.ON_EVENT__MESSAGE_EXCHANGE:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -263,104 +283,104 @@ public class OnEventItemProvider extends ExtensibleElementItemProvider
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createActivity()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createActivity()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createPartnerActivity()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createPartnerActivity()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createInvoke()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createInvoke()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createReply()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createReply()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createReceive()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createReceive()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createExit()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createExit()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createThrow()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createThrow()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createWait()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createWait()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createEmpty()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createEmpty()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createSequence()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createSequence()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createWhile()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createWhile()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createPick()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createPick()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createFlow()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createFlow()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createAssign()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createAssign()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createScope()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createScope()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createCompensateScope()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createCompensateScope()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createRethrow()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createRethrow()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createExtensionActivity()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createExtensionActivity()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createOpaqueActivity()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createOpaqueActivity()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createForEach()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createForEach()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createRepeatUntil()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createRepeatUntil()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createValidate()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createValidate()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createIf()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createIf()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__ACTIVITY, BPELFactory.eINSTANCE
-						.createCompensate()));
+				BPELPackage.Literals.ON_EVENT__ACTIVITY,
+				BPELFactory.eINSTANCE.createCompensate()));
 
 		newChildDescriptors.add(createChildParameter(
-				BPELPackage.Literals.ON_EVENT__VARIABLE, BPELFactory.eINSTANCE
-						.createVariable()));
+				BPELPackage.Literals.ON_EVENT__VARIABLE,
+				BPELFactory.eINSTANCE.createVariable()));
 
 		newChildDescriptors.add(createChildParameter(
 				BPELPackage.Literals.ON_EVENT__CORRELATIONS,

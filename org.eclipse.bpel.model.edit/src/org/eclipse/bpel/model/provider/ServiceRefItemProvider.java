@@ -198,8 +198,8 @@ public class ServiceRefItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/ServiceRef")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/ServiceRef")); //$NON-NLS-1$
 	}
 
 	/**
@@ -232,12 +232,12 @@ public class ServiceRefItemProvider extends ItemProviderAdapter implements
 		case BPELPackage.SERVICE_REF__ELEMENT:
 		case BPELPackage.SERVICE_REF__REFERENCE_SCHEME:
 		case BPELPackage.SERVICE_REF__VALUE:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), false, true));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), false, true));
 			return;
 		case BPELPackage.SERVICE_REF__EEXTENSIBILITY_ELEMENTS:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);

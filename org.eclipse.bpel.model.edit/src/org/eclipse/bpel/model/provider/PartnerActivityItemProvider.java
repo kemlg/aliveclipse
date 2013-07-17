@@ -161,8 +161,8 @@ public class PartnerActivityItemProvider extends ActivityItemProvider implements
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/PartnerActivity")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/PartnerActivity")); //$NON-NLS-1$
 	}
 
 	/**
@@ -191,8 +191,8 @@ public class PartnerActivityItemProvider extends ActivityItemProvider implements
 
 		switch (notification.getFeatureID(PartnerActivity.class)) {
 		case BPELPackage.PARTNER_ACTIVITY__CORRELATIONS:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);

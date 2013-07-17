@@ -34,7 +34,7 @@ import org.w3c.dom.Element;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CorrelationsItemProvider extends ExtensibleElementItemProvider
+public class CorrelationsItemProvider extends BPELExtensibleElementItemProvider
 		implements IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -101,8 +101,8 @@ public class CorrelationsItemProvider extends ExtensibleElementItemProvider
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage(
-				"full/obj16/Correlations")); //$NON-NLS-1$
+		return overlayImage(object,
+				getResourceLocator().getImage("full/obj16/Correlations")); //$NON-NLS-1$
 	}
 
 	/**
@@ -132,8 +132,8 @@ public class CorrelationsItemProvider extends ExtensibleElementItemProvider
 
 		switch (notification.getFeatureID(Correlations.class)) {
 		case BPELPackage.CORRELATIONS__CHILDREN:
-			fireNotifyChanged(new ViewerNotification(notification, notification
-					.getNotifier(), true, false));
+			fireNotifyChanged(new ViewerNotification(notification,
+					notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);

@@ -23,6 +23,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: net.sf.ictalive.service.matchmakertab,
  net.sf.ictalive.service.matchmakertab.dashboard,
  net.sf.ictalive.service.matchmakertab.views
-Bundle-ClassPath: .
+Bundle-ClassPath: .,
+ lib/alive-matchmaker.jar
 Import-Package: org.eclipse.ui.actions
 Bundle-Vendor: ALIVE, University of Bath

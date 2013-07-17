@@ -1,0 +1,9 @@
+bin.includes = .,\
+               META-INF/,\
+               lib/imq.jar,\
+               lib/jms.jar
+jars.compile.order = .
+source.. = src/
+output.. = bin/
+source.. = src/
+source.. = src/

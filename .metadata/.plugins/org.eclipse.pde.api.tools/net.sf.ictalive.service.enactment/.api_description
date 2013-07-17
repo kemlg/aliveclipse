@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component id="net.sf.ictalive.service.enactment" modificationStamp="680" version="1.2">
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.service.enactment/src&lt;net.sf.ictalive.service.enactment"/>
+        <type handle="=net.sf.ictalive.service.enactment/src&lt;net.sf.ictalive.service.enactment{ServiceEnactmentEventFactory.java[ServiceEnactmentEventFactory" modificationStamp="9178" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.ictalive.service.enactment/src&lt;net.sf.ictalive.service.enactment{ServiceEnactor.java[ServiceEnactor" modificationStamp="9174" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.ictalive.service.enactment/src&lt;net.sf.ictalive.service.enactment{ServiceEnactorFactory.java[ServiceEnactorFactory" modificationStamp="9175" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.ictalive.service.enactment/src&lt;net.sf.ictalive.service.enactment{EventBusEnactmentListener.java[EventBusEnactmentListener" modificationStamp="9209" restrictions="0" visibility="0"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.service.enactment/src&lt;net.sf.ictalive.service.enactment.simpleevents"/>
+        <type handle="=net.sf.ictalive.service.enactment/src&lt;net.sf.ictalive.service.enactment.simpleevents{SimpleEnactmentEvent.java[SimpleEnactmentEvent" modificationStamp="9183" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.ictalive.service.enactment/src&lt;net.sf.ictalive.service.enactment.simpleevents{ServiceFailedEvent.java[ServiceFailedEvent" modificationStamp="9181" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.ictalive.service.enactment/src&lt;net.sf.ictalive.service.enactment.simpleevents{SimpleLogPrinter.java[SimpleLogPrinter" modificationStamp="9184" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.ictalive.service.enactment/src&lt;net.sf.ictalive.service.enactment.simpleevents{SimpleSerializationEnactmentListener.java[SimpleSerializationEnactmentListener" modificationStamp="9419" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.ictalive.service.enactment/src&lt;net.sf.ictalive.service.enactment.simpleevents{ServiceSuccessEvent.java[ServiceSuccessEvent" modificationStamp="9182" restrictions="0" visibility="0"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.ictalive.service.enactment/src&lt;net.sf.ictalive.service.enactment.policy"/>
+        <type handle="=net.sf.ictalive.service.enactment/src&lt;net.sf.ictalive.service.enactment.policy{ExplicitServicePolicy.java[ExplicitServicePolicy" modificationStamp="9178" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.ictalive.service.enactment/src&lt;net.sf.ictalive.service.enactment.policy{MatchmakerServicePolicy.java[MatchmakerServicePolicy" modificationStamp="9179" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.ictalive.service.enactment/src&lt;net.sf.ictalive.service.enactment.policy{ServicePolicy.java[ServicePolicy" modificationStamp="9180" restrictions="0" visibility="0"/>
+    </package>
+</component>

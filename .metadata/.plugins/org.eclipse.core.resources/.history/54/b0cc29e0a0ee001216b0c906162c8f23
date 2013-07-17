@@ -1,0 +1,5 @@
+output.. = bin/
+bin.includes = META-INF/,\
+               lib/upnp-1.0.jar
+bin.excludes = dep/slf4j-api-1.5.6.jar,\
+               dep/slf4j-log4j12-1.5.6.jar

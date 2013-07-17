@@ -14,9 +14,8 @@ Export-Package: net.sf.ictalive.eventbus;
  net.sf.ictalive.eventbus.transport.jms;uses:="javax.jms"
 Require-Bundle: net.sf.ictalive.runtime.NormInstances;bundle-version="1.0.0",
  net.sf.ictalive.metamodel.utils;bundle-version="0.0.1";visibility:=reexport,
- net.sf.ictalive.runtime;bundle-version="1.0.3"
+ net.sf.ictalive.runtime;bundle-version="1.0.3",
+ commons;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Bundle-ClassPath: lib/imq.jar,
- lib/jms.jar,
- .
+Bundle-ClassPath: .
 Bundle-Vendor: ALIVE, Universitat Politecnica de Catalunya
