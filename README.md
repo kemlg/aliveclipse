@@ -18,6 +18,7 @@ Usage
 
 * Install all the required software before beginning the following steps
 * Run mvn install from the aliveclipse/net.sf.ictalive.commons folder
-* Open the Eclipse with the aliveclipse/ directory as the workspace
+* Open the Eclipse with the aliveclipse/ directory as the workspace and
+  import all the projects (without copying them)
 
 
