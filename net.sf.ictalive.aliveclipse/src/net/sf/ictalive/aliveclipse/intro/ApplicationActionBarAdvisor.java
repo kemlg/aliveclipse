@@ -3,7 +3,6 @@ package net.sf.ictalive.aliveclipse.intro;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.core.runtime.IExtension;
 import org.eclipse.jface.action.GroupMarker;
 import org.eclipse.jface.action.IContributionItem;
 import org.eclipse.jface.action.IMenuManager;
@@ -16,9 +15,6 @@ import org.eclipse.ui.actions.ActionFactory.IWorkbenchAction;
 import org.eclipse.ui.actions.ContributionItemFactory;
 import org.eclipse.ui.application.ActionBarAdvisor;
 import org.eclipse.ui.application.IActionBarConfigurer;
-import org.eclipse.ui.internal.WorkbenchPlugin;
-import org.eclipse.ui.internal.registry.ActionSetRegistry;
-import org.eclipse.ui.internal.registry.IActionSetDescriptor;
 
 public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 
@@ -201,10 +197,9 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 		
 	}
 	
-	@SuppressWarnings("restriction")
 	private void removeExtraneousActions() {
 
-		ActionSetRegistry reg = WorkbenchPlugin.getDefault().getActionSetRegistry();
+//		ActionSetRegistry reg = WorkbenchPlugin.getDefault().getActionSetRegistry();
 		
 		// TODO: Keeping these removals gives a lot of exceptions, check whether it is necessary to remove them and how to do it if so.
 		// removing gotoLastPosition message
@@ -217,19 +212,18 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 		//removeStandardAction(reg, "org.eclipse.ui.actionSet.openFiles");
 	}
 
-	@SuppressWarnings("restriction")
-	private void removeStandardAction(ActionSetRegistry reg, String actionSetId) {
-
-		IActionSetDescriptor[] actionSets = reg.getActionSets();
-
-		for (int i = 0; i <actionSets.length; i++)
-		{
-		    if (!actionSets[i].getId().equals(actionSetId))
-		        continue;
-	        IExtension ext = actionSets[i].getConfigurationElement()
-	            .getDeclaringExtension();
-	        reg.removeExtension(ext, new Object[] { actionSets[i] });
-		}
-	}
-
+//	@SuppressWarnings("restriction")
+//	private void removeStandardAction(ActionSetRegistry reg, String actionSetId) {
+//
+//		IActionSetDescriptor[] actionSets = reg.getActionSets();
+//
+//		for (int i = 0; i <actionSets.length; i++)
+//		{
+//		    if (!actionSets[i].getId().equals(actionSetId))
+//		        continue;
+//	        IExtension ext = actionSets[i].getConfigurationElement()
+//	            .getDeclaringExtension();
+//	        reg.removeExtension(ext, new Object[] { actionSets[i] });
+//		}
+//	}
 }
