@@ -10,4 +10,8 @@ bin/*
 */bin/*
 
 .metadata
-.metadata/
+.metadata/*
+.plugins
+*/.plugins
+*/.plugins/*
+*/org.eclipse.e4.workbench/*
