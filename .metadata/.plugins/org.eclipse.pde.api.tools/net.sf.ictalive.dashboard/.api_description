@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<component id="net.sf.ictalive.dashboard" modificationStamp="1166" version="1.2">
-    <package visibility="1">
-        <fragment handle="=net.sf.ictalive.dashboard/src&lt;net.sf.ictalive.dashboard"/>
-    </package>
-    <package visibility="1">
-        <fragment handle="=net.sf.ictalive.dashboard/src&lt;net.sf.ictalive.dashboard.figure"/>
-    </package>
-</component>

@@ -1,4 +1,0 @@
-source.. = src/
-bin.includes = META-INF/,\
-               .,\
-               dep/alive-repository-server-client.jar
