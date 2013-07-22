@@ -315,7 +315,7 @@ public class RoleImpl extends EObjectImpl implements Role {
 		}
 		
 		
-		return new EcoreEList.UnmodifiableEList(this,
+		return new EcoreEList.UnmodifiableEList<Norm>(this,
 				OMPackage.Literals.ROLE__NORMS,
 				normList.size(), normList.toArray());
 	}
@@ -364,7 +364,7 @@ public class RoleImpl extends EObjectImpl implements Role {
 		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
 		List<Dependency> dependants = new ArrayList<Dependency>();
 		for(Iterator<Dependency> iter = ((SS)this.eContainer).getDependencies().iterator(); iter.hasNext();){
-			Dependency dep = (Dependency) iter.next();
+			Dependency dep = iter.next();
 			if (dep instanceof HierarchyDependency) {
 				if (((HierarchyDependency) dep).getDependant() == this) {
 					dependants.add(dep);
@@ -383,7 +383,7 @@ public class RoleImpl extends EObjectImpl implements Role {
 			
 		}
 			
-			return  new EcoreEList.UnmodifiableEList(this,
+			return  new EcoreEList.UnmodifiableEList<Dependency>(this,
 									OMPackage.Literals.ROLE__DEPENDANT_ON,
 									dependants.size(), dependants.toArray());
 	}
@@ -399,7 +399,7 @@ public class RoleImpl extends EObjectImpl implements Role {
 		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
 		List<Dependency> dependants = new ArrayList<Dependency>();
 		for(Iterator<Dependency> iter = ((SS)this.eContainer).getDependencies().iterator(); iter.hasNext();){
-			Dependency dep = (Dependency) iter.next();
+			Dependency dep = iter.next();
 			if (dep instanceof HierarchyDependency) {
 				if (((HierarchyDependency) dep).getDependee() == this) {
 					dependants.add(dep);
@@ -418,7 +418,7 @@ public class RoleImpl extends EObjectImpl implements Role {
 			
 		}
 			
-			return  new EcoreEList.UnmodifiableEList(this,
+			return  new EcoreEList.UnmodifiableEList<Dependency>(this,
 									OMPackage.Literals.ROLE__DEPENDANT_ON,
 									dependants.size(), dependants.toArray());
 	}

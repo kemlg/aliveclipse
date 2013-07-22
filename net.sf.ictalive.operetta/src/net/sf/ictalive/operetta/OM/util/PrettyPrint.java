@@ -6,7 +6,6 @@ import net.sf.ictalive.operetta.OM.Always;
 import net.sf.ictalive.operetta.OM.ExistsPath;
 import net.sf.ictalive.operetta.OM.ForAllPaths;
 import net.sf.ictalive.operetta.OM.Next;
-import net.sf.ictalive.operetta.OM.PathFormula;
 import net.sf.ictalive.operetta.OM.Sometime;
 import net.sf.ictalive.operetta.OM.StateFormula;
 

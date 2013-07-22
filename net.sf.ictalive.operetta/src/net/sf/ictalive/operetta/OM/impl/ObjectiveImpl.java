@@ -275,7 +275,7 @@ public class ObjectiveImpl extends EObjectImpl implements Objective {
 			}
 		}
 		
-		return new EcoreEList.UnmodifiableEList(this,
+		return new EcoreEList.UnmodifiableEList<Objective>(this,
 				OMPackage.Literals.OBJECTIVE__PARENT_OBJECTIVE,
 				parents.size(), parents.toArray());
 		
@@ -292,14 +292,14 @@ public class ObjectiveImpl extends EObjectImpl implements Objective {
 		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
 		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
 		List<Role> roles = new ArrayList<Role>();
-		for(Iterator iter = ((SS)this.eContainer).getRoles().iterator(); iter.hasNext();) {
-			Role role = (Role) iter.next();
+		for(Iterator<Role> iter = ((SS)this.eContainer).getRoles().iterator(); iter.hasNext();) {
+			Role role = iter.next();
 			if (role.getAllObjectives().contains(this)) {
 				roles.add(role);
 			}
 		}
 
-		return new EcoreEList.UnmodifiableEList(this,
+		return new EcoreEList.UnmodifiableEList<Role>(this,
 				OMPackage.Literals.OBJECTIVE__USED_BY_ROLE,
 				roles.size(), roles.toArray());
 	}
@@ -458,7 +458,7 @@ public class ObjectiveImpl extends EObjectImpl implements Objective {
 	public EList<Objective> getAllChildren() {
 		EList<Objective> result = new BasicEList<Objective>();
 		result.add(this);
-		for(Iterator iter = getSubObjectives().iterator(); iter.hasNext(); ) {
+		for(Iterator<Objective> iter = getSubObjectives().iterator(); iter.hasNext(); ) {
 			EList<Objective> childObjectives = ((Objective) iter.next()).getAllChildren();
 			result.addAll(childObjectives);
 		}
@@ -467,6 +467,11 @@ public class ObjectiveImpl extends EObjectImpl implements Objective {
 	
 	// @added
 	public class ObjectiveException extends Exception {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -8826042824609768902L;
+
 		public ObjectiveException() {
 			super("Cannot set objective as it's own child!");
 		}

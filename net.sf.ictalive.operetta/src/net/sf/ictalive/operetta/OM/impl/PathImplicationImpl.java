@@ -6,7 +6,6 @@
  */
 package net.sf.ictalive.operetta.OM.impl;
 
-import net.sf.ictalive.operetta.OM.Atom;
 import net.sf.ictalive.operetta.OM.OMPackage;
 import net.sf.ictalive.operetta.OM.PartialStateDescription;
 import net.sf.ictalive.operetta.OM.PathFormula;
@@ -14,12 +13,10 @@ import net.sf.ictalive.operetta.OM.PathImplication;
 import net.sf.ictalive.operetta.OM.util.PrettyPrint;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
