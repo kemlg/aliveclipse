@@ -12,7 +12,7 @@ Required software
 * Eclipse Modeling plugins (all of them, under Modeling), m2e, and Eclipse Web Developer Tools: http://download.eclipse.org/releases/luna
 * Tycho Configurator: Preferences/Maven/Discovery -> Tycho Configurator
 * Graphical Editing Framework: http://download.eclipse.org/tools/gef/updates/releases/
-* Operational QVT Plugin (at Install Modeling Components in the Eclipse
+* ATL and Operational QVT Plugins (at Install Modeling Components in the Eclipse
   menu)
 
 Usage
