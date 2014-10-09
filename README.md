@@ -1,6 +1,8 @@
 aliveclipse
 ===========
 
+It is recommended to increase the memory that Eclipse can get. To make things easy, if your Luna installation is new and/or you do not already have a configuration file for Eclipse, you can copy `eclipse.ini` from the root of this repository to the root of your Eclipse installation.
+
 Required software
 -----------------
 
